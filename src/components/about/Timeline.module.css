@@ -1,0 +1,86 @@
+.section { background: var(--navy); padding: 96px 0; }
+
+.inner { max-width: 1440px; margin: 0 auto; padding: 0 92px; }
+@media (max-width: 768px) { .inner { padding: 0 16px; } .section { padding: 64px 0; } }
+
+.header { max-width: 640px; margin-bottom: 64px; }
+.eyebrow { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--sky); margin-bottom: 12px; }
+.heading { font-size: clamp(28px, 3vw, 44px); font-weight: 800; color: var(--white); letter-spacing: -1px; }
+
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.line {
+  position: absolute;
+  left: 50%;
+  top: 0; bottom: 0;
+  width: 2px;
+  background: rgba(70,195,242,0.2);
+  transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+  .line { left: 16px; }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  padding: 0 48px 48px 0;
+  position: relative;
+}
+
+.left { align-self: flex-start; padding-right: 64px; }
+.right { align-self: flex-end; padding-left: 64px; padding-right: 0; flex-direction: row-reverse; }
+
+@media (max-width: 768px) {
+  .item, .left, .right {
+    width: 100%;
+    padding: 0 0 40px 48px;
+    align-self: auto;
+    flex-direction: row;
+  }
+}
+
+.content {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.year {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--sky);
+  letter-spacing: 1px;
+}
+
+.title { font-size: 17px; font-weight: 700; color: var(--white); }
+
+.desc { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.6; }
+
+.dot {
+  position: absolute;
+  right: -8px;
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  background: var(--sky);
+  border: 3px solid var(--navy);
+  box-shadow: 0 0 0 3px rgba(70,195,242,0.3);
+  flex-shrink: 0;
+}
+
+.right .dot { left: -8px; right: auto; }
+
+@media (max-width: 768px) {
+  .dot { left: -32px; right: auto; }
+}

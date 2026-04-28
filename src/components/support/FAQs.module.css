@@ -1,0 +1,20 @@
+.section { background: var(--white); padding: 96px 0; }
+.inner { max-width: 1440px; margin: 0 auto; padding: 0 92px; }
+@media (max-width: 768px) { .inner { padding: 0 16px; } .section { padding: 64px 0; } }
+.header { max-width: 640px; margin-bottom: 40px; }
+.eyebrow { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--blue); margin-bottom: 12px; }
+.heading { font-size: clamp(28px, 3vw, 44px); font-weight: 800; color: var(--navy); letter-spacing: -1px; }
+.tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 32px; }
+.tab { padding: 8px 20px; border-radius: 100px; font-size: 13px; font-weight: 600; color: var(--text); background: var(--bg); border: 1.5px solid rgba(0,31,51,0.1); transition: all 0.2s; min-height: 44px; }
+.tab:hover { border-color: var(--blue); color: var(--blue); }
+.tabActive { background: var(--blue); color: var(--white); border-color: var(--blue); }
+.tabActive:hover { color: var(--white); }
+.list { display: flex; flex-direction: column; border: 1.5px solid rgba(0,31,51,0.08); border-radius: 16px; overflow: hidden; }
+.item { border-bottom: 1px solid rgba(0,31,51,0.07); }
+.item:last-child { border-bottom: none; }
+.question { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 24px; font-size: 15px; font-weight: 600; color: var(--navy); text-align: left; background: var(--white); transition: background 0.15s; min-height: 64px; font-family: var(--font); }
+.question:hover { background: #f8fafc; }
+.chevron { flex-shrink: 0; transition: transform 0.2s; color: var(--blue); }
+.chevronOpen { transform: rotate(180deg); }
+.answer { overflow: hidden; }
+.answer p { padding: 0 24px 20px; font-size: 14px; color: var(--text); line-height: 1.75; }

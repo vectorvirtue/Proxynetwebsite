@@ -1,0 +1,17 @@
+.btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 900;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+  transition: box-shadow 0.2s;
+}
+.btn:hover { box-shadow: 0 6px 28px rgba(37,211,102,0.55); }

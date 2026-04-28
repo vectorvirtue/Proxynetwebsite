@@ -1,0 +1,62 @@
+.section { background: var(--white); padding: 96px 0; }
+
+.inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 92px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 768px) { .inner { grid-template-columns: 1fr; padding: 0 16px; } .section { padding: 64px 0; } }
+
+.card {
+  background: var(--bg);
+  border-radius: 20px;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid rgba(0,31,51,0.08);
+}
+
+.cardDark {
+  background: var(--navy);
+}
+
+.iconWrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: rgba(0,111,180,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue);
+}
+
+.cardDark .iconWrap {
+  background: rgba(70,195,242,0.15);
+  color: var(--sky);
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--blue);
+}
+
+.cardDark .label { color: var(--sky); }
+
+.statement {
+  font-size: clamp(15px, 1.4vw, 18px);
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.7;
+  letter-spacing: -0.2px;
+}
+
+.cardDark .statement { color: var(--white); }

@@ -1,0 +1,12 @@
+.section { background: var(--white); padding: 80px 0; }
+.inner { max-width: 1440px; margin: 0 auto; padding: 0 92px; }
+@media (max-width: 768px) { .inner { padding: 0 16px; } .section { padding: 56px 0; } }
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+@media (max-width: 1024px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .grid { grid-template-columns: 1fr; } }
+.card { background: var(--bg); border: 1.5px solid rgba(0,31,51,0.08); border-radius: 16px; padding: 32px 24px; display: flex; flex-direction: column; gap: 12px; text-decoration: none; transition: box-shadow 0.2s, border-color 0.2s; }
+.card:hover { box-shadow: 0 8px 32px rgba(0,31,51,0.1); border-color: var(--accent); }
+.icon { width: 56px; height: 56px; border-radius: 14px; background: color-mix(in srgb, var(--accent) 12%, transparent); display: flex; align-items: center; justify-content: center; color: var(--accent); }
+.label { font-size: 17px; font-weight: 700; color: var(--navy); }
+.desc { font-size: 14px; color: var(--text); line-height: 1.6; flex: 1; }
+.action { font-size: 13px; font-weight: 600; color: var(--accent); margin-top: 4px; }

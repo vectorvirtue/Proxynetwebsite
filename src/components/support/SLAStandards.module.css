@@ -1,0 +1,25 @@
+.section { background: var(--bg); padding: 96px 0; }
+.inner { max-width: 1440px; margin: 0 auto; padding: 0 92px; }
+@media (max-width: 768px) { .inner { padding: 0 16px; } .section { padding: 64px 0; } }
+.header { max-width: 640px; margin-bottom: 48px; }
+.eyebrow { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--blue); margin-bottom: 12px; }
+.heading { font-size: clamp(28px, 3vw, 44px); font-weight: 800; color: var(--navy); letter-spacing: -1px; margin-bottom: 16px; }
+.sub { font-size: 16px; color: var(--text); line-height: 1.7; }
+
+.table { border: 1.5px solid rgba(0,31,51,0.08); border-radius: 16px; overflow: hidden; margin-bottom: 24px; }
+.tableHead { display: grid; grid-template-columns: 140px 1fr 140px 160px; gap: 16px; padding: 14px 24px; background: var(--navy); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.6); }
+.tableRow { display: grid; grid-template-columns: 140px 1fr 140px 160px; gap: 16px; padding: 20px 24px; align-items: center; border-bottom: 1px solid rgba(0,31,51,0.07); background: var(--white); transition: background 0.15s; }
+.tableRow:last-child { border-bottom: none; }
+.tableRow:hover { background: #f8fafc; }
+@media (max-width: 768px) { .tableHead { display: none; } .tableRow { grid-template-columns: 1fr 1fr; gap: 12px; } }
+
+.priority { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; color: var(--c); }
+.priorityIcon { display: flex; }
+.desc { font-size: 13px; color: var(--text); line-height: 1.5; }
+.time { font-size: 14px; font-weight: 600; color: var(--navy); }
+
+.windows { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 640px) { .windows { grid-template-columns: 1fr; } }
+.window { background: var(--white); border: 1.5px solid rgba(0,31,51,0.08); border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 6px; }
+.window strong { font-size: 13px; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.5px; }
+.window span { font-size: 14px; color: var(--text); }

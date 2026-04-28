@@ -1,0 +1,52 @@
+.nav {
+  background: var(--white);
+  border-bottom: 1px solid rgba(0,31,51,0.08);
+  position: sticky;
+  top: 72px;
+  z-index: 100;
+}
+
+.inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 92px;
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.inner::-webkit-scrollbar { display: none; }
+
+@media (max-width: 768px) { .inner { padding: 0 16px; } }
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 24px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  white-space: nowrap;
+  min-height: 64px;
+  border-radius: 4px 4px 0 0;
+}
+
+.card:hover {
+  color: var(--blue);
+  border-bottom-color: var(--blue);
+  background: rgba(0,111,180,0.04);
+}
+
+.active {
+  color: var(--blue);
+  border-bottom-color: var(--blue);
+  background: rgba(0,111,180,0.04);
+}
+
+.icon {
+  color: inherit;
+  display: flex;
+}

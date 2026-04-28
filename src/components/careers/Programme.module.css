@@ -1,0 +1,38 @@
+.section { background: var(--bg); padding: 96px 0; }
+.sectionAlt { background: var(--white); }
+.inner { max-width: 1440px; margin: 0 auto; padding: 0 92px; display: flex; flex-direction: column; gap: 32px; }
+@media (max-width: 768px) { .inner { padding: 0 16px; } .section { padding: 64px 0; } }
+
+.iconWrap { width: 64px; height: 64px; border-radius: 16px; background: rgba(0,111,180,0.1); display: flex; align-items: center; justify-content: center; color: var(--blue); }
+.iconAlt { background: rgba(70,195,242,0.1); color: var(--sky); }
+
+.content { display: flex; flex-direction: column; gap: 20px; max-width: 900px; }
+
+.eyebrow { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--blue); }
+.heading { font-size: clamp(28px, 3vw, 44px); font-weight: 800; color: var(--navy); letter-spacing: -1px; }
+.sub { font-size: 16px; color: var(--text); line-height: 1.75; max-width: 640px; }
+
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+@media (max-width: 640px) { .cols { grid-template-columns: 1fr; } }
+
+.colTitle { font-size: 14px; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 16px; }
+
+.list { display: flex; flex-direction: column; gap: 12px; }
+.listItem { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--text); line-height: 1.6; }
+.check { color: var(--blue); flex-shrink: 0; margin-top: 2px; }
+
+.deptGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+@media (max-width: 768px) { .deptGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .deptGrid { grid-template-columns: 1fr; } }
+
+.deptCard { background: var(--bg); border: 1.5px solid rgba(0,31,51,0.08); border-radius: 10px; padding: 16px 20px; }
+.deptName { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+.deptDuration { font-size: 12px; color: var(--blue); font-weight: 600; }
+
+.cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 24px; background: var(--blue); color: var(--white);
+  font-size: 14px; font-weight: 600; border-radius: 8px; min-height: 48px;
+  width: fit-content; transition: background 0.2s, gap 0.2s;
+}
+.cta:hover { background: #005a94; gap: 12px; }

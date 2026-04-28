@@ -1,0 +1,32 @@
+.section {
+  padding: 80px 0;
+  background: var(--bg);
+  border-bottom: 1px dashed rgba(0,31,51,0.1);
+}
+
+.section.dark {
+  background: var(--navy);
+  border-bottom: none;
+}
+
+.inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 92px;
+}
+
+@media (max-width: 768px) {
+  .inner { padding: 0 16px; }
+  .section { padding: 60px 0; }
+}
+
+.heading {
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -1px;
+}
+
+.dark .heading {
+  color: var(--white);
+}

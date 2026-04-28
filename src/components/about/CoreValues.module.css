@@ -1,0 +1,84 @@
+.section { background: var(--bg); padding: 96px 0; }
+
+.inner { max-width: 1440px; margin: 0 auto; padding: 0 92px; }
+@media (max-width: 768px) { .inner { padding: 0 16px; } .section { padding: 64px 0; } }
+
+.header { max-width: 640px; margin: 0 auto 40px; text-align: center; }
+
+.eyebrow { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--blue); margin-bottom: 12px; }
+
+.heading { font-size: clamp(28px, 3vw, 44px); font-weight: 800; color: var(--navy); letter-spacing: -1px; margin-bottom: 16px; }
+
+.sub { font-size: 16px; color: var(--text); line-height: 1.7; }
+
+/* PAIDSOE display */
+.acronym {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 56px;
+}
+
+.acronymLetter {
+  font-size: clamp(40px, 6vw, 80px);
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -2px;
+  line-height: 1;
+  position: relative;
+  padding: 0 6px;
+}
+
+.acronymLetter::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 6px;
+  right: 6px;
+  height: 4px;
+  background: var(--blue);
+  border-radius: 2px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+@media (max-width: 1024px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .grid { grid-template-columns: 1fr; } }
+
+.card {
+  background: var(--white);
+  border: 1.5px solid rgba(0,31,51,0.08);
+  border-radius: 16px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+.card:hover { box-shadow: 0 8px 32px rgba(0,31,51,0.1); border-color: var(--blue); }
+
+.top { display: flex; align-items: center; justify-content: space-between; }
+
+.letter {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--sky);
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.iconWrap {
+  width: 44px; height: 44px;
+  border-radius: 10px;
+  background: rgba(0,111,180,0.08);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--blue);
+}
+
+.title { font-size: 16px; font-weight: 700; color: var(--navy); }
+
+.desc { font-size: 13px; color: var(--text); line-height: 1.7; }

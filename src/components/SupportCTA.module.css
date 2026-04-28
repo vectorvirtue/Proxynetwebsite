@@ -1,0 +1,131 @@
+.section {
+  background: var(--navy);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle background texture */
+.section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(70,195,242,0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+}
+
+.inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 92px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .inner { grid-template-columns: 1fr; gap: 40px; }
+}
+
+@media (max-width: 768px) {
+  .inner { padding: 0 16px; }
+  .section { padding: 64px 0; }
+}
+
+/* Left */
+.left { display: flex; flex-direction: column; gap: 20px; }
+
+.iconWrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: rgba(70,195,242,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sky);
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--sky);
+}
+
+.heading {
+  font-size: clamp(28px, 3vw, 44px);
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -1px;
+  line-height: 1.15;
+}
+
+.sub {
+  font-size: 16px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.75;
+  max-width: 480px;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: var(--blue);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  width: fit-content;
+  transition: background 0.2s, gap 0.2s, transform 0.15s;
+  min-height: 48px;
+}
+.cta:hover { background: #005a94; gap: 12px; transform: translateY(-2px); }
+
+/* Right — pillars */
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pillar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 20px 24px;
+  transition: background 0.2s, border-color 0.2s;
+}
+.pillar:hover {
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(70,195,242,0.25);
+}
+
+.pillarIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(0,111,180,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sky);
+  flex-shrink: 0;
+}
+
+.pillarLabel {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.4;
+}
