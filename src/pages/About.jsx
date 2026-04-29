@@ -9,9 +9,16 @@ import Awards from '../components/about/Awards'
 import Locations from '../components/about/Locations'
 import TaxCompliance from '../components/about/TaxCompliance'
 import AboutCTA from '../components/about/AboutCTA'
+import SEO from '../components/SEO'
 
 export default function About() {
   return (
+    <>
+      <SEO
+        title="About Us — Who We Are"
+        description="Proxynet Group is a Nigerian technology solutions company founded in 2004. Learn about our mission, values, leadership team, and offices across West Africa."
+        canonical="/about"
+      />
     <main>
       <AboutHero />
       <SubNav />
@@ -25,5 +32,6 @@ export default function About() {
       <TaxCompliance />
       <AboutCTA />
     </main>
+    </>
   )
 }

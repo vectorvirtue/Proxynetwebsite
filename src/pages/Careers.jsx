@@ -4,10 +4,17 @@ import OpenRoles from '../components/careers/OpenRoles'
 import GraduateProgramme from '../components/careers/GraduateProgramme'
 import InternshipProgramme from '../components/careers/InternshipProgramme'
 import ApplicationForm from '../components/careers/ApplicationForm'
+import SEO from '../components/SEO'
 
 export default function Careers() {
   return (
-    <main>
+    <>
+      <SEO
+        title="Careers — Join Our Team"
+        description="Build the future of technology in West Africa. Explore open roles, graduate programmes, and internship opportunities at Proxynet Group."
+        canonical="/careers"
+      />
+      <main>
       <CareersHero />
       <LifeAtProxynet />
       <OpenRoles />
@@ -15,5 +22,6 @@ export default function Careers() {
       <InternshipProgramme />
       <ApplicationForm />
     </main>
+    </>
   )
 }

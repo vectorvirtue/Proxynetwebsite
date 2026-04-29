@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
@@ -17,24 +18,26 @@ import './App.css'
 
 export default function App() {
   return (
-    <LanguageProvider>
-      <BrowserRouter>
-        <ScrollToTop />
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/careers" element={<Careers />} />
-          <Route path="/support" element={<Support />} />
-          <Route path="/rentals" element={<Rentals />} />
-          <Route path="/billboard-solutions" element={<BillboardSolutions />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-        <Footer />
-        <WhatsAppButton />
-        <BackToTop />
-        <CookieBanner />
-      </BrowserRouter>
-    </LanguageProvider>
+    <HelmetProvider>
+      <LanguageProvider>
+        <BrowserRouter>
+          <ScrollToTop />
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/support" element={<Support />} />
+            <Route path="/rentals" element={<Rentals />} />
+            <Route path="/billboard-solutions" element={<BillboardSolutions />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+          <Footer />
+          <WhatsAppButton />
+          <BackToTop />
+          <CookieBanner />
+        </BrowserRouter>
+      </LanguageProvider>
+    </HelmetProvider>
   )
 }
