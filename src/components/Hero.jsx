@@ -23,6 +23,18 @@ const slideContent = [
     sub: 'World-class connectivity, infrastructure, and managed services for businesses across Africa — built for reliability, designed for growth.',
   },
   {
+    eyebrow: 'Upcoming Event — May 6, 2026',
+    title: 'Huawei IdeaHub S3',
+    accent: 'Launch',
+    sub: 'Experience the Future of Smart Collaboration. Join us at Four Points by Sheraton, VI, Lagos. 10:00AM WAT.',
+    isEvent: true,
+    eventDate: 'May 6, 2026',
+    eventTime: '10:00AM WAT',
+    eventVenue: 'Four Points by Sheraton, VI, Lagos',
+    eventCta: 'Register Now',
+    eventCtaHref: 'http://events.proxynetgroup.com/',
+  },
+  {
     eyebrow: 'Smart School Solutions',
     title: 'Empowering the Next',
     accent: 'Generation of Talent',
@@ -51,18 +63,6 @@ const slideContent = [
     title: 'Protecting Your',
     accent: 'Infrastructure',
     sub: 'Firewalls, intrusion detection, VPNs, and disaster recovery — we secure your business from threats inside and out.',
-  },
-  {
-    eyebrow: 'Upcoming Event — May 6, 2026',
-    title: 'Huawei IdeaHub S3',
-    accent: 'Launch',
-    sub: 'Experience the Future of Smart Collaboration. Join us at Four Points by Sheraton, VI, Lagos. 10:00AM WAT.',
-    isEvent: true,
-    eventDate: 'May 6, 2026',
-    eventTime: '10:00AM WAT',
-    eventVenue: 'Four Points by Sheraton, VI, Lagos',
-    eventCta: 'Register Now',
-    eventCtaHref: 'http://events.proxynetgroup.com/',
   },
 ]
 
