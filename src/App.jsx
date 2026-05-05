@@ -12,6 +12,7 @@ import EdTech from './pages/EdTech'
 import Blog from './pages/Blog'
 import BlogPost from './pages/BlogPost'
 import CSR from './pages/CSR'
+import Contact from './pages/Contact'
 import NotFound from './pages/NotFound'
 import ScrollToTop from './components/ScrollToTop'
 import WhatsAppButton from './components/WhatsAppButton'
@@ -38,6 +39,7 @@ export default function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/csr" element={<CSR />} />
+          <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />
