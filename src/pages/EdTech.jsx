@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { ChevronRight, Send, GraduationCap, Monitor, Users, BookOpen, Wifi, Cpu } from "lucide-react"
 import SEO from "../components/SEO"
 import Captcha from "../components/Captcha"
+import { useLang } from "../context/LanguageContext"
 import styles from "./EdTech.module.css"
 
 const programmes = [
@@ -22,6 +23,7 @@ const institutions = [
 ]
 
 export default function EdTech() {
+  const { t } = useLang()
   const [submitted, setSubmitted] = useState(false)
   const [captchaToken, setCaptchaToken] = useState(null)
   const [form, setForm] = useState({ name: "", institution: "", role: "", email: "", phone: "", interest: "", notes: "" })
@@ -54,8 +56,8 @@ export default function EdTech() {
               We partner with schools, universities, and institutions across West Africa to deliver smart classroom solutions, digital literacy programmes, and ICT infrastructure.
             </motion.p>
             <motion.div className={styles.heroCtas} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}>
-              <a href="#partner" className={styles.primary}>Partner With Us</a>
-              <a href="#programmes" className={styles.secondary}>View Programmes</a>
+              <a href="#partner" className={styles.primary}>{t.partnerWithUs}</a>
+              <a href="#programmes" className={styles.secondary}>{t.viewProgrammes}</a>
             </motion.div>
           </div>
         </section>
@@ -70,7 +72,7 @@ export default function EdTech() {
               <div className={styles.overviewRight}>
                 <p className={styles.body}>Proxynet EdTech is the education technology division of Proxynet Group. We work with primary schools, secondary schools, universities, and government education agencies to transform learning environments through technology.</p>
                 <p className={styles.body}>From installing interactive displays in classrooms to building campus-wide Wi-Fi networks and running digital literacy workshops â€” we provide end-to-end technology solutions designed specifically for education.</p>
-                <a href="https://edtech.proxynetgroup.com" target="_blank" rel="noopener noreferrer" className={styles.extLink}>Visit the EdTech Website <ChevronRight size={16} /></a>
+                <a href="https://edtech.proxynetgroup.com" target="_blank" rel="noopener noreferrer" className={styles.extLink}>{t.visitEdTechWebsite} <ChevronRight size={16} /></a>
               </div>
             </motion.div>
           </div>
@@ -176,7 +178,7 @@ export default function EdTech() {
                 </div>
                 <div className={styles.field}><label className={styles.label}>Additional Notes</label><textarea rows="4" className={styles.textarea} value={form.notes} onChange={e => setForm({...form, notes: e.target.value})} /></div>
                 <Captcha onChange={setCaptchaToken} />
-                <button type="submit" className={styles.submitBtn} disabled={!captchaToken} style={{ opacity: captchaToken ? 1 : 0.5, cursor: captchaToken ? 'pointer' : 'not-allowed' }}>Submit Enquiry <Send size={16} /></button>
+                <button type="submit" className={styles.submitBtn} disabled={!captchaToken} style={{ opacity: captchaToken ? 1 : 0.5, cursor: captchaToken ? 'pointer' : 'not-allowed' }}>{t.submitEnquiry} <Send size={16} /></button>
               </motion.form>
             )}
           </div>

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import { ChevronRight, Send, Monitor, Building2, ShoppingCart, Megaphone } from "lucide-react"
 import Captcha from '../components/Captcha'
+import { useLang } from '../context/LanguageContext'
 import styles from "./BillboardSolutions.module.css"
 
 const useCases = [
@@ -24,6 +25,7 @@ const specs = [
 ]
 
 export default function BillboardSolutions() {
+  const { t } = useLang()
   const [submitted, setSubmitted] = useState(false)
   const [captchaToken, setCaptchaToken] = useState(null)
   const [form, setForm] = useState({ name: "", company: "", location: "", useCase: "", notes: "" })
@@ -51,8 +53,8 @@ export default function BillboardSolutions() {
             Indoor and outdoor digital signage, LED walls, and billboard deployments that command attention and deliver results.
           </motion.p>
           <motion.div className={styles.heroCtas} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}>
-            <a href="#enquire" className={styles.primary}>Request a Quote</a>
-            <a href="#usecases" className={styles.secondary}>View Case Studies</a>
+            <a href="#enquire" className={styles.primary}>{t.requestAQuote}</a>
+            <a href="#usecases" className={styles.secondary}>{t.viewCaseStudies}</a>
           </motion.div>
         </div>
       </section>
@@ -127,7 +129,7 @@ export default function BillboardSolutions() {
               </div>
               <div className={styles.field}><label className={styles.label}>Project Details</label><textarea rows="4" className={styles.textarea} value={form.notes} onChange={e => setForm({...form, notes: e.target.value})} placeholder="Screen size, quantity, indoor/outdoor, timeline..." /></div>
               <Captcha onChange={setCaptchaToken} />
-              <button type="submit" className={styles.submitBtn} disabled={!captchaToken} style={{ opacity: captchaToken ? 1 : 0.5, cursor: captchaToken ? 'pointer' : 'not-allowed' }}>Submit Request <Send size={16} /></button>
+              <button type="submit" className={styles.submitBtn} disabled={!captchaToken} style={{ opacity: captchaToken ? 1 : 0.5, cursor: captchaToken ? 'pointer' : 'not-allowed' }}>{t.submitEnquiry} <Send size={16} /></button>
             </motion.form>
           )}
         </div>

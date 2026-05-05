@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { FileText, Video, BookOpen, Download, ArrowRight } from 'lucide-react'
+import { useLang } from '../../context/LanguageContext'
 import styles from './OnboardingResources.module.css'
 
 const resources = [
@@ -10,6 +11,7 @@ const resources = [
 ]
 
 export default function OnboardingResources() {
+  const { t } = useLang()
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
@@ -26,7 +28,7 @@ export default function OnboardingResources() {
               <span className={styles.type}>{r.type}</span>
               <h3 className={styles.title}>{r.title}</h3>
               <p className={styles.desc}>{r.desc}</p>
-              <a href="mailto:info@proxynetgroup.com" className={styles.link}>Request Access <ArrowRight size={14} /></a>
+              <a href="mailto:info@proxynetgroup.com" className={styles.link}>{t.requestAccess} <ArrowRight size={14} /></a>
             </motion.div>
           ))}
         </div>

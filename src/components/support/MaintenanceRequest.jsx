@@ -2,9 +2,11 @@ import { useState } from 'react'
 import Captcha from '../../components/Captcha'
 import { motion } from 'framer-motion'
 import { Wrench, Send } from 'lucide-react'
+import { useLang } from '../../context/LanguageContext'
 import styles from './MaintenanceRequest.module.css'
 
 export default function MaintenanceRequest() {
+  const { t } = useLang()
   const [submitted, setSubmitted] = useState(false)
   const [captchaToken, setCaptchaToken] = useState(null)
   const [form, setForm] = useState({ name: '', email: '', phone: '', site: '', date: '', description: '' })
@@ -42,7 +44,7 @@ export default function MaintenanceRequest() {
             <div className={styles.field}><label className={styles.label}>Preferred Date (for scheduled maintenance)</label><input type="date" className={styles.input} value={form.date} onChange={e => setForm({...form, date: e.target.value})} /></div>
             <div className={styles.field}><label className={styles.label}>Issue Description</label><textarea required rows="5" className={styles.textarea} value={form.description} onChange={e => setForm({...form, description: e.target.value})} placeholder="Describe the issue or maintenance required..." /></div>
             <Captcha onChange={setCaptchaToken} />
-            <button type="submit" className={styles.submit}>Submit Request <Send size={16} /></button>
+            <button type="submit" className={styles.submit}>{t.submitRequest} <Send size={16} /></button>
           </motion.form>
         )}
       </div>

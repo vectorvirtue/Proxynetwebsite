@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { MapPin, Phone, Mail } from 'lucide-react'
+import { useLang } from '../../context/LanguageContext'
 import styles from './Locations.module.css'
 
 const offices = [
@@ -43,6 +44,7 @@ const offices = [
 ]
 
 export default function Locations() {
+  const { t } = useLang()
   const [active, setActive] = useState(0)
   const office = offices[active]
 
@@ -96,8 +98,8 @@ export default function Locations() {
             </div>
 
             <div className={styles.detailCtas}>
-              <a href={`mailto:${office.email}`} className={styles.primary}>Contact This Office</a>
-              <a href={office.mapUrl} target="_blank" rel="noopener noreferrer" className={styles.secondary}>View on Map</a>
+              <a href={`mailto:${office.email}`} className={styles.primary}>{t.contactThisOffice}</a>
+              <a href={office.mapUrl} target="_blank" rel="noopener noreferrer" className={styles.secondary}>{t.viewOnMap}</a>
             </div>
           </motion.div>
         </div>

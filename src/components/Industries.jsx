@@ -61,10 +61,10 @@ export default function Industries() {
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           <Link to="/solutions" className={styles.ctaPrimary}>
-            Find Your Solution <ArrowRight size={16} />
+            {t.findYourSolution} <ArrowRight size={16} />
           </Link>
           <Link to="/contact" className={styles.ctaSecondary}>
-            Contact Sales
+            {t.contactSales}
           </Link>
         </motion.div>
 

@@ -2,9 +2,11 @@ import { useState } from 'react'
 import Captcha from '../../components/Captcha'
 import { motion } from 'framer-motion'
 import { Upload, Send } from 'lucide-react'
+import { useLang } from '../../context/LanguageContext'
 import styles from './ApplicationForm.module.css'
 
 export default function ApplicationForm() {
+  const { t } = useLang()
   const [submitted, setSubmitted] = useState(false)
   const [captchaToken, setCaptchaToken] = useState(null)
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', role: '', cv: null, note: '' })
@@ -78,7 +80,7 @@ export default function ApplicationForm() {
           </div>
 
           <button type="submit" className={styles.submit}>
-            Submit Application <Send size={16} />
+            {t.submitApplication} <Send size={16} />
           </button>
         </motion.form>
       </div>

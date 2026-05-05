@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight, Clock, User, Send } from 'lucide-react'
 import SEO from '../components/SEO'
+import { useLang } from '../context/LanguageContext'
 import { posts, categories } from '../data/blogPosts'
 import styles from './Blog.module.css'
 
 export default function Blog() {
+  const { t } = useLang()
   const [activeCategory, setActiveCategory] = useState('All')
   const [email, setEmail] = useState('')
   const [subscribed, setSubscribed] = useState(false)
@@ -39,8 +41,8 @@ export default function Blog() {
               Thought leadership, industry analysis, company news, and partner updates from the Proxynet team.
             </motion.p>
             <motion.div className={styles.heroCtas} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
-              <a href="#posts" className={styles.primary}>Read Latest Posts</a>
-              <a href="#newsletter" className={styles.secondary}>Subscribe for Updates</a>
+              <a href="#posts" className={styles.primary}>{t.readLatestPosts}</a>
+              <a href="#newsletter" className={styles.secondary}>{t.subscribeForUpdates}</a>
             </motion.div>
           </div>
         </section>
@@ -113,7 +115,7 @@ export default function Blog() {
                     aria-label="Email address"
                   />
                   <button type="submit" className={styles.newsletterBtn}>
-                    Subscribe <Send size={15} />
+                    {t.subscribe} <Send size={15} />
                   </button>
                 </form>
               )}

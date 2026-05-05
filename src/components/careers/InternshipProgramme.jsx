@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { BookOpen, ArrowRight } from 'lucide-react'
+import { useLang } from '../../context/LanguageContext'
 import styles from './Programme.module.css'
 
 const departments = [
@@ -12,6 +13,7 @@ const departments = [
 ]
 
 export default function InternshipProgramme() {
+  const { t } = useLang()
   return (
     <section className={`${styles.section} ${styles.sectionAlt}`}>
       <div className={styles.inner}>
@@ -35,7 +37,7 @@ export default function InternshipProgramme() {
           </div>
 
           <a href="#apply" className={styles.cta}>
-            Apply for Internship <ArrowRight size={16} />
+            {t.applyForInternship} <ArrowRight size={16} />
           </a>
         </motion.div>
       </div>

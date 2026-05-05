@@ -12,28 +12,29 @@ import img6 from "../assets/Picture6.png"
 import img7 from "../assets/Picture7.png"
 import styles from "./FeaturedProjects.module.css"
 
-const projects = [
-  { img: img1, client: "UBA", solution: "15-Display NOC Solution", category: "NOC & Command Centre", outcome: "Deployed a 15-screen network operations centre enabling real-time monitoring across UBA infrastructure." },
-  { img: img2, client: "Access Bank", solution: "4x2 46-Inch Videowall with NOC Monitoring Solution", category: "Videowall & NOC", outcome: "Installed a high-resolution 8-panel videowall for centralised network and security monitoring." },
-  { img: img3, client: "Wigwe University Isiokpo", solution: "Command Center Solution for Link Health and Infrastructure Monitoring", category: "Design, Deployment & Support", outcome: "End-to-end command center solution for monitoring link health and infrastructure across the university campus." },
-  { img: img4, client: "Access Bank, DIG", solution: "32-Display NOC Solution", category: "NOC & Command Centre", outcome: "Deployed a 32-screen network operations centre for Access Bank DIG, enabling comprehensive infrastructure monitoring." },
-  { img: img5, client: "FCMB Lagos HQ", solution: "NOC VideoWall with Peerless VideoWall Floor Stand", category: "Videowall & NOC", outcome: "Installed a high-resolution NOC videowall with Peerless floor stand at FCMB Lagos headquarters." },
-  { img: img6, client: "ePROCESS", solution: "Command Center Solution for Infrastructure Monitoring", category: "Design, Deployment & Support", outcome: "Deployed a command center solution for infrastructure monitoring at ePROCESS offices in Accra, Ghana." },
-  { img: img7, client: "NLNG", solution: "Multi-Site Logitech VC Solution", category: "AV & Collaboration", outcome: "Implemented a multi-site Logitech video conferencing solution across Lagos, Bonny, Port Harcourt, and Abuja." },
-]
-
-const variants = {
-  enter: (d) => ({ x: d > 0 ? 80 : -80, opacity: 0 }),
-  center: { x: 0, opacity: 1, transition: { duration: 0.4, ease: "easeOut" } },
-  exit: (d) => ({ x: d > 0 ? -80 : 80, opacity: 0, transition: { duration: 0.25 } }),
-}
-
 export default function FeaturedProjects() {
   const { t } = useLang()
   const [current, setCurrent] = useState(0)
   const [direction, setDirection] = useState(1)
+
+  const projects = [
+    { img: img1, client: 'UBA', solution: t.proj1Solution, category: t.proj1Category, outcome: t.proj1Outcome },
+    { img: img2, client: 'Access Bank', solution: t.proj2Solution, category: t.proj2Category, outcome: t.proj2Outcome },
+    { img: img3, client: 'Wigwe University Isiokpo', solution: t.proj3Solution, category: t.proj3Category, outcome: t.proj3Outcome },
+    { img: img4, client: 'Access Bank, DIG', solution: t.proj4Solution, category: t.proj4Category, outcome: t.proj4Outcome },
+    { img: img5, client: 'FCMB Lagos HQ', solution: t.proj5Solution, category: t.proj5Category, outcome: t.proj5Outcome },
+    { img: img6, client: 'ePROCESS', solution: t.proj6Solution, category: t.proj6Category, outcome: t.proj6Outcome },
+    { img: img7, client: 'NLNG', solution: t.proj7Solution, category: t.proj7Category, outcome: t.proj7Outcome },
+  ]
+
   const total = projects.length
   const proj = projects[current]
+
+  const variants = {
+    enter: (d) => ({ x: d > 0 ? 80 : -80, opacity: 0 }),
+    center: { x: 0, opacity: 1, transition: { duration: 0.4, ease: 'easeOut' } },
+    exit: (d) => ({ x: d > 0 ? -80 : 80, opacity: 0, transition: { duration: 0.25 } }),
+  }
 
   useEffect(() => {
     const id = setInterval(() => go(1), 5000)
@@ -84,8 +85,8 @@ export default function FeaturedProjects() {
           </div>
         </motion.div>
         <div className={styles.ctas}>
-          <Link to="/contact" className={styles.ctaPrimary}>Start a Project</Link>
-          <Link to="/case-studies" className={styles.ctaSecondary}>View Case Studies</Link>
+          <Link to="/contact" className={styles.ctaPrimary}>{t.startAProject}</Link>
+          <Link to="/case-studies" className={styles.ctaSecondary}>{t.viewCaseStudies}</Link>
         </div>
       </div>
     </section>

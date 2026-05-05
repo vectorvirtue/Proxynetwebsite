@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { GraduationCap, CheckCircle, ArrowRight } from 'lucide-react'
+import { useLang } from '../../context/LanguageContext'
 import styles from './Programme.module.css'
 
 const eligibility = [
@@ -18,6 +19,7 @@ const gains = [
 ]
 
 export default function GraduateProgramme() {
+  const { t } = useLang()
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
@@ -56,7 +58,7 @@ export default function GraduateProgramme() {
           </div>
 
           <a href="#apply" className={styles.cta}>
-            Apply for Graduate Programme <ArrowRight size={16} />
+            {t.applyForGraduate} <ArrowRight size={16} />
           </a>
         </motion.div>
       </div>

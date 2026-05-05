@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { MapPin, Briefcase, Clock, ArrowRight } from 'lucide-react'
+import { useLang } from '../../context/LanguageContext'
 import styles from './OpenRoles.module.css'
 
 const roles = [
@@ -13,6 +14,7 @@ const roles = [
 ]
 
 export default function OpenRoles() {
+  const { t } = useLang()
   const [selected, setSelected] = useState(null)
 
   return (
@@ -36,7 +38,7 @@ export default function OpenRoles() {
                 </div>
               </div>
               <a href="#apply" className={styles.applyBtn}>
-                Apply <ArrowRight size={14} />
+                {t.apply} <ArrowRight size={14} />
               </a>
             </motion.div>
           ))}

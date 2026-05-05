@@ -15,62 +15,62 @@ const VIDEO_ID = 'qrQZiRbFj34'
 const images = [img1, img2, img3, img4, img5, img6]
 const TOTAL = 1 + images.length
 
-const slideContent = [
-  {
-    eyebrow: 'Enterprise Technology Solutions',
-    title: 'Powering Africa\'s',
-    accent: 'Digital Future',
-    sub: 'World-class connectivity, infrastructure, and managed services for businesses across Africa — built for reliability, designed for growth.',
-  },
-  {
-    eyebrow: 'Upcoming Event — May 6, 2026',
-    title: 'Huawei IdeaHub S3',
-    accent: 'Launch',
-    sub: 'Experience the Future of Smart Collaboration. Join us at Four Points by Sheraton, VI, Lagos. 10:00AM WAT.',
-    isEvent: true,
-    eventDate: 'May 6, 2026',
-    eventTime: '10:00AM WAT',
-    eventVenue: 'Four Points by Sheraton, VI, Lagos',
-    eventCta: 'Register Now',
-    eventCtaHref: 'http://events.proxynetgroup.com/',
-  },
-  {
-    eyebrow: 'Smart School Solutions',
-    title: 'Empowering the Next',
-    accent: 'Generation of Talent',
-    sub: 'Proxynet EdTech delivers smart classrooms, digital literacy programmes, and ICT infrastructure to schools across West Africa.',
-  },
-  {
-    eyebrow: 'NOC & Command Centres',
-    title: 'Real-Time Monitoring',
-    accent: 'at Scale',
-    sub: 'From 15-display NOC solutions to full command centres — we design and deploy infrastructure that keeps your operations visible.',
-  },
-  {
-    eyebrow: 'Systems Integration',
-    title: 'Technology That',
-    accent: 'Works Together',
-    sub: 'We connect your hardware, software, and networks into one seamless system — eliminating silos and driving operational efficiency.',
-  },
-  {
-    eyebrow: 'AV & Videowall Solutions',
-    title: 'Displays That',
-    accent: 'Command Attention',
-    sub: 'From boardroom videowalls to large-scale event AV — we design, deploy, and support world-class display solutions.',
-  },
-  {
-    eyebrow: 'Cybersecurity',
-    title: 'Protecting Your',
-    accent: 'Infrastructure',
-    sub: 'Firewalls, intrusion detection, VPNs, and disaster recovery — we secure your business from threats inside and out.',
-  },
-]
-
 export default function Hero() {
   const { t } = useLang()
   const [current, setCurrent] = useState(0)
   const [direction, setDirection] = useState(1)
   const [paused, setPaused] = useState(false)
+
+  const slideContent = [
+    {
+      eyebrow: t.slide0Eyebrow,
+      title: t.slide0Title,
+      accent: t.slide0Accent,
+      sub: t.slide0Sub,
+    },
+    {
+      eyebrow: t.slide1Eyebrow,
+      title: t.slide1Title,
+      accent: t.slide1Accent,
+      sub: t.slide1Sub,
+      isEvent: true,
+      eventDate: t.slide1EventDate,
+      eventTime: t.slide1EventTime,
+      eventVenue: t.slide1EventVenue,
+      eventCta: t.slide1EventCta,
+      eventCtaHref: 'http://events.proxynetgroup.com/',
+    },
+    {
+      eyebrow: t.slide2Eyebrow,
+      title: t.slide2Title,
+      accent: t.slide2Accent,
+      sub: t.slide2Sub,
+    },
+    {
+      eyebrow: t.slide3Eyebrow,
+      title: t.slide3Title,
+      accent: t.slide3Accent,
+      sub: t.slide3Sub,
+    },
+    {
+      eyebrow: t.slide4Eyebrow,
+      title: t.slide4Title,
+      accent: t.slide4Accent,
+      sub: t.slide4Sub,
+    },
+    {
+      eyebrow: t.slide5Eyebrow,
+      title: t.slide5Title,
+      accent: t.slide5Accent,
+      sub: t.slide5Sub,
+    },
+    {
+      eyebrow: t.slide6Eyebrow,
+      title: t.slide6Title,
+      accent: t.slide6Accent,
+      sub: t.slide6Sub,
+    },
+  ]
 
   useEffect(() => {
     if (paused) return

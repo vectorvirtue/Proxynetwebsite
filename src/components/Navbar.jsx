@@ -20,34 +20,34 @@ export default function Navbar() {
 
   const solutions = [
     {
-      category: 'AV & Infrastructure',
+      category: t.catAVInfra,
       items: [
-        { icon: <TvMinimal size={18} />, label: 'Professional AV Solutions', href: '/solutions/av' },
-        { icon: <Network size={18} />, label: 'Network Infrastructure & Systems Integration', href: '/solutions/networking' },
-        { icon: <Shield size={18} />, label: 'IT Security & Cybersecurity', href: '/solutions/cybersecurity' },
-        { icon: <Cpu size={18} />, label: 'IoT & Smart Infrastructure', href: '/solutions/iot' },
+        { icon: <TvMinimal size={18} />, label: t.solAV, href: '/solutions/av' },
+        { icon: <Network size={18} />, label: t.solNetworking, href: '/solutions/networking' },
+        { icon: <Shield size={18} />, label: t.solCybersecurity, href: '/solutions/cybersecurity' },
+        { icon: <Cpu size={18} />, label: t.solIoT, href: '/solutions/iot' },
       ],
     },
     {
-      category: 'Software & Apps',
+      category: t.catSoftwareApps,
       items: [
-        { icon: <BarChart2 size={18} />, label: 'Enterprise Software Solutions', href: '/solutions/enterprise-software' },
-        { icon: <Server size={18} />, label: 'ERP Solutions', href: '/solutions/erp' },
-        { icon: <Building2 size={18} />, label: 'Visitor Management — ProVMS', href: '/solutions/provms' },
-        { icon: <GraduationCap size={18} />, label: 'School Management — ProSkool', href: '/solutions/proskool' },
+        { icon: <BarChart2 size={18} />, label: t.solEnterpriseSoftware, href: '/solutions/enterprise-software' },
+        { icon: <Server size={18} />, label: t.solERP, href: '/solutions/erp' },
+        { icon: <Building2 size={18} />, label: t.solProVMS, href: '/solutions/provms' },
+        { icon: <GraduationCap size={18} />, label: t.solProSkool, href: '/solutions/proskool' },
       ],
     },
     {
-      category: 'Managed & Cloud',
+      category: t.catManagedCloud,
       items: [
-        { icon: <Headphones size={18} />, label: 'Unified Communications', href: '/solutions/unified-communications' },
-        { icon: <Globe size={18} />, label: 'Cloud & Managed Services', href: '/solutions/cloud-managed-services' },
-        { icon: <Monitor size={18} />, label: 'CAD Services', href: '/solutions/cad-services' },
-        { icon: <BarChart2 size={18} />, label: 'Distribution & Reseller Services', href: '/solutions/distribution' },
+        { icon: <Headphones size={18} />, label: t.solUnifiedComms, href: '/solutions/unified-communications' },
+        { icon: <Globe size={18} />, label: t.solCloud, href: '/solutions/cloud-managed-services' },
+        { icon: <Monitor size={18} />, label: t.solCAD, href: '/solutions/cad-services' },
+        { icon: <BarChart2 size={18} />, label: t.solDistribution, href: '/solutions/distribution' },
       ],
     },
     {
-      category: 'Specialist',
+      category: t.catSpecialist,
       items: [
         { icon: <GraduationCap size={18} />, label: t.edtech, href: '/solutions/edtech' },
         { icon: <TvMinimal size={18} />, label: t.rentals, href: '/rentals' },

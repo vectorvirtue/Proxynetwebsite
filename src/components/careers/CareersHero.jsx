@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronRight, ChevronLeft } from 'lucide-react'
+import { useLang } from '../../context/LanguageContext'
 import img1 from '../../assets/idehub.jpg'
 import img2 from '../../assets/Picture1.jpg'
 import img3 from '../../assets/Picture2.png'
@@ -13,6 +14,7 @@ import styles from './CareersHero.module.css'
 const slides = [img1, img2, img3, img4, img5]
 
 export default function CareersHero() {
+  const { t } = useLang()
   const [current, setCurrent] = useState(0)
   const [direction, setDirection] = useState(1)
 
@@ -79,8 +81,8 @@ export default function CareersHero() {
         </motion.p>
 
         <motion.div className={styles.ctas} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}>
-          <a href="#roles" className={styles.primary}>View Open Roles</a>
-          <a href="#life" className={styles.secondary}>Learn About Our Culture</a>
+          <a href="#roles" className={styles.primary}>{t.viewOpenRoles}</a>
+          <a href="#life" className={styles.secondary}>{t.learnAboutCulture}</a>
         </motion.div>
       </div>
     </section>

@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import { useLang } from '../context/LanguageContext'
 import styles from './CookieBanner.module.css'
 
 export default function CookieBanner() {
+  const { t } = useLang()
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
@@ -29,17 +31,18 @@ export default function CookieBanner() {
         >
           <div className={styles.inner}>
             <div className={styles.text}>
-              <p className={styles.title}>We use cookies</p>
+              <p className={styles.title}>{t.cookieTitle}</p>
               <p className={styles.body}>
-                We use cookies to improve your experience on our website, analyse traffic, and personalise content. By clicking "Accept", you consent to our use of cookies in accordance with the{' '}
-                <Link to="/privacy-policy" className={styles.link}>Privacy Policy</Link> and{' '}
-                <Link to="/cookie-policy" className={styles.link}>Cookie Policy</Link>.
-                This site complies with the Nigeria Data Protection Regulation (NDPR) and GDPR.
+                {t.cookieBody}{' '}
+                <Link to="/privacy-policy" className={styles.link}>{t.privacyPolicy}</Link>{' '}
+                {t.cookieAnd}{' '}
+                <Link to="/cookie-policy" className={styles.link}>{t.cookiePolicy}</Link>.{' '}
+                {t.cookieCompliance}
               </p>
             </div>
             <div className={styles.actions}>
-              <button className={styles.decline} onClick={decline}>Decline</button>
-              <button className={styles.accept} onClick={accept}>Accept All</button>
+              <button className={styles.decline} onClick={decline}>{t.cookieDecline}</button>
+              <button className={styles.accept} onClick={accept}>{t.cookieAccept}</button>
             </div>
           </div>
         </motion.div>

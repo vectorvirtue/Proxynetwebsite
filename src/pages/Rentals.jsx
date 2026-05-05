@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import { ChevronRight, Send, TvMinimal, Volume2, Monitor, Layers } from "lucide-react"
 import Captcha from '../components/Captcha'
+import { useLang } from '../context/LanguageContext'
 import styles from "./Rentals.module.css"
 
 const equipment = [
@@ -20,6 +21,7 @@ const steps = [
 ]
 
 export default function Rentals() {
+  const { t } = useLang()
   const [submitted, setSubmitted] = useState(false)
   const [captchaToken, setCaptchaToken] = useState(null)
   const [form, setForm] = useState({ name: "", company: "", date: "", location: "", equipment: "", notes: "" })
@@ -52,8 +54,8 @@ export default function Rentals() {
               From intimate boardroom setups to large-scale outdoor events, we supply, install, and operate professional AV equipment across Nigeria and West Africa.
             </motion.p>
             <motion.div className={styles.heroCtas} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}>
-              <a href="#enquire" className={styles.primary}>Request a Rental</a>
-              <a href="#equipment" className={styles.secondary}>View Equipment</a>
+              <a href="#enquire" className={styles.primary}>{t.requestARental}</a>
+              <a href="#equipment" className={styles.secondary}>{t.viewEquipment}</a>
             </motion.div>
           </div>
         </section>
@@ -139,7 +141,7 @@ export default function Rentals() {
                 <div className={styles.field}><label className={styles.label}>Equipment Needed</label><input required className={styles.input} placeholder="e.g. 2x2 videowall, PA system, 2x touch screens" value={form.equipment} onChange={e => setForm({...form, equipment: e.target.value})} /></div>
                 <div className={styles.field}><label className={styles.label}>Additional Notes</label><textarea rows="4" className={styles.textarea} value={form.notes} onChange={e => setForm({...form, notes: e.target.value})} /></div>
                 <Captcha onChange={setCaptchaToken} />
-                <button type="submit" className={styles.submitBtn} disabled={!captchaToken} style={{ opacity: captchaToken ? 1 : 0.5, cursor: captchaToken ? 'pointer' : 'not-allowed' }}>Submit Enquiry <Send size={16} /></button>
+                <button type="submit" className={styles.submitBtn} disabled={!captchaToken} style={{ opacity: captchaToken ? 1 : 0.5, cursor: captchaToken ? 'pointer' : 'not-allowed' }}>{t.submitEnquiry} <Send size={16} /></button>
               </motion.form>
             )}
           </div>
