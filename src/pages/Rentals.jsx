@@ -3,6 +3,7 @@ import SEO from "../components/SEO"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import { ChevronRight, Send, TvMinimal, Volume2, Monitor, Layers } from "lucide-react"
+import Captcha from '../components/Captcha'
 import styles from "./Rentals.module.css"
 
 const equipment = [
@@ -20,14 +21,16 @@ const steps = [
 
 export default function Rentals() {
   const [submitted, setSubmitted] = useState(false)
+  const [captchaToken, setCaptchaToken] = useState(null)
   const [form, setForm] = useState({ name: "", company: "", date: "", location: "", equipment: "", notes: "" })
 
-  const handleSubmit = (e) => { e.preventDefault(); setSubmitted(true) }
+
+  const handleSubmit = (e) => { e.preventDefault(); if (!captchaToken) return; setSubmitted(true) }
 
   return (
     <>
       <SEO
-        title="AV Equipment Rentals â€” World-Class AV for Your Events"
+        title="AV Equipment Rentals Ã¢â‚¬â€ World-Class AV for Your Events"
         description="Rent professional AV equipment for events across Nigeria and West Africa. Videowalls, displays, touch screens, audio systems. Delivered and operated by Proxynet."
         canonical="/rentals"
       />
@@ -84,7 +87,7 @@ export default function Rentals() {
             <motion.div className={styles.sectionHeader} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <p className={styles.eyebrowLight}>Event Gallery</p>
               <h2 className={styles.headingLight}>Past Deployments</h2>
-              <p className={styles.galleryNote}>Photos coming soon â€” check back after our next event.</p>
+              <p className={styles.galleryNote}>Photos coming soon Ã¢â‚¬â€ check back after our next event.</p>
             </motion.div>
             <div className={styles.galleryGrid}>
               {[1,2,3,4,5,6].map(i => (
@@ -135,7 +138,8 @@ export default function Rentals() {
                 </div>
                 <div className={styles.field}><label className={styles.label}>Equipment Needed</label><input required className={styles.input} placeholder="e.g. 2x2 videowall, PA system, 2x touch screens" value={form.equipment} onChange={e => setForm({...form, equipment: e.target.value})} /></div>
                 <div className={styles.field}><label className={styles.label}>Additional Notes</label><textarea rows="4" className={styles.textarea} value={form.notes} onChange={e => setForm({...form, notes: e.target.value})} /></div>
-                <button type="submit" className={styles.submitBtn}>Submit Enquiry <Send size={16} /></button>
+                <Captcha onChange={setCaptchaToken} />
+                <button type="submit" className={styles.submitBtn} disabled={!captchaToken} style={{ opacity: captchaToken ? 1 : 0.5, cursor: captchaToken ? 'pointer' : 'not-allowed' }}>Submit Enquiry <Send size={16} /></button>
               </motion.form>
             )}
           </div>

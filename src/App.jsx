@@ -8,6 +8,10 @@ import Careers from './pages/Careers'
 import Support from './pages/Support'
 import Rentals from './pages/Rentals'
 import BillboardSolutions from './pages/BillboardSolutions'
+import EdTech from './pages/EdTech'
+import Blog from './pages/Blog'
+import BlogPost from './pages/BlogPost'
+import CSR from './pages/CSR'
 import NotFound from './pages/NotFound'
 import ScrollToTop from './components/ScrollToTop'
 import WhatsAppButton from './components/WhatsAppButton'
@@ -30,6 +34,10 @@ export default function App() {
             <Route path="/support" element={<Support />} />
             <Route path="/rentals" element={<Rentals />} />
             <Route path="/billboard-solutions" element={<BillboardSolutions />} />
+          <Route path="/solutions/edtech" element={<EdTech />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/csr" element={<CSR />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />

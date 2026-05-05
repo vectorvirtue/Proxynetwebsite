@@ -1,14 +1,17 @@
 import { useState } from 'react'
+import Captcha from '../../components/Captcha'
 import { motion } from 'framer-motion'
 import { Upload, Send } from 'lucide-react'
 import styles from './ApplicationForm.module.css'
 
 export default function ApplicationForm() {
   const [submitted, setSubmitted] = useState(false)
+  const [captchaToken, setCaptchaToken] = useState(null)
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', role: '', cv: null, note: '' })
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    if (!captchaToken) return
     setSubmitted(true)
   }
 

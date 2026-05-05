@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import { Link } from "react-router-dom"
 import { useLang } from "../context/LanguageContext"
 import img1 from "../assets/Picture1.jpg"
 import img2 from "../assets/Picture2.png"
@@ -82,6 +83,10 @@ export default function FeaturedProjects() {
             </div>
           </div>
         </motion.div>
+        <div className={styles.ctas}>
+          <Link to="/contact" className={styles.ctaPrimary}>Start a Project</Link>
+          <Link to="/case-studies" className={styles.ctaSecondary}>View Case Studies</Link>
+        </div>
       </div>
     </section>
   )

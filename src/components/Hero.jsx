@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
@@ -11,43 +11,87 @@ import img5 from '../assets/Picture4.png'
 import img6 from '../assets/Picture5.png'
 import styles from './Hero.module.css'
 
-// Slide 0 is the YouTube video, slides 1+ are images
 const VIDEO_ID = 'qrQZiRbFj34'
 const images = [img1, img2, img3, img4, img5, img6]
-const TOTAL = 1 + images.length // video + images
+const TOTAL = 1 + images.length
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  show: (i) => ({ opacity: 1, y: 0, transition: { duration: 0.6, delay: i * 0.12, ease: 'easeOut' } }),
-}
+const slideContent = [
+  {
+    eyebrow: 'Enterprise Technology Solutions',
+    title: 'Powering Africa\'s',
+    accent: 'Digital Future',
+    sub: 'World-class connectivity, infrastructure, and managed services for businesses across Africa — built for reliability, designed for growth.',
+  },
+  {
+    eyebrow: 'Smart School Solutions',
+    title: 'Empowering the Next',
+    accent: 'Generation of Talent',
+    sub: 'Proxynet EdTech delivers smart classrooms, digital literacy programmes, and ICT infrastructure to schools across West Africa.',
+  },
+  {
+    eyebrow: 'NOC & Command Centres',
+    title: 'Real-Time Monitoring',
+    accent: 'at Scale',
+    sub: 'From 15-display NOC solutions to full command centres — we design and deploy infrastructure that keeps your operations visible.',
+  },
+  {
+    eyebrow: 'Systems Integration',
+    title: 'Technology That',
+    accent: 'Works Together',
+    sub: 'We connect your hardware, software, and networks into one seamless system — eliminating silos and driving operational efficiency.',
+  },
+  {
+    eyebrow: 'AV & Videowall Solutions',
+    title: 'Displays That',
+    accent: 'Command Attention',
+    sub: 'From boardroom videowalls to large-scale event AV — we design, deploy, and support world-class display solutions.',
+  },
+  {
+    eyebrow: 'Cybersecurity',
+    title: 'Protecting Your',
+    accent: 'Infrastructure',
+    sub: 'Firewalls, intrusion detection, VPNs, and disaster recovery — we secure your business from threats inside and out.',
+  },
+  {
+    eyebrow: 'Upcoming Event — May 6, 2026',
+    title: 'Huawei IdeaHub S3',
+    accent: 'Launch',
+    sub: 'Experience the Future of Smart Collaboration. Join us at Four Points by Sheraton, VI, Lagos. 10:00AM WAT.',
+    isEvent: true,
+    eventDate: 'May 6, 2026',
+    eventTime: '10:00AM WAT',
+    eventVenue: 'Four Points by Sheraton, VI, Lagos',
+    eventCta: 'Register Now',
+    eventCtaHref: 'http://events.proxynetgroup.com/',
+  },
+]
 
 export default function Hero() {
   const { t } = useLang()
   const [current, setCurrent] = useState(0)
   const [direction, setDirection] = useState(1)
+  const [paused, setPaused] = useState(false)
 
   useEffect(() => {
-    const duration = current === 0 ? 120000 : 3000 // 2 min for video, 3s for images
+    if (paused) return
+    const duration = current === 0 ? 120000 : 6000
     const id = setInterval(() => {
       setDirection(1)
       setCurrent(p => (p + 1) % TOTAL)
     }, duration)
     return () => clearInterval(id)
-  }, [current])
+  }, [current, paused])
 
   const go = (dir) => {
     setDirection(dir)
     setCurrent(p => (p + dir + TOTAL) % TOTAL)
   }
 
-  const solutions = [
-    t.itSecurity, t.systemsIntegration, t.enterpriseNetworking,
-    t.intrusionDetection, t.firewallSecurity, t.vpn,
-  ]
+  const slide = slideContent[current] || slideContent[0]
 
   return (
-    <section className={styles.hero} aria-label="Hero">
-      {/* Background — video for slide 0, image for rest */}
+    <section className={styles.hero} aria-label="Hero" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
+      {/* Background */}
       <div className={styles.videoBg} aria-hidden="true">
         {current === 0 ? (
           <iframe
@@ -74,7 +118,7 @@ export default function Hero() {
       </div>
       <div className={styles.videoOverlay} aria-hidden="true" />
 
-      {/* Carousel arrows */}
+      {/* Arrows */}
       <button className={`${styles.arrow} ${styles.arrowLeft}`} onClick={() => go(-1)} aria-label="Previous slide">
         <ChevronLeft size={24} />
       </button>
@@ -82,29 +126,60 @@ export default function Hero() {
         <ChevronRight size={24} />
       </button>
 
-      {/* Slide dots */}
+      {/* Dots */}
       <div className={styles.slideDots} aria-hidden="true">
         {Array.from({ length: TOTAL }).map((_, i) => (
           <button key={i} className={`${styles.slideDot} ${i === current ? styles.slideDotActive : ''}`} onClick={() => { setDirection(i > current ? 1 : -1); setCurrent(i) }} />
         ))}
       </div>
 
-      {/* Glow blobs */}
       <div className={styles.blobBlue} aria-hidden="true" />
       <div className={styles.blobSky} aria-hidden="true" />
 
+      {/* Content — changes with each slide */}
       <div className={styles.inner}>
-        <motion.p className={styles.eyebrow} variants={fadeUp} initial="hidden" animate="show" custom={0}>{t.heroEyebrow}</motion.p>
-        <motion.h1 className={styles.title} variants={fadeUp} initial="hidden" animate="show" custom={1}>
-          {t.heroTitle} <span className={styles.accent}>{t.heroTitleAccent}</span>
-        </motion.h1>
-        <motion.p className={styles.sub} variants={fadeUp} initial="hidden" animate="show" custom={2}>{t.heroSub}</motion.p>
-        <motion.div className={styles.pills} variants={fadeUp} initial="hidden" animate="show" custom={3}>
-          {solutions.map((s) => <span key={s} className={styles.pill}>{s}</span>)}
-        </motion.div>
-        <motion.div className={styles.ctas} variants={fadeUp} initial="hidden" animate="show" custom={4}>
-          <Link to="/contact" className={styles.ctaPrimary}>{t.getInTouch}</Link>
-          <Link to="/solutions" className={styles.ctaSecondary}>{t.exploreSolutions}</Link>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={current}
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -16 }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+            className={styles.slideText}
+          >
+            <p className={`${styles.eyebrow} ${slide.isEvent ? styles.eyebrowEvent : ''}`}>{slide.eyebrow}</p>
+            <h1 className={styles.title}>
+              {slide.title} <span className={styles.accent}>{slide.accent}</span>
+            </h1>
+            <p className={styles.sub}>{slide.sub}</p>
+
+            {slide.isEvent && (
+              <div className={styles.eventMeta}>
+                <span className={styles.eventTag}>📅 {slide.eventDate}</span>
+                <span className={styles.eventTag}>🕙 {slide.eventTime}</span>
+                <span className={styles.eventTag}>📍 {slide.eventVenue}</span>
+              </div>
+            )}
+          </motion.div>
+        </AnimatePresence>
+
+        <motion.div
+          className={styles.ctas}
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          {slide.isEvent ? (
+            <>
+              <a href={slide.eventCtaHref} target="_blank" rel="noopener noreferrer" className={styles.ctaPrimary}>{slide.eventCta}</a>
+              <Link to="/contact" className={styles.ctaSecondary}>{t.getInTouch}</Link>
+            </>
+          ) : (
+            <>
+              <Link to="/contact" className={styles.ctaPrimary}>{t.getInTouch}</Link>
+              <Link to="/solutions" className={styles.ctaSecondary}>{t.exploreSolutions}</Link>
+            </>
+          )}
         </motion.div>
       </div>
     </section>

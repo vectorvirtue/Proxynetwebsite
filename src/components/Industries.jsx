@@ -1,5 +1,6 @@
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { Landmark, Flame, Factory, Radio, Building2, GraduationCap, Stethoscope, ShoppingCart } from 'lucide-react'
+import { Landmark, Flame, Factory, Radio, Building2, GraduationCap, Stethoscope, ShoppingCart, ArrowRight } from 'lucide-react'
 import { useLang } from '../context/LanguageContext'
 import styles from './Industries.module.css'
 
@@ -51,6 +52,21 @@ export default function Industries() {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          className={styles.ctas}
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          <Link to="/solutions" className={styles.ctaPrimary}>
+            Find Your Solution <ArrowRight size={16} />
+          </Link>
+          <Link to="/contact" className={styles.ctaSecondary}>
+            Contact Sales
+          </Link>
+        </motion.div>
 
       </div>
     </section>

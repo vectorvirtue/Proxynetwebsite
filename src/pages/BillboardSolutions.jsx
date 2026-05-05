@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import { ChevronRight, Send, Monitor, Building2, ShoppingCart, Megaphone } from "lucide-react"
+import Captcha from '../components/Captcha'
 import styles from "./BillboardSolutions.module.css"
 
 const useCases = [
@@ -24,9 +25,11 @@ const specs = [
 
 export default function BillboardSolutions() {
   const [submitted, setSubmitted] = useState(false)
+  const [captchaToken, setCaptchaToken] = useState(null)
   const [form, setForm] = useState({ name: "", company: "", location: "", useCase: "", notes: "" })
 
-  const handleSubmit = (e) => { e.preventDefault(); setSubmitted(true) }
+
+  const handleSubmit = (e) => { e.preventDefault(); if (!captchaToken) return; setSubmitted(true) }
 
   return (
     <main>
@@ -123,7 +126,8 @@ export default function BillboardSolutions() {
                 </div>
               </div>
               <div className={styles.field}><label className={styles.label}>Project Details</label><textarea rows="4" className={styles.textarea} value={form.notes} onChange={e => setForm({...form, notes: e.target.value})} placeholder="Screen size, quantity, indoor/outdoor, timeline..." /></div>
-              <button type="submit" className={styles.submitBtn}>Submit Request <Send size={16} /></button>
+              <Captcha onChange={setCaptchaToken} />
+              <button type="submit" className={styles.submitBtn} disabled={!captchaToken} style={{ opacity: captchaToken ? 1 : 0.5, cursor: captchaToken ? 'pointer' : 'not-allowed' }}>Submit Request <Send size={16} /></button>
             </motion.form>
           )}
         </div>

@@ -12,6 +12,7 @@ export const translations = {
     solutions: 'Solutions',
     casestudies: 'Case Studies',
     support: 'Support',
+    community: 'Community',
     blog: 'Blog',
     connectivity: 'Connectivity',
     infrastructure: 'Infrastructure',
@@ -47,6 +48,9 @@ export const translations = {
     rentalsDesc: 'World-class AV equipment for events and activations.',
     billboardSolutions: 'Billboard & Digital Signage',
     billboardDesc: 'Indoor and outdoor digital signage and LED wall deployments.',
+    // EdTech
+    edtech: 'EdTech & Smart Schools',
+    edtechDesc: 'Smart school solutions, digital literacy programmes, and technology training.',
     // Footer
     footerTagline: "Connecting Nigeria's future with world-class technology infrastructure and managed services.",
     company: 'Company',
@@ -152,6 +156,7 @@ export const translations = {
     solutions: 'Solutions',
     casestudies: 'Études de Cas',
     support: 'Assistance',
+    community: 'Communauté',
     blog: 'Blog',
     connectivity: 'Connectivité',
     infrastructure: 'Infrastructure',
@@ -187,6 +192,9 @@ export const translations = {
     rentalsDesc: 'Équipement AV de classe mondiale pour événements.',
     billboardSolutions: 'Affichage & Signalétique Numérique',
     billboardDesc: 'Déploiements de signalétique numérique intérieure et extérieure.',
+    // EdTech
+    edtech: 'EdTech & Écoles Intelligentes',
+    edtechDesc: 'Solutions d\'écoles intelligentes, programmes d\'alphabétisation numérique et formations technologiques.',
     // Footer
     footerTagline: "Connecter l'avenir du Nigeria avec une infrastructure technologique de classe mondiale et des services gérés.",
     company: 'Entreprise',
