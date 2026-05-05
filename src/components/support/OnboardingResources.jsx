@@ -3,24 +3,24 @@ import { FileText, Video, BookOpen, Download, ArrowRight } from 'lucide-react'
 import { useLang } from '../../context/LanguageContext'
 import styles from './OnboardingResources.module.css'
 
-const resources = [
-  { icon: <FileText size={22} />, title: 'Getting Started Guide', desc: 'Step-by-step guide for new clients — from first contact to go-live.', type: 'PDF Guide' },
-  { icon: <Video size={22} />, title: 'System Walkthrough Videos', desc: 'Video tutorials covering your installed systems and how to use them.', type: 'Video Series' },
-  { icon: <BookOpen size={22} />, title: 'User Manuals', desc: 'Detailed manuals for all hardware and software solutions deployed.', type: 'Documentation' },
-  { icon: <Download size={22} />, title: 'Configuration Templates', desc: 'Pre-built configuration templates to speed up setup and standardise deployments.', type: 'Templates' },
-]
-
 export default function OnboardingResources() {
   const { t } = useLang()
+
+  const resources = [
+    { icon: <FileText size={22} />, title: t.onboard1Title, desc: t.onboard1Desc, type: t.onboard1Type },
+    { icon: <Video size={22} />, title: t.onboard2Title, desc: t.onboard2Desc, type: t.onboard2Type },
+    { icon: <BookOpen size={22} />, title: t.onboard3Title, desc: t.onboard3Desc, type: t.onboard3Type },
+    { icon: <Download size={22} />, title: t.onboard4Title, desc: t.onboard4Desc, type: t.onboard4Type },
+  ]
+
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
         <motion.div className={styles.header} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-          <p className={styles.eyebrow}>Resource Hub</p>
-          <h2 className={styles.heading}>Onboarding Resources</h2>
-          <p className={styles.sub}>Everything you need to get up and running — guides, videos, manuals, and templates all in one place.</p>
+          <p className={styles.eyebrow}>{t.onboardEyebrow}</p>
+          <h2 className={styles.heading}>{t.onboardHeading}</h2>
+          <p className={styles.sub}>{t.onboardSub}</p>
         </motion.div>
-
         <div className={styles.grid}>
           {resources.map((r, i) => (
             <motion.div key={r.title} className={styles.card} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.08 }} whileHover={{ y: -4 }}>

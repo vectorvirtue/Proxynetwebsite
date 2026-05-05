@@ -35,10 +35,10 @@ export default function Blog() {
           <div className={styles.heroOverlay} />
           <div className={styles.heroInner}>
             <motion.h1 className={styles.heroTitle} initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-              Technology Insights from West Africa's Leading ICT Company
+              {t.blogHeroTitle}
             </motion.h1>
             <motion.p className={styles.heroSub} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}>
-              Thought leadership, industry analysis, company news, and partner updates from the Proxynet team.
+              {t.blogHeroSub}
             </motion.p>
             <motion.div className={styles.heroCtas} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
               <a href="#posts" className={styles.primary}>{t.readLatestPosts}</a>
@@ -85,7 +85,7 @@ export default function Blog() {
                     <h2 className={styles.cardTitle}>{post.title}</h2>
                     <p className={styles.cardExcerpt}>{post.excerpt}</p>
                     <Link to={`/blog/${post.slug}`} className={styles.readMore}>
-                      Read more <ArrowRight size={14} />
+                      {t.blogReadMore} <ArrowRight size={14} />
                     </Link>
                   </div>
                 </motion.article>
@@ -98,11 +98,11 @@ export default function Blog() {
         <section id="newsletter" className={styles.newsletter}>
           <div className={styles.inner}>
             <motion.div className={styles.newsletterContent} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <p className={styles.newsletterEyebrow}>Stay Informed</p>
-              <h2 className={styles.newsletterHeading}>Subscribe for Weekly Insights</h2>
-              <p className={styles.newsletterSub}>Get the latest technology insights, company news, and industry analysis delivered to your inbox every week.</p>
+              <p className={styles.newsletterEyebrow}>{t.blogNewsletterEyebrow}</p>
+              <h2 className={styles.newsletterHeading}>{t.blogNewsletterHeading}</h2>
+              <p className={styles.newsletterSub}>{t.blogNewsletterSub}</p>
               {subscribed ? (
-                <p className={styles.successMsg}>Thanks for subscribing! Check your inbox for a confirmation.</p>
+                <p className={styles.successMsg}>{t.blogSubscribeSuccess}</p>
               ) : (
                 <form className={styles.newsletterForm} onSubmit={handleSubscribe}>
                   <input

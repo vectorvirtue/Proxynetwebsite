@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ChevronRight, BookOpen, Leaf, Users, Wifi, Download, ExternalLink } from 'lucide-react'
 import SEO from '../components/SEO'
+import { useLang } from '../context/LanguageContext'
 import styles from './CSR.module.css'
 
 const categories = [
@@ -48,6 +49,7 @@ const partners = [
 ]
 
 export default function CSR() {
+  const { t } = useLang()
   return (
     <>
       <SEO
@@ -66,10 +68,10 @@ export default function CSR() {
               <span className={styles.crumbActive}>CSR & Community</span>
             </motion.nav>
             <motion.h1 className={styles.heroTitle} initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}>
-              Technology That Gives Back
+              {t.csrHeroTitle}
             </motion.h1>
             <motion.p className={styles.heroSub} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
-              At Proxynet, we believe technology should benefit everyone — not just those who can afford it. Our CSR programme puts that belief into action.
+              {t.csrHeroSub}
             </motion.p>
           </div>
         </section>
@@ -78,8 +80,8 @@ export default function CSR() {
         <section className={styles.section}>
           <div className={styles.inner}>
             <motion.div className={styles.sectionHeader} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <p className={styles.eyebrow}>Our Focus Areas</p>
-              <h2 className={styles.heading}>Where We Make an Impact</h2>
+              <p className={styles.eyebrow}>{t.csrFocusEyebrow}</p>
+              <h2 className={styles.heading}>{t.csrFocusHeading}</h2>
             </motion.div>
             <div className={styles.catGrid}>
               {categories.map((c, i) => (
@@ -97,8 +99,8 @@ export default function CSR() {
         <section className={styles.sectionAlt}>
           <div className={styles.inner}>
             <motion.div className={styles.sectionHeader} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <p className={styles.eyebrow}>Impact Stories</p>
-              <h2 className={styles.heading}>What We Have Done</h2>
+              <p className={styles.eyebrow}>{t.csrImpactEyebrow}</p>
+              <h2 className={styles.heading}>{t.csrImpactHeading}</h2>
             </motion.div>
             <div className={styles.storiesGrid}>
               {stories.map((s, i) => (
@@ -109,7 +111,7 @@ export default function CSR() {
                     <h3 className={styles.storyTitle}>{s.title}</h3>
                     <p className={styles.storyDesc}>{s.desc}</p>
                     <div className={styles.storyOutcome}>
-                      <span className={styles.outcomeLabel}>Outcome</span>
+                      <span className={styles.outcomeLabel}>{t.csrOutcomeLabel}</span>
                       <p className={styles.outcomeText}>{s.outcome}</p>
                     </div>
                   </div>
@@ -123,8 +125,8 @@ export default function CSR() {
         <section className={styles.sectionDark}>
           <div className={styles.inner}>
             <motion.div className={styles.sectionHeader} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <p className={styles.eyebrowLight}>Partner Organisations</p>
-              <h2 className={styles.headingLight}>Who We Work With</h2>
+              <p className={styles.eyebrowLight}>{t.csrPartnersEyebrow}</p>
+              <h2 className={styles.headingLight}>{t.csrPartnersHeading}</h2>
             </motion.div>
             <div className={styles.partnerGrid}>
               {partners.map((p, i) => (
@@ -142,16 +144,16 @@ export default function CSR() {
           <div className={styles.inner}>
             <motion.div className={styles.reportCard} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <div className={styles.reportLeft}>
-                <p className={styles.eyebrow}>CSR Report</p>
-                <h2 className={styles.reportHeading}>Download Our CSR Report</h2>
-                <p className={styles.reportSub}>Our annual CSR report details our initiatives, impact metrics, and commitments for the year ahead.</p>
+                <p className={styles.eyebrow}>{t.csrReportEyebrow}</p>
+                <h2 className={styles.reportHeading}>{t.csrReportHeading}</h2>
+                <p className={styles.reportSub}>{t.csrReportSub}</p>
               </div>
               <div className={styles.reportRight}>
                 <a href="mailto:info@proxynetgroup.com?subject=CSR Report Request" className={styles.downloadBtn}>
-                  <Download size={18} /> Request Report
+                  <Download size={18} /> {t.csrRequestReport}
                 </a>
                 <Link to="/contact" className={styles.contactBtn}>
-                  <ExternalLink size={16} /> Get Involved
+                  <ExternalLink size={16} /> {t.csrGetInvolved}
                 </Link>
               </div>
             </motion.div>

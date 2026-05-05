@@ -19,17 +19,17 @@ export default function MaintenanceRequest() {
         <motion.div className={styles.header} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <div className={styles.iconWrap}><Wrench size={28} /></div>
           <div>
-            <p className={styles.eyebrow}>Maintenance & Support</p>
-            <h2 className={styles.heading}>Raise a Ticket</h2>
-            <p className={styles.sub}>Submit a support request or schedule a maintenance visit. Our team will confirm within your SLA window.</p>
+            <p className={styles.eyebrow}>{t.ticketEyebrow}</p>
+            <h2 className={styles.heading}>{t.ticketHeading}</h2>
+            <p className={styles.sub}>{t.ticketSub}</p>
           </div>
         </motion.div>
 
         {submitted ? (
           <motion.div className={styles.success} initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }}>
             <Send size={32} />
-            <h3>Ticket Submitted</h3>
-            <p>Your request has been logged. We will respond within your SLA window. Reference your email for updates.</p>
+            <h3>{t.ticketSuccess}</h3>
+            <p>{t.ticketSuccessMsg}</p>
           </motion.div>
         ) : (
           <motion.form className={styles.form} onSubmit={handleSubmit} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.15 }}>

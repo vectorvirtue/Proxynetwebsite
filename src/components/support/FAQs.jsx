@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
+import { useLang } from '../../context/LanguageContext'
 import styles from './FAQs.module.css'
 
-const categories = [
+const faqData = [
   {
     label: 'Onboarding',
     faqs: [
@@ -36,27 +37,33 @@ const categories = [
 ]
 
 export default function FAQs() {
+  const { t } = useLang()
   const [activeCategory, setActiveCategory] = useState('Onboarding')
   const [openIndex, setOpenIndex] = useState(null)
 
-  const current = categories.find(c => c.label === activeCategory)
+  const categories = [
+    { label: t.faqOnboarding, key: 'Onboarding' },
+    { label: t.faqTechnical, key: 'Technical' },
+    { label: t.faqBilling, key: 'Billing' },
+    { label: t.faqAccount, key: 'Account' },
+  ]
+
+  const current = faqData.find(c => c.label === activeCategory)
 
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
         <motion.div className={styles.header} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-          <p className={styles.eyebrow}>FAQs</p>
-          <h2 className={styles.heading}>Frequently Asked Questions</h2>
+          <p className={styles.eyebrow}>{t.faqEyebrow}</p>
+          <h2 className={styles.heading}>{t.faqHeading}</h2>
         </motion.div>
-
         <div className={styles.tabs}>
           {categories.map(c => (
-            <button key={c.label} className={`${styles.tab} ${activeCategory === c.label ? styles.tabActive : ''}`} onClick={() => { setActiveCategory(c.label); setOpenIndex(null) }}>
+            <button key={c.key} className={`${styles.tab} ${activeCategory === c.key ? styles.tabActive : ''}`} onClick={() => { setActiveCategory(c.key); setOpenIndex(null) }}>
               {c.label}
             </button>
           ))}
         </div>
-
         <div className={styles.list}>
           {current.faqs.map((faq, i) => (
             <div key={i} className={styles.item}>
