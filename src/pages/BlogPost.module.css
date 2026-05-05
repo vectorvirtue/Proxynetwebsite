@@ -40,3 +40,10 @@
 .relatedCat { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--blue); }
 .relatedTitle { font-size: 15px; font-weight: 700; color: var(--navy); line-height: 1.4; }
 .relatedDate { font-size: 12px; color: rgba(51,65,85,0.5); }
+
+.placeholder { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 80px 24px; gap: 16px; }
+.placeholderIcon { color: var(--blue); opacity: 0.5; }
+.placeholderHeading { font-size: 28px; font-weight: 800; color: var(--navy); letter-spacing: -0.5px; }
+.placeholderSub { font-size: 16px; color: var(--text); max-width: 480px; line-height: 1.7; }
+.placeholderBack { display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; padding: 12px 24px; background: var(--blue); color: var(--white); font-size: 14px; font-weight: 600; border-radius: 8px; transition: background 0.2s; }
+.placeholderBack:hover { background: #005a94; }

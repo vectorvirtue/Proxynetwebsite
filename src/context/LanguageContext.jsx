@@ -401,6 +401,8 @@ export const translations = {
     blogShareArticle: 'Share this article',
     blogAuthorBio: 'The Proxynet team shares insights from over 20 years of delivering technology solutions across West Africa.',
     blogRelatedArticles: 'Related Articles',
+    articleComingSoon: 'Full Article Coming Soon',
+    articleComingSoonSub: 'We are working on the full version of this article. Check back soon or subscribe to our newsletter to be notified when it goes live.',
     // Blog categories
     blogCatAll: 'All',
     blogCatTechInsights: 'Technology Insights',
@@ -862,6 +864,8 @@ export const translations = {
     blogShareArticle: 'Partager cet article',
     blogAuthorBio: 'L\'équipe Proxynet partage des perspectives issues de plus de 20 ans de livraison de solutions technologiques en Afrique de l\'Ouest.',
     blogRelatedArticles: 'Articles Connexes',
+    articleComingSoon: 'Article Complet Bientôt Disponible',
+    articleComingSoonSub: 'Nous travaillons sur la version complète de cet article. Revenez bientôt ou abonnez-vous à notre newsletter pour être notifié lors de sa publication.',
     blogReadMore: 'Lire la suite',
     // Blog categories
     blogCatAll: 'Tout',
