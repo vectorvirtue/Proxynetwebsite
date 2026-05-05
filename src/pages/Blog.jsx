@@ -4,16 +4,18 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Clock, User, Send } from 'lucide-react'
 import SEO from '../components/SEO'
 import { useLang } from '../context/LanguageContext'
-import { posts, categories } from '../data/blogPosts'
+import { getPosts, getCategories } from '../data/blogPosts'
 import styles from './Blog.module.css'
 
 export default function Blog() {
   const { t } = useLang()
-  const [activeCategory, setActiveCategory] = useState('All')
+  const posts = getPosts(t)
+  const categories = getCategories(t)
+  const [activeCategory, setActiveCategory] = useState(categories[0])
   const [email, setEmail] = useState('')
   const [subscribed, setSubscribed] = useState(false)
 
-  const filtered = activeCategory === 'All'
+  const filtered = activeCategory === categories[0]
     ? posts
     : posts.filter(p => p.category === activeCategory)
 

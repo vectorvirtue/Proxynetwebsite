@@ -52,9 +52,9 @@ export default function Locations() {
     <section id="locations" className={styles.section}>
       <div className={styles.inner}>
         <motion.div className={styles.header} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-          <p className={styles.eyebrow}>Where We Are</p>
-          <h2 className={styles.heading}>Our Offices</h2>
-          <p className={styles.sub}>From our Lagos headquarters to offices across West Africa and the Middle East — we're close to the clients we serve.</p>
+          <p className={styles.eyebrow}>{t.locationsEyebrow}</p>
+          <h2 className={styles.heading}>{t.locationsHeading}</h2>
+          <p className={styles.sub}>{t.locationsSub}</p>
         </motion.div>
 
         <div className={styles.layout}>

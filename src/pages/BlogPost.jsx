@@ -2,11 +2,14 @@ import { useParams, Link, Navigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowLeft, Clock, User, Calendar, Share2 } from 'lucide-react'
 import SEO from '../components/SEO'
-import { posts } from '../data/blogPosts'
+import { useLang } from '../context/LanguageContext'
+import { getPosts } from '../data/blogPosts'
 import styles from './BlogPost.module.css'
 
 export default function BlogPost() {
   const { slug } = useParams()
+  const { t } = useLang()
+  const posts = getPosts(t)
   const post = posts.find(p => p.slug === slug)
 
   if (!post) return <Navigate to="/blog" replace />
@@ -49,7 +52,7 @@ export default function BlogPost() {
             <div className={styles.heroOverlay} />
             <div className={styles.heroInner}>
               <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-                <Link to="/blog" className={styles.back}><ArrowLeft size={16} /> Back to Blog</Link>
+                <Link to="/blog" className={styles.back}><ArrowLeft size={16} /> {t.blogBackToBlog}</Link>
                 <span className={styles.category}>{post.category}</span>
                 <h1 className={styles.title}>{post.title}</h1>
                 <div className={styles.meta}>
@@ -71,7 +74,7 @@ export default function BlogPost() {
               {/* Share */}
               <div className={styles.shareRow}>
                 <button className={styles.shareBtn} onClick={handleShare}>
-                  <Share2 size={16} /> Share this article
+                  <Share2 size={16} /> {t.blogShareArticle}
                 </button>
               </div>
 
@@ -80,7 +83,7 @@ export default function BlogPost() {
                 <div className={styles.authorAvatar}>P</div>
                 <div>
                   <p className={styles.authorName}>{post.author}</p>
-                  <p className={styles.authorBio}>The Proxynet team shares insights from over 20 years of delivering technology solutions across West Africa.</p>
+                  <p className={styles.authorBio}>{t.blogAuthorBio}</p>
                 </div>
               </div>
             </div>
@@ -91,7 +94,7 @@ export default function BlogPost() {
         {related.length > 0 && (
           <section className={styles.related}>
             <div className={styles.relatedInner}>
-              <h2 className={styles.relatedHeading}>Related Articles</h2>
+              <h2 className={styles.relatedHeading}>{t.blogRelatedArticles}</h2>
               <div className={styles.relatedGrid}>
                 {related.map(r => (
                   <Link key={r.slug} to={`/blog/${r.slug}`} className={styles.relatedCard}>

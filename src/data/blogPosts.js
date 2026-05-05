@@ -1,22 +1,15 @@
-export const categories = [
-  'All',
-  'Technology Insights',
-  'Company News',
-  'Partner Updates',
-  'Industry Focus',
-  'EdTech',
+export const getCategories = (t) => [
+  t.blogCatAll,
+  t.blogCatTechInsights,
+  t.blogCatCompanyNews,
+  t.blogCatPartnerUpdates,
+  t.blogCatIndustryFocus,
+  t.blogCatEdTech,
 ]
 
-export const posts = [
-  {
-    slug: 'why-cybersecurity-matters-african-businesses',
-    title: 'Why Cybersecurity Is No Longer Optional for African Businesses',
-    category: 'Technology Insights',
-    author: 'Proxynet Team',
-    date: 'April 12, 2026',
-    readTime: '5 min read',
-    excerpt: 'As digital adoption accelerates across the continent, the threat landscape is evolving fast. Here is what every business needs to know about protecting their infrastructure.',
-    content: `
+// Article body content stays in English (long-form content)
+const postContent = {
+  'why-cybersecurity-matters-african-businesses': `
 ## The Growing Threat Landscape
 
 Cybersecurity incidents in Africa have increased by over 200% in the past three years. As businesses digitise their operations, they become increasingly attractive targets for cybercriminals.
@@ -36,17 +29,8 @@ Many organisations across West Africa are running legacy systems, lack dedicated
 ## How Proxynet Can Help
 
 Our cybersecurity team provides end-to-end security assessments, implementation, and ongoing monitoring. Contact us to discuss your security posture.
-    `,
-  },
-  {
-    slug: 'state-of-enterprise-networking-west-africa-2026',
-    title: 'The State of Enterprise Networking in West Africa in 2026',
-    category: 'Industry Focus',
-    author: 'Proxynet Team',
-    date: 'March 28, 2026',
-    readTime: '7 min read',
-    excerpt: 'From SD-WAN to fibre rollouts, we break down the infrastructure trends shaping connectivity for large organisations across the region.',
-    content: `
+  `,
+  'state-of-enterprise-networking-west-africa-2026': `
 ## The Connectivity Revolution
 
 West Africa is experiencing a connectivity revolution. Submarine cable landings, fibre rollouts, and 5G deployments are transforming what is possible for enterprise networking.
@@ -65,17 +49,8 @@ The lines between networking and security are blurring, with SASE (Secure Access
 ## What This Means for Your Business
 
 If your organisation is still running legacy WAN infrastructure, now is the time to evaluate your options. The cost of upgrading has never been lower, and the performance benefits are significant.
-    `,
-  },
-  {
-    slug: 'building-disaster-recovery-plan-that-works',
-    title: 'Building a Disaster Recovery Plan That Actually Works',
-    category: 'Technology Insights',
-    author: 'Proxynet Team',
-    date: 'March 10, 2026',
-    readTime: '6 min read',
-    excerpt: 'Most DR plans fail not because of bad technology, but poor planning. Our team shares the framework we use with clients across West Africa.',
-    content: `
+  `,
+  'building-disaster-recovery-plan-that-works': `
 ## Why Most DR Plans Fail
 
 A disaster recovery plan is only as good as its last test. Most organisations create a DR plan, file it away, and never revisit it — until disaster strikes.
@@ -100,17 +75,8 @@ Ensure multiple people know how to execute the plan — not just the IT manager.
 ## Getting Started
 
 Contact our team for a free DR assessment. We will help you identify gaps and build a plan that actually works.
-    `,
-  },
-  {
-    slug: 'huawei-ideahub-s3-launch-lagos',
-    title: 'Proxynet Hosts Huawei IdeaHub S3 Launch in Lagos',
-    category: 'Company News',
-    author: 'Proxynet Team',
-    date: 'May 6, 2026',
-    readTime: '3 min read',
-    excerpt: 'Proxynet Communications hosted the official Huawei IdeaHub S3 launch event at Four Points by Sheraton, Victoria Island, Lagos.',
-    content: `
+  `,
+  'huawei-ideahub-s3-launch-lagos': `
 ## A New Era of Smart Collaboration
 
 On May 6, 2026, Proxynet Communications hosted the official Nigerian launch of the Huawei IdeaHub S3 at Four Points by Sheraton, Victoria Island, Lagos.
@@ -126,17 +92,8 @@ The event brought together IT decision-makers, procurement teams, and technology
 ## Availability
 
 The Huawei IdeaHub S3 is now available through Proxynet Communications. Contact our sales team for pricing and installation details.
-    `,
-  },
-  {
-    slug: 'smart-classrooms-transforming-education-nigeria',
-    title: 'How Smart Classrooms Are Transforming Education in Nigeria',
-    category: 'EdTech',
-    author: 'Proxynet EdTech Team',
-    date: 'February 20, 2026',
-    readTime: '5 min read',
-    excerpt: 'Proxynet EdTech has deployed smart classroom solutions in schools across Lagos State. Here is what we have learned about what works.',
-    content: `
+  `,
+  'smart-classrooms-transforming-education-nigeria': `
 ## The Smart Classroom Revolution
 
 Technology is transforming how students learn across Nigeria. Interactive displays, digital content, and connected classrooms are no longer a luxury — they are becoming a necessity.
@@ -157,17 +114,8 @@ The best hardware is useless without quality digital content. We work with conte
 ## Partner With Us
 
 If your school or institution is interested in smart classroom solutions, contact our EdTech team.
-    `,
-  },
-  {
-    slug: 'samsung-b2b-partnership-proxynet',
-    title: 'Proxynet Renews Samsung B2B Partnership for 2026',
-    category: 'Partner Updates',
-    author: 'Proxynet Team',
-    date: 'January 15, 2026',
-    readTime: '2 min read',
-    excerpt: 'Proxynet Communications has renewed its Samsung B2B partnership, continuing a relationship that began over a decade ago.',
-    content: `
+  `,
+  'samsung-b2b-partnership-proxynet': `
 ## A Decade of Partnership
 
 Proxynet Communications has renewed its Samsung B2B partnership for 2026, continuing a relationship that has spanned over a decade and delivered hundreds of display and AV solutions across West Africa.
@@ -190,6 +138,68 @@ As a Samsung B2B partner, Proxynet clients benefit from:
 - Digital Signage Solutions
 
 Contact our sales team to discuss your Samsung display requirements.
-    `,
+  `,
+}
+
+export const getPosts = (t) => [
+  {
+    slug: 'why-cybersecurity-matters-african-businesses',
+    title: t.post1Title,
+    category: t.blogCatTechInsights,
+    author: 'Proxynet Team',
+    date: 'April 12, 2026',
+    readTime: '5 min read',
+    excerpt: t.post1Excerpt,
+    content: postContent['why-cybersecurity-matters-african-businesses'],
+  },
+  {
+    slug: 'state-of-enterprise-networking-west-africa-2026',
+    title: t.post2Title,
+    category: t.blogCatIndustryFocus,
+    author: 'Proxynet Team',
+    date: 'March 28, 2026',
+    readTime: '7 min read',
+    excerpt: t.post2Excerpt,
+    content: postContent['state-of-enterprise-networking-west-africa-2026'],
+  },
+  {
+    slug: 'building-disaster-recovery-plan-that-works',
+    title: t.post3Title,
+    category: t.blogCatTechInsights,
+    author: 'Proxynet Team',
+    date: 'March 10, 2026',
+    readTime: '6 min read',
+    excerpt: t.post3Excerpt,
+    content: postContent['building-disaster-recovery-plan-that-works'],
+  },
+  {
+    slug: 'huawei-ideahub-s3-launch-lagos',
+    title: t.post4Title,
+    category: t.blogCatCompanyNews,
+    author: 'Proxynet Team',
+    date: 'May 6, 2026',
+    readTime: '3 min read',
+    excerpt: t.post4Excerpt,
+    content: postContent['huawei-ideahub-s3-launch-lagos'],
+  },
+  {
+    slug: 'smart-classrooms-transforming-education-nigeria',
+    title: t.post5Title,
+    category: t.blogCatEdTech,
+    author: 'Proxynet EdTech Team',
+    date: 'February 20, 2026',
+    readTime: '5 min read',
+    excerpt: t.post5Excerpt,
+    content: postContent['smart-classrooms-transforming-education-nigeria'],
+  },
+  {
+    slug: 'samsung-b2b-partnership-proxynet',
+    title: t.post6Title,
+    category: t.blogCatPartnerUpdates,
+    author: 'Proxynet Team',
+    date: 'January 15, 2026',
+    readTime: '2 min read',
+    excerpt: t.post6Excerpt,
+    content: postContent['samsung-b2b-partnership-proxynet'],
   },
 ]
