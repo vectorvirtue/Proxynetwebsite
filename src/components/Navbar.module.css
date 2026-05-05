@@ -13,7 +13,7 @@
 }
 
 .scrolled {
-  background: rgba(249, 248, 245, 0.85);
+  background: rgba(249, 248, 245, 0.98);
   -webkit-box-shadow: 0 0 20px 0 rgba(69, 80, 115, 0.15);
   box-shadow: 0 0 20px 0 rgba(69, 80, 115, 0.15);
 }

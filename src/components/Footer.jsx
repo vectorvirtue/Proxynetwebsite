@@ -63,14 +63,14 @@ export default function Footer() {
     {
       heading: t.solutions,
       links: [
-        { label: t.itSecurity, href: '/solutions/it-security' },
-        { label: t.systemsIntegration, href: '/solutions/systems-integration' },
-        { label: t.enterpriseNetworking, href: '/solutions/enterprise-networking' },
-        { label: t.intrusionDetection, href: '/solutions/intrusion-detection' },
-        { label: t.firewallSecurity, href: '/solutions/firewall' },
-        { label: t.vpn, href: '/solutions/vpn' },
-        { label: t.customDev, href: '/solutions/custom-software' },
-        { label: t.webApps, href: '/solutions/web-apps' },
+        { label: t.solAV, href: '/solutions/av' },
+        { label: t.solNetworking, href: '/solutions/networking' },
+        { label: t.solCybersecurity, href: '/solutions/cybersecurity' },
+        { label: t.solEnterpriseSoftware, href: '/solutions/enterprise-software' },
+        { label: t.solProVMS, href: '/solutions/provms' },
+        { label: t.solUnifiedComms, href: '/solutions/unified-communications' },
+        { label: t.solCloud, href: '/solutions/cloud-managed-services' },
+        { label: t.edtech, href: '/solutions/edtech' },
       ],
     },
     {
