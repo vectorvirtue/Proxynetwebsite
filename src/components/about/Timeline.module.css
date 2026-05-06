@@ -1,9 +1,9 @@
-.section { background: var(--navy); padding: 96px 0; }
+﻿.section { background: var(--navy); padding: 96px 0; }
 
 .inner { max-width: 1440px; margin: 0 auto; padding: 0 92px; }
-@media (max-width: 768px) { .inner { padding: 0 16px; } .section { padding: 64px 0; } }
+@media (max-width: 768px) { .inner { padding: 0 16px; } .section { padding: 92px 0; } }
 
-.header { max-width: 640px; margin-bottom: 64px; }
+.header { max-width: 640px; margin-bottom: 92px; }
 .eyebrow { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--sky); margin-bottom: 12px; }
 .heading { font-size: clamp(28px, 3vw, 44px); font-weight: 800; color: var(--white); letter-spacing: -1px; }
 
@@ -35,8 +35,8 @@
   position: relative;
 }
 
-.left { align-self: flex-start; padding-right: 64px; }
-.right { align-self: flex-end; padding-left: 64px; padding-right: 0; flex-direction: row-reverse; }
+.left { align-self: flex-start; padding-right: 92px; }
+.right { align-self: flex-end; padding-left: 92px; padding-right: 0; flex-direction: row-reverse; }
 
 @media (max-width: 768px) {
   .item, .left, .right {

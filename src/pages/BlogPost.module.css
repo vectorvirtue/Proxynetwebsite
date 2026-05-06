@@ -9,7 +9,7 @@
 .meta { display: flex; flex-wrap: wrap; gap: 16px; }
 .metaItem { display: flex; align-items: center; gap: 6px; font-size: 13px; color: rgba(255,255,255,0.55); }
 
-.content { background: var(--white); padding: 64px 0; }
+.content { background: var(--white); padding: 92px 0; }
 .contentInner { max-width: 800px; margin: 0 auto; padding: 0 24px; }
 
 .article { display: flex; flex-direction: column; gap: 4px; }
@@ -27,7 +27,7 @@
 .authorName { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
 .authorBio { font-size: 13px; color: var(--text); line-height: 1.6; }
 
-.related { background: var(--bg); padding: 64px 0; }
+.related { background: var(--bg); padding: 92px 0; }
 .relatedInner { max-width: 1440px; margin: 0 auto; padding: 0 92px; }
 @media (max-width: 768px) { .relatedInner { padding: 0 16px; } }
 .relatedHeading { font-size: 24px; font-weight: 800; color: var(--navy); letter-spacing: -0.5px; margin-bottom: 32px; }

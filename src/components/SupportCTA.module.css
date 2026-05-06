@@ -1,4 +1,4 @@
-.section {
+﻿.section {
   background: var(--navy);
   padding: 80px 0;
   position: relative;
@@ -21,7 +21,7 @@
   padding: 0 92px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 64px;
+  gap: 92px;
   align-items: center;
   position: relative;
   z-index: 1;
@@ -33,7 +33,7 @@
 
 @media (max-width: 768px) {
   .inner { padding: 0 16px; }
-  .section { padding: 64px 0; }
+  .section { padding: 92px 0; }
 }
 
 /* Left */

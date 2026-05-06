@@ -26,9 +26,9 @@
 
 /* Main section */
 .section { padding: 96px 0; background: var(--white); }
-.sectionInner { max-width: 1440px; margin: 0 auto; padding: 0 92px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+.sectionInner { max-width: 1440px; margin: 0 auto; padding: 0 92px; display: grid; grid-template-columns: 1fr 1fr; gap: 92px; align-items: start; }
 @media (max-width: 900px) { .sectionInner { grid-template-columns: 1fr; gap: 48px; } }
-@media (max-width: 768px) { .sectionInner { padding: 0 16px; } .section { padding: 64px 0; } }
+@media (max-width: 768px) { .sectionInner { padding: 0 16px; } .section { padding: 92px 0; } }
 
 .colEyebrow { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--blue); margin-bottom: 12px; }
 .colHeading { font-size: clamp(24px, 2.5vw, 36px); font-weight: 800; color: var(--navy); letter-spacing: -1px; margin-bottom: 28px; }
@@ -70,7 +70,7 @@
 /* Offices */
 .officesSection { padding: 96px 0; background: var(--bg); }
 .officesInner { max-width: 1440px; margin: 0 auto; padding: 0 92px; }
-@media (max-width: 768px) { .officesInner { padding: 0 16px; } .officesSection { padding: 64px 0; } }
+@media (max-width: 768px) { .officesInner { padding: 0 16px; } .officesSection { padding: 92px 0; } }
 .officesHeader { margin-bottom: 48px; }
 .eyebrow { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--blue); margin-bottom: 12px; }
 .officesHeading { font-size: clamp(28px, 3vw, 44px); font-weight: 800; color: var(--navy); letter-spacing: -1px; }

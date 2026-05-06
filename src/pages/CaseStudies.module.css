@@ -13,9 +13,9 @@
 .heroSub { font-size: clamp(15px, 1.5vw, 18px); color: rgba(255,255,255,0.65); max-width: 560px; line-height: 1.7; }
 
 /* ── Section wrapper ──────────────────────────────────────────── */
-.section { background: var(--bg); padding: 64px 0 96px; }
+.section { background: var(--bg); padding: 92px 0 96px; }
 .inner { max-width: 1440px; margin: 0 auto; padding: 0 92px; }
-@media (max-width: 768px) { .inner { padding: 0 16px; } .section { padding: 40px 0 64px; } }
+@media (max-width: 768px) { .inner { padding: 0 16px; } .section { padding: 40px 0 92px; } }
 
 /* ── Filter bar ───────────────────────────────────────────────── */
 .filterBar {
@@ -91,7 +91,7 @@
 .empty p { font-size: 16px; color: var(--text); opacity: 0.6; }
 
 /* ── Bottom CTA block ─────────────────────────────────────────── */
-.ctaBlock { background: var(--navy); border-radius: 20px; padding: 64px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.ctaBlock { background: var(--navy); border-radius: 20px; padding: 92px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 16px; }
 @media (max-width: 768px) { .ctaBlock { padding: 40px 24px; } }
 .ctaEyebrow { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--sky); }
 .ctaHeading { font-size: clamp(24px, 3vw, 40px); font-weight: 800; color: var(--white); letter-spacing: -1px; max-width: 560px; }

@@ -1,4 +1,4 @@
-.navbar {
+﻿.navbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -54,6 +54,7 @@
   display: flex;
   align-items: center;
   flex-shrink: 0;
+  margin-left: -14px;
 }
 .logoImg {
   height: 66px;

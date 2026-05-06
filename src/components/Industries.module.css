@@ -1,4 +1,4 @@
-.section {
+﻿.section {
   background: var(--navy);
   padding: 96px 0;
 }
@@ -11,7 +11,7 @@
 
 @media (max-width: 768px) {
   .inner { padding: 0 16px; }
-  .section { padding: 64px 0; }
+  .section { padding: 92px 0; }
 }
 
 .header {

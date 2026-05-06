@@ -21,7 +21,7 @@
 .contentInner { max-width: 1440px; margin: 0 auto; padding: 0 92px; }
 @media (max-width: 768px) { .contentInner { padding: 0 16px; } .contentSection { padding: 48px 0; } }
 
-.contentGrid { display: grid; grid-template-columns: 1fr 340px; gap: 64px; align-items: start; }
+.contentGrid { display: grid; grid-template-columns: 1fr 340px; gap: 92px; align-items: start; }
 @media (max-width: 1024px) { .contentGrid { grid-template-columns: 1fr; gap: 48px; } }
 
 /* Body blocks */
@@ -88,7 +88,7 @@
 .ctaSection { background: var(--white); padding: 80px 0; }
 .ctaInner { max-width: 1440px; margin: 0 auto; padding: 0 92px; }
 @media (max-width: 768px) { .ctaInner { padding: 0 16px; } .ctaSection { padding: 48px 0; } }
-.ctaBlock { background: var(--navy); border-radius: 20px; padding: 64px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.ctaBlock { background: var(--navy); border-radius: 20px; padding: 92px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 16px; }
 @media (max-width: 768px) { .ctaBlock { padding: 40px 24px; } }
 .ctaEyebrow { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--sky); }
 .ctaHeading { font-size: clamp(24px, 3vw, 40px); font-weight: 800; color: var(--white); letter-spacing: -1px; max-width: 560px; }

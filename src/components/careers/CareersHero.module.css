@@ -1,4 +1,4 @@
-.hero {
+﻿.hero {
   position: relative;
   background: var(--navy);
   padding: 160px 0 80px;
@@ -75,7 +75,7 @@
 .crumbActive { font-size: 13px; color: var(--sky); font-weight: 600; }
 
 .title {
-  font-size: clamp(36px, 5vw, 64px);
+  font-size: clamp(36px, 5vw, 92px);
   font-weight: 800;
   color: var(--white);
   letter-spacing: -2px;

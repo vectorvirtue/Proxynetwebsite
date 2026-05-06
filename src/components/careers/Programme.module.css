@@ -1,9 +1,9 @@
-.section { background: var(--bg); padding: 96px 0; }
+﻿.section { background: var(--bg); padding: 96px 0; }
 .sectionAlt { background: var(--white); }
 .inner { max-width: 1440px; margin: 0 auto; padding: 0 92px; display: flex; flex-direction: column; gap: 32px; }
-@media (max-width: 768px) { .inner { padding: 0 16px; } .section { padding: 64px 0; } }
+@media (max-width: 768px) { .inner { padding: 0 16px; } .section { padding: 92px 0; } }
 
-.iconWrap { width: 64px; height: 64px; border-radius: 16px; background: rgba(0,111,180,0.1); display: flex; align-items: center; justify-content: center; color: var(--blue); }
+.iconWrap { width: 92px; height: 92px; border-radius: 16px; background: rgba(0,111,180,0.1); display: flex; align-items: center; justify-content: center; color: var(--blue); }
 .iconAlt { background: rgba(70,195,242,0.1); color: var(--sky); }
 
 .content { display: flex; flex-direction: column; gap: 20px; max-width: 900px; }

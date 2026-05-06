@@ -1,4 +1,4 @@
-.section { background: var(--white); padding: 80px 0; }
+﻿.section { background: var(--white); padding: 80px 0; }
 .inner { max-width: 1440px; margin: 0 auto; padding: 0 92px; }
 @media (max-width: 768px) { .inner { padding: 0 16px; } .section { padding: 56px 0; } }
 .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
