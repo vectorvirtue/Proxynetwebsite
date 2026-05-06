@@ -34,6 +34,10 @@
   <url><loc>https://www.proxynetgroup.com/case-studies/gtbank-gambia</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.proxynetgroup.com/case-studies/creamer-media</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
+  <!-- Partnerships -->
+  <url><loc>https://www.proxynetgroup.com/partnerships</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.proxynetgroup.com/partners</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
   <!-- Blog -->
   <url><loc>https://www.proxynetgroup.com/blog</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.proxynetgroup.com/blog/why-cybersecurity-matters-african-businesses</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>

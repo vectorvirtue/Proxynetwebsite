@@ -1,0 +1,34 @@
+﻿.hero { position: relative; background: var(--navy); padding: 160px 0 80px; overflow: hidden; }
+.heroOverlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,18,30,0.6) 0%, rgba(0,40,70,0.2) 100%); z-index: 0; }
+.heroInner { position: relative; z-index: 1; max-width: 1440px; margin: 0 auto; padding: 0 92px; }
+@media (max-width: 768px) { .heroInner { padding: 0 16px; } .hero { padding: 120px 0 60px; } }
+.breadcrumb { display: flex; align-items: center; gap: 6px; margin-bottom: 24px; flex-wrap: wrap; }
+.crumb { font-size: 13px; color: rgba(255,255,255,0.5); transition: color 0.15s; }
+.crumb:hover { color: var(--sky); }
+.sep { color: rgba(255,255,255,0.3); }
+.crumbActive { font-size: 13px; color: var(--sky); font-weight: 600; }
+.eyebrow { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--sky); margin-bottom: 12px; }
+.heroTitle { font-size: clamp(32px, 4.5vw, 60px); font-weight: 800; color: var(--white); letter-spacing: -2px; line-height: 1.05; margin-bottom: 20px; max-width: 760px; }
+.heroSub { font-size: clamp(15px, 1.5vw, 18px); color: rgba(255,255,255,0.65); max-width: 560px; line-height: 1.7; }
+
+.section { background: var(--bg); padding: 96px 0; }
+.inner { max-width: 1440px; margin: 0 auto; padding: 0 92px; }
+@media (max-width: 768px) { .inner { padding: 0 16px; } .section { padding: 64px 0; } }
+
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 64px; }
+@media (max-width: 1024px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px)  { .grid { grid-template-columns: 1fr; } }
+
+.card { background: var(--white); border: 1.5px solid rgba(0,31,51,0.08); border-radius: 16px; padding: 28px 24px; display: flex; flex-direction: column; gap: 10px; align-items: flex-start; transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s; }
+.card:hover { box-shadow: 0 8px 32px rgba(0,31,51,0.1); border-color: var(--blue); transform: translateY(-4px); }
+.logoWrap { height: 52px; display: flex; align-items: center; margin-bottom: 4px; }
+.logo { max-height: 44px; max-width: 100px; object-fit: contain; }
+.name { font-size: 18px; font-weight: 800; color: var(--navy); }
+.type { font-size: 12px; font-weight: 600; color: var(--blue); }
+.desc { font-size: 13px; color: var(--text); line-height: 1.6; }
+
+.cta { background: var(--navy); border-radius: 16px; padding: 40px 48px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+.ctaText { font-size: 18px; font-weight: 700; color: var(--white); max-width: 480px; line-height: 1.5; }
+.ctaBtn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; background: var(--blue); color: var(--white); font-size: 15px; font-weight: 600; border-radius: 8px; min-height: 52px; white-space: nowrap; transition: background 0.2s, transform 0.15s; }
+.ctaBtn:hover { background: #005a94; transform: translateY(-2px); }
+
