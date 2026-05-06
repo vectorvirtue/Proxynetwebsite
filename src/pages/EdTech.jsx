@@ -1,19 +1,28 @@
-import { useState } from "react"
+﻿import { useState } from "react"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
-import { ChevronRight, Send, GraduationCap, Monitor, Users, BookOpen, Wifi, Cpu } from "lucide-react"
+import { ChevronRight, Send, GraduationCap, Monitor, Users, BookOpen, Wifi, Cpu, Code, Layout, PenTool, Brain, BarChart2, BarChart } from "lucide-react"
 import SEO from "../components/SEO"
 import Captcha from "../components/Captcha"
 import { useLang } from "../context/LanguageContext"
+import edtech1 from "../assets/edtech.jpg"
+import edtech2 from "../assets/edtech2.jpg"
+import edtech3 from "../assets/edtech3.jpg"
+import edtech4 from "../assets/edtech4.jpg"
+import edtech5 from "../assets/edtech5.jpg"
+import edtech5b from "../assets/edtech5.jpeg"
 import styles from "./EdTech.module.css"
 
 const programmes = [
-  { icon: "monitor", name: "Smart Classroom Setup", duration: "1-2 weeks", audience: "Primary & Secondary Schools", format: "On-site installation + training", desc: "Interactive displays, projectors, and AV systems installed and configured for modern classroom learning." },
-  { icon: "wifi", name: "School Network Infrastructure", duration: "1-4 weeks", audience: "Schools & Universities", format: "On-site deployment", desc: "Structured cabling, Wi-Fi networks, and internet connectivity solutions designed for educational environments." },
-  { icon: "cpu", name: "Computer Lab Setup", duration: "1-2 weeks", audience: "Secondary Schools & Tertiary", format: "On-site installation", desc: "Full computer lab design, hardware supply, networking, and software configuration for ICT education." },
-  { icon: "book", name: "Digital Literacy Training", duration: "1-5 days", audience: "Students & Teachers", format: "Classroom + hands-on", desc: "Practical digital skills training covering computer basics, internet safety, productivity tools, and more." },
-  { icon: "users", name: "Teacher Technology Training", duration: "1-3 days", audience: "Teaching Staff", format: "Workshop", desc: "Equipping teachers with the skills to use technology effectively in the classroom â€” from interactive displays to e-learning platforms." },
-  { icon: "graduation", name: "ICT Certification Programmes", duration: "4-12 weeks", audience: "Students & Young Professionals", format: "Classroom + online", desc: "Structured certification courses in networking, cybersecurity, software development, and IT support." },
+  { icon: "code", name: "Web Development", duration: "4-12 weeks", audience: "Students & Young Professionals", format: "Classroom + hands-on", desc: "Full-stack web development covering HTML, CSS, JavaScript, and modern frameworks. Students build real projects from day one." },
+  { icon: "layout", name: "Web Design", duration: "2-6 weeks", audience: "Students & Creatives", format: "Classroom + hands-on", desc: "UI/UX principles, wireframing, prototyping, and visual design for the web using industry-standard tools." },
+  { icon: "book", name: "Digital Literacy", duration: "1-5 days", audience: "Students & Teachers", format: "Classroom + hands-on", desc: "Practical digital skills covering computer basics, internet safety, productivity tools, and navigating the digital world confidently." },
+  { icon: "pen", name: "Graphics Design", duration: "2-8 weeks", audience: "Students & Creatives", format: "Classroom + hands-on", desc: "Visual communication, branding, typography, and design using professional tools. From logos to marketing materials." },
+  { icon: "cpu", name: "Robotics", duration: "4-8 weeks", audience: "Primary, Secondary & Tertiary", format: "Hands-on workshop", desc: "Introduction to robotics, electronics, and programming through building and programming real robots. STEM-focused and project-based." },
+  { icon: "brain", name: "Artificial Intelligence", duration: "4-12 weeks", audience: "Secondary & Tertiary", format: "Classroom + practical", desc: "Foundations of AI, machine learning concepts, and practical applications. Students explore how AI is transforming industries." },
+  { icon: "wifi", name: "Internet of Things (IoT)", duration: "4-8 weeks", audience: "Secondary & Tertiary", format: "Hands-on workshop", desc: "Connecting devices, sensors, and systems. Students build IoT projects that solve real-world problems using hardware and code." },
+  { icon: "chart", name: "Data Science", duration: "6-12 weeks", audience: "Tertiary & Professionals", format: "Classroom + practical", desc: "Data collection, cleaning, analysis, and visualisation. Covers Python, statistics, and real-world datasets from African markets." },
+  { icon: "bar", name: "Data Analytics", duration: "4-8 weeks", audience: "Students & Professionals", format: "Classroom + practical", desc: "Turning raw data into actionable insights using tools like Excel, Power BI, and SQL. Practical, business-focused curriculum." },
 ]
 
 const institutions = [
@@ -38,7 +47,7 @@ export default function EdTech() {
         canonical="/solutions/edtech"
       />
       <main>
-        <section className={styles.hero}>
+        <section className={`${styles.hero} heroScene`}>
           <div className={styles.heroOverlay} />
           <div className={styles.heroInner}>
             <motion.nav className={styles.breadcrumb} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
@@ -88,12 +97,15 @@ export default function EdTech() {
               {programmes.map((p, i) => (
                 <motion.div key={p.name} className={styles.progCard} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.07 }} whileHover={{ y: -4 }}>
                   <div className={styles.progIcon}>
-                    {p.icon === "monitor" && <Monitor size={24} />}
-                    {p.icon === "wifi" && <Wifi size={24} />}
-                    {p.icon === "cpu" && <Cpu size={24} />}
-                    {p.icon === "book" && <BookOpen size={24} />}
-                    {p.icon === "users" && <Users size={24} />}
-                    {p.icon === "graduation" && <GraduationCap size={24} />}
+                    {p.icon === "code"       && <Code size={24} />}
+                    {p.icon === "layout"     && <Layout size={24} />}
+                    {p.icon === "book"       && <BookOpen size={24} />}
+                    {p.icon === "pen"        && <PenTool size={24} />}
+                    {p.icon === "cpu"        && <Cpu size={24} />}
+                    {p.icon === "brain"      && <Brain size={24} />}
+                    {p.icon === "wifi"       && <Wifi size={24} />}
+                    {p.icon === "chart"      && <BarChart2 size={24} />}
+                    {p.icon === "bar"        && <BarChart size={24} />}
                   </div>
                   <h3 className={styles.progName}>{p.name}</h3>
                   <p className={styles.progDesc}>{p.desc}</p>
@@ -130,14 +142,31 @@ export default function EdTech() {
             <motion.div className={styles.sectionHeader} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <p className={styles.eyebrowBlue}>Events Gallery</p>
               <h2 className={styles.heading}>EdTech in Action</h2>
-              <p className={styles.galleryNote}>Photos from our school engagements and EdTech events coming soon.</p>
             </motion.div>
             <div className={styles.galleryGrid}>
-              {[1,2,3,4,5,6].map(i => (
-                <div key={i} className={styles.galleryPlaceholder}>
-                  <GraduationCap size={28} className={styles.galleryIcon} />
-                </div>
+              {/* Row 1 — three equal images */}
+              {[edtech1, edtech2, edtech3].map((src, i) => (
+                <motion.div
+                  key={i}
+                  className={styles.galleryItem}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: i * 0.07 }}
+                >
+                  <img src={src} alt={`Proxynet EdTech — photo ${i + 1}`} className={styles.galleryImg} loading="lazy" />
+                </motion.div>
               ))}
+              {/* Row 2 — side image, tall centrepiece, side image */}
+              <motion.div className={styles.galleryItem} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: 0.21 }}>
+                <img src={edtech4} alt="Proxynet EdTech — photo 4" className={styles.galleryImg} loading="lazy" />
+              </motion.div>
+              <motion.div className={styles.galleryItemFeatured} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: 0.28 }}>
+                <img src={edtech5b} alt="Proxynet EdTech — featured photo" className={styles.galleryImgFull} loading="lazy" />
+              </motion.div>
+              <motion.div className={styles.galleryItem} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: 0.35 }}>
+                <img src={edtech5} alt="Proxynet EdTech — photo 5" className={styles.galleryImg} loading="lazy" />
+              </motion.div>
             </div>
           </div>
         </section>

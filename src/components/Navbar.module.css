@@ -8,6 +8,8 @@
   -webkit-box-shadow: 0 0 20px 0 rgba(69, 80, 115, 0.1);
   box-shadow: 0 0 20px 0 rgba(69, 80, 115, 0.1);
   transition: box-shadow 0.3s ease;
+  /* Ensure no extra padding on the navbar wrapper itself */
+  padding: 0;
 }
 
 .scrolled {
@@ -27,8 +29,15 @@
   box-sizing: border-box;
 }
 
+@media (max-width: 1535px) {
+  .inner {
+    padding: 0 92px;
+  }
+}
+
 @media (max-width: 1023px) {
   .inner {
+    padding: 0 92px;
     gap: 8px;
   }
 }
@@ -91,8 +100,8 @@
 .megaMenu {
   position: fixed;
   top: 72px;
-  left: 24px;
-  right: 24px;
+  left: 0;
+  right: 0;
   background: var(--white);
   box-shadow: 0 20px 60px rgba(0,0,0,0.12);
   z-index: 999;

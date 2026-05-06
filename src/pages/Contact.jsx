@@ -1,11 +1,30 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { Phone, Mail, MapPin, Linkedin, Facebook, Instagram, MessageCircle, Send, ChevronRight, Clock } from 'lucide-react'
+import { Phone, Mail, MapPin, MessageCircle, Send, ChevronRight, Clock } from 'lucide-react'
 import SEO from '../components/SEO'
 import Captcha from '../components/Captcha'
 import { useLang } from '../context/LanguageContext'
 import styles from './Contact.module.css'
+
+const LinkedinIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+    <rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+  </svg>
+)
+const FacebookIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+  </svg>
+)
+const InstagramIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+  </svg>
+)
 
 const offices = [
   { flag: '🇳🇬', city: 'Lagos', tag: 'HQ', address: 'The Proxynet House, 5B, Adedeji Close, off Opebi Road, Ikeja, Lagos, Nigeria.', phone: '+234 703 264 7755', email: 'info@proxynetgroup.com', mapUrl: 'https://maps.google.com/?q=5B+Adedeji+Close+Opebi+Ikeja+Lagos' },
@@ -16,9 +35,9 @@ const offices = [
 ]
 
 const socials = [
-  { icon: <Linkedin size={20} />, label: 'LinkedIn', href: 'https://www.linkedin.com/company/proxynet-communications' },
-  { icon: <Facebook size={20} />, label: 'Facebook', href: 'https://www.facebook.com/proxynetcommunications/' },
-  { icon: <Instagram size={20} />, label: 'Instagram', href: 'https://www.instagram.com/proxynetgroup/' },
+  { icon: <LinkedinIcon />, label: 'LinkedIn', href: 'https://www.linkedin.com/company/proxynet-communications' },
+  { icon: <FacebookIcon />, label: 'Facebook', href: 'https://www.facebook.com/proxynetcommunications/' },
+  { icon: <InstagramIcon />, label: 'Instagram', href: 'https://www.instagram.com/proxynetgroup/' },
   { icon: <MessageCircle size={20} />, label: 'WhatsApp', href: 'https://wa.me/2347032647755' },
 ]
 
@@ -48,7 +67,7 @@ export default function Contact() {
       />
       <main>
         {/* Hero */}
-        <section className={styles.hero}>
+        <section className={`${styles.hero} heroScene`}>
           <div className={styles.heroOverlay} />
           <div className={styles.heroInner}>
             <motion.nav className={styles.breadcrumb} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>

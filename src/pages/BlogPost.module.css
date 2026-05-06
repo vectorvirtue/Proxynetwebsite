@@ -1,6 +1,6 @@
-.hero { position: relative; background: var(--navy); padding: 140px 0 60px; overflow: hidden; }
-.hero::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(rgba(70,195,242,0.07) 1px, transparent 1px); background-size: 32px 32px; }
-.heroOverlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,31,51,0.95) 0%, rgba(0,111,180,0.25) 100%); }
+﻿.hero { position: relative; background: var(--navy); padding: 140px 0 60px; overflow: hidden; }
+
+
 .heroInner { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; padding: 0 24px; }
 .back { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: rgba(255,255,255,0.6); margin-bottom: 20px; transition: color 0.15s; }
 .back:hover { color: var(--sky); }

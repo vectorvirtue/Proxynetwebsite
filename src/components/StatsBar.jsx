@@ -34,10 +34,10 @@ export default function StatsBar() {
   const { t } = useLang()
 
   const stats = [
-    { value: 20, suffix: '+', label: t.yearsInOperation },
-    { value: 500, suffix: '+', label: t.projectsDelivered },
-    { value: 6, suffix: '', label: t.countriesServed },
-    { value: 50, suffix: '+', label: t.globalPartners },
+    { id: 'years', value: 20, suffix: '+', label: t.yearsInOperation },
+    { id: 'projects', value: 500, suffix: '+', label: t.projectsDelivered },
+    { id: 'countries', value: 6, suffix: '', label: t.countriesServed },
+    { id: 'partners', value: 50, suffix: '+', label: t.globalPartners },
   ]
 
   return (
@@ -45,7 +45,7 @@ export default function StatsBar() {
       <div className={styles.inner}>
         {stats.map((stat, i) => (
           <motion.div
-            key={stat.label}
+            key={stat.id}
             className={styles.stat}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

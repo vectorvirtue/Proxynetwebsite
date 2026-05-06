@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+﻿import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ChevronRight } from 'lucide-react'
 import { useLang } from '../../context/LanguageContext'
@@ -7,7 +7,7 @@ import styles from './AboutHero.module.css'
 export default function AboutHero() {
   const { t } = useLang()
   return (
-    <section className={styles.hero}>
+    <section className={`${styles.hero} heroScene`}>
       <div className={styles.overlay} />
       <div className={styles.inner}>
         <motion.nav className={styles.breadcrumb} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} aria-label="Breadcrumb">

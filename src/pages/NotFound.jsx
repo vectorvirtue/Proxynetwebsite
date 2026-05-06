@@ -7,7 +7,7 @@ import styles from './NotFound.module.css'
 export default function NotFound() {
   const { t } = useLang()
   return (
-    <main className={styles.page}>
+    <main className={`${styles.page} heroScene`}>
       <div className={styles.inner}>
         <motion.div
           initial={{ opacity: 0, y: 32 }}

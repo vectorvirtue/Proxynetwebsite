@@ -1,4 +1,4 @@
-import { useState } from "react"
+﻿import { useState } from "react"
 import SEO from "../components/SEO"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
@@ -37,7 +37,7 @@ export default function Rentals() {
         canonical="/rentals"
       />
       <main>
-        <section className={styles.hero}>
+        <section className={`${styles.hero} heroScene`}>
           <div className={styles.heroOverlay} />
           <div className={styles.heroInner}>
             <motion.nav className={styles.breadcrumb} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>

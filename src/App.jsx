@@ -13,6 +13,8 @@ import Blog from './pages/Blog'
 import BlogPost from './pages/BlogPost'
 import CSR from './pages/CSR'
 import Contact from './pages/Contact'
+import CaseStudies from './pages/CaseStudies'
+import CaseStudy from './pages/CaseStudy'
 import NotFound from './pages/NotFound'
 import ScrollToTop from './components/ScrollToTop'
 import WhatsAppButton from './components/WhatsAppButton'
@@ -40,6 +42,8 @@ export default function App() {
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/csr" element={<CSR />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/case-studies/:slug" element={<CaseStudy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />

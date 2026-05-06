@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+﻿import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ChevronRight, BookOpen, Leaf, Users, Wifi, Download, ExternalLink } from 'lucide-react'
 import SEO from '../components/SEO'
@@ -59,7 +59,7 @@ export default function CSR() {
       />
       <main>
         {/* Hero */}
-        <section className={styles.hero}>
+        <section className={`${styles.hero} heroScene`}>
           <div className={styles.heroOverlay} />
           <div className={styles.heroInner}>
             <motion.nav className={styles.breadcrumb} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
