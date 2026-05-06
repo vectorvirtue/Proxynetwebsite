@@ -1,4 +1,5 @@
 ﻿.hero { position: relative; background: var(--navy); padding: 140px 0 60px; overflow: hidden; }
+.heroOverlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,18,30,0.6) 0%, rgba(0,40,70,0.2) 100%); z-index: 0; }
 
 
 .heroInner { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; padding: 0 24px; }
@@ -47,3 +48,9 @@
 .placeholderSub { font-size: 16px; color: var(--text); max-width: 480px; line-height: 1.7; }
 .placeholderBack { display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; padding: 12px 24px; background: var(--blue); color: var(--white); font-size: 14px; font-weight: 600; border-radius: 8px; transition: background 0.2s; }
 .placeholderBack:hover { background: #005a94; }
+
+.breadcrumb { display: flex; align-items: center; gap: 6px; margin-bottom: 24px; flex-wrap: wrap; }
+.crumb { font-size: 13px; color: rgba(255,255,255,0.5); transition: color 0.15s; }
+.crumb:hover { color: var(--sky); }
+.sep { color: rgba(255,255,255,0.3); }
+.crumbActive { font-size: 13px; color: var(--sky); font-weight: 600; max-width: 260px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

@@ -1,6 +1,6 @@
 ﻿import { useParams, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowLeft, Clock } from 'lucide-react'
+import { ArrowLeft, Clock, ChevronRight } from 'lucide-react'
 import { useLang } from '../context/LanguageContext'
 import { getPosts } from '../data/blogPosts'
 import SEO from '../components/SEO'
@@ -27,9 +27,13 @@ export default function BlogPost() {
           <div className={styles.heroOverlay} />
           <div className={styles.heroInner}>
             <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-              <Link to="/blog" className={styles.back}>
-                <ArrowLeft size={16} /> {t.blogBackToBlog}
-              </Link>
+              <nav className={styles.breadcrumb}>
+                <Link to="/" className={styles.crumb}>{t.home}</Link>
+                <ChevronRight size={14} className={styles.sep} />
+                <Link to="/blog" className={styles.crumb}>{t.blog}</Link>
+                <ChevronRight size={14} className={styles.sep} />
+                <span className={styles.crumbActive}>{title}</span>
+              </nav>
               {category && <span className={styles.category}>{category}</span>}
               <h1 className={styles.title}>{title}</h1>
             </motion.div>

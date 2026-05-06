@@ -1,8 +1,10 @@
 ﻿.hero { position: relative; background: var(--navy); padding: 160px 0 80px; overflow: hidden; }
+.heroOverlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,18,30,0.6) 0%, rgba(0,40,70,0.2) 100%); z-index: 0; }
 
 
 .heroInner { position: relative; z-index: 1; max-width: 1440px; margin: 0 auto; padding: 0 92px; }
-@media (max-width: 768px) { .heroInner { padding: 0 16px; } .hero { padding: 120px 0 60px; } }
+@media (max-width: 768px) { .heroInner { padding: 0 16px; } .hero { padding: 120px 0 60px; }
+.heroOverlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,18,30,0.6) 0%, rgba(0,40,70,0.2) 100%); z-index: 0; } }
 .heroTitle { font-size: clamp(28px, 4vw, 52px); font-weight: 800; color: var(--white); letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 20px; max-width: 700px; }
 .heroSub { font-size: clamp(15px, 1.5vw, 18px); color: rgba(255,255,255,0.65); max-width: 520px; line-height: 1.7; margin-bottom: 32px; }
 .heroCtas { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -58,3 +60,9 @@
 .newsletterBtn { display: flex; align-items: center; gap: 8px; padding: 12px 20px; background: var(--blue); color: var(--white); font-size: 14px; font-weight: 600; border: none; cursor: pointer; font-family: var(--font); transition: background 0.2s; white-space: nowrap; }
 .newsletterBtn:hover { background: #005a94; }
 .successMsg { font-size: 15px; color: var(--sky); padding: 12px 0; }
+
+.breadcrumb { display: flex; align-items: center; gap: 6px; margin-bottom: 24px; flex-wrap: wrap; }
+.crumb { font-size: 13px; color: rgba(255,255,255,0.5); transition: color 0.15s; }
+.crumb:hover { color: var(--sky); }
+.sep { color: rgba(255,255,255,0.3); }
+.crumbActive { font-size: 13px; color: var(--sky); font-weight: 600; max-width: 260px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

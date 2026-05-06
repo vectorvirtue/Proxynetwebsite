@@ -1,7 +1,7 @@
 ﻿import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowRight, Clock, User, Send } from 'lucide-react'
+import { ArrowRight, Clock, User, Send, ChevronRight } from 'lucide-react'
 import SEO from '../components/SEO'
 import { useLang } from '../context/LanguageContext'
 import { getPosts, getCategories } from '../data/blogPosts'
@@ -36,6 +36,11 @@ export default function Blog() {
         <section className={`${styles.hero} heroScene`}>
           <div className={styles.heroOverlay} />
           <div className={styles.heroInner}>
+            <motion.nav className={styles.breadcrumb} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
+              <Link to="/" className={styles.crumb}>{t.home}</Link>
+              <ChevronRight size={14} className={styles.sep} />
+              <span className={styles.crumbActive}>{t.blog}</span>
+            </motion.nav>
             <motion.h1 className={styles.heroTitle} initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
               {t.blogHeroTitle}
             </motion.h1>
