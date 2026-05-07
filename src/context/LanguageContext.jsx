@@ -375,6 +375,9 @@ export const translations = {
     award8Body: 'Official distributor of VT professional headsets and communication devices across West Africa.',
     award9Body: 'Authorised Dahua distributor for CCTV, IP cameras, NVR systems, and security surveillance solutions.',
     award10Body: 'Quality Management System certified by TNV (Cert No. SBSCKTSI20251120NGAQM10U). Valid through 19/11/2028.',
+    // Team certifications
+    teamCertsTitle: 'Team Technical Certifications',
+    teamCertsSub: 'Our engineers and technical staff hold industry-recognised certifications across networking, cybersecurity, structured cabling, and design.',
     // Support page
     supportHeroTitle: '24/7 Support, Because Your Business Never Stops',
     supportHeroSub: 'Our support team is available around the clock to keep your technology running. Raise a ticket, call us, or reach us on WhatsApp — we respond fast.',
@@ -446,6 +449,7 @@ export const translations = {
     faqAccount: 'Account',
     // CSR page
     csrHeroTitle: 'Technology That Gives Back',
+    csr: 'CSR & Community',
     csrHeroSub: 'At Proxynet, we believe technology should benefit everyone — not just those who can afford it. Our CSR programme puts that belief into action.',
     csrFocusEyebrow: 'Our Focus Areas',
     csrFocusHeading: 'Where We Make an Impact',
@@ -965,6 +969,9 @@ export const translations = {
     award8Body: 'Distributeur officiel de casques professionnels et d\'appareils de communication VT en Afrique de l\'Ouest.',
     award9Body: 'Distributeur Dahua agréé pour les systèmes CCTV, caméras IP, NVR et solutions de surveillance de sécurité.',
     award10Body: 'Système de management de la qualité certifié par TNV (Cert No. SBSCKTSI20251120NGAQM10U). Valide jusqu\'au 19/11/2028.',
+    // Team certifications
+    teamCertsTitle: 'Certifications Techniques de l\'Équipe',
+    teamCertsSub: 'Nos ingénieurs et techniciens détiennent des certifications reconnues dans les domaines des réseaux, de la cybersécurité, du câblage structuré et de la conception.',
     // Support page
     supportHeroTitle: 'Support 24h/24, Parce que Votre Entreprise Ne S\'arrête Jamais',
     supportHeroSub: 'Notre équipe de support est disponible 24h/24 pour maintenir votre technologie opérationnelle. Soumettez un ticket, appelez-nous ou contactez-nous sur WhatsApp — nous répondons rapidement.',
@@ -1036,6 +1043,7 @@ export const translations = {
     faqAccount: 'Compte',
     // CSR page
     csrHeroTitle: 'Une Technologie Qui Redonne',
+    csr: 'RSE & Communauté',
     csrHeroSub: 'Chez Proxynet, nous croyons que la technologie devrait bénéficier à tous — pas seulement à ceux qui peuvent se le permettre. Notre programme RSE met cette conviction en action.',
     csrFocusEyebrow: 'Nos Domaines d\'Action',
     csrFocusHeading: 'Où Nous Avons un Impact',

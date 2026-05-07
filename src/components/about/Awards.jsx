@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion'
-import { ShieldCheck } from 'lucide-react'
+﻿import { motion } from 'framer-motion'
+import { ShieldCheck, GraduationCap } from 'lucide-react'
 import { useLang } from '../../context/LanguageContext'
 import dahuaLogo from '../../assets/dahua.png'
 import vtLogo from '../../assets/vt.webp'
@@ -19,6 +19,15 @@ const ImgLogo = ({ src, alt }) => (
 export default function Awards() {
   const { t } = useLang()
 
+
+  const teamCerts = [
+    { code: 'CCNA',     name: 'Cisco Certified Network Associate',          area: 'Networking' },
+    { code: 'CCNP',     name: 'Cisco Certified Network Professional',       area: 'Networking' },
+    { code: 'CISSP',    name: 'Certified Information Systems Security Professional', area: 'Cybersecurity' },
+    { code: 'CISA',     name: 'Certified Information Systems Auditor',      area: 'Audit & Governance' },
+    { code: 'Systimax', name: 'Systimax Certified Installer',               area: 'Structured Cabling' },
+    { code: 'AutoCAD',  name: 'Autodesk AutoCAD Certified Professional',    area: 'CAD & Design' },
+  ]
   const awards = [
     { type: 'award', logo: <ImgLogo src={samsungLogo} alt="Samsung" />, title: 'Samsung B2B Award 2014', body: t.award1Body },
     { type: 'cert', logo: <ImgLogo src={samsungLogo} alt="Samsung" />, title: 'Samsung Authorised Partner', body: t.award2Body },
@@ -51,7 +60,27 @@ export default function Awards() {
             </motion.div>
           ))}
         </div>
-      </div>
+
+        <motion.div className={styles.certsBlock} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+          <div className={styles.certsHeader}>
+            <div className={styles.certsIconWrap}><GraduationCap size={20} /></div>
+            <div>
+              <h3 className={styles.certsTitle}>{t.teamCertsTitle}</h3>
+              <p className={styles.certsSub}>{t.teamCertsSub}</p>
+            </div>
+          </div>
+          <div className={styles.certsList}>
+            {teamCerts.map((c, i) => (
+              <motion.div key={c.code} className={styles.certChip} initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, delay: i * 0.06 }}>
+                <span className={styles.certCode}>{c.code}</span>
+                <div className={styles.certInfo}>
+                  <span className={styles.certName}>{c.name}</span>
+                  <span className={styles.certArea}>{c.area}</span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>      </div>
     </section>
   )
 }

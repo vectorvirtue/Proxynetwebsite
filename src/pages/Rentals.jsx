@@ -41,11 +41,11 @@ export default function Rentals() {
           <div className={styles.heroOverlay} />
           <div className={styles.heroInner}>
             <motion.nav className={styles.breadcrumb} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
-              <Link to="/" className={styles.crumb}>Home</Link>
+              <Link to="/" className={styles.crumb}>{t.home}</Link>
               <ChevronRight size={14} className={styles.sep} />
-              <Link to="/solutions" className={styles.crumb}>Solutions</Link>
+              <Link to="/solutions" className={styles.crumb}>{t.solutions}</Link>
               <ChevronRight size={14} className={styles.sep} />
-              <span className={styles.crumbActive}>Rentals</span>
+              <span className={styles.crumbActive}>{t.rentals}</span>
             </motion.nav>
             <motion.h1 className={styles.heroTitle} initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}>
               World-Class AV Equipment for Your Events

@@ -88,3 +88,64 @@
 
 .title { font-size: 16px; font-weight: 700; color: var(--navy); }
 .body { font-size: 13px; color: var(--text); line-height: 1.7; }
+
+/* ── Team Certifications block ────────────────────────────────── */
+.certsBlock {
+  margin-top: 48px;
+  background: var(--white);
+  border: 1.5px solid rgba(0,31,51,0.08);
+  border-radius: 20px;
+  padding: 36px 40px;
+}
+@media (max-width: 768px) { .certsBlock { padding: 24px 20px; } }
+
+.certsHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+.certsIconWrap {
+  width: 44px; height: 44px; flex-shrink: 0;
+  border-radius: 12px;
+  background: rgba(0,111,180,0.08);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--blue);
+}
+.certsTitle { font-size: 18px; font-weight: 800; color: var(--navy); margin-bottom: 4px; }
+.certsSub { font-size: 14px; color: var(--text); line-height: 1.6; }
+
+.certsList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+@media (max-width: 1024px) { .certsList { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px)  { .certsList { grid-template-columns: 1fr; } }
+
+.certChip {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  background: var(--bg);
+  border: 1.5px solid rgba(0,31,51,0.07);
+  border-radius: 12px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.certChip:hover { border-color: var(--blue); box-shadow: 0 4px 16px rgba(0,31,51,0.08); }
+
+.certCode {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--blue);
+  background: rgba(0,111,180,0.08);
+  padding: 4px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.certInfo { display: flex; flex-direction: column; gap: 2px; }
+.certName { font-size: 13px; font-weight: 600; color: var(--navy); line-height: 1.4; }
+.certArea { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text); opacity: 0.5; }
+

@@ -39,11 +39,11 @@ export default function BillboardSolutions() {
         <div className={styles.heroOverlay} />
         <div className={styles.heroInner}>
           <motion.nav className={styles.breadcrumb} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
-            <Link to="/" className={styles.crumb}>Home</Link>
+            <Link to="/" className={styles.crumb}>{t.home}</Link>
             <ChevronRight size={14} className={styles.sep} />
-            <Link to="/solutions" className={styles.crumb}>Solutions</Link>
+            <Link to="/solutions" className={styles.crumb}>{t.solutions}</Link>
             <ChevronRight size={14} className={styles.sep} />
-            <span className={styles.crumbActive}>Billboard Solutions</span>
+            <span className={styles.crumbActive}>{t.billboardSolutions}</span>
           </motion.nav>
           <motion.p className={styles.eyebrow} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.05 }}>ProBoard by Proxynet</motion.p>
           <motion.h1 className={styles.heroTitle} initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}>

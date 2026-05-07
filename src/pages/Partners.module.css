@@ -1,5 +1,5 @@
-﻿.hero { position: relative; background: var(--navy); padding: 160px 0 80px; overflow: hidden; }
-.heroOverlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,18,30,0.6) 0%, rgba(0,40,70,0.2) 100%); z-index: 0; }
+﻿.hero { position: relative; background: transparent; padding: 160px 0 80px; overflow: hidden; }
+.heroOverlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,31,51,0.75) 0%, rgba(0,60,120,0.25) 50%, rgba(0,180,220,0.05) 100%); z-index: 0; }
 .heroInner { position: relative; z-index: 1; max-width: 1440px; margin: 0 auto; padding: 0 92px; }
 @media (max-width: 768px) { .heroInner { padding: 0 16px; } .hero { padding: 120px 0 60px; } }
 .breadcrumb { display: flex; align-items: center; gap: 6px; margin-bottom: 24px; flex-wrap: wrap; }
@@ -27,7 +27,7 @@
 .type { font-size: 12px; font-weight: 600; color: var(--blue); }
 .desc { font-size: 13px; color: var(--text); line-height: 1.6; }
 
-.cta { background: var(--navy); border-radius: 16px; padding: 40px 48px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+.cta { background: transparent; border-radius: 16px; padding: 40px 48px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
 .ctaText { font-size: 18px; font-weight: 700; color: var(--white); max-width: 480px; line-height: 1.5; }
 .ctaBtn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; background: var(--blue); color: var(--white); font-size: 15px; font-weight: 600; border-radius: 8px; min-height: 52px; white-space: nowrap; transition: background 0.2s, transform 0.15s; }
 .ctaBtn:hover { background: #005a94; transform: translateY(-2px); }
