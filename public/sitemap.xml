@@ -37,6 +37,7 @@
   <!-- Partnerships -->
   <url><loc>https://www.proxynetgroup.com/partnerships</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.proxynetgroup.com/partners</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.proxynetgroup.com/events</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
   <!-- Blog -->
   <url><loc>https://www.proxynetgroup.com/blog</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>

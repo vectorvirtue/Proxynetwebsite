@@ -3,7 +3,24 @@ import { motion } from 'framer-motion'
 import { ChevronRight, BookOpen, Leaf, Users, Wifi, Download, ExternalLink } from 'lucide-react'
 import SEO from '../components/SEO'
 import { useLang } from '../context/LanguageContext'
+import breakfast1 from '../assets/BREAKFAST SESSION WITH PROXYNET AND COMFORTE AT RADISSON BLUE.jpg'
+import breakfast2 from '../assets/BREAKFAST SESSION WITH PROXYNET AND COMFORTE AT RADISSON BLUE2.jpg'
+import breakfast3 from '../assets/BREAKFAST SESSION WITH PROXYNET AND COMFORTE AT RADISSON BLUE3.jpg'
+import breakfast4 from '../assets/BREAKFAST SESSION WITH PROXYNET AND COMFORTE AT RADISSON BLUE4.jpg'
+import huawei1 from '../assets/huawei.jpg'
+import huawei2 from '../assets/huawei2.jpg'
+import huaweiPH from '../assets/huaweiportharcourtexperience.jpg'
 import styles from './CSR.module.css'
+
+const eventPhotos = [
+  { src: breakfast1, name: 'Breakfast Session with Proxynet & Comforte at Radisson Blue' },
+  { src: breakfast2, name: 'Breakfast Session with Proxynet & Comforte at Radisson Blue' },
+  { src: breakfast3, name: 'Breakfast Session with Proxynet & Comforte at Radisson Blue' },
+  { src: breakfast4, name: 'Breakfast Session with Proxynet & Comforte at Radisson Blue' },
+  { src: huawei1,   name: 'Huawei Event' },
+  { src: huawei2,   name: 'Huawei Event' },
+  { src: huaweiPH,  name: 'Huawei Port Harcourt Experience' },
+]
 
 const categories = [
   { icon: <BookOpen size={28} />, title: 'Education', desc: 'Equipping schools with technology, funding scholarships, and supporting digital literacy programmes across underserved communities.' },
@@ -114,6 +131,33 @@ export default function CSR() {
                       <span className={styles.outcomeLabel}>{t.csrOutcomeLabel}</span>
                       <p className={styles.outcomeText}>{s.outcome}</p>
                     </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Events gallery */}
+        <section className={styles.section}>
+          <div className={styles.inner}>
+            <motion.div className={styles.sectionHeader} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+              <p className={styles.eyebrow}>Events Gallery</p>
+              <h2 className={styles.heading}>Proxynet in the Community</h2>
+            </motion.div>
+            <div className={styles.galleryGrid}>
+              {eventPhotos.map((photo, i) => (
+                <motion.div
+                  key={i}
+                  className={styles.galleryItem}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: i * 0.06 }}
+                >
+                  <img src={photo.src} alt={photo.name} className={styles.galleryImg} loading="lazy" />
+                  <div className={styles.galleryOverlay}>
+                    <p className={styles.galleryName}>{photo.name}</p>
                   </div>
                 </motion.div>
               ))}
