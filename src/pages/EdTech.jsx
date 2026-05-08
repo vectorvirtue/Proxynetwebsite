@@ -42,7 +42,7 @@ export default function EdTech() {
   return (
     <>
       <SEO
-        title="EdTech & Smart Schools â€” Technology for Education"
+        title="EdTech & Smart Schools — Technology for Education"
         description="Proxynet EdTech delivers smart classroom solutions, school network infrastructure, digital literacy training, and ICT programmes across West Africa."
         canonical="/solutions/edtech"
       />
@@ -80,7 +80,7 @@ export default function EdTech() {
               </div>
               <div className={styles.overviewRight}>
                 <p className={styles.body}>Proxynet EdTech is the education technology division of Proxynet Group. We work with primary schools, secondary schools, universities, and government education agencies to transform learning environments through technology.</p>
-                <p className={styles.body}>From installing interactive displays in classrooms to building campus-wide Wi-Fi networks and running digital literacy workshops â€” we provide end-to-end technology solutions designed specifically for education.</p>
+                <p className={styles.body}>From installing interactive displays in classrooms to building campus-wide Wi-Fi networks and running digital literacy workshops — we provide end-to-end technology solutions designed specifically for education.</p>
                 <a href="https://edtech.proxynetgroup.com" target="_blank" rel="noopener noreferrer" className={styles.extLink}>{t.visitEdTechWebsite} <ChevronRight size={16} /></a>
               </div>
             </motion.div>

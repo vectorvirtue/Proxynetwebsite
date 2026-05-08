@@ -12,19 +12,75 @@
 .headerCta { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; color: var(--blue); white-space: nowrap; transition: gap 0.2s; flex-shrink: 0; }
 .headerCta:hover { gap: 12px; }
 
-/* ── Logo strip ───────────────────────────────────────────────── */
-.logoStrip { display: grid; grid-template-columns: repeat(7, 1fr); gap: 16px; margin-bottom: 48px; }
-@media (max-width: 1024px) { .logoStrip { grid-template-columns: repeat(4, 1fr); } }
-@media (max-width: 640px)  { .logoStrip { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 400px)  { .logoStrip { grid-template-columns: repeat(2, 1fr); } }
+/* ── Logo strip → Infinite carousel ──────────────────────────── */
+.carouselWrap {
+  overflow: hidden;
+  margin-bottom: 48px;
+  /* fade edges */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
 
-.logoCard { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 20px 12px; background: var(--bg); border: 1.5px solid rgba(0,31,51,0.07); border-radius: 14px; transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s; }
-.logoCard:hover { box-shadow: 0 8px 24px rgba(0,31,51,0.08); border-color: var(--blue); transform: translateY(-3px); }
-.logoWrap { height: 48px; display: flex; align-items: center; justify-content: center; }
-.logo { max-height: 40px; max-width: 80px; width: auto; object-fit: contain; filter: grayscale(30%); transition: filter 0.2s; }
-.logoCard:hover .logo { filter: grayscale(0%); }
-.partnerName { font-size: 13px; font-weight: 700; color: var(--navy); text-align: center; }
-.partnerType { font-size: 11px; color: var(--text); opacity: 0.55; text-align: center; line-height: 1.4; }
+.carouselTrack {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+
+.carouselTrack:hover { animation-play-state: paused; }
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.carouselItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px;
+  height: 72px;
+  border-right: 1px solid rgba(0,31,51,0.08);
+  flex-shrink: 0;
+}
+
+.carouselLogo {
+  max-height: 44px;
+  max-width: 120px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Larger variant for logos that render too small at default size */
+.carouselLogoTall {
+  max-height: 56px;
+  max-width: 140px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Extra large — FireEye */
+.carouselLogoXL {
+  max-height: 70px;
+  max-width: 160px;
+  width: auto;
+  object-fit: contain;
+}
+
+.carouselItem:hover .carouselLogo { filter: none; }
+
+.carouselName {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  opacity: 0.55;
+  white-space: nowrap;
+  letter-spacing: -0.3px;
+  transition: opacity 0.2s;
+}
+.carouselItem:hover .carouselName { opacity: 1; color: var(--navy); }
 
 /* ── Footer CTA strip ─────────────────────────────────────────── */
 .footer { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 28px 32px; background: var(--bg); border-radius: 16px; border: 1.5px solid rgba(0,31,51,0.07); flex-wrap: wrap; }

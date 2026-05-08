@@ -63,6 +63,7 @@ export default function Navbar() {
     { label: t.casestudies, href: '/case-studies' },
     { label: t.support, href: '/support' },
     { label: t.community, href: '/csr' },
+    { label: t.events, href: '/events' },
     { label: t.blog, href: '/blog' },
   ]
 

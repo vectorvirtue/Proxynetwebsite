@@ -78,7 +78,10 @@ export default function Footer() {
       links: [
         { label: t.blog, href: '/blog' },
         { label: t.casestudies, href: '/case-studies' },
+        { label: t.events, href: '/events' },
+        { label: t.datasheets, href: '/resources/datasheets' },
         { label: t.whitepapers, href: '/resources/whitepapers' },
+        { label: t.onboardingGuides, href: '/resources/onboarding' },
         { label: t.supportCentre, href: '/support' },
         { label: t.faqs, href: '/faqs' },
       ],

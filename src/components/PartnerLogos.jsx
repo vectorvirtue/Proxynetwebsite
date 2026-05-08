@@ -3,23 +3,39 @@ import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { useLang } from '../context/LanguageContext'
 import samsungLogo from '../assets/samsung.png'
-import logitechLogo from '../assets/logitech.png'
+import logitechLogo from '../assets/Logitech.jpg'
 import canonLogo from '../assets/canon.png'
 import yealinkLogo from '../assets/yealink.png'
 import microsoftLogo from '../assets/microsoft.png'
 import dahuaLogo from '../assets/dahua.png'
 import vtLogo from '../assets/vt.webp'
+import sennheiserLogo from '../assets/Sennheiser-logo.png'
+import maxhubLogo from '../assets/maxhub.jpg'
+import ibmLogo from '../assets/ibm.png'
+import zoomLogo from '../assets/zoom-logo1.jpg'
+import peerlessLogo from '../assets/peerlessav.jpg'
+import fireeyeLogo from '../assets/fireeye.jpg'
 import styles from './PartnerLogos.module.css'
 
+// All partners now have logos
 const partners = [
-  { logo: samsungLogo,   name: 'Samsung',   type: 'Authorised B2B Partner' },
-  { logo: logitechLogo,  name: 'Logitech',  type: 'Authorised Distributor' },
-  { logo: microsoftLogo, name: 'Microsoft', type: 'Authorised Partner' },
-  { logo: canonLogo,     name: 'Canon',     type: 'Authorised Distributor' },
-  { logo: yealinkLogo,   name: 'Yealink',   type: 'Distributor & Integrator' },
-  { logo: dahuaLogo,     name: 'Dahua',     type: 'Authorised Distributor' },
-  { logo: vtLogo,        name: 'VT',        type: 'Authorised Distributor' },
+  { logo: yealinkLogo,    name: 'Yealink' },
+  { logo: samsungLogo,    name: 'Samsung' },
+  { logo: sennheiserLogo, name: 'Sennheiser', tall: true },
+  { logo: logitechLogo,   name: 'Logitech' },
+  { logo: maxhubLogo,     name: 'Maxhub' },
+  { logo: microsoftLogo,  name: 'Microsoft' },
+  { logo: ibmLogo,        name: 'IBM',        tall: true },
+  { logo: zoomLogo,       name: 'Zoom',       tall: true },
+  { logo: peerlessLogo,   name: 'Peerless-AV', tall: true },
+  { logo: fireeyeLogo,    name: 'FireEye',    size: 'xl' },
+  { logo: canonLogo,      name: 'Canon' },
+  { logo: dahuaLogo,      name: 'Dahua' },
+  { logo: vtLogo,         name: 'VT' },
 ]
+
+// Duplicate for seamless infinite loop
+const track = [...partners, ...partners]
 
 export default function PartnerLogos() {
   const { t } = useLang()
@@ -46,24 +62,27 @@ export default function PartnerLogos() {
           </Link>
         </motion.div>
 
-        {/* Logo strip */}
-        <div className={styles.logoStrip}>
-          {partners.map((p, i) => (
-            <motion.div
-              key={p.name}
-              className={styles.logoCard}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.35, delay: i * 0.06 }}
-            >
-              <div className={styles.logoWrap}>
-                <img src={p.logo} alt={p.name} className={styles.logo} />
+        {/* Infinite scrolling carousel */}
+        <div className={styles.carouselWrap} aria-hidden="true">
+          <div className={styles.carouselTrack}>
+            {track.map((p, i) => (
+              <div key={`${p.name}-${i}`} className={styles.carouselItem}>
+                {p.logo ? (
+                  <img
+                    src={p.logo}
+                    alt={p.name}
+                    className={
+                      p.size === 'xl' ? styles.carouselLogoXL :
+                      p.tall ? styles.carouselLogoTall :
+                      styles.carouselLogo
+                    }
+                  />
+                ) : (
+                  <span className={styles.carouselName}>{p.name}</span>
+                )}
               </div>
-              <p className={styles.partnerName}>{p.name}</p>
-              <p className={styles.partnerType}>{p.type}</p>
-            </motion.div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* Bottom CTA */}
@@ -85,4 +104,3 @@ export default function PartnerLogos() {
     </section>
   )
 }
-
