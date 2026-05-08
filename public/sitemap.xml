@@ -39,6 +39,16 @@
   <url><loc>https://www.proxynetgroup.com/partners</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.proxynetgroup.com/events</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
+  <!-- Industries -->
+  <url><loc>https://www.proxynetgroup.com/industries/financial-services</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.proxynetgroup.com/industries/oil-gas</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.proxynetgroup.com/industries/manufacturing</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.proxynetgroup.com/industries/telecommunications</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.proxynetgroup.com/industries/government</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.proxynetgroup.com/industries/education</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.proxynetgroup.com/industries/healthcare</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.proxynetgroup.com/industries/retail</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
   <!-- Blog -->
   <url><loc>https://www.proxynetgroup.com/blog</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.proxynetgroup.com/blog/why-cybersecurity-matters-african-businesses</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>

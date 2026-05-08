@@ -20,7 +20,7 @@ export default function Industries() {
   const industries = getIndustries(t)
 
   return (
-    <section className={styles.section} aria-labelledby="industries-heading">
+    <section id="industries" className={styles.section} aria-labelledby="industries-heading">
       <div className={styles.inner}>
 
         <motion.div

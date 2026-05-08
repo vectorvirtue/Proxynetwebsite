@@ -18,6 +18,7 @@ import CaseStudy from './pages/CaseStudy'
 import Partnerships from './pages/Partnerships'
 import Partners from './pages/Partners'
 import Events from './pages/Events'
+import IndustryPage from './pages/IndustryPage'
 import NotFound from './pages/NotFound'
 import ScrollToTop from './components/ScrollToTop'
 import WhatsAppButton from './components/WhatsAppButton'
@@ -50,6 +51,7 @@ export default function App() {
           <Route path="/partnerships" element={<Partnerships />} />
           <Route path="/partners" element={<Partners />} />
           <Route path="/events" element={<Events />} />
+          <Route path="/industries/:slug" element={<IndustryPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />
