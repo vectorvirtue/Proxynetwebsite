@@ -35,7 +35,7 @@ const YoutubeIcon = () => (
 const socials = [
   { icon: <LinkedinIcon />, href: 'https://www.linkedin.com/company/proxynet-communications', label: 'LinkedIn' },
   { icon: <FacebookIcon />, href: 'https://www.facebook.com/proxynetcommunications/', label: 'Facebook' },
-  { icon: <InstagramIcon />, href: 'https://www.instagram.com/proxynetgroup/', label: 'Instagram' },
+  { icon: <InstagramIcon />, href: 'https://www.instagram.com/proxynetcommltd/', label: 'Instagram' },
   { icon: <YoutubeIcon />, href: 'https://www.youtube.com/channel/UCKfMFI9KCi63vntfcW68_1g', label: 'YouTube' },
 ]
 

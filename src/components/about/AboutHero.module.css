@@ -1,7 +1,7 @@
 ﻿.hero {
   position: relative;
   background: var(--navy);
-  padding: 160px 0 80px;
+  padding: 100px 0 60px;
   overflow: hidden;
 }
 
@@ -29,7 +29,7 @@
 
 @media (max-width: 768px) {
   .inner { padding: 0 16px; }
-  .hero { padding: 120px 0 60px; }
+  .hero { padding: 80px 0 48px; }
 }
 
 .breadcrumb {

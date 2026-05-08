@@ -3,15 +3,13 @@ import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronRight, ChevronLeft } from 'lucide-react'
 import { useLang } from '../../context/LanguageContext'
-import img1 from '../../assets/idehub.jpg'
-import img2 from '../../assets/Picture1.jpg'
-import img3 from '../../assets/Picture2.png'
-import img4 from '../../assets/Picture3.png'
-import img5 from '../../assets/Picture4.png'
+import img1 from '../../assets/annie-spratt-QckxruozjRg-unsplash.jpg'
+import img2 from '../../assets/hack-capital-uv5_bsypFUM-unsplash.jpg'
+import img3 from '../../assets/desola-lanre-ologun-kwzWjTnDPLk-unsplash.jpg'
+import img4 from '../../assets/compagnons-Im_cQ6hQo10-unsplash.jpg'
 import styles from './CareersHero.module.css'
 
-// Swap these for career-specific photos when available
-const slides = [img1, img2, img3, img4, img5]
+const slides = [img1, img2, img3, img4]
 
 export default function CareersHero() {
   const { t } = useLang()
@@ -22,7 +20,7 @@ export default function CareersHero() {
     const id = setInterval(() => {
       setDirection(1)
       setCurrent(p => (p + 1) % slides.length)
-    }, 3000)
+    }, 5000)
     return () => clearInterval(id)
   }, [current])
 
@@ -33,18 +31,17 @@ export default function CareersHero() {
 
   return (
     <section className={styles.hero}>
-      {/* Carousel background */}
+      {/* Carousel background — crossfade */}
       <div className={styles.slideBg} aria-hidden="true">
-        <AnimatePresence custom={direction} mode="sync">
+        <AnimatePresence mode="crossfade">
           <motion.img
             key={current}
             src={slides[current]}
             alt=""
             className={styles.slideImg}
-            custom={direction}
-            initial={{ opacity: 0, x: direction > 0 ? 60 : -60 }}
-            animate={{ opacity: 1, x: 0, transition: { duration: 0.7, ease: 'easeOut' } }}
-            exit={{ opacity: 0, x: direction > 0 ? -60 : 60, transition: { duration: 0.4 } }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { duration: 1.2, ease: 'easeInOut' } }}
+            exit={{ opacity: 0, transition: { duration: 0.8, ease: 'easeInOut' } }}
           />
         </AnimatePresence>
       </div>
