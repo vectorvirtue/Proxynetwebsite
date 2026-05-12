@@ -51,16 +51,23 @@ ul { list-style: none; }
   overflow: hidden;
 }
 
-/* Flowing mesh lines */
+/* Large circle blobs + dot grid */
 .heroScene::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-image:
+  background:
+    /* large circle top-left */
+    radial-gradient(circle 420px at 18% 35%, rgba(255,255,255,0.12) 0%, transparent 70%),
+    /* overlapping circle centre */
+    radial-gradient(circle 360px at 52% 20%, rgba(255,255,255,0.09) 0%, transparent 70%),
+    /* partial circle bottom-right */
+    radial-gradient(circle 480px at 105% 90%, rgba(255,255,255,0.08) 0%, transparent 60%),
     /* fine dot grid */
     radial-gradient(rgba(70,195,242,0.06) 1px, transparent 1px);
-  background-size: 36px 36px;
+  background-size: auto, auto, auto, 36px 36px;
   pointer-events: none;
+  z-index: 0;
 }
 
 /* SVG wave shapes */
@@ -74,3 +81,62 @@ ul { list-style: none; }
   pointer-events: none;
 }
 
+
+/* ── Hero content centring (all pages except home) ──────────────
+   Centres all text and CTAs inside heroScene sections.
+   The home hero overrides this back to left-aligned via Hero.module.css.
+   ──────────────────────────────────────────────────────────────── */
+.heroScene .heroInner,
+.heroScene .inner {
+  text-align: center;
+  align-items: center;
+}
+
+/* Breadcrumb stays as a row */
+.heroScene .heroInner nav,
+.heroScene .inner nav {
+  text-align: left;
+}
+
+/* CTA rows stay horizontal and centred */
+.heroScene .heroCtas,
+.heroScene .ctas {
+  justify-content: center;
+}
+
+/* ── Section circle decoration ──────────────────────────────────
+   Add .sectionCircles to any light section for subtle circle blobs.
+   Works on var(--bg) and var(--white) backgrounds.
+   ──────────────────────────────────────────────────────────────── */
+.sectionCircles {
+  position: relative;
+  overflow: hidden;
+}
+
+.sectionCircles::before {
+  content: '';
+  position: absolute;
+  top: -160px;
+  left: -120px;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,111,180,0.15) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sectionCircles::after {
+  content: '';
+  position: absolute;
+  bottom: -140px;
+  right: -100px;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(70,195,242,0.12) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sectionCircles > * { position: relative; z-index: 1; }

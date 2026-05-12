@@ -1,9 +1,10 @@
 ﻿import { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowRight, ChevronRight, SlidersHorizontal, X } from 'lucide-react'
+import { ArrowRight, ChevronRight, X } from 'lucide-react'
 import { useLang } from '../context/LanguageContext'
 import { getCaseStudies } from '../data/caseStudies'
+import FilterDropdown from '../components/FilterDropdown'
 import SEO from '../components/SEO'
 import styles from './CaseStudies.module.css'
 
@@ -13,27 +14,23 @@ export default function CaseStudies() {
   const { t } = useLang()
   const allStudies = getCaseStudies(t).filter(cs => cs.status !== 'consent-required')
 
-  const solutions = useMemo(() => [ALL, ...new Set(allStudies.map(cs => cs.category))], [allStudies])
-  const industries = useMemo(() => [ALL, ...new Set(allStudies.map(cs => cs.industry))], [allStudies])
-  const countries  = useMemo(() => [ALL, ...new Set(allStudies.map(cs => cs.country))], [allStudies])
+  const solutions = useMemo(() => [...new Set(allStudies.map(cs => cs.category))], [allStudies])
+  const industries = useMemo(() => [...new Set(allStudies.map(cs => cs.industry))], [allStudies])
+  const countries  = useMemo(() => [...new Set(allStudies.map(cs => cs.country))], [allStudies])
 
-  const [filterSolution, setFilterSolution] = useState(ALL)
-  const [filterIndustry, setFilterIndustry] = useState(ALL)
-  const [filterCountry,  setFilterCountry]  = useState(ALL)
+  const [filterSolution, setFilterSolution] = useState(null)
+  const [filterIndustry, setFilterIndustry] = useState(null)
+  const [filterCountry,  setFilterCountry]  = useState(null)
 
   const filtered = useMemo(() => allStudies.filter(cs =>
-    (filterSolution === ALL || cs.category === filterSolution) &&
-    (filterIndustry === ALL || cs.industry  === filterIndustry) &&
-    (filterCountry  === ALL || cs.country   === filterCountry)
+    (!filterSolution || cs.category === filterSolution) &&
+    (!filterIndustry || cs.industry  === filterIndustry) &&
+    (!filterCountry  || cs.country   === filterCountry)
   ), [allStudies, filterSolution, filterIndustry, filterCountry])
 
-  const hasActiveFilter = filterSolution !== ALL || filterIndustry !== ALL || filterCountry !== ALL
+  const hasActiveFilter = filterSolution || filterIndustry || filterCountry
 
-  const clearFilters = () => {
-    setFilterSolution(ALL)
-    setFilterIndustry(ALL)
-    setFilterCountry(ALL)
-  }
+  const clearFilters = () => { setFilterSolution(null); setFilterIndustry(null); setFilterCountry(null) }
 
   return (
     <>
@@ -61,6 +58,10 @@ export default function CaseStudies() {
             <motion.p className={styles.heroSub} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
               {t.caseStudiesHeroSub}
             </motion.p>
+            <motion.div className={styles.heroCtas} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}>
+              <Link to="/contact" className={styles.ctaPrimary}>{t.csSimilarSolution}</Link>
+              <Link to="/contact" className={styles.ctaSecondary}>{t.contactUs}</Link>
+            </motion.div>
           </div>
         </section>
 
@@ -68,59 +69,13 @@ export default function CaseStudies() {
         <section className={styles.section}>
           <div className={styles.inner}>
 
-            {/* Filter bar */}
+            {/* Dropdown filter bar */}
             <div className={styles.filterBar}>
-              <div className={styles.filterIcon}><SlidersHorizontal size={16} /></div>
-
-              <div className={styles.filterGroup}>
-                <span className={styles.filterLabel}>{t.csFilterSolution}</span>
-                <div className={styles.filterPills}>
-                  {solutions.map(s => (
-                    <button
-                      key={s}
-                      className={`${styles.pill} ${filterSolution === s ? styles.pillActive : ''}`}
-                      onClick={() => setFilterSolution(s)}
-                    >
-                      {s}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              <div className={styles.filterGroup}>
-                <span className={styles.filterLabel}>{t.csFilterIndustry}</span>
-                <div className={styles.filterPills}>
-                  {industries.map(ind => (
-                    <button
-                      key={ind}
-                      className={`${styles.pill} ${filterIndustry === ind ? styles.pillActive : ''}`}
-                      onClick={() => setFilterIndustry(ind)}
-                    >
-                      {ind}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              <div className={styles.filterGroup}>
-                <span className={styles.filterLabel}>{t.csFilterCountry}</span>
-                <div className={styles.filterPills}>
-                  {countries.map(c => (
-                    <button
-                      key={c}
-                      className={`${styles.pill} ${filterCountry === c ? styles.pillActive : ''}`}
-                      onClick={() => setFilterCountry(c)}
-                    >
-                      {c}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
+              <FilterDropdown label={t.csFilterSolution} options={solutions} value={filterSolution} onChange={setFilterSolution} />
+              <FilterDropdown label={t.csFilterIndustry} options={industries} value={filterIndustry} onChange={setFilterIndustry} />
+              <FilterDropdown label={t.csFilterCountry}  options={countries}  value={filterCountry}  onChange={setFilterCountry} />
               {hasActiveFilter && (
-                <button className={styles.clearBtn} onClick={clearFilters}>
-                  <X size={14} /> {t.csFilterClear}
-                </button>
+                <button className={styles.clearBtn} onClick={clearFilters}><X size={13} /> {t.csFilterClear}</button>
               )}
             </div>
 

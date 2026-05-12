@@ -90,6 +90,10 @@ export default function CSR() {
             <motion.p className={styles.heroSub} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
               {t.csrHeroSub}
             </motion.p>
+            <motion.div className={styles.heroCtas} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}>
+              <Link to="/contact" className={styles.primary}>{t.partnerWithUs}</Link>
+              <a href="#impact" className={styles.secondary}>{t.csrReadImpact}</a>
+            </motion.div>
           </div>
         </section>
 

@@ -25,6 +25,10 @@
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 92px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -61,12 +65,18 @@
   letter-spacing: -2px;
   line-height: 1.05;
   margin-bottom: 20px;
-  max-width: 700px;
+  max-width: 760px;
 }
 
 .sub {
   font-size: clamp(16px, 1.5vw, 20px);
   color: rgba(255,255,255,0.65);
-  max-width: 560px;
+  max-width: 600px;
   line-height: 1.7;
 }
+
+.heroCtas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px;   justify-content: center;}
+.primary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; background: var(--blue); color: var(--white); font-size: 15px; font-weight: 600; border-radius: 8px; min-height: 52px; transition: background 0.2s, transform 0.15s; }
+.primary:hover { background: #005a94; transform: translateY(-2px); }
+.secondary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; background: transparent; color: var(--white); font-size: 15px; font-weight: 600; border-radius: 8px; border: 1.5px solid rgba(255,255,255,0.25); min-height: 52px; transition: border-color 0.2s, background 0.2s, transform 0.15s; }
+.secondary:hover { border-color: var(--sky); background: rgba(70,195,242,0.08); transform: translateY(-2px); }

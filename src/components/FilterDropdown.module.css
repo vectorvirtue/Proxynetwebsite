@@ -1,0 +1,88 @@
+﻿.wrap { position: relative; display: inline-block; }
+
+/* Trigger button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border: 1.5px solid rgba(0,31,51,0.2);
+  border-radius: 100px;
+  background: transparent;
+  font-family: var(--font);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--navy);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  white-space: nowrap;
+}
+.btn:hover { border-color: var(--blue); color: var(--blue); }
+.btnActive { border-color: var(--navy); background: var(--navy); color: var(--white); }
+.btnActive:hover { border-color: #003a6b; background: #003a6b; color: var(--white); }
+
+.label { flex-shrink: 0; }
+
+/* Active value badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 100px;
+  padding: 2px 8px 2px 8px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.badgeClear {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+.badgeClear:hover { opacity: 1; }
+
+.chevron { flex-shrink: 0; transition: transform 0.2s; }
+.chevronOpen { transform: rotate(180deg); }
+
+/* Dropdown menu */
+.menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 180px;
+  background: var(--white);
+  border: 1.5px solid rgba(0,31,51,0.1);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  z-index: 100;
+  list-style: none;
+  padding: 6px;
+  overflow: hidden;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--navy);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.12s;
+}
+.option:hover { background: var(--bg); }
+.optionActive { font-weight: 700; color: var(--blue); background: rgba(0,111,180,0.06); }
+.optionCheck { color: var(--blue); flex-shrink: 0; }
+

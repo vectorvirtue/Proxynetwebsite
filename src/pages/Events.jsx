@@ -2,6 +2,7 @@
 import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronRight, X, Calendar, MapPin, ArrowRight, Images } from 'lucide-react'
+import FilterDropdown from '../components/FilterDropdown'
 import SEO from '../components/SEO'
 import { useLang } from '../context/LanguageContext'
 import breakfast1 from '../assets/BREAKFAST SESSION WITH PROXYNET AND COMFORTE AT RADISSON BLUE.jpg'
@@ -80,16 +81,16 @@ const upcomingEvents = [
 
 export default function Events() {
   const { t } = useLang()
-  const [activeFilter, setActiveFilter] = useState(ALL)
-  const [activeYear, setActiveYear] = useState(ALL)
+  const [activeFilter, setActiveFilter] = useState(null)
+  const [activeYear, setActiveYear] = useState(null)
   const [lightbox, setLightbox] = useState(null) // { src, caption }
 
-  const categories = [ALL, ...new Set(events.map(e => e.category))]
-  const years = [ALL, ...new Set(events.map(e => e.year)).values()].sort((a, b) => b - a)
+  const categories = [...new Set(events.map(e => e.category))]
+  const years = [...new Set(events.map(e => e.year))].sort((a, b) => b - a)
 
   const filtered = events.filter(e =>
-    (activeFilter === ALL || e.category === activeFilter) &&
-    (activeYear === ALL || e.year === activeYear)
+    (!activeFilter || e.category === activeFilter) &&
+    (!activeYear || e.year === activeYear)
   )
 
   const allPhotos = filtered.flatMap(e => e.photos)
@@ -178,18 +179,15 @@ export default function Events() {
               <h2 className={styles.heading}>All Events</h2>
             </motion.div>
 
-            {/* Filters */}
+            {/* Dropdown filters */}
             <div className={styles.filters}>
-              <div className={styles.filterGroup}>
-                {categories.map(c => (
-                  <button key={c} className={`${styles.pill} ${activeFilter === c ? styles.pillActive : ''}`} onClick={() => setActiveFilter(c)}>{c}</button>
-                ))}
-              </div>
-              <div className={styles.filterGroup}>
-                {years.map(y => (
-                  <button key={y} className={`${styles.pill} ${activeYear === y ? styles.pillActive : ''}`} onClick={() => setActiveYear(y)}>{y}</button>
-                ))}
-              </div>
+              <FilterDropdown label="Category" options={categories} value={activeFilter} onChange={setActiveFilter} />
+              <FilterDropdown label="Year"     options={years}      value={activeYear}   onChange={setActiveYear} />
+              {(activeFilter || activeYear) && (
+                <button className={styles.clearBtn} onClick={() => { setActiveFilter(null); setActiveYear(null) }}>
+                  <X size={13} /> Clear
+                </button>
+              )}
             </div>
 
             {/* Grid */}

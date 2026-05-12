@@ -133,9 +133,6 @@ export default function Hero() {
         ))}
       </div>
 
-      <div className={styles.blobBlue} aria-hidden="true" />
-      <div className={styles.blobSky} aria-hidden="true" />
-
       {/* Content — changes with each slide */}
       <div className={styles.inner}>
         <AnimatePresence mode="wait">

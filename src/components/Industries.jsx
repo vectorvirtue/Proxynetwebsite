@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Landmark, Flame, Factory, Radio, Building2, GraduationCap, Stethoscope, ShoppingCart, ArrowRight } from 'lucide-react'
 import { useLang } from '../context/LanguageContext'
+import SectionBlobs from './SectionBlobs'
 import styles from './Industries.module.css'
 
 const getIndustries = (t) => [
@@ -22,6 +23,7 @@ export default function Industries() {
   return (
     <section id="industries" className={styles.section} aria-labelledby="industries-heading">
       <div className={styles.inner}>
+        <SectionBlobs variant="dark" />
 
         <motion.div
           className={styles.header}

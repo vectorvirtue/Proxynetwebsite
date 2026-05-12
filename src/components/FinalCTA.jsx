@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useLang } from '../context/LanguageContext'
+import SectionBlobs from './SectionBlobs'
 import styles from './FinalCTA.module.css'
 
 export default function FinalCTA() {
@@ -8,6 +9,7 @@ export default function FinalCTA() {
   return (
     <section className={styles.section} aria-labelledby="final-cta-heading">
       <div className={styles.inner}>
+        <SectionBlobs />
         <motion.h2
           id="final-cta-heading"
           className={styles.heading}

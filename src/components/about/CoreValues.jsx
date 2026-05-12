@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Compass, ShieldCheck, Gem, Zap, Leaf, Link2, Star } from 'lucide-react'
 import { useLang } from '../../context/LanguageContext'
+import SectionBlobs from '../SectionBlobs'
 import styles from './CoreValues.module.css'
 
 export default function CoreValues() {
@@ -19,6 +20,7 @@ export default function CoreValues() {
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
+        <SectionBlobs />
         <motion.div className={styles.header} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <p className={styles.eyebrow}>{t.coreValuesEyebrow}</p>
           <p className={styles.sub}>{t.coreValuesSub}</p>

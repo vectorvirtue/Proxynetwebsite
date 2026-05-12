@@ -1,38 +1,121 @@
-﻿.section { background: var(--white); padding: 96px 0; }
+﻿.section { position: relative; overflow: hidden; background: var(--white); padding: 96px 0; }
 .inner { max-width: 1440px; margin: 0 auto; padding: 0 92px; }
-@media (max-width: 768px) { .inner { padding: 0 16px; } .section { padding: 92px 0; } }
+@media (max-width: 768px) { .inner { padding: 0 16px; } .section { padding: 64px 0; } }
 
-.header { max-width: 640px; margin-bottom: 56px; }
+.header { max-width: 640px; margin-bottom: 64px; }
 .eyebrow { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--blue); margin-bottom: 12px; }
 .heading { font-size: clamp(28px, 3vw, 44px); font-weight: 800; color: var(--navy); letter-spacing: -1px; }
 
-.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-@media (max-width: 1024px) { .grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 480px) { .grid { grid-template-columns: 1fr; } }
+/* ── Fan scene ────────────────────────────────────────────────── */
+.fanScene {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 8px;
+  margin-bottom: 64px;
+}
 
-.card {
-  background: var(--bg);
-  border: 1px solid rgba(0,31,51,0.08);
-  border-radius: 16px;
-  padding: 28px 24px;
+.fanCard {
+  width: 180px;
+  flex-shrink: 0;
+  position: relative;
+  cursor: default;
+}
+
+.fanCard:hover .fanImgWrap {
+  filter: brightness(1.08);
+}
+
+.fanImgWrap {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: linear-gradient(160deg, #001f33 0%, #003a6b 60%, #001220 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.25);
+  transition: filter 0.3s ease;
+  /* clip-path applied inline per card */
+}
+
+.fanAvatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(70,195,242,0.12);
+  border: 2px solid rgba(70,195,242,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fanInitials {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--sky);
+  letter-spacing: -1px;
+}
+
+.fanLabel {
+  padding: 10px 4px 0;
+  text-align: center;
+}
+
+.fanName {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fanTitle {
+  font-size: 11px;
+  color: var(--blue);
+  font-weight: 600;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+  .fanScene {
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+  }
+  .fanCard { width: 140px; }
+  .fanImgWrap { clip-path: none !important; }
+}
+
+/* ── Bio strip ────────────────────────────────────────────────── */
+.bioGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  border-top: 1px solid rgba(0,31,51,0.08);
+  padding-top: 40px;
+}
+@media (max-width: 1200px) { .bioGrid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 768px)  { .bioGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px)  { .bioGrid { grid-template-columns: 1fr; } }
+
+.bioCard {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  transition: box-shadow 0.2s;
-}
-.card:hover { box-shadow: 0 8px 32px rgba(0,31,51,0.1); }
-
-.avatar {
-  width: 72px; height: 72px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--blue), var(--sky));
-  display: flex; align-items: center; justify-content: center;
+  gap: 4px;
+  padding: 18px;
+  background: var(--bg);
+  border-radius: 12px;
+  border: 1px solid rgba(0,31,51,0.07);
 }
 
-.initials { font-size: 22px; font-weight: 800; color: var(--white); }
+.bioName { font-size: 14px; font-weight: 700; color: var(--navy); }
+.bioRole { font-size: 11px; font-weight: 600; color: var(--blue); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+.bioCopy { font-size: 13px; color: var(--text); line-height: 1.7; }
 
-.info { display: flex; flex-direction: column; gap: 6px; }
 
-.name { font-size: 17px; font-weight: 700; color: var(--navy); }
-.title { font-size: 13px; font-weight: 600; color: var(--blue); }
-.bio { font-size: 13px; color: var(--text); line-height: 1.7; margin-top: 4px; }

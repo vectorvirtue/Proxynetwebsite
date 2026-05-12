@@ -1,5 +1,5 @@
 ﻿/* ── Section ──────────────────────────────────────────────────── */
-.section { background: var(--white); padding: 96px 0; }
+.section { position: relative; overflow: hidden; background: var(--white); padding: 96px 0; }
 .inner { max-width: 1440px; margin: 0 auto; padding: 0 92px; }
 @media (max-width: 768px) { .inner { padding: 0 16px; } .section { padding: 64px 0; } }
 
@@ -61,6 +61,14 @@
   object-fit: contain;
 }
 
+/* Wide variant for landscape SVG logos like Unilumin */
+.carouselLogoWide {
+  max-height: 32px;
+  max-width: 160px;
+  width: auto;
+  object-fit: contain;
+}
+
 /* Extra large — FireEye */
 .carouselLogoXL {
   max-height: 70px;
@@ -83,11 +91,21 @@
 .carouselItem:hover .carouselName { opacity: 1; color: var(--navy); }
 
 /* ── Footer CTA strip ─────────────────────────────────────────── */
-.footer { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 28px 32px; background: var(--bg); border-radius: 16px; border: 1.5px solid rgba(0,31,51,0.07); flex-wrap: wrap; }
+.footer { display: flex; align-items: center; justify-content: center; }
 .footerText { font-size: 16px; font-weight: 600; color: var(--navy); max-width: 480px; line-height: 1.5; }
+
 .footerCtas { display: flex; gap: 12px; flex-wrap: wrap; }
+
 .ctaPrimary { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: var(--blue); color: var(--white); font-size: 14px; font-weight: 600; border-radius: 8px; min-height: 48px; transition: background 0.2s, transform 0.15s; }
 .ctaPrimary:hover { background: #005a94; transform: translateY(-2px); }
-.ctaSecondary { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: transparent; color: var(--navy); font-size: 14px; font-weight: 600; border-radius: 8px; border: 1.5px solid rgba(0,31,51,0.15); min-height: 48px; transition: border-color 0.2s, background 0.2s; }
+.ctaSecondary { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background:var(--blue); color: var(--white); font-size: 14px; font-weight: 600; border-radius: 8px; border: 1.5px solid rgba(0,31,51,0.15); min-height: 48px; transition: border-color 0.2s, background 0.2s; }
 .ctaSecondary:hover { border-color: var(--blue); color: var(--blue); background: rgba(0,111,180,0.04); }
 
+
+/* Wide variant for landscape SVG logos like Unilumin */
+.carouselLogoWide {
+  max-height: 32px;
+  max-width: 160px;
+  width: auto;
+  object-fit: contain;
+}

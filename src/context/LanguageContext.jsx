@@ -163,9 +163,8 @@ export const translations = {
     partnersHeading: 'Our Technology Partners',
     partnersEyebrow: 'Global Technology Alliances',
     partnersSub: 'We are authorised distributors and partners for the world\'s leading technology brands — bringing you access to the best products, backed by Proxynet\'s local expertise.',
-    partnersBecome: 'Become a Reseller',
+   
     partnersViewAll: 'View All Partners',
-    partnersFooterText: 'Interested in reselling Proxynet solutions or becoming a technology partner in your region?',
     // Partnerships page
     partnershipsNav: 'Partnerships',
     partnershipsPageTitle: 'Partnerships — Backed by the World\'s Best Technology Brands',
@@ -173,7 +172,7 @@ export const translations = {
     partnershipsEyebrow: 'Technology Alliances & Reseller Programme',
     partnershipsHeroTitle: 'Backed by the World\'s Best Technology Brands',
     partnershipsHeroSub: 'We are authorised distributors and certified partners for the world\'s leading technology brands. Join our reseller network and grow your business with Proxynet.',
-    partnershipsCta1: 'Become a Reseller',
+    
     partnershipsCta2: 'View Our Partners',
     partnershipsLogosEyebrow: 'Our Technology Partners',
     partnershipsLogosHeading: 'Global Brands. Local Expertise.',
@@ -355,8 +354,17 @@ export const translations = {
     tm2019Desc: 'Opened Middle East office in Dubai Silicon Oasis to serve international clients and technology partners.',
     tm2024Title: '20 Years Strong',
     tm2024Desc: 'Celebrating two decades of technology excellence — 500+ projects, 6 countries, 50+ global partners.',
-    // Leadership
-    leadershipEyebrow: 'Leadership',
+    // Leadership team
+    leaderCEOTitle: 'Chief Executive Officer',
+    leaderCEOBio: 'Visionary leader with 20+ years driving technology transformation across Africa. Founded Proxynet in 2004 with a mission to bridge the infrastructure gap.',
+    leaderHRTitle: 'Human Resources Manager',
+    leaderHRBio: 'People-first leader who builds and nurtures the talent that powers Proxynet\'s delivery excellence across West Africa.',
+    leaderCOOTitle: 'Chief Operating Officer',
+    leaderCOOBio: 'Operations specialist with deep expertise in project management and service delivery. Ensures every client engagement meets Proxynet\'s quality standards.',
+    leaderCFOTitle: 'Head of Finance',
+    leaderCFOBio: 'Stewards Proxynet\'s financial health and builds the commercial frameworks that support sustainable growth across all markets.',
+    leaderSalesTitle: 'Head of Sales',
+    leaderSalesBio: 'Drives Proxynet\'s commercial growth across West Africa, building enterprise relationships and leading the sales team to deliver consistent revenue performance.',
     leadershipHeading: 'The Team Behind Proxynet',
     // Awards
     awardsEyebrow: 'Recognition',
@@ -455,6 +463,7 @@ export const translations = {
     // CSR page
     csrHeroTitle: 'Technology That Gives Back',
     csr: 'CSR & Community',
+    csrReadImpact: 'Read Our Impact Stories',
     csrHeroSub: 'At Proxynet, we believe technology should benefit everyone — not just those who can afford it. Our CSR programme puts that belief into action.',
     csrFocusEyebrow: 'Our Focus Areas',
     csrFocusHeading: 'Where We Make an Impact',
@@ -1038,8 +1047,18 @@ export const translations = {
     tm2019Desc: 'Ouverture d\'un bureau au Moyen-Orient à Dubai Silicon Oasis pour servir les clients internationaux et les partenaires technologiques.',
     tm2024Title: '20 Ans de Succès',
     tm2024Desc: 'Célébration de deux décennies d\'excellence technologique — 500+ projets, 6 pays, 50+ partenaires mondiaux.',
+    // Leadership team
+    leaderCEOTitle: 'Directeur Général',
+    leaderCEOBio: 'Leader visionnaire avec plus de 20 ans d\'expérience dans la transformation technologique en Afrique. A fondé Proxynet en 2004 avec la mission de combler le fossé infrastructurel.',
+    leaderHRTitle: 'Responsable des Ressources Humaines',
+    leaderHRBio: 'Leader centré sur les personnes qui construit et nourrit les talents qui alimentent l\'excellence de livraison de Proxynet en Afrique de l\'Ouest.',
+    leaderCOOTitle: 'Directeur des Opérations',
+    leaderCOOBio: 'Spécialiste des opérations avec une expertise approfondie en gestion de projets et livraison de services. Garantit que chaque engagement client répond aux normes de qualité de Proxynet.',
+    leaderCFOTitle: 'Responsable Financier',
+    leaderCFOBio: 'Gère la santé financière de Proxynet et construit les cadres commerciaux qui soutiennent une croissance durable sur tous les marchés.',
+    leaderSalesTitle: 'Responsable Commercial',
+    leaderSalesBio: 'Pilote la croissance commerciale de Proxynet en Afrique de l\'Ouest, en développant des relations d\'entreprise et en dirigeant l\'équipe commerciale pour des performances constantes.',
     // Leadership
-    leadershipEyebrow: 'Direction',
     leadershipHeading: 'L\'Équipe Derrière Proxynet',
     // Awards
     awardsEyebrow: 'Reconnaissance',
@@ -1138,6 +1157,7 @@ export const translations = {
     // CSR page
     csrHeroTitle: 'Une Technologie Qui Redonne',
     csr: 'RSE & Communauté',
+    csrReadImpact: 'Lire Nos Histoires d\'Impact',
     csrHeroSub: 'Chez Proxynet, nous croyons que la technologie devrait bénéficier à tous — pas seulement à ceux qui peuvent se le permettre. Notre programme RSE met cette conviction en action.',
     csrFocusEyebrow: 'Nos Domaines d\'Action',
     csrFocusHeading: 'Où Nous Avons un Impact',

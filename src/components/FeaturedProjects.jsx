@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Link } from "react-router-dom"
 import { useLang } from "../context/LanguageContext"
+import SectionBlobs from "./SectionBlobs"
 import img1 from "../assets/Picture1.jpg"
 import img2 from "../assets/Picture2.png"
 import img3 from "../assets/Picture1.png"
@@ -49,6 +50,7 @@ export default function FeaturedProjects() {
   return (
     <section className={styles.section} aria-labelledby="projects-heading">
       <div className={styles.inner}>
+        <SectionBlobs />
         <motion.div className={styles.header} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <p className={styles.eyebrow}>{t.projectsEyebrow}</p>
           <h2 id="projects-heading" className={styles.heading}>{t.projectsHeading}</h2>

@@ -21,6 +21,10 @@ export default function AboutHero() {
         <motion.p className={styles.sub} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
           {t.aboutHeroSub}
         </motion.p>
+        <motion.div className={styles.heroCtas} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}>
+          <Link to="/contact" className={styles.primary}>{t.contactUs}</Link>
+          <Link to="/solutions" className={styles.secondary}>{t.viewOurSolutions}</Link>
+        </motion.div>
       </div>
     </section>
   )

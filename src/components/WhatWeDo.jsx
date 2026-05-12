@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { TvMinimal, Layers, Code2, Network, ShieldCheck, Smartphone, Globe, ServerCog } from 'lucide-react'
 import { useLang } from '../context/LanguageContext'
+import SectionBlobs from './SectionBlobs'
 import styles from './WhatWeDo.module.css'
 
 const getCategories = (t) => [
@@ -21,8 +22,9 @@ export default function WhatWeDo() {
   const categories = getCategories(t)
 
   return (
-    <section className={styles.section} aria-labelledby="what-we-do-heading">
+    <section className={`${styles.section} sectionCircles`} aria-labelledby="what-we-do-heading">
       <div className={styles.inner}>
+        <SectionBlobs />
 
         <motion.div
           className={styles.header}
