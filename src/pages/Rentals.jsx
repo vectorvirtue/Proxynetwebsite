@@ -62,6 +62,7 @@ export default function Rentals() {
 
         <section id="equipment" className={styles.section}>
           <div className={styles.inner}>
+          <SectionBlobs />
             <motion.div className={styles.sectionHeader} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <p className={styles.eyebrow}>Equipment Catalogue</p>
               <h2 className={styles.heading}>What We Offer</h2>
@@ -86,6 +87,7 @@ export default function Rentals() {
 
         <section className={styles.sectionDark}>
           <div className={styles.inner}>
+          <SectionBlobs />
             <motion.div className={styles.sectionHeader} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <p className={styles.eyebrowLight}>Event Gallery</p>
               <h2 className={styles.headingLight}>Past Deployments</h2>
@@ -103,6 +105,7 @@ export default function Rentals() {
 
         <section className={styles.sectionDark}>
           <div className={styles.inner}>
+          <SectionBlobs />
             <motion.div className={styles.sectionHeader} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <p className={styles.eyebrowLight}>How It Works</p>
               <h2 className={styles.headingLight}>Simple. Fast. Professional.</h2>
@@ -121,6 +124,7 @@ export default function Rentals() {
 
         <section id="enquire" className={styles.section}>
           <div className={styles.inner}>
+          <SectionBlobs />
             <motion.div className={styles.sectionHeader} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <p className={styles.eyebrow}>Rental Enquiry</p>
               <h2 className={styles.heading}>Request a Rental</h2>

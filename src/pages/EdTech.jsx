@@ -73,6 +73,7 @@ export default function EdTech() {
 
         <section className={styles.section}>
           <div className={styles.inner}>
+          <SectionBlobs />
             <motion.div className={styles.overviewGrid} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <div className={styles.overviewLeft}>
                 <p className={styles.eyebrowBlue}>What We Do</p>
@@ -89,6 +90,7 @@ export default function EdTech() {
 
         <section id="programmes" className={styles.sectionAlt}>
           <div className={styles.inner}>
+          <SectionBlobs />
             <motion.div className={styles.sectionHeader} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <p className={styles.eyebrowBlue}>Training Programmes</p>
               <h2 className={styles.heading}>What We Offer</h2>
@@ -122,6 +124,7 @@ export default function EdTech() {
 
         <section className={styles.sectionDark}>
           <div className={styles.inner}>
+          <SectionBlobs />
             <motion.div className={styles.sectionHeader} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <p className={styles.eyebrowLight}>Partner Institutions</p>
               <h2 className={styles.headingLight}>Schools & Institutions We Work With</h2>
@@ -139,6 +142,7 @@ export default function EdTech() {
 
         <section className={styles.section}>
           <div className={styles.inner}>
+          <SectionBlobs />
             <motion.div className={styles.sectionHeader} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <p className={styles.eyebrowBlue}>Events Gallery</p>
               <h2 className={styles.heading}>EdTech in Action</h2>
@@ -173,6 +177,7 @@ export default function EdTech() {
 
         <section id="partner" className={styles.sectionAlt}>
           <div className={styles.inner}>
+          <SectionBlobs />
             <motion.div className={styles.sectionHeader} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <p className={styles.eyebrowBlue}>Partner With Us</p>
               <h2 className={styles.heading}>Bring EdTech to Your Institution</h2>

@@ -111,6 +111,7 @@ export default function Partnerships() {
         {/* Partner logo grid */}
         <section className={styles.logosSection}>
           <div className={styles.inner}>
+          <SectionBlobs />
             <motion.div className={styles.sectionHeader} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <p className={styles.eyebrowBlue}>{t.partnershipsLogosEyebrow}</p>
               <h2 className={styles.heading}>{t.partnershipsLogosHeading}</h2>
@@ -144,6 +145,7 @@ export default function Partnerships() {
         {/* Reseller programme */}
         <section className={styles.sectionDark}>
           <div className={styles.inner}>
+          <SectionBlobs />
             <motion.div className={styles.sectionHeader} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <p className={styles.eyebrowLight}>{t.partnershipsResellerEyebrow}</p>
               <h2 className={styles.headingLight}>{t.partnershipsResellerHeading}</h2>
@@ -172,6 +174,7 @@ export default function Partnerships() {
         {/* Reseller application form */}
         <section id="apply" className={styles.section}>
           <div className={styles.inner}>
+          <SectionBlobs />
             <div className={styles.applyGrid}>
               <motion.div className={styles.applyLeft} initial={{ opacity: 0, x: -24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                 <p className={styles.eyebrowBlue}>{t.partnershipsApplyEyebrow}</p>

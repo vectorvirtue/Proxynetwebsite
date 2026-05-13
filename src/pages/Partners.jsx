@@ -58,6 +58,7 @@ export default function Partners() {
         {/* Partner grid */}
         <section className={styles.section}>
           <div className={styles.inner}>
+          <SectionBlobs />
             <div className={styles.grid}>
               {partners.map((p, i) => (
                 <motion.div key={p.name} className={styles.card} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.07 }}>

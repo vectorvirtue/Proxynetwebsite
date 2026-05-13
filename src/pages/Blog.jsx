@@ -57,6 +57,7 @@ export default function Blog() {
         {/* Category filter + grid */}
         <section id="posts" className={styles.section}>
           <div className={styles.inner}>
+          <SectionBlobs />
             <div className={styles.filters}>
               {categories.map(cat => (
                 <button
@@ -104,6 +105,7 @@ export default function Blog() {
         {/* Newsletter */}
         <section id="newsletter" className={styles.newsletter}>
           <div className={styles.inner}>
+          <SectionBlobs />
             <motion.div className={styles.newsletterContent} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <p className={styles.newsletterEyebrow}>{t.blogNewsletterEyebrow}</p>
               <h2 className={styles.newsletterHeading}>{t.blogNewsletterHeading}</h2>

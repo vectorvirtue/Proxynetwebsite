@@ -18,7 +18,7 @@
 .secondary:hover { border-color: var(--sky); background: rgba(70,195,242,0.08); transform: translateY(-2px); }
 
 /* ── Shared layout ────────────────────────────────────────────── */
-.section { background: var(--bg); padding: 96px 0; }
+.section { background: var(--bg); position: relative; overflow: hidden; padding: 96px 0; }
 .logosSection { background: var(--white); padding: 96px 0; }
 .sectionDark { background: transparent; padding: 96px 0; }
 .inner { max-width: 1440px; margin: 0 auto; padding: 0 92px; }
