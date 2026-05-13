@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { ChevronRight, BookOpen, Leaf, Users, Wifi, Download, ExternalLink } from 'lucide-react'
 import SEO from '../components/SEO'
 import { useLang } from '../context/LanguageContext'
+import SectionBlobs from '../components/SectionBlobs'
 import breakfast1 from '../assets/BREAKFAST SESSION WITH PROXYNET AND COMFORTE AT RADISSON BLUE.jpg'
 import breakfast2 from '../assets/BREAKFAST SESSION WITH PROXYNET AND COMFORTE AT RADISSON BLUE2.jpg'
 import breakfast3 from '../assets/BREAKFAST SESSION WITH PROXYNET AND COMFORTE AT RADISSON BLUE3.jpg'
@@ -100,6 +101,7 @@ export default function CSR() {
         {/* Initiative categories */}
         <section className={styles.section}>
           <div className={styles.inner}>
+            <SectionBlobs />
             <motion.div className={styles.sectionHeader} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <p className={styles.eyebrow}>{t.csrFocusEyebrow}</p>
               <h2 className={styles.heading}>{t.csrFocusHeading}</h2>
@@ -172,6 +174,7 @@ export default function CSR() {
         {/* Partner organisations */}
         <section className={styles.sectionDark}>
           <div className={styles.inner}>
+            <SectionBlobs variant="dark" />
             <motion.div className={styles.sectionHeader} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <p className={styles.eyebrowLight}>{t.csrPartnersEyebrow}</p>
               <h2 className={styles.headingLight}>{t.csrPartnersHeading}</h2>

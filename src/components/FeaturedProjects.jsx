@@ -11,6 +11,8 @@ import img4 from "../assets/Picture4.jpg"
 import img5 from "../assets/Picture5.png"
 import img6 from "../assets/Picture6.png"
 import img7 from "../assets/Picture7.png"
+import img8 from "../assets/ghanabroadcasting.jpg"
+import img9 from "../assets/houseofassembly.png"
 import styles from "./FeaturedProjects.module.css"
 
 export default function FeaturedProjects() {
@@ -26,6 +28,8 @@ export default function FeaturedProjects() {
     { img: img5, client: 'FCMB Lagos HQ', solution: t.proj5Solution, category: t.proj5Category, outcome: t.proj5Outcome },
     { img: img6, client: 'ePROCESS', solution: t.proj6Solution, category: t.proj6Category, outcome: t.proj6Outcome },
     { img: img7, client: 'NLNG', solution: t.proj7Solution, category: t.proj7Category, outcome: t.proj7Outcome },
+    { img: img8, client: 'Ghana Broadcasting Corporation', solution: t.proj8Solution, category: t.proj8Category, outcome: t.proj8Outcome },
+    { img: img9, client: 'Lagos State House of Assembly', solution: t.proj9Solution, category: t.proj9Category, outcome: t.proj9Outcome },
   ]
 
   const total = projects.length

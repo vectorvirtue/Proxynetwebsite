@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronRight, X, Calendar, MapPin, ArrowRight, Images } from 'lucide-react'
 import FilterDropdown from '../components/FilterDropdown'
 import SEO from '../components/SEO'
+import SectionBlobs from '../components/SectionBlobs'
 import { useLang } from '../context/LanguageContext'
 import breakfast1 from '../assets/BREAKFAST SESSION WITH PROXYNET AND COMFORTE AT RADISSON BLUE.jpg'
 import breakfast2 from '../assets/BREAKFAST SESSION WITH PROXYNET AND COMFORTE AT RADISSON BLUE2.jpg'
@@ -151,7 +152,7 @@ export default function Events() {
                   ) : (
                     <div className={styles.featuredImgPlaceholder}>
                       <Images size={40} className={styles.placeholderIcon} />
-                      <p className={styles.placeholderText}>Gallery Coming Soon</p>
+                      <p className={styles.placeholderText}>{t.csGalleryComingSoon}</p>
                       {e.theme && <p className={styles.placeholderTheme}>Theme: {e.theme}</p>}
                       {e.date && <p className={styles.placeholderDate}><Calendar size={14} /> {e.date}</p>}
                     </div>
@@ -244,6 +245,7 @@ export default function Events() {
         <section className={styles.section}>
           <div className={styles.inner}>
             <motion.div className={styles.ctaBlock} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+              <SectionBlobs variant="dark" />
               <p className={styles.ctaEyebrow}>Stay in the Loop</p>
               <h2 className={styles.ctaHeading}>Never Miss a Proxynet Event</h2>
               <p className={styles.ctaSub}>Subscribe to our newsletter or follow us on social media to be the first to know about upcoming events, product launches, and partner summits.</p>

@@ -27,6 +27,7 @@ import {
 import SEO from '../components/SEO'
 import { useLang } from '../context/LanguageContext'
 import { getIndustryBySlug } from '../data/industries'
+import SectionBlobs from '../components/SectionBlobs'
 import styles from './IndustryPage.module.css'
 
 // Lucide icon lookup map — icon name string → component
@@ -325,6 +326,7 @@ export default function IndustryPage() {
         {/* ── 7. CTA ──────────────────────────────────────────────────── */}
         <section className={styles.ctaSection}>
           <div className={styles.inner}>
+            <SectionBlobs variant="dark" />
             <motion.div
               className={styles.ctaInner}
               initial={{ opacity: 0, y: 24 }}

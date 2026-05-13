@@ -4,6 +4,7 @@ import { ArrowLeft, ChevronRight, CheckCircle, Quote, ArrowRight } from 'lucide-
 import { useLang } from '../context/LanguageContext'
 import { getCaseStudyBySlug, getCaseStudies } from '../data/caseStudies'
 import SEO from '../components/SEO'
+import SectionBlobs from '../components/SectionBlobs'
 import styles from './CaseStudy.module.css'
 
 export default function CaseStudy() {
@@ -200,6 +201,7 @@ export default function CaseStudy() {
             <section className={styles.ctaSection}>
               <div className={styles.ctaInner}>
                 <motion.div className={styles.ctaBlock} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+                  <SectionBlobs variant="dark" />
                   <p className={styles.ctaEyebrow}>{t.caseStudiesCtaEyebrow}</p>
                   <h2 className={styles.ctaHeading}>{t.caseStudiesCtaHeading}</h2>
                   <p className={styles.ctaSub}>{t.caseStudiesCtaSub}</p>

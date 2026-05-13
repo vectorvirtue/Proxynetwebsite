@@ -472,6 +472,8 @@
 .ctaSection {
   background: var(--navy);
   padding: 96px 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .ctaInner {

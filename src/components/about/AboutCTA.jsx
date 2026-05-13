@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useLang } from '../../context/LanguageContext'
+import SectionBlobs from '../SectionBlobs'
 import styles from './AboutCTA.module.css'
 
 export default function AboutCTA() {
@@ -8,6 +9,7 @@ export default function AboutCTA() {
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
+        <SectionBlobs />
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -5,6 +5,7 @@ import { Phone, Mail, MapPin, MessageCircle, Send, ChevronRight, Clock } from 'l
 import SEO from '../components/SEO'
 import Captcha from '../components/Captcha'
 import { useLang } from '../context/LanguageContext'
+import SectionBlobs from '../components/SectionBlobs'
 import styles from './Contact.module.css'
 
 const LinkedinIcon = () => (
@@ -99,6 +100,7 @@ export default function Contact() {
         {/* Main content: form + direct contacts */}
         <section id="form" className={styles.section}>
           <div className={styles.sectionInner}>
+            <SectionBlobs />
 
             {/* Smart contact form */}
             <motion.div className={styles.formCol} initial={{ opacity: 0, x: -32 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
@@ -207,6 +209,7 @@ export default function Contact() {
         {/* Office locations */}
         <section className={styles.officesSection}>
           <div className={styles.officesInner}>
+            <SectionBlobs />
             <motion.div className={styles.officesHeader} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <p className={styles.eyebrow}>{t.locationsEyebrow}</p>
               <h2 className={styles.officesHeading}>{t.locationsHeading}</h2>
@@ -237,7 +240,7 @@ export default function Contact() {
         <section className={styles.mapSection}>
           <iframe
             title="Proxynet Group HQ — Ikeja, Lagos"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.3!2d3.3517!3d6.6018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9228!2sOpebi+Road+Ikeja+Lagos!5e0!3m2!1sen!2sng!4v1"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.4!2d3.3512!3d6.6021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b922b3c5c5555%3A0x0!2sAdedeji+Close%2C+Opebi%2C+Ikeja%2C+Lagos!5e0!3m2!1sen!2sng!4v1"
             className={styles.mapFrame}
             allowFullScreen=""
             loading="lazy"

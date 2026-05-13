@@ -1,6 +1,7 @@
-import { motion } from 'framer-motion'
+﻿import { motion } from 'framer-motion'
 import { HeartHandshake, RefreshCw, BarChart2, Users } from 'lucide-react'
 import { useLang } from '../../context/LanguageContext'
+import SectionBlobs from '../SectionBlobs'
 import styles from './CustomerSuccess.module.css'
 
 export default function CustomerSuccess() {
@@ -16,6 +17,7 @@ export default function CustomerSuccess() {
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
+        <SectionBlobs />
         <motion.div className={styles.left} initial={{ opacity: 0, x: -32 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <p className={styles.eyebrow}>{t.csEyebrow}</p>
           <h2 className={styles.heading}>{t.csHeading}</h2>

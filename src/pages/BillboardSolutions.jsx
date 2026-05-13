@@ -1,9 +1,10 @@
 ﻿import { useState } from "react"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
-import { ChevronRight, Send, Monitor, Building2, ShoppingCart, Megaphone } from "lucide-react"
+import { ChevronRight, Send, Monitor, Building2, ShoppingCart, Megaphone, MapPin } from "lucide-react"
 import Captcha from '../components/Captcha'
 import { useLang } from '../context/LanguageContext'
+import billboardImg from '../assets/billboard.png'
 import styles from "./BillboardSolutions.module.css"
 
 const useCases = [
@@ -78,6 +79,38 @@ export default function BillboardSolutions() {
                 <p className={styles.useCaseDesc}>{u.desc}</p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Outdoor Advertising Network */}
+      <section className={styles.section}>
+        <div className={styles.inner}>
+          <motion.div className={styles.sectionHeader} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+            <p className={styles.eyebrowBlue}>Outdoor Advertising Network</p>
+            <h2 className={styles.heading}>Proxynet Billboard Locations</h2>
+            <p className={styles.subText}>Proxynet Communications provides outdoor advertising solutions through a network of digital and static billboards strategically located in high-traffic, high-visibility areas across Nigeria.</p>
+          </motion.div>
+          <div className={styles.outdoorGrid}>
+            <motion.div className={styles.outdoorImgWrap} initial={{ opacity: 0, x: -24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+              <img src={billboardImg} alt="Proxynet outdoor billboard" className={styles.outdoorImg} />
+            </motion.div>
+            <motion.div className={styles.outdoorLocations} initial={{ opacity: 0, x: 24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }}>
+              {[
+                { city: 'Lagos', detail: 'Bonny Camp & Slot HQ in Ikeja', desc: 'Reaching professionals, commuters, and corporate decision-makers & business owners in one of Nigeria\'s busiest commercial corridors.' },
+                { city: 'Enugu', detail: 'Abakaliki Road', desc: 'Connecting brands with a growing regional audience in the South-East.' },
+                { city: 'Port Harcourt', detail: 'Peter Odili Road', desc: 'Capturing the attention of business executives and residents in the vibrant South-South hub.' },
+              ].map((loc, i) => (
+                <motion.div key={loc.city} className={styles.locationCard} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.1 }}>
+                  <div className={styles.locationIcon}><MapPin size={18} /></div>
+                  <div>
+                    <p className={styles.locationCity}>{loc.city} <span className={styles.locationDetail}>— {loc.detail}</span></p>
+                    <p className={styles.locationDesc}>{loc.desc}</p>
+                  </div>
+                </motion.div>
+              ))}
+              <a href="#enquire" className={styles.outdoorCta}>Advertise on Our Billboards</a>
+            </motion.div>
           </div>
         </div>
       </section>

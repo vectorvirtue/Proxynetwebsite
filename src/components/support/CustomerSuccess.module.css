@@ -1,7 +1,11 @@
-﻿.section { background: var(--bg); padding: 96px 0; }
+﻿.section {
+  position: relative;
+  overflow: hidden; background: var(--bg); padding: 96px 0; }
 .inner { max-width: 1440px; margin: 0 auto; padding: 0 92px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
 @media (max-width: 1024px) { .inner { grid-template-columns: 1fr; gap: 40px; } }
-@media (max-width: 768px) { .inner { padding: 0 16px; } .section { padding: 92px 0; } }
+@media (max-width: 768px) { .inner { padding: 0 16px; } .section {
+  position: relative;
+  overflow: hidden; padding: 92px 0; } }
 .left { display: flex; flex-direction: column; gap: 20px; }
 .eyebrow { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--blue); }
 .heading { font-size: clamp(28px, 3vw, 42px); font-weight: 800; color: var(--navy); letter-spacing: -1px; line-height: 1.15; }

@@ -1,6 +1,7 @@
-import { motion } from 'framer-motion'
+﻿import { motion } from 'framer-motion'
 import { FileText, BookOpen, Download, Wrench, ClipboardList, ArrowRight } from 'lucide-react'
 import { useLang } from '../../context/LanguageContext'
+import SectionBlobs from '../SectionBlobs'
 import styles from './OnboardingResources.module.css'
 
 export default function OnboardingResources() {
@@ -47,6 +48,7 @@ export default function OnboardingResources() {
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
+        <SectionBlobs />
         <motion.div className={styles.header} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <p className={styles.eyebrow}>{t.onboardEyebrow}</p>
           <h2 className={styles.heading}>{t.onboardHeading}</h2>

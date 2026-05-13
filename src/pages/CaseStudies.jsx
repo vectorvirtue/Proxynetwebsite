@@ -6,6 +6,7 @@ import { useLang } from '../context/LanguageContext'
 import { getCaseStudies } from '../data/caseStudies'
 import FilterDropdown from '../components/FilterDropdown'
 import SEO from '../components/SEO'
+import SectionBlobs from '../components/SectionBlobs'
 import styles from './CaseStudies.module.css'
 
 const ALL = 'All'
@@ -148,6 +149,7 @@ export default function CaseStudies() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
+              <SectionBlobs variant="dark" />
               <p className={styles.ctaEyebrow}>{t.caseStudiesCtaEyebrow}</p>
               <h2 className={styles.ctaHeading}>{t.caseStudiesCtaHeading}</h2>
               <p className={styles.ctaSub}>{t.caseStudiesCtaSub}</p>

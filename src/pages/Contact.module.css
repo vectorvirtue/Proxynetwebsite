@@ -27,7 +27,7 @@
 .responseInner p { font-size: 14px; font-weight: 600; color: var(--white); text-align: center; }
 
 /* Main section */
-.section { padding: 96px 0; background: var(--white); }
+.section { padding: 96px 0; background: var(--white); position: relative; overflow: hidden; }
 .sectionInner { max-width: 1440px; margin: 0 auto; padding: 0 92px; display: grid; grid-template-columns: 1fr 1fr; gap: 92px; align-items: start; }
 @media (max-width: 900px) { .sectionInner { grid-template-columns: 1fr; gap: 48px; } }
 @media (max-width: 768px) { .sectionInner { padding: 0 16px; } .section { padding: 92px 0; } }
@@ -70,7 +70,7 @@
 .socialBtn:hover { background: var(--blue); color: var(--white); }
 
 /* Offices */
-.officesSection { padding: 96px 0; background: var(--bg); }
+.officesSection { padding: 96px 0; background: var(--bg); position: relative; overflow: hidden; }
 .officesInner { max-width: 1440px; margin: 0 auto; padding: 0 92px; }
 @media (max-width: 768px) { .officesInner { padding: 0 16px; } .officesSection { padding: 92px 0; } }
 .officesHeader { margin-bottom: 48px; }

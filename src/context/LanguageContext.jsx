@@ -297,6 +297,12 @@ export const translations = {
     proj7Solution: 'Multi-Site Logitech VC Solution',
     proj7Category: 'AV & Collaboration',
     proj7Outcome: 'Implemented a multi-site Logitech video conferencing solution across Lagos, Bonny, Port Harcourt, and Abuja.',
+    proj8Solution: 'Studio Videowall & 4K Camera Installation',
+    proj8Category: 'Broadcast & AV',
+    proj8Outcome: 'Re-installation of videowall displays and installation of 4K Canon cameras for the Ghana Broadcasting Corporation studio.',
+    proj9Solution: '2 Units of 3x2 Videowall + Audio & Security Solution',
+    proj9Category: 'Videowall, Audio & CCTV',
+    proj9Outcome: 'Deployed 2 units of 3x2 videowall with full audio solution, Bosch discussion system, and CCTV for the Lagos State House of Assembly.',
     // About page
     aboutUs: 'About Us',
     aboutHeroTitle: 'Who We Are',
@@ -588,6 +594,7 @@ export const translations = {
     csTechnologies: 'Technologies Used',
     csResults: 'Results & ROI',
     csRelatedSolutions: 'Related Solutions',
+    csGalleryComingSoon: 'Gallery Coming Soon',
     // Case study titles & metadata
     cs1Title: 'UBA NOC Deployment — 15-Display Command Centre',
     cs1Category: 'NOC & Command Centre',
@@ -990,6 +997,12 @@ export const translations = {
     proj7Solution: 'Solution Logitech VC Multi-Sites',
     proj7Category: 'AV & Collaboration',
     proj7Outcome: 'Mise en œuvre d\'une solution de vidéoconférence Logitech multi-sites à Lagos, Bonny, Port Harcourt et Abuja.',
+    proj8Solution: 'Installation Videowall Studio & Caméras 4K',
+    proj8Category: 'Diffusion & AV',
+    proj8Outcome: 'Réinstallation des écrans videowall et installation de caméras Canon 4K pour le studio de la Ghana Broadcasting Corporation.',
+    proj9Solution: '2 Unités de Videowall 3x2 + Solution Audio & Sécurité',
+    proj9Category: 'Videowall, Audio & CCTV',
+    proj9Outcome: 'Déploiement de 2 unités de videowall 3x2 avec solution audio complète, système de discussion Bosch et CCTV pour l\'Assemblée de l\'État de Lagos.',
     // About page
     aboutUs: 'À Propos',
     aboutHeroTitle: 'Qui Nous Sommes',
@@ -1282,6 +1295,7 @@ export const translations = {
     csTechnologies: 'Technologies Utilisées',
     csResults: 'Résultats & ROI',
     csRelatedSolutions: 'Solutions Associées',
+    csGalleryComingSoon: 'Galerie Bientôt Disponible',
     // Case study titles & metadata
     cs1Title: 'Déploiement NOC UBA — Centre de Commandement 15 Écrans',
     cs1Category: 'NOC & Centre de Commandement',
