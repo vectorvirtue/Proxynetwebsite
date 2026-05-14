@@ -16,7 +16,8 @@
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(0,31,51,0.95) 0%, rgba(0,111,180,0.3) 100%);
+  background: linear-gradient(135deg, rgba(0,18,30,0.6) 0%, rgba(0,40,70,0.2) 100%);
+  z-index: 0;
 }
 
 .inner {
