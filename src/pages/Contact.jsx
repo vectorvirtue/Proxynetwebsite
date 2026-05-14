@@ -1,4 +1,4 @@
-﻿import { useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Phone, Mail, MapPin, MessageCircle, Send, ChevronRight, Clock } from 'lucide-react'
@@ -28,11 +28,11 @@ const InstagramIcon = () => (
 )
 
 const offices = [
-  { flag: '🇳🇬', city: 'Lagos', tag: 'HQ', address: 'The Proxynet House, 5B, Adedeji Close, off Opebi Road, Ikeja, Lagos, Nigeria.', phone: '+234 703 264 7755', email: 'info@proxynetgroup.com', mapUrl: 'https://maps.google.com/?q=5B+Adedeji+Close+Opebi+Ikeja+Lagos' },
-  { flag: '🇳🇬', city: 'Abuja', tag: '', address: 'House 21, Street 693, Off Road 69, Gwarimpa, Abuja, Nigeria.', phone: '+234 903 182 9347', email: 'abuja@proxynetgroup.com', mapUrl: 'https://maps.google.com/?q=Gwarimpa+Abuja+Nigeria' },
-  { flag: '🇬🇭', city: 'Accra', tag: '', address: 'No 18 Nii Klu Osae Avenue, Off American House, Accra, Ghana.', phone: '+233 302 546 703', email: 'ghana@proxynetgroup.com', mapUrl: 'https://maps.google.com/?q=Nii+Klu+Osae+Avenue+Accra+Ghana' },
-  { flag: '🇨🇮', city: 'Abidjan', tag: '', address: "1st floor, SIAA Building, Cocody 2 Plateaux, 7e Tranche Road, Abidjan.", phone: '+225 2722 468 434', email: 'cotedivoire@proxynetgroup.com', mapUrl: 'https://maps.google.com/?q=Cocody+2+Plateaux+Abidjan' },
-  { flag: '🇦🇪', city: 'Dubai', tag: '', address: 'Building A2, Unit 101, Dubai Silicon Oasis, DDP, Dubai, UAE.', phone: '+971 505 044 932', email: 'dubai@proxynetgroup.com', mapUrl: 'https://maps.google.com/?q=Dubai+Silicon+Oasis+Dubai' },
+  { flag: '????', city: 'Lagos', tag: 'HQ', address: 'The Proxynet House, 5B, Adedeji Close, off Opebi Road, Ikeja, Lagos, Nigeria.', phone: '+234 703 264 7755', email: 'info@proxynetgroup.com', mapUrl: 'https://maps.google.com/?q=5B+Adedeji+Close+Opebi+Ikeja+Lagos' },
+  { flag: '????', city: 'Abuja', tag: '', address: 'House 21, Street 693, Off Road 69, Gwarimpa, Abuja, Nigeria.', phone: '+234 903 182 9347', email: 'abuja@proxynetgroup.com', mapUrl: 'https://maps.google.com/?q=Gwarimpa+Abuja+Nigeria' },
+  { flag: '????', city: 'Accra', tag: '', address: 'No 18 Nii Klu Osae Avenue, Off American House, Accra, Ghana.', phone: '+233 302 546 703', email: 'ghana@proxynetgroup.com', mapUrl: 'https://maps.google.com/?q=Nii+Klu+Osae+Avenue+Accra+Ghana' },
+  { flag: '????', city: 'Abidjan', tag: '', address: "1st floor, SIAA Building, Cocody 2 Plateaux, 7e Tranche Road, Abidjan.", phone: '+225 2722 468 434', email: 'cotedivoire@proxynetgroup.com', mapUrl: 'https://maps.google.com/?q=Cocody+2+Plateaux+Abidjan' },
+  { flag: '????', city: 'Dubai', tag: '', address: 'Building A2, Unit 101, Dubai Silicon Oasis, DDP, Dubai, UAE.', phone: '+971 505 044 932', email: 'dubai@proxynetgroup.com', mapUrl: 'https://maps.google.com/?q=Dubai+Silicon+Oasis+Dubai' },
 ]
 
 const socials = [
@@ -69,7 +69,8 @@ export default function Contact() {
       <main>
         {/* Hero */}
         <section className={`${styles.hero} heroScene`}>
-          <SectionBlobs variant="dark" />`n          <div className={styles.heroOverlay} />
+          <SectionBlobs variant="dark" />
+          <div className={styles.heroOverlay} />
           <div className={styles.heroInner}>
             <motion.nav className={styles.breadcrumb} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
               <Link to="/" className={styles.crumb}>{t.home}</Link>
@@ -236,10 +237,10 @@ export default function Contact() {
           </div>
         </section>
 
-        {/* Embedded map — HQ */}
+        {/* Embedded map � HQ */}
         <section className={styles.mapSection}>
           <iframe
-            title="Proxynet Group HQ — Ikeja, Lagos"
+            title="Proxynet Group HQ � Ikeja, Lagos"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.4!2d3.3512!3d6.6021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b922b3c5c5555%3A0x0!2sAdedeji+Close%2C+Opebi%2C+Ikeja%2C+Lagos!5e0!3m2!1sen!2sng!4v1"
             className={styles.mapFrame}
             allowFullScreen=""

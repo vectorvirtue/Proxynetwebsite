@@ -1,4 +1,4 @@
-﻿import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ChevronRight, Ticket, Phone } from 'lucide-react'
 import { useLang } from '../../context/LanguageContext'
@@ -9,7 +9,8 @@ export default function SupportHero() {
   const { t } = useLang()
   return (
     <section className={`${styles.hero} heroScene`}>
-      <SectionBlobs variant="dark" />`n      <div className={styles.overlay} />
+      <SectionBlobs variant="dark" />
+      <div className={styles.overlay} />
       <div className={styles.inner}>
         <motion.nav className={styles.breadcrumb} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} aria-label="Breadcrumb">
           <Link to="/" className={styles.crumb}>{t.home}</Link>
@@ -22,7 +23,7 @@ export default function SupportHero() {
         </motion.h1>
 
         <motion.p className={styles.sub} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
-          Our support team is available around the clock to keep your technology running. Raise a ticket, call us, or reach us on WhatsApp — we respond fast.
+          Our support team is available around the clock to keep your technology running. Raise a ticket, call us, or reach us on WhatsApp � we respond fast.
         </motion.p>
 
         <motion.div className={styles.ctas} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}>

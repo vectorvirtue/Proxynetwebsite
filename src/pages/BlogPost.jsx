@@ -1,4 +1,4 @@
-﻿import { useParams, Link } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowLeft, Clock, ChevronRight } from 'lucide-react'
 import { useLang } from '../context/LanguageContext'
@@ -25,7 +25,8 @@ export default function BlogPost() {
       />
       <main>
         <section className={`${styles.hero} heroScene`}>
-          <SectionBlobs variant="dark" />`n          <div className={styles.heroOverlay} />
+          <SectionBlobs variant="dark" />
+          <div className={styles.heroOverlay} />
           <div className={styles.heroInner}>
             <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
               <nav className={styles.breadcrumb}>

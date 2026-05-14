@@ -1,4 +1,4 @@
-﻿import { useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight, Clock, User, Send, ChevronRight } from 'lucide-react'
@@ -28,14 +28,15 @@ export default function Blog() {
   return (
     <>
       <SEO
-        title="Blog — Technology Insights from West Africa"
-        description="Technology insights, company news, partner updates, and industry focus from Proxynet Group — West Africa's leading ICT company."
+        title="Blog � Technology Insights from West Africa"
+        description="Technology insights, company news, partner updates, and industry focus from Proxynet Group � West Africa's leading ICT company."
         canonical="/blog"
       />
       <main>
         {/* Hero */}
         <section className={`${styles.hero} heroScene`}>
-          <SectionBlobs variant="dark" />`n          <div className={styles.heroOverlay} />
+          <SectionBlobs variant="dark" />
+          <div className={styles.heroOverlay} />
           <div className={styles.heroInner}>
             <motion.nav className={styles.breadcrumb} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
               <Link to="/" className={styles.crumb}>{t.home}</Link>

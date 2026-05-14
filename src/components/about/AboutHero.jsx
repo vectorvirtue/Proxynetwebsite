@@ -9,7 +9,8 @@ export default function AboutHero() {
   const { t } = useLang()
   return (
     <section className={`${styles.hero} heroScene`}>
-      <SectionBlobs variant="dark" />`n      <div className={styles.heroOverlay} />
+      <SectionBlobs variant="dark" />
+      <div className={styles.overlay} />
       <div className={styles.inner}>
         <motion.nav className={styles.breadcrumb} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} aria-label="Breadcrumb">
           <Link to="/" className={styles.crumb}>{t.home}</Link>

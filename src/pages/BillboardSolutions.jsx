@@ -1,4 +1,4 @@
-﻿import { useState } from "react"
+import { useState } from "react"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import { ChevronRight, Send, Monitor, Building2, ShoppingCart, Megaphone, MapPin } from "lucide-react"
@@ -37,7 +37,8 @@ export default function BillboardSolutions() {
   return (
     <main>
       <section className={`${styles.hero} heroScene`}>
-        <SectionBlobs variant="dark" />`n          <div className={styles.heroOverlay} />
+        <SectionBlobs variant="dark" />
+          <div className={styles.heroOverlay} />
         <div className={styles.heroInner}>
           <motion.nav className={styles.breadcrumb} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
             <Link to="/" className={styles.crumb}>{t.home}</Link>
@@ -106,7 +107,7 @@ export default function BillboardSolutions() {
                 <motion.div key={loc.cityKey} className={styles.locationCard} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.1 }}>
                   <div className={styles.locationIcon}><MapPin size={18} /></div>
                   <div>
-                    <p className={styles.locationCity}>{t[loc.cityKey]} <span className={styles.locationDetail}>— {t[loc.detailKey]}</span></p>
+                    <p className={styles.locationCity}>{t[loc.cityKey]} <span className={styles.locationDetail}>� {t[loc.detailKey]}</span></p>
                     <p className={styles.locationDesc}>{t[loc.descKey]}</p>
                   </div>
                 </motion.div>

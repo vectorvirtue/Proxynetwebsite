@@ -1,4 +1,4 @@
-﻿import { useParams, Link } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowLeft, ChevronRight, CheckCircle, Quote, ArrowRight } from 'lucide-react'
 import { useLang } from '../context/LanguageContext'
@@ -19,7 +19,8 @@ export default function CaseStudy() {
         <SEO title="Case Study Not Found" description="" canonical={`/case-studies/${slug}`} />
         <main>
           <section className={`${styles.hero} heroScene`}>
-            <SectionBlobs variant="dark" />`n          <div className={styles.heroOverlay} />
+            <SectionBlobs variant="dark" />
+            <div className={styles.heroOverlay} />
             <div className={styles.heroInner}>
               <Link to="/case-studies" className={styles.back}><ArrowLeft size={16} /> {t.caseStudiesBack}</Link>
               <h1 className={styles.heroTitle}>{t.pageNotFound}</h1>
@@ -35,14 +36,15 @@ export default function CaseStudy() {
   return (
     <>
       <SEO
-        title={`${cs.title} — Proxynet Case Study`}
+        title={`${cs.title} � Proxynet Case Study`}
         description={cs.excerpt}
         canonical={`/case-studies/${cs.slug}`}
       />
       <main>
         {/* Hero */}
         <section className={`${styles.hero} heroScene`}>
-          <SectionBlobs variant="dark" />`n          <div className={styles.heroOverlay} />
+          <SectionBlobs variant="dark" />
+          <div className={styles.heroOverlay} />
           <div className={styles.heroInner}>
             <motion.nav className={styles.breadcrumb} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
               <Link to="/" className={styles.crumb}>{t.home}</Link>
@@ -68,7 +70,7 @@ export default function CaseStudy() {
           <section className={styles.contentSection}>
             <div className={styles.contentInner}>
               <motion.div className={styles.consentBlock} initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-                <div className={styles.consentIcon}>🔒</div>
+                <div className={styles.consentIcon}>??</div>
                 <h2 className={styles.consentTitle}>{t.caseStudiesConsentTitle}</h2>
                 <p className={styles.consentBody}>{t.caseStudiesConsentBody}</p>
                 <Link to="/case-studies" className={styles.consentBack}>
