@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Target, Eye } from 'lucide-react'
 import { useLang } from '../../context/LanguageContext'
+import SectionBlobs from '../SectionBlobs'
 import styles from './MissionVision.module.css'
 
 export default function MissionVision() {
@@ -8,6 +9,7 @@ export default function MissionVision() {
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
+        <SectionBlobs />
         <motion.div className={styles.card} initial={{ opacity: 0, y: 32 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <div className={styles.iconWrap}><Target size={28} /></div>
           <p className={styles.label}>{t.ourMission}</p>

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { MapPin, Briefcase, Clock, ArrowRight } from 'lucide-react'
 import { useLang } from '../../context/LanguageContext'
+import SectionBlobs from '../SectionBlobs'
 import styles from './OpenRoles.module.css'
 
 const roles = [
@@ -20,6 +21,7 @@ export default function OpenRoles() {
   return (
     <section id="roles" className={styles.section}>
       <div className={styles.inner}>
+        <SectionBlobs />
         <motion.div className={styles.header} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <p className={styles.eyebrow}>Open Roles</p>
           <h2 className={styles.heading}>Current Opportunities</h2>

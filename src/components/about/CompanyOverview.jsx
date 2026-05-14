@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { useLang } from '../../context/LanguageContext'
+import SectionBlobs from '../SectionBlobs'
 import styles from './CompanyOverview.module.css'
 
 export default function CompanyOverview() {
@@ -7,6 +8,7 @@ export default function CompanyOverview() {
   return (
     <section id="overview" className={styles.section}>
       <div className={styles.inner}>
+        <SectionBlobs />
         <motion.div className={styles.left} initial={{ opacity: 0, x: -32 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <p className={styles.eyebrow}>{t.overviewEyebrow}</p>
           <h2 className={styles.heading}>{t.overviewHeading}</h2>

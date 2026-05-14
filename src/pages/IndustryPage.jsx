@@ -85,7 +85,8 @@ export default function IndustryPage() {
 
         {/* ── 1. HERO ─────────────────────────────────────────────────── */}
         <section className={`${styles.hero} heroScene`}>
-          <SectionBlobs variant="dark" />`n          <div className={styles.heroOverlay} />
+          <SectionBlobs variant="dark" />
+          <div className={styles.heroOverlay} />
           <div className={styles.heroInner}>
             <motion.nav
               className={styles.breadcrumb}
@@ -143,6 +144,7 @@ export default function IndustryPage() {
         {/* ── 2. INDUSTRY OVERVIEW ────────────────────────────────────── */}
         <section className={styles.section}>
           <div className={styles.inner}>
+            <SectionBlobs />
             <div className={styles.overviewGrid}>
               <motion.div
                 className={styles.overviewText}
@@ -175,6 +177,7 @@ export default function IndustryPage() {
         {/* ── 3. PROXYNET'S ROLE ──────────────────────────────────────── */}
         <section className={styles.sectionDark}>
           <div className={styles.inner}>
+            <SectionBlobs variant="dark" />
             <motion.div
               className={styles.roleHeader}
               initial={{ opacity: 0, y: 24 }}
@@ -208,6 +211,7 @@ export default function IndustryPage() {
         {/* ── 4. KEY SOLUTIONS ────────────────────────────────────────── */}
         <section className={styles.section}>
           <div className={styles.inner}>
+            <SectionBlobs />
             <motion.div
               className={styles.sectionHeader}
               initial={{ opacity: 0, y: 24 }}
@@ -245,6 +249,7 @@ export default function IndustryPage() {
         {/* ── 5. FEATURED CASE STUDY ──────────────────────────────────── */}
         <section className={styles.sectionAlt}>
           <div className={styles.inner}>
+            <SectionBlobs />
             <motion.div
               className={styles.sectionHeader}
               initial={{ opacity: 0, y: 24 }}
@@ -295,6 +300,7 @@ export default function IndustryPage() {
         {/* ── 6. CLIENT LOGOS ─────────────────────────────────────────── */}
         <section className={styles.section}>
           <div className={styles.inner}>
+            <SectionBlobs />
             <motion.div
               className={styles.sectionHeader}
               initial={{ opacity: 0, y: 24 }}
@@ -326,6 +332,7 @@ export default function IndustryPage() {
         {/* ── 7. CTA ──────────────────────────────────────────────────── */}
         <section className={styles.ctaSection}>
           <div className={styles.inner}>
+            <SectionBlobs variant="dark" />
             <motion.div
               className={styles.ctaInner}
               initial={{ opacity: 0, y: 24 }}

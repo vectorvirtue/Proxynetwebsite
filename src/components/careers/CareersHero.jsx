@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronRight, ChevronLeft } from 'lucide-react'
 import { useLang } from '../../context/LanguageContext'
+import SectionBlobs from '../SectionBlobs'
 import img1 from '../../assets/annie-spratt-QckxruozjRg-unsplash.jpg'
 import img2 from '../../assets/hack-capital-uv5_bsypFUM-unsplash.jpg'
 import img3 from '../../assets/desola-lanre-ologun-kwzWjTnDPLk-unsplash.jpg'
@@ -31,6 +32,7 @@ export default function CareersHero() {
 
   return (
     <section className={styles.hero}>
+      <SectionBlobs variant="dark" />
       {/* Carousel background — crossfade */}
       <div className={styles.slideBg} aria-hidden="true">
         <AnimatePresence mode="crossfade">

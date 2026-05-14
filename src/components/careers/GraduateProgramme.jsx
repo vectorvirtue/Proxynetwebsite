@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { GraduationCap, CheckCircle, ArrowRight } from 'lucide-react'
 import { useLang } from '../../context/LanguageContext'
+import SectionBlobs from '../SectionBlobs'
 import styles from './Programme.module.css'
 
 const eligibility = [
@@ -23,6 +24,7 @@ export default function GraduateProgramme() {
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
+        <SectionBlobs />
         <motion.div className={styles.iconWrap} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
           <GraduationCap size={32} />
         </motion.div>

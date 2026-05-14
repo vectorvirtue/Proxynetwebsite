@@ -219,6 +219,16 @@
   gap: 12px;
 }
 
+@media (max-width: 768px) {
+  .ctas {
+    flex-direction: column;
+  }
+  .ctaPrimary,
+  .ctaSecondary {
+    width: 100%;
+  }
+}
+
 .ctaPrimary {
   display: inline-flex;
   align-items: center;

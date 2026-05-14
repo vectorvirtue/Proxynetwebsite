@@ -3,6 +3,7 @@ import Captcha from '../../components/Captcha'
 import { motion } from 'framer-motion'
 import { Wrench, Send } from 'lucide-react'
 import { useLang } from '../../context/LanguageContext'
+import SectionBlobs from '../SectionBlobs'
 import styles from './MaintenanceRequest.module.css'
 
 export default function MaintenanceRequest() {
@@ -16,6 +17,7 @@ export default function MaintenanceRequest() {
   return (
     <section id="ticket" className={styles.section}>
       <div className={styles.inner}>
+        <SectionBlobs />
         <motion.div className={styles.header} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <div className={styles.iconWrap}><Wrench size={28} /></div>
           <div>

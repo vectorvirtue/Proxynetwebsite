@@ -3,6 +3,7 @@ import Captcha from '../../components/Captcha'
 import { motion } from 'framer-motion'
 import { Upload, Send } from 'lucide-react'
 import { useLang } from '../../context/LanguageContext'
+import SectionBlobs from '../SectionBlobs'
 import styles from './ApplicationForm.module.css'
 
 export default function ApplicationForm() {
@@ -21,6 +22,7 @@ export default function ApplicationForm() {
     return (
       <section id="apply" className={styles.section}>
         <div className={styles.inner}>
+          <SectionBlobs />
           <motion.div className={styles.success} initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }}>
             <div className={styles.successIcon}><Send size={32} /></div>
             <h2 className={styles.successTitle}>Application Submitted!</h2>
@@ -34,6 +36,7 @@ export default function ApplicationForm() {
   return (
     <section id="apply" className={styles.section}>
       <div className={styles.inner}>
+        <SectionBlobs />
         <motion.div className={styles.header} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <p className={styles.eyebrow}>Apply Now</p>
           <h2 className={styles.heading}>Submit Your Application</h2>

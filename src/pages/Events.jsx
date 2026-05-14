@@ -109,7 +109,8 @@ export default function Events() {
       <main>
         {/* Hero */}
         <section className={`${styles.hero} heroScene`}>
-          <SectionBlobs variant="dark" />`n          <div className={styles.heroOverlay} />
+          <SectionBlobs variant="dark" />
+          <div className={styles.heroOverlay} />
           <div className={styles.heroInner}>
             <motion.nav className={styles.breadcrumb} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
               <Link to="/" className={styles.crumb}>{t.home}</Link>
@@ -135,6 +136,7 @@ export default function Events() {
         {/* Featured events */}
         <section className={styles.section}>
           <div className={styles.inner}>
+            <SectionBlobs />
             <motion.div className={styles.sectionHeader} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <p className={styles.eyebrowBlue}>Featured Events</p>
               <h2 className={styles.heading}>Recent Highlights</h2>
@@ -175,6 +177,7 @@ export default function Events() {
         {/* Photo gallery */}
         <section id="gallery" className={styles.sectionAlt}>
           <div className={styles.inner}>
+            <SectionBlobs />
             <motion.div className={styles.sectionHeader} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <p className={styles.eyebrowBlue}>Photo Gallery</p>
               <h2 className={styles.heading}>All Events</h2>
@@ -219,6 +222,7 @@ export default function Events() {
         {/* Upcoming events */}
         <section id="upcoming" className={styles.sectionDark}>
           <div className={styles.inner}>
+            <SectionBlobs variant="dark" />
             <motion.div className={styles.sectionHeader} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <p className={styles.eyebrowLight}>What's Next</p>
               <h2 className={styles.headingLight}>Upcoming Events</h2>
