@@ -44,7 +44,6 @@ export default function StatsBar() {
   return (
     <section className={styles.statsBar} aria-label="Company statistics">
       <div className={styles.inner}>
-        <SectionBlobs variant="dark" />
         {stats.map((stat, i) => (
           <motion.div
             key={stat.id}
