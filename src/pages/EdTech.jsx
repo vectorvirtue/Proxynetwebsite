@@ -27,8 +27,8 @@ const programmes = [
 
 const institutions = [
   "Lagos State University", "University of Lagos", "Covenant University",
-  "Lagos State Ministry of Education", "Access Bank Academy",
-  "Nigerian Educational Research and Development Council (NERDC)",
+  "Lagos State Ministry of Education", "Pampers",
+  "American International School of Lagos (AISL)",
 ]
 
 export default function EdTech() {
