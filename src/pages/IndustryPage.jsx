@@ -85,7 +85,7 @@ export default function IndustryPage() {
 
         {/* ── 1. HERO ─────────────────────────────────────────────────── */}
         <section className={`${styles.hero} heroScene`}>
-          <div className={styles.heroOverlay} />
+          <SectionBlobs variant="dark" />`n          <div className={styles.heroOverlay} />
           <div className={styles.heroInner}>
             <motion.nav
               className={styles.breadcrumb}
@@ -326,7 +326,6 @@ export default function IndustryPage() {
         {/* ── 7. CTA ──────────────────────────────────────────────────── */}
         <section className={styles.ctaSection}>
           <div className={styles.inner}>
-            <SectionBlobs variant="dark" />
             <motion.div
               className={styles.ctaInner}
               initial={{ opacity: 0, y: 24 }}

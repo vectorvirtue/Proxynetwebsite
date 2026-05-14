@@ -19,7 +19,7 @@ export default function CaseStudy() {
         <SEO title="Case Study Not Found" description="" canonical={`/case-studies/${slug}`} />
         <main>
           <section className={`${styles.hero} heroScene`}>
-            <div className={styles.heroOverlay} />
+            <SectionBlobs variant="dark" />`n          <div className={styles.heroOverlay} />
             <div className={styles.heroInner}>
               <Link to="/case-studies" className={styles.back}><ArrowLeft size={16} /> {t.caseStudiesBack}</Link>
               <h1 className={styles.heroTitle}>{t.pageNotFound}</h1>
@@ -42,7 +42,7 @@ export default function CaseStudy() {
       <main>
         {/* Hero */}
         <section className={`${styles.hero} heroScene`}>
-          <div className={styles.heroOverlay} />
+          <SectionBlobs variant="dark" />`n          <div className={styles.heroOverlay} />
           <div className={styles.heroInner}>
             <motion.nav className={styles.breadcrumb} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
               <Link to="/" className={styles.crumb}>{t.home}</Link>

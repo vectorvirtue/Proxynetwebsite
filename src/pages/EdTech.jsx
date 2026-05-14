@@ -12,7 +12,7 @@ import edtech4 from "../assets/edtech4.jpg"
 import edtech5 from "../assets/edtech5.jpg"
 import edtech5b from "../assets/edtech5.jpeg"
 import styles from "./EdTech.module.css"
-
+import SectionBlobs from "../components/SectionBlobs"
 const programmes = [
   { icon: "code", name: "Web Development", duration: "4-12 weeks", audience: "Students & Young Professionals", format: "Classroom + hands-on", desc: "Full-stack web development covering HTML, CSS, JavaScript, and modern frameworks. Students build real projects from day one." },
   { icon: "layout", name: "Web Design", duration: "2-6 weeks", audience: "Students & Creatives", format: "Classroom + hands-on", desc: "UI/UX principles, wireframing, prototyping, and visual design for the web using industry-standard tools." },

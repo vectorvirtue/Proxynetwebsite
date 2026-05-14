@@ -2,13 +2,14 @@
 import { motion } from 'framer-motion'
 import { ChevronRight, Ticket, Phone } from 'lucide-react'
 import { useLang } from '../../context/LanguageContext'
+import SectionBlobs from '../SectionBlobs'
 import styles from './SupportHero.module.css'
 
 export default function SupportHero() {
   const { t } = useLang()
   return (
     <section className={`${styles.hero} heroScene`}>
-      <div className={styles.overlay} />
+      <SectionBlobs variant="dark" />`n      <div className={styles.overlay} />
       <div className={styles.inner}>
         <motion.nav className={styles.breadcrumb} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} aria-label="Breadcrumb">
           <Link to="/" className={styles.crumb}>{t.home}</Link>

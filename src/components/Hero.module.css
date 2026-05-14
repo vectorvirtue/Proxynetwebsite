@@ -59,6 +59,7 @@
 .arrow:hover { background: rgba(255,255,255,0.25); transform: translateY(-50%) scale(1.08); }
 .arrowLeft { left: 24px; }
 .arrowRight { right: 24px; }
+@media (max-width: 768px) { .arrow { display: none; } }
 
 /* Slide dots */
 .slideDots {

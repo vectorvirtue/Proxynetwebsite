@@ -30,7 +30,12 @@ import polycomLogo from '../assets/polycom.jpg'
 import sharpLogo from '../assets/Sharp-Be-Original-small.png'
 import sonosLogo from '../assets/Sonos_2015-Logo.png'
 import uniluminLogo from '../assets/unilumin.png'
-
+import belkinLogo from '../assets/belkin.jpg'
+import beyondLogo from '../assets/BeyondTrust.jpg'
+import nordenLogo from  '../assets/348886.png'
+import krammerLogo from  '../assets/Krammer.png'
+import inetcoLogo from '../assets/INETCO_Systems_Limited_Logo.jpg'
+import acebottLogo from  '../assets/logo-1000x500-1 1.png'
 const partners = [
   { logo: samsungLogo,   name: 'Samsung' },
   { logo: logitechLogo,  name: 'Logitech',  tall: true  },
@@ -38,17 +43,23 @@ const partners = [
   { logo: yealinkLogo,   name: 'Yealink',  tall: true  },
   { logo: sennheiserLogo, name: 'Sennheiser', tall: true },
   { logo: maxhubLogo,    name: 'Maxhub' },
+{logo: beyondLogo,    name: 'BeyondTrust', tall: true  },
+{logo: inetcoLogo,    name: 'Inetco', tall: true  },
+{logo: krammerLogo,    name: 'Kramer', tall: true  },
   { logo: huaweiLogo,    name: 'Huawei' },
+   { logo:acebottLogo, name: 'Acebott', tall: true },
   { logo: ibmLogo,       name: 'IBM', size: 'xl' },
   { logo: zoomLogo,      name: 'Zoom', size: 'xl' },
   { logo: peerlessLogo,  name: 'Peerless-AV', tall: true },
   { logo: fireeyeLogo,   name: 'FireEye', size: 'xl' },
   { logo: canonLogo,     name: 'Canon' },
   { logo: dahuaLogo,     name: 'Dahua' },
+   { logo: nordenLogo,     name: 'Norden', tall:true },
   { logo: hikvisionLogo, name: 'Hikvision' },
   { logo: boschLogo,     name: 'Bosch' },
   { logo: panasonicLogo, name: 'Panasonic',  tall: true  },
   { logo: crestronLogo,  name: 'Crestron' },
+   { logo: belkinLogo,  name: 'Belkin' },
   { logo: extronLogo,    name: 'Extron' },
   { logo: biampLogo,     name: 'Biamp' },
   { logo: polycomLogo,   name: 'Polycom' },

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+﻿import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
@@ -20,6 +20,7 @@ export default function Hero() {
   const [current, setCurrent] = useState(0)
   const [direction, setDirection] = useState(1)
   const [paused, setPaused] = useState(false)
+  const touchStartX = useRef(null)
 
   const slideContent = [
     {
@@ -89,8 +90,18 @@ export default function Hero() {
 
   const slide = slideContent[current] || slideContent[0]
 
+  const handleTouchStart = (e) => { touchStartX.current = e.touches[0].clientX }
+  const handleTouchEnd = (e) => {
+    if (touchStartX.current === null) return
+    const diff = touchStartX.current - e.changedTouches[0].clientX
+    if (Math.abs(diff) > 40) go(diff > 0 ? 1 : -1)
+    touchStartX.current = null
+  }
+
   return (
-    <section className={styles.hero} aria-label="Hero" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
+    <section className={styles.hero} aria-label="Hero" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}>
       {/* Background */}
       <div className={styles.videoBg} aria-hidden="true">
         {current === 0 ? (

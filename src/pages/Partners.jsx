@@ -11,7 +11,7 @@ import microsoftLogo from '../assets/microsoft.png'
 import dahuaLogo from '../assets/dahua.png'
 import vtLogo from '../assets/vt.webp'
 import styles from './Partners.module.css'
-
+import SectionBlobs from '../components/SectionBlobs'
 const partners = [
   { logo: samsungLogo,   name: 'Samsung',   type: 'Authorised B2B Partner',              desc: 'Large format displays, videowalls, smart signage, and commercial AV solutions.' },
   { logo: logitechLogo,  name: 'Logitech',  type: 'Authorised Distributor',              desc: 'Video collaboration, peripherals, and enterprise workspace solutions.' },
@@ -34,7 +34,7 @@ export default function Partners() {
       <main>
         {/* Hero */}
         <section className={`${styles.hero} heroScene`}>
-          <div className={styles.heroOverlay} />
+          <SectionBlobs variant="dark" />`n          <div className={styles.heroOverlay} />
           <div className={styles.heroInner}>
             <motion.nav className={styles.breadcrumb} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
               <Link to="/" className={styles.crumb}>{t.home}</Link>
@@ -58,7 +58,7 @@ export default function Partners() {
         {/* Partner grid */}
         <section className={styles.section}>
           <div className={styles.inner}>
-          <SectionBlobs />
+          {/* <SectionBlobs /> */}
             <div className={styles.grid}>
               {partners.map((p, i) => (
                 <motion.div key={p.name} className={styles.card} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.07 }}>
@@ -71,7 +71,7 @@ export default function Partners() {
                 </motion.div>
               ))}
             </div>
-
+    <SectionBlobs/>
             {/* CTA */}
             <motion.div className={styles.cta} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <p className={styles.ctaText}>{t.partnersFooterText}</p>
