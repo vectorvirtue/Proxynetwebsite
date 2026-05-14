@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { useLang } from '../context/LanguageContext'
+import SectionBlobs from './SectionBlobs'
 import styles from './StatsBar.module.css'
 
 function Counter({ end, duration = 2, suffix = '' }) {
