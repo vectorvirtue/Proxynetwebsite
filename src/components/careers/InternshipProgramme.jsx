@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import { BookOpen, ArrowRight } from 'lucide-react'
 import { useLang } from '../../context/LanguageContext'
-import SectionBlobs from '../SectionBlobs'
 import styles from './Programme.module.css'
 
 const departments = [
@@ -18,7 +17,6 @@ export default function InternshipProgramme() {
   return (
     <section className={`${styles.section} ${styles.sectionAlt}`}>
       <div className={styles.inner}>
-        <SectionBlobs />
         <motion.div className={`${styles.iconWrap} ${styles.iconAlt}`} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
           <BookOpen size={32} />
         </motion.div>

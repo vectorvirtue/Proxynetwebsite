@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import { Ticket, Phone, MessageCircle, Mail } from 'lucide-react'
 import { useLang } from '../../context/LanguageContext'
-import SectionBlobs from '../SectionBlobs'
 import styles from './SupportOptions.module.css'
 
 export default function SupportOptions() {
@@ -17,7 +16,6 @@ export default function SupportOptions() {
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
-        <SectionBlobs />
         <div className={styles.grid}>
           {options.map((o, i) => (
             <motion.a key={o.label} href={o.href} target={o.href.startsWith('http') ? '_blank' : undefined} rel={o.href.startsWith('http') ? 'noopener noreferrer' : undefined} className={styles.card} style={{ '--accent': o.color }} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.08 }} whileHover={{ y: -4 }}>

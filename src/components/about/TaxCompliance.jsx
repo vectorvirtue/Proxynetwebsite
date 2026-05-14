@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import { ShieldCheck } from 'lucide-react'
 import { useLang } from '../../context/LanguageContext'
-import SectionBlobs from '../SectionBlobs'
 import styles from './TaxCompliance.module.css'
 
 export default function TaxCompliance() {
@@ -9,7 +8,6 @@ export default function TaxCompliance() {
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
-        <SectionBlobs />
         <motion.div className={styles.card} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <div className={styles.icon}><ShieldCheck size={28} /></div>
           <div className={styles.text}>

@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
 import { Heart, Zap, Users, TrendingUp } from 'lucide-react'
-import SectionBlobs from '../SectionBlobs'
 import styles from './LifeAtProxynet.module.css'
 
 const perks = [
@@ -14,7 +13,6 @@ export default function LifeAtProxynet() {
   return (
     <section id="life" className={styles.section}>
       <div className={styles.inner}>
-        <SectionBlobs />
         <motion.div className={styles.header} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <p className={styles.eyebrow}>Life at Proxynet</p>
           <h2 className={styles.heading}>Why People Love Working Here</h2>

@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+﻿import { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowRight, ChevronRight, X } from 'lucide-react'
@@ -43,8 +43,7 @@ export default function CaseStudies() {
       <main>
         {/* Hero */}
         <section className={`${styles.hero} heroScene`}>
-          <SectionBlobs variant="dark" />
-          <div className={styles.heroOverlay} />
+          <SectionBlobs variant="dark" />`n          <div className={styles.heroOverlay} />
           <div className={styles.heroInner}>
             <motion.nav className={styles.breadcrumb} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
               <Link to="/" className={styles.crumb}>{t.home}</Link>

@@ -78,8 +78,7 @@ export default function CSR() {
       <main>
         {/* Hero */}
         <section className={`${styles.hero} heroScene`}>
-          <SectionBlobs variant="dark" />
-          <div className={styles.heroOverlay} />
+          <SectionBlobs variant="dark" />`n          <div className={styles.heroOverlay} />
           <div className={styles.heroInner}>
             <motion.nav className={styles.breadcrumb} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
               <Link to="/" className={styles.crumb}>{t.home}</Link>
@@ -122,7 +121,6 @@ export default function CSR() {
         {/* Impact stories */}
         <section className={styles.sectionAlt}>
           <div className={styles.inner}>
-            <SectionBlobs />
             <motion.div className={styles.sectionHeader} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <p className={styles.eyebrow}>{t.csrImpactEyebrow}</p>
               <h2 className={styles.heading}>{t.csrImpactHeading}</h2>
@@ -149,7 +147,6 @@ export default function CSR() {
         {/* Events gallery */}
         <section className={styles.section}>
           <div className={styles.inner}>
-            <SectionBlobs />
             <motion.div className={styles.sectionHeader} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <p className={styles.eyebrow}>Events Gallery</p>
               <h2 className={styles.heading}>Proxynet in the Community</h2>
@@ -177,7 +174,6 @@ export default function CSR() {
         {/* Partner organisations */}
         <section className={styles.sectionDark}>
           <div className={styles.inner}>
-            <SectionBlobs variant="dark" />
             <motion.div className={styles.sectionHeader} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <p className={styles.eyebrowLight}>{t.csrPartnersEyebrow}</p>
               <h2 className={styles.headingLight}>{t.csrPartnersHeading}</h2>
@@ -196,7 +192,6 @@ export default function CSR() {
         {/* CSR Report download */}
         <section className={styles.section}>
           <div className={styles.inner}>
-            <SectionBlobs />
             <motion.div className={styles.reportCard} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <div className={styles.reportLeft}>
                 <p className={styles.eyebrow}>{t.csrReportEyebrow}</p>

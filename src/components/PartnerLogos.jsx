@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { useLang } from '../context/LanguageContext'
-import SectionBlobs from './SectionBlobs'
 import styles from './PartnerLogos.module.css'
 import samsungLogo from '../assets/samsung.png'
 import logitechLogo from '../assets/Logitech.jpg'
@@ -82,7 +81,8 @@ export default function PartnerLogos() {
   return (
     <section className={`${styles.section} sectionCircles`} aria-labelledby="partners-heading">
       <div className={styles.inner}>
-        <SectionBlobs />
+
+        {/* Header */}
         <motion.div
           className={styles.header}
           initial={{ opacity: 0, y: 24 }}

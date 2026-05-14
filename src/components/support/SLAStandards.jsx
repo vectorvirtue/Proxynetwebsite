@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import { Clock, AlertTriangle, CheckCircle, ArrowUp } from 'lucide-react'
 import { useLang } from '../../context/LanguageContext'
-import SectionBlobs from '../SectionBlobs'
 import styles from './SLAStandards.module.css'
 
 export default function SLAStandards() {
@@ -17,7 +16,6 @@ export default function SLAStandards() {
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
-        <SectionBlobs />
         <motion.div className={styles.header} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <p className={styles.eyebrow}>{t.slaEyebrow}</p>
           <h2 className={styles.heading}>{t.slaHeading}</h2>

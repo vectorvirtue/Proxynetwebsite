@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+﻿import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ChevronRight, ArrowRight } from 'lucide-react'
 import SEO from '../components/SEO'
@@ -27,15 +27,14 @@ export default function Partners() {
   return (
     <>
       <SEO
-        title="Our Technology Partners � Proxynet Group"
+        title="Our Technology Partners — Proxynet Group"
         description="Proxynet Group holds authorised distributor and partner status with Samsung, Logitech, Microsoft, Canon, Yealink, Dahua, and VT."
         canonical="/partners"
       />
       <main>
         {/* Hero */}
         <section className={`${styles.hero} heroScene`}>
-          <SectionBlobs variant="dark" />
-          <div className={styles.heroOverlay} />
+          <SectionBlobs variant="dark" />`n          <div className={styles.heroOverlay} />
           <div className={styles.heroInner}>
             <motion.nav className={styles.breadcrumb} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
               <Link to="/" className={styles.crumb}>{t.home}</Link>

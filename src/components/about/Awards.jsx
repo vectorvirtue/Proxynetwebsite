@@ -1,7 +1,6 @@
 ﻿import { motion } from 'framer-motion'
 import { ShieldCheck, GraduationCap } from 'lucide-react'
 import { useLang } from '../../context/LanguageContext'
-import SectionBlobs from '../SectionBlobs'
 import dahuaLogo from '../../assets/dahua.png'
 import vtLogo from '../../assets/vt.webp'
 import canonLogo from '../../assets/canon.png'
@@ -45,7 +44,6 @@ export default function Awards() {
   return (
     <section id="awards" className={styles.section}>
       <div className={styles.inner}>
-        <SectionBlobs />
         <motion.div className={styles.header} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <p className={styles.eyebrow}>{t.awardsEyebrow}</p>
           <h2 className={styles.heading}>{t.awardsHeading}</h2>

@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { useLang } from '../context/LanguageContext'
-import SectionBlobs from './SectionBlobs'
 import styles from './BlogPreview.module.css'
 
 const posts = [
@@ -34,7 +33,6 @@ export default function BlogPreview() {
   return (
     <section className={styles.section} aria-labelledby="blog-heading">
       <div className={styles.inner}>
-        <SectionBlobs />
         <div className={styles.header}>
           <div>
             <p className={styles.eyebrow}>{t.blog}</p>
