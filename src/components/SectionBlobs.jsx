@@ -5,7 +5,9 @@
  */
 export default function SectionBlobs({ variant = 'light' }) {
   const isLight = variant === 'light'
+
   const c1 = isLight ? 'rgba(0,111,180,0.08)'  : 'rgba(255,255,255,0.06)'
+
   const c2 = isLight ? 'rgba(70,195,242,0.07)' : 'rgba(255,255,255,0.04)'
 
   const base = {
