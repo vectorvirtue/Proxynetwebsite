@@ -59,12 +59,39 @@ export default function Contact() {
     t.contactTypeGeneral,
   ]
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Proxynet Group Ltd',
+    url: 'https://www.proxynetgroup.com',
+    logo: 'https://www.proxynetgroup.com/PROXYNET LOGO ASSET.png',
+    telephone: '+2347032647755',
+    email: 'info@proxynetgroup.com',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '5B Adedeji Close, off Opebi Road',
+      addressLocality: 'Ikeja',
+      addressRegion: 'Lagos',
+      addressCountry: 'NG',
+    },
+    contactPoint: [
+      { '@type': 'ContactPoint', telephone: '+2347032647755', contactType: 'customer service', areaServed: 'NG' },
+      { '@type': 'ContactPoint', telephone: '+2349031829347', contactType: 'sales', areaServed: 'NG' },
+    ],
+    sameAs: [
+      'https://www.linkedin.com/company/proxynet-communications',
+      'https://www.facebook.com/proxynetcommunications/',
+      'https://www.instagram.com/proxynetgroup/',
+    ],
+  }
+
   return (
     <>
       <SEO
         title={t.contactPageTitle}
         description={t.contactPageDesc}
         canonical="/contact"
+        jsonLd={jsonLd}
       />
       <main>
         {/* Hero */}

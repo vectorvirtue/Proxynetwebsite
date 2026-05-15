@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import { ChevronRight, Send, Monitor, Building2, ShoppingCart, Megaphone, MapPin } from "lucide-react"
 import Captcha from '../components/Captcha'
+import SEO from '../components/SEO'
 import { useLang } from '../context/LanguageContext'
 import SectionBlobs from '../components/SectionBlobs'
 import billboardImg from '../assets/billboard.png'
@@ -35,7 +36,23 @@ export default function BillboardSolutions() {
   const handleSubmit = (e) => { e.preventDefault(); if (!captchaToken) return; setSubmitted(true) }
 
   return (
-    <main>
+    <>
+      <SEO
+        title="Billboard & Digital Signage Solutions — ProBoard"
+        description="Proxynet ProBoard delivers indoor and outdoor LED digital signage, videowalls, and billboard solutions across Nigeria. Make your message unmissable."
+        canonical="/billboard-solutions"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: 'Billboard & Digital Signage Solutions',
+          description: 'Indoor and outdoor LED digital signage, videowalls, and billboard solutions across Nigeria.',
+          provider: { '@type': 'Organization', name: 'Proxynet Group', url: 'https://www.proxynetgroup.com' },
+          areaServed: { '@type': 'Place', name: 'Nigeria' },
+          serviceType: 'Digital Signage',
+          url: 'https://www.proxynetgroup.com/billboard-solutions',
+        }}
+      />
+      <main>
       <section className={`${styles.hero} heroScene`}>
         <SectionBlobs variant="dark" />
           <div className={styles.heroOverlay} />
@@ -172,5 +189,6 @@ export default function BillboardSolutions() {
         </div>
       </section>
     </main>
+    </>
   )
 }

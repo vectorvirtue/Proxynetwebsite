@@ -36,6 +36,16 @@ export default function Rentals() {
         title="AV Equipment Rentals | World-Class AV for Your Events"
         description="Rent professional AV equipment for events across Nigeria and West Africa. Videowalls, displays, touch screens, audio systems. Delivered and operated by Proxynet."
         canonical="/rentals"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: 'AV Equipment Rentals',
+          description: 'Professional AV equipment rental for events across Nigeria and West Africa — videowalls, displays, touch screens, and audio systems.',
+          provider: { '@type': 'Organization', name: 'Proxynet Group', url: 'https://www.proxynetgroup.com' },
+          areaServed: { '@type': 'Place', name: 'West Africa' },
+          serviceType: 'AV Equipment Rental',
+          url: 'https://www.proxynetgroup.com/rentals',
+        }}
       />
       <main>
         <section className={`${styles.hero} heroScene`}>

@@ -45,6 +45,16 @@ export default function EdTech() {
         title="EdTech & Smart Schools — Technology for Education"
         description="Proxynet EdTech delivers smart classroom solutions, school network infrastructure, digital literacy training, and ICT programmes across West Africa."
         canonical="/solutions/edtech"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: 'EdTech & Smart School Solutions',
+          description: 'Smart classroom solutions, school network infrastructure, digital literacy training, and ICT programmes across West Africa.',
+          provider: { '@type': 'Organization', name: 'Proxynet Group', url: 'https://www.proxynetgroup.com' },
+          areaServed: { '@type': 'Place', name: 'West Africa' },
+          serviceType: 'Education Technology',
+          url: 'https://www.proxynetgroup.com/solutions/edtech',
+        }}
       />
       <main>
         <section className={`${styles.hero} heroScene`}>

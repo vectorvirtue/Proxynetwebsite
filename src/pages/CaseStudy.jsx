@@ -39,6 +39,21 @@ export default function CaseStudy() {
         title={`${cs.title} — Proxynet Case Study`}
         description={cs.excerpt}
         canonical={`/case-studies/${cs.slug}`}
+        ogType="article"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: cs.title,
+          description: cs.excerpt,
+          author: { '@type': 'Organization', name: 'Proxynet Group' },
+          publisher: {
+            '@type': 'Organization',
+            name: 'Proxynet Group',
+            logo: { '@type': 'ImageObject', url: 'https://www.proxynetgroup.com/PROXYNET LOGO ASSET.png' },
+          },
+          url: `https://www.proxynetgroup.com/case-studies/${cs.slug}`,
+          about: { '@type': 'Organization', name: cs.client },
+        }}
       />
       <main>
         {/* Hero */}
