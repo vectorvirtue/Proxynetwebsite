@@ -6,6 +6,7 @@ import { ChevronRight, Send, TvMinimal, Volume2, Monitor, Layers } from "lucide-
 import Captcha from '../components/Captcha'
 import { useLang } from '../context/LanguageContext'
 import SectionBlobs from '../components/SectionBlobs'
+import HeroBlobs from '../components/HeroBlobs'
 import styles from "./Rentals.module.css"
 
 const equipment = [
@@ -33,13 +34,13 @@ export default function Rentals() {
   return (
     <>
       <SEO
-        title="AV Equipment Rentals Ã¢â‚¬â€ World-Class AV for Your Events"
+        title="AV Equipment Rentals | World-Class AV for Your Events"
         description="Rent professional AV equipment for events across Nigeria and West Africa. Videowalls, displays, touch screens, audio systems. Delivered and operated by Proxynet."
         canonical="/rentals"
       />
       <main>
         <section className={`${styles.hero} heroScene`}>
-          <SectionBlobs variant="dark" />
+          <HeroBlobs />
           <div className={styles.heroOverlay} />
           <div className={styles.heroInner}>
             <motion.nav className={styles.breadcrumb} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
@@ -93,7 +94,7 @@ export default function Rentals() {
             <motion.div className={styles.sectionHeader} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <p className={styles.eyebrowLight}>Event Gallery</p>
               <h2 className={styles.headingLight}>Past Deployments</h2>
-              <p className={styles.galleryNote}>Photos coming soon Ã¢â‚¬â€ check back after our next event.</p>
+              <p className={styles.galleryNote}>Photos coming soon, check back after our next event.</p>
             </motion.div>
             <div className={styles.galleryGrid}>
               {[1,2,3,4,5,6].map(i => (

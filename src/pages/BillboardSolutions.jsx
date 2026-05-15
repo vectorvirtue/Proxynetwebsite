@@ -5,6 +5,7 @@ import { ChevronRight, Send, Monitor, Building2, ShoppingCart, Megaphone, MapPin
 import Captcha from '../components/Captcha'
 import { useLang } from '../context/LanguageContext'
 import SectionBlobs from '../components/SectionBlobs'
+import HeroBlobs from '../components/HeroBlobs'
 import billboardImg from '../assets/billboard.png'
 import styles from "./BillboardSolutions.module.css"
 
@@ -37,7 +38,8 @@ export default function BillboardSolutions() {
   return (
     <main>
       <section className={`${styles.hero} heroScene`}>
-        <SectionBlobs variant="dark" />`n          <div className={styles.heroOverlay} />
+        <HeroBlobs />
+          <div className={styles.heroOverlay} />
         <div className={styles.heroInner}>
           <motion.nav className={styles.breadcrumb} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
             <Link to="/" className={styles.crumb}>{t.home}</Link>

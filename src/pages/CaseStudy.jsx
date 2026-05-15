@@ -5,6 +5,7 @@ import { useLang } from '../context/LanguageContext'
 import { getCaseStudyBySlug, getCaseStudies } from '../data/caseStudies'
 import SEO from '../components/SEO'
 import SectionBlobs from '../components/SectionBlobs'
+import HeroBlobs from '../components/HeroBlobs'
 import styles from './CaseStudy.module.css'
 
 export default function CaseStudy() {
@@ -19,7 +20,8 @@ export default function CaseStudy() {
         <SEO title="Case Study Not Found" description="" canonical={`/case-studies/${slug}`} />
         <main>
           <section className={`${styles.hero} heroScene`}>
-            <SectionBlobs variant="dark" />`n          <div className={styles.heroOverlay} />
+            <HeroBlobs />
+          <div className={styles.heroOverlay} />
             <div className={styles.heroInner}>
               <Link to="/case-studies" className={styles.back}><ArrowLeft size={16} /> {t.caseStudiesBack}</Link>
               <h1 className={styles.heroTitle}>{t.pageNotFound}</h1>
@@ -42,7 +44,8 @@ export default function CaseStudy() {
       <main>
         {/* Hero */}
         <section className={`${styles.hero} heroScene`}>
-          <SectionBlobs variant="dark" />`n          <div className={styles.heroOverlay} />
+          <HeroBlobs />
+          <div className={styles.heroOverlay} />
           <div className={styles.heroInner}>
             <motion.nav className={styles.breadcrumb} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
               <Link to="/" className={styles.crumb}>{t.home}</Link>
@@ -201,7 +204,7 @@ export default function CaseStudy() {
             <section className={styles.ctaSection}>
               <div className={styles.ctaInner}>
                 <motion.div className={styles.ctaBlock} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                  <SectionBlobs variant="dark" />
+                  <HeroBlobs />
                   <p className={styles.ctaEyebrow}>{t.caseStudiesCtaEyebrow}</p>
                   <h2 className={styles.ctaHeading}>{t.caseStudiesCtaHeading}</h2>
                   <p className={styles.ctaSub}>{t.caseStudiesCtaSub}</p>

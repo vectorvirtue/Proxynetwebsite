@@ -28,6 +28,7 @@ import SEO from '../components/SEO'
 import { useLang } from '../context/LanguageContext'
 import { getIndustryBySlug } from '../data/industries'
 import SectionBlobs from '../components/SectionBlobs'
+import HeroBlobs from '../components/HeroBlobs'
 import styles from './IndustryPage.module.css'
 
 // Lucide icon lookup map — icon name string → component
@@ -85,7 +86,8 @@ export default function IndustryPage() {
 
         {/* ── 1. HERO ─────────────────────────────────────────────────── */}
         <section className={`${styles.hero} heroScene`}>
-          <SectionBlobs variant="dark" />`n          <div className={styles.heroOverlay} />
+          <HeroBlobs />
+          <div className={styles.heroOverlay} />
           <div className={styles.heroInner}>
             <motion.nav
               className={styles.breadcrumb}
