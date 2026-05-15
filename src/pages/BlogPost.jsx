@@ -5,7 +5,6 @@ import { useLang } from '../context/LanguageContext'
 import { getPosts } from '../data/blogPosts'
 import SEO from '../components/SEO'
 import SectionBlobs from '../components/SectionBlobs'
-import HeroBlobs from '../components/HeroBlobs'
 import styles from './BlogPost.module.css'
 
 export default function BlogPost() {
@@ -26,7 +25,7 @@ export default function BlogPost() {
       />
       <main>
         <section className={`${styles.hero} heroScene`}>
-          <HeroBlobs />
+          <SectionBlobs variant="dark" />
           <div className={styles.heroOverlay} />
           <div className={styles.heroInner}>
             <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>

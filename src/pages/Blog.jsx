@@ -6,7 +6,6 @@ import SEO from '../components/SEO'
 import { useLang } from '../context/LanguageContext'
 import { getPosts, getCategories } from '../data/blogPosts'
 import SectionBlobs from '../components/SectionBlobs'
-import HeroBlobs from '../components/HeroBlobs'
 import styles from './Blog.module.css'
 
 export default function Blog() {
@@ -36,7 +35,7 @@ export default function Blog() {
       <main>
         {/* Hero */}
         <section className={`${styles.hero} heroScene`}>
-          <HeroBlobs />        <div className={styles.heroOverlay} />
+          <SectionBlobs variant="dark" />        <div className={styles.heroOverlay} />
           <div className={styles.heroInner}>
             <motion.nav className={styles.breadcrumb} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
               <Link to="/" className={styles.crumb}>{t.home}</Link>

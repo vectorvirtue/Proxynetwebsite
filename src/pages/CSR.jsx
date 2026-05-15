@@ -4,7 +4,6 @@ import { ChevronRight, BookOpen, Leaf, Users, Wifi, Download, ExternalLink } fro
 import SEO from '../components/SEO'
 import { useLang } from '../context/LanguageContext'
 import SectionBlobs from '../components/SectionBlobs'
-import HeroBlobs from '../components/HeroBlobs'
 import breakfast1 from '../assets/BREAKFAST SESSION WITH PROXYNET AND COMFORTE AT RADISSON BLUE.jpg'
 import breakfast2 from '../assets/BREAKFAST SESSION WITH PROXYNET AND COMFORTE AT RADISSON BLUE2.jpg'
 import breakfast3 from '../assets/BREAKFAST SESSION WITH PROXYNET AND COMFORTE AT RADISSON BLUE3.jpg'
@@ -79,7 +78,7 @@ export default function CSR() {
       <main>
         {/* Hero */}
         <section className={`${styles.hero} heroScene`}>
-          <HeroBlobs />
+          <SectionBlobs variant="dark" />
           <div className={styles.overlay} />
           <div className={styles.heroInner}>
             <motion.nav className={styles.breadcrumb} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>

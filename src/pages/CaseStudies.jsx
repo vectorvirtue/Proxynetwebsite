@@ -7,7 +7,6 @@ import { getCaseStudies } from '../data/caseStudies'
 import FilterDropdown from '../components/FilterDropdown'
 import SEO from '../components/SEO'
 import SectionBlobs from '../components/SectionBlobs'
-import HeroBlobs from '../components/HeroBlobs'
 import styles from './CaseStudies.module.css'
 
 const ALL = 'All'
@@ -44,7 +43,7 @@ export default function CaseStudies() {
       <main>
         {/* Hero */}
         <section className={`${styles.hero} heroScene`}>
-          <HeroBlobs />    <div className={styles.overlay} />
+          <SectionBlobs variant="dark" />    <div className={styles.overlay} />
           <div className={styles.heroInner}>
             <motion.nav className={styles.breadcrumb} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
               <Link to="/" className={styles.crumb}>{t.home}</Link>
@@ -150,7 +149,7 @@ export default function CaseStudies() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <HeroBlobs />
+              <SectionBlobs variant="dark" />
               <p className={styles.ctaEyebrow}>{t.caseStudiesCtaEyebrow}</p>
               <h2 className={styles.ctaHeading}>{t.caseStudiesCtaHeading}</h2>
               <p className={styles.ctaSub}>{t.caseStudiesCtaSub}</p>

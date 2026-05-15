@@ -6,7 +6,6 @@ import { ChevronRight, Send, TvMinimal, Volume2, Monitor, Layers } from "lucide-
 import Captcha from '../components/Captcha'
 import { useLang } from '../context/LanguageContext'
 import SectionBlobs from '../components/SectionBlobs'
-import HeroBlobs from '../components/HeroBlobs'
 import styles from "./Rentals.module.css"
 
 const equipment = [
@@ -40,7 +39,7 @@ export default function Rentals() {
       />
       <main>
         <section className={`${styles.hero} heroScene`}>
-          <HeroBlobs />
+          <SectionBlobs variant="dark" />
           <div className={styles.heroOverlay} />
           <div className={styles.heroInner}>
             <motion.nav className={styles.breadcrumb} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>

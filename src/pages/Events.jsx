@@ -5,7 +5,6 @@ import { ChevronRight, X, Calendar, MapPin, ArrowRight, Images } from 'lucide-re
 import FilterDropdown from '../components/FilterDropdown'
 import SEO from '../components/SEO'
 import SectionBlobs from '../components/SectionBlobs'
-import HeroBlobs from '../components/HeroBlobs'
 import { useLang } from '../context/LanguageContext'
 import breakfast1 from '../assets/BREAKFAST SESSION WITH PROXYNET AND COMFORTE AT RADISSON BLUE.jpg'
 import breakfast2 from '../assets/BREAKFAST SESSION WITH PROXYNET AND COMFORTE AT RADISSON BLUE2.jpg'
@@ -110,7 +109,7 @@ export default function Events() {
       <main>
         {/* Hero */}
         <section className={`${styles.hero} heroScene`}>
-          <HeroBlobs />     <div className={styles.overlay} />
+          <SectionBlobs variant="dark" />     <div className={styles.overlay} />
           <div className={styles.heroInner}>
             <motion.nav className={styles.breadcrumb} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
               <Link to="/" className={styles.crumb}>{t.home}</Link>
@@ -246,7 +245,7 @@ export default function Events() {
         <section className={styles.section}>
           <div className={styles.inner}>
             <motion.div className={styles.ctaBlock} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <HeroBlobs />
+              <SectionBlobs variant="dark" />
               <p className={styles.ctaEyebrow}>Stay in the Loop</p>
               <h2 className={styles.ctaHeading}>Never Miss a Proxynet Event</h2>
               <p className={styles.ctaSub}>Subscribe to our newsletter or follow us on social media to be the first to know about upcoming events, product launches, and partner summits.</p>
