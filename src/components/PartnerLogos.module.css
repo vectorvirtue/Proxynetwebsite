@@ -100,8 +100,12 @@
 .ctaPrimary:hover { background: #005a94; transform: translateY(-2px); }
 .ctaSecondary { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background:var(--blue); color: var(--white); font-size: 14px; font-weight: 600; border-radius: 8px; border: 1.5px solid rgba(0,31,51,0.15); min-height: 48px; transition: border-color 0.2s, background 0.2s; }
 .ctaSecondary:hover { border-color: var(--blue); color: var(--blue); background: rgba(0,111,180,0.04); }
-
-
+.carouselLogoSquare {
+  max-height: 72px;    /* Allow it to fill the absolute max height of the container */
+  width: auto;
+  object-fit: contain;
+  transform: scale(1.3); /* Zooms the logo in by 160% to crop out the invisible padding */
+}
 /* Wide variant for landscape SVG logos like Unilumin */
 .carouselLogoWide {
   max-height: 32px;

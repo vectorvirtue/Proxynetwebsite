@@ -36,25 +36,30 @@ import nordenLogo from  '../assets/348886.png'
 import krammerLogo from  '../assets/Krammer.png'
 import inetcoLogo from '../assets/INETCO_Systems_Limited_Logo.jpg'
 import acebottLogo from  '../assets/logo-1000x500-1 1.png'
-const partners = [
+import makeblockLogo from '../assets/makeblock.png'
+import lumensLogo from '../assets/lumens-logo-2.png'
+import zktecLogo from '../assets/zkteco.png'
+const partners = [  
   { logo: samsungLogo,   name: 'Samsung' },
   { logo: logitechLogo,  name: 'Logitech',  tall: true  },
   { logo: microsoftLogo, name: 'Microsoft' },
-  { logo: yealinkLogo,   name: 'Yealink',  tall: true  },
-  { logo: sennheiserLogo, name: 'Sennheiser', tall: true },
+  { logo: yealinkLogo,   name: 'Yealink',  square: true  },
+  { logo: sennheiserLogo, name: 'Sennheiser', size: 'xl' },
   { logo: maxhubLogo,    name: 'Maxhub' },
+   { logo: makeblockLogo,    name: 'MakeBlock', tall:true },
+  
 {logo: beyondLogo,    name: 'BeyondTrust', tall: true  },
 {logo: inetcoLogo,    name: 'Inetco', tall: true  },
 {logo: krammerLogo,    name: 'Kramer', tall: true  },
   { logo: huaweiLogo,    name: 'Huawei' },
    { logo:acebottLogo, name: 'Acebott', tall: true },
-  { logo: ibmLogo,       name: 'IBM', size: 'xl' },
+  { logo: ibmLogo,       name: 'IBM', square: true },
   { logo: zoomLogo,      name: 'Zoom', size: 'xl' },
   { logo: peerlessLogo,  name: 'Peerless-AV', tall: true },
   { logo: fireeyeLogo,   name: 'FireEye', size: 'xl' },
   { logo: canonLogo,     name: 'Canon' },
   { logo: dahuaLogo,     name: 'Dahua' },
-   { logo: nordenLogo,     name: 'Norden', tall:true },
+   { logo: nordenLogo,     name: 'Norden', square:true },
   { logo: hikvisionLogo, name: 'Hikvision' },
   { logo: boschLogo,     name: 'Bosch' },
   { logo: panasonicLogo, name: 'Panasonic',  tall: true  },
@@ -70,6 +75,8 @@ const partners = [
   { logo: dLinkLogo,     name: 'D-Link' },
   { logo: hanwhaLogo,    name: 'Hanwha' },
   { logo: vtLogo,        name: 'VT' },
+  { logo: lumensLogo,    name: 'Lumens', tall: true },
+  { logo: zktecLogo,     name: 'ZKTeco',  },
 ]
 
 // Duplicate for seamless infinite loop
@@ -111,6 +118,7 @@ export default function PartnerLogos() {
                       p.size === 'xl' ? styles.carouselLogoXL :
                       p.tall ? styles.carouselLogoTall :
                       p.wide ? styles.carouselLogoWide :
+                      p.square ? styles.carouselLogoSquare:
                       styles.carouselLogo
                     }
                   />

@@ -3,6 +3,7 @@
   background: var(--navy);
   padding: 100px 0 60px;
   overflow: hidden;
+  
 }
 
 .hero::before {
