@@ -2,13 +2,18 @@ import { motion } from 'framer-motion'
 import { useLang } from '../../context/LanguageContext'
 import SectionBlobs from '../SectionBlobs'
 import styles from './Leadership.module.css'
+import placeholderOne from '../../assets/Picture1.jpg'
+import placeholderTwo from '../../assets/Picture4.jpg'
+import placeholderThree from '../../assets/Logitech.jpg'
+import placeholderFour from '../../assets/huawei.jpg'
+import placeholderFive from '../../assets/edtech.jpg'
 
 const team = [
-  { name: 'Ifeanyi Ozo-Onyali',  titleKey: 'leaderCEOTitle',  bioKey: 'leaderCEOBio' },
-  { name: 'Theodora Usman',      titleKey: 'leaderHRTitle',   bioKey: 'leaderHRBio' },
-  { name: 'Chijioke Okorie',     titleKey: 'leaderCOOTitle',  bioKey: 'leaderCOOBio' },
-  { name: 'Folasade',            titleKey: 'leaderCFOTitle',  bioKey: 'leaderCFOBio' },
-  { name: 'Chike Oliobi',         titleKey: 'leaderSalesTitle', bioKey: 'leaderSalesBio' },
+  { name: 'Ifeanyi Ozo-Onyali',  titleKey: 'leaderCEOTitle',  bioKey: 'leaderCEOBio', image: placeholderOne },
+  { name: 'Theodora Usman',      titleKey: 'leaderHRTitle',   bioKey: 'leaderHRBio', image: placeholderTwo },
+  { name: 'Chijioke Okorie',     titleKey: 'leaderCOOTitle',  bioKey: 'leaderCOOBio', image: placeholderThree },
+  { name: 'Folasade',            titleKey: 'leaderCFOTitle',  bioKey: 'leaderCFOBio', image: placeholderFour },
+  { name: 'Chike Oliobi',         titleKey: 'leaderSalesTitle', bioKey: 'leaderSalesBio', image: placeholderFive },
 ]
 
 // Trapezoid clip-paths — outer edge of each card is inset, inner edge is full height
@@ -47,14 +52,27 @@ export default function Leadership() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              whileHover={{ scale: 1.06, zIndex: 10, transition: { duration: 0.25 } }}
+              whileHover={{ scale: 1.03, zIndex: 10, transition: { duration: 0.25 } }}
             >
               <div
                 className={styles.fanImgWrap}
-                style={{ clipPath: clipPaths[i] }}
+                style={{
+                  '--flip-direction': i % 2 === 0 ? '180deg' : '-180deg',
+                  '--flip-twist': i % 2 === 0 ? '5deg' : '-5deg',
+                }}
               >
-                <div className={styles.fanAvatar}>
-                  <span className={styles.fanInitials}>{p.name.split(' ').map(n => n[0]).join('')}</span>
+                <div className={styles.fanFlip}>
+                  <div
+                    className={`${styles.fanFace} ${styles.fanFront}`}
+                    style={{ clipPath: clipPaths[i] }}
+                  >
+                    <div className={styles.fanAvatar}>
+                      <span className={styles.fanInitials}>{p.name.split(' ').map(n => n[0]).join('')}</span>
+                    </div>
+                  </div>
+                  <div className={`${styles.fanFace} ${styles.fanBack}`}>
+                    <img className={styles.fanImage} src={p.image} alt="" />
+                  </div>
                 </div>
               </div>
               <div className={styles.fanLabel}>

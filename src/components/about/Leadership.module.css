@@ -11,7 +11,7 @@
   display: flex;
   justify-content: center;
   align-items: stretch;
-  gap: 8px;
+  gap: 24px;
   margin-bottom: 64px;
 }
 
@@ -29,14 +29,51 @@
 .fanImgWrap {
   width: 100%;
   aspect-ratio: 3 / 4;
-  overflow: hidden;
-  background: linear-gradient(160deg, #001f33 0%, #003a6b 60%, #001220 100%);
+  overflow: visible;
+  transition: filter 0.3s ease;
+  perspective: 900px;
+}
+
+.fanFlip {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.72s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: transform;
+}
+
+.fanCard:hover .fanFlip {
+  transform: rotateY(var(--flip-direction)) rotateZ(var(--flip-twist));
+}
+
+.fanFace {
+  position: absolute;
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  backface-visibility: hidden;
+  overflow: hidden;
   box-shadow: 0 16px 48px rgba(0,0,0,0.25);
-  transition: filter 0.3s ease;
+}
+
+.fanFront {
+  background: linear-gradient(160deg, #001f33 0%, #003a6b 60%, #001220 100%);
   /* clip-path applied inline per card */
+}
+
+.fanBack {
+  background: var(--navy);
+  border-radius: 18px;
+  transform: rotateY(180deg);
+}
+
+.fanImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .fanAvatar {
@@ -85,7 +122,7 @@
 @media (max-width: 768px) {
   .fanScene {
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 24px 18px;
     justify-content: center;
   }
   .fanCard { width: 140px; }
