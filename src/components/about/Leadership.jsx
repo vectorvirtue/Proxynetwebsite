@@ -2,17 +2,17 @@ import { motion } from 'framer-motion'
 import { useLang } from '../../context/LanguageContext'
 import SectionBlobs from '../SectionBlobs'
 import styles from './Leadership.module.css'
-import placeholderOne from '../../assets/Picture1.jpg'
+import placeholderOne from '../../assets/BREAKFAST SESSION WITH PROXYNET AND COMFORTE AT RADISSON BLUE2.jpg'
 import placeholderTwo from '../../assets/Picture4.jpg'
 import placeholderThree from '../../assets/Logitech.jpg'
 import placeholderFour from '../../assets/huawei.jpg'
 import placeholderFive from '../../assets/edtech.jpg'
 
 const team = [
-  { name: 'Ifeanyi Ozo-Onyali',  titleKey: 'leaderCEOTitle',  bioKey: 'leaderCEOBio', image: placeholderOne },
+ { name: 'Chijioke Okorie',     titleKey: 'leaderCOOTitle',  bioKey: 'leaderCOOBio', image: placeholderThree },
   { name: 'Theodora Usman',      titleKey: 'leaderHRTitle',   bioKey: 'leaderHRBio', image: placeholderTwo },
-  { name: 'Chijioke Okorie',     titleKey: 'leaderCOOTitle',  bioKey: 'leaderCOOBio', image: placeholderThree },
-  { name: 'Folasade',            titleKey: 'leaderCFOTitle',  bioKey: 'leaderCFOBio', image: placeholderFour },
+    { name: 'Ifeanyi Ozo-Onyali',  titleKey: 'leaderCEOTitle',  bioKey: 'leaderCEOBio', image: placeholderOne },
+  { name: 'Folasade Odewale',            titleKey: 'leaderCFOTitle',  bioKey: 'leaderCFOBio', image: placeholderFour },
   { name: 'Chike Oliobi',         titleKey: 'leaderSalesTitle', bioKey: 'leaderSalesBio', image: placeholderFive },
 ]
 

@@ -96,7 +96,7 @@ export default function Contact() {
       <main>
         {/* Hero */}
         <section className={`${styles.hero} heroScene`}>
-          <SectionBlobs variant="dark" />      <div className={styles.heroOverlay} />
+          <SectionBlobs variant="dark" opacityScale={1.9} />      <div className={styles.heroOverlay} />
           <div className={styles.heroInner}>
             <motion.nav className={styles.breadcrumb} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
               <Link to="/" className={styles.crumb}>{t.home}</Link>
@@ -127,7 +127,7 @@ export default function Contact() {
         {/* Main content: form + direct contacts */}
         <section id="form" className={styles.section}>
           <div className={styles.sectionInner}>
-            <SectionBlobs />
+            <SectionBlobs  />
 
             {/* Smart contact form */}
             <motion.div className={styles.formCol} initial={{ opacity: 0, x: -32 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
@@ -236,7 +236,7 @@ export default function Contact() {
         {/* Office locations */}
         <section className={styles.officesSection}>
           <div className={styles.officesInner}>
-            <SectionBlobs />
+            <SectionBlobs  />
             <motion.div className={styles.officesHeader} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <p className={styles.eyebrow}>{t.locationsEyebrow}</p>
               <h2 className={styles.officesHeading}>{t.locationsHeading}</h2>

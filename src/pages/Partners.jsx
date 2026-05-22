@@ -88,6 +88,7 @@ const partners = [
   {
     logo: sennheiserLogo,
     name: "Sennheiser",
+    logoSize: "large",
     type: "Authorised Partner",
     desc: "Premium audio solutions, professional headsets, and communication devices.",
   },
@@ -136,30 +137,38 @@ const partners = [
   {
     logo: ibmLogo,
     name: "IBM",
+    logoSize: "large",
+    logoAlign: "left",
     type: "Authorised Partner",
     desc: "Enterprise IT infrastructure, cloud computing, and AI technologies.",
   },
   {
     logo: zoomLogo,
     name: "Zoom",
+    logoSize: "large",
+    logoAlign: "midLeft",
     type: "Authorised Partner",
     desc: "Video conferencing, webinars, and unified communication platforms.",
   },
   {
     logo: peerlessLogo,
     name: "Peerless-AV",
+    logoSize: "large",
     type: "Authorised Partner",
     desc: "Professional AV mounting systems and installation solutions.",
   },
   {
     logo: fireeyeLogo,
     name: "FireEye",
+    logoSize: "xlarge",
+    logoAlign: "farLeft",
     type: "Authorised Partner",
     desc: "Advanced cybersecurity, threat detection, and incident response.",
   },
   {
     logo: nordenLogo,
     name: "Norden",
+    logoSize: "xlarge",
     type: "Authorised Partner",
     desc: "IT solutions and managed services for enterprise environments.",
   },
@@ -178,6 +187,7 @@ const partners = [
   {
     logo: panasonicLogo,
     name: "Panasonic",
+    logoAlign: "left",
     type: "Authorised Partner",
     desc: "Professional imaging, display solutions, and AV equipment.",
   },
@@ -250,6 +260,7 @@ const partners = [
   {
     logo: lumensLogo,
     name: "Lumens",
+    logoSize: "large",
     type: "Authorised Partner",
     desc: "Professional projectors, imaging, and display solutions.",
   },
@@ -330,7 +341,25 @@ export default function Partners() {
                   transition={{ duration: 0.4, delay: i * 0.07 }}
                 >
                   <div className={styles.logoWrap}>
-                    <img src={p.logo} alt={p.name} className={styles.logo} />
+                    <img
+                      src={p.logo}
+                      alt={p.name}
+                      className={`${styles.logo} ${
+                        p.logoSize === "xlarge"
+                          ? styles.logoXLarge
+                          : p.logoSize === "large"
+                            ? styles.logoLarge
+                            : ""
+                      } ${
+                        p.logoAlign === "farLeft"
+                          ? styles.logoPullFarLeft
+                          : p.logoAlign === "midLeft"
+                            ? styles.logoPullMidLeft
+                          : p.logoAlign === "left"
+                            ? styles.logoPullLeft
+                            : ""
+                      }`}
+                    />
                   </div>
                   <h3 className={styles.name}>{p.name}</h3>
                   <p className={styles.type}>{p.type}</p>

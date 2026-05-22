@@ -4,7 +4,9 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgb(249, 248, 245);
+  background: rgba(249, 248, 245, 0.86);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   -webkit-box-shadow: 0 0 20px 0 rgba(69, 80, 115, 0.1);
   box-shadow: 0 0 20px 0 rgba(69, 80, 115, 0.1);
   transition: box-shadow 0.3s ease;

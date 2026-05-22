@@ -125,8 +125,13 @@
     gap: 24px 18px;
     justify-content: center;
   }
-  .fanCard { width: 140px; }
-  .fanImgWrap { clip-path: none !important; }
+  .fanCard { width: 160px; }
+  .fanCard:hover .fanFlip { transform: none; }
+  .fanImgWrap { aspect-ratio: 3 / 4.35; clip-path: none !important; perspective: none; }
+  .fanFlip { transform: none !important; transition: none; }
+  .fanFront { display: none; }
+  .fanBack { transform: none; border-radius: 14px; }
+  .fanFace { box-shadow: 0 12px 32px rgba(0,0,0,0.18); }
 }
 
 /* ── Bio strip ────────────────────────────────────────────────── */

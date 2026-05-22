@@ -21,8 +21,13 @@
 
 .card { background: var(--white); border: 1.5px solid rgba(0,31,51,0.08); border-radius: 16px; padding: 28px 24px; display: flex; flex-direction: column; gap: 10px; align-items: flex-start; transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s; }
 .card:hover { box-shadow: 0 8px 32px rgba(0,31,51,0.1); border-color: var(--blue); transform: translateY(-4px); }
-.logoWrap { height: 52px; display: flex; align-items: center; margin-bottom: 4px; }
+.logoWrap { height: 64px; display: flex; align-items: center; margin-bottom: 4px; }
 .logo { max-height: 44px; max-width: 100px; object-fit: contain; }
+.logoLarge { max-height: 58px; max-width: 150px; }
+.logoXLarge { max-height: 64px; max-width: 170px; }
+.logoPullLeft { transform: translateX(-10px); }
+.logoPullMidLeft { transform: translateX(-14px); }
+.logoPullFarLeft { transform: translateX(-18px); }
 .name { font-size: 18px; font-weight: 800; color: var(--navy); }
 .type { font-size: 12px; font-weight: 600; color: var(--blue); }
 .desc { font-size: 13px; color: var(--text); line-height: 1.6; }
