@@ -4,7 +4,6 @@ import CompanyOverview from '../components/about/CompanyOverview'
 import MissionVision from '../components/about/MissionVision'
 import CoreValues from '../components/about/CoreValues'
 import Timeline from '../components/about/Timeline'
-import Leadership from '../components/about/Leadership'
 import Awards from '../components/about/Awards'
 import Locations from '../components/about/Locations'
 import TaxCompliance from '../components/about/TaxCompliance'
@@ -26,7 +25,6 @@ export default function About() {
       <MissionVision />
       <CoreValues />
       <Timeline />
-      <Leadership />
       <Awards />
       <Locations />
       <TaxCompliance />
