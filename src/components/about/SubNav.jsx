@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Users, Clock, Award, MapPin, Info } from 'lucide-react'
+import { Clock, Award, MapPin, Info } from 'lucide-react'
 import { useLang } from '../../context/LanguageContext'
 import styles from './SubNav.module.css'
 
@@ -10,7 +10,6 @@ export default function SubNav() {
   const links = [
     { icon: <Info size={18} />, label: t.subNavWhoWeAre, href: 'overview' },
     { icon: <Clock size={18} />, label: t.subNavHistory, href: 'timeline' },
-    { icon: <Users size={18} />, label: t.subNavLeadership, href: 'leadership' },
     { icon: <Award size={18} />, label: t.subNavAwards, href: 'awards' },
     { icon: <MapPin size={18} />, label: t.subNavLocations, href: 'locations' },
   ]
