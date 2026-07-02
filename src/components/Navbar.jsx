@@ -33,7 +33,7 @@ export default function Navbar() {
       items: [
         { icon: <BarChart2 size={18} />, label: t.solEnterpriseSoftware, href: '/solutions/enterprise-software' },
         { icon: <Server size={18} />, label: t.solERP, href: '/solutions/erp' },
-        { icon: <Building2 size={18} />, label: t.solProVMS, href: '/solutions/provms' },
+
         { icon: <GraduationCap size={18} />, label: t.solProSkool, href: '/solutions/proskool' },
       ],
     },

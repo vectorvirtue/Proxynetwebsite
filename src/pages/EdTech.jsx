@@ -25,7 +25,7 @@ import edtech2 from "../assets/edtech2.jpg";
 import edtech3 from "../assets/edtech3.jpg";
 import edtech4 from "../assets/edtech4.jpg";
 import edtech5 from "../assets/edtech5.jpg";
-import edtech5b from "../assets/edtech5.jpeg";
+import edtech5b from "../assets/Screenshot 2026-07-01 145658.png";
 import aislLogo from "../assets/aisl.png";
 import laradayLogo from "../assets/laraday-logo.png";
 import lagoonLogo from "../assets/logo-lagoon.png";
