@@ -22,6 +22,8 @@
 
 .scrolled {
   background: rgba(249, 248, 245, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   -webkit-box-shadow: 0 2px 24px 0 rgba(69, 80, 115, 0.18);
   box-shadow: 0 2px 24px 0 rgba(69, 80, 115, 0.18);
 }
