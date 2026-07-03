@@ -40,81 +40,6 @@ import avicennaLogo from "../assets/avicenna.jpg";
 import brightsparkLogo from "../assets/brightspark.png";
 import styles from "./EdTech.module.css";
 import SectionBlobs from "../components/SectionBlobs";
-const programmes = [
-  {
-    icon: "code",
-    name: "Web Development",
-    duration: "4-12 weeks",
-    audience: "Students & Young Professionals",
-    format: "Classroom + hands-on",
-    desc: "Full-stack web development covering HTML, CSS, JavaScript, and modern frameworks. Students build real projects from day one.",
-  },
-  {
-    icon: "layout",
-    name: "Web Design",
-    duration: "2-6 weeks",
-    audience: "Students & Creatives",
-    format: "Classroom + hands-on",
-    desc: "UI/UX principles, wireframing, prototyping, and visual design for the web using industry-standard tools.",
-  },
-  {
-    icon: "book",
-    name: "Digital Literacy",
-    duration: "1-5 days",
-    audience: "Students & Teachers",
-    format: "Classroom + hands-on",
-    desc: "Practical digital skills covering computer basics, internet safety, productivity tools, and navigating the digital world confidently.",
-  },
-  {
-    icon: "pen",
-    name: "Graphics Design",
-    duration: "2-8 weeks",
-    audience: "Students & Creatives",
-    format: "Classroom + hands-on",
-    desc: "Visual communication, branding, typography, and design using professional tools. From logos to marketing materials.",
-  },
-  {
-    icon: "cpu",
-    name: "Robotics",
-    duration: "4-8 weeks",
-    audience: "Primary, Secondary & Tertiary",
-    format: "Hands-on workshop",
-    desc: "Introduction to robotics, electronics, and programming through building and programming real robots. STEM-focused and project-based.",
-  },
-  {
-    icon: "brain",
-    name: "Artificial Intelligence",
-    duration: "4-12 weeks",
-    audience: "Secondary & Tertiary",
-    format: "Classroom + practical",
-    desc: "Foundations of AI, machine learning concepts, and practical applications. Students explore how AI is transforming industries.",
-  },
-  {
-    icon: "wifi",
-    name: "Internet of Things (IoT)",
-    duration: "4-8 weeks",
-    audience: "Secondary & Tertiary",
-    format: "Hands-on workshop",
-    desc: "Connecting devices, sensors, and systems. Students build IoT projects that solve real-world problems using hardware and code.",
-  },
-  {
-    icon: "chart",
-    name: "Data Science",
-    duration: "6-12 weeks",
-    audience: "Tertiary & Professionals",
-    format: "Classroom + practical",
-    desc: "Data collection, cleaning, analysis, and visualisation. Covers Python, statistics, and real-world datasets from African markets.",
-  },
-  {
-    icon: "bar",
-    name: "Data Analytics",
-    duration: "4-8 weeks",
-    audience: "Students & Professionals",
-    format: "Classroom + practical",
-    desc: "Turning raw data into actionable insights using tools like Excel, Power BI, and SQL. Practical, business-focused curriculum.",
-  },
-];
-
 const institutions = [
   { name: "Lara Day School", logo: laradayLogo },
   { name: "Banana Island School", logo: bananaislandLogo },
@@ -143,6 +68,18 @@ export default function EdTech() {
     interest: "",
     notes: "",
   });
+
+  const programmes = [
+    { icon: "code",   name: t.progWebDevName,        duration: t.progWebDevDuration,        audience: t.progWebDevAudience,        format: t.progWebDevFormat,        desc: t.progWebDevDesc },
+    { icon: "layout", name: t.progWebDesignName,      duration: t.progWebDesignDuration,     audience: t.progWebDesignAudience,     format: t.progWebDesignFormat,     desc: t.progWebDesignDesc },
+    { icon: "book",   name: t.progDigLitName,         duration: t.progDigLitDuration,        audience: t.progDigLitAudience,        format: t.progDigLitFormat,        desc: t.progDigLitDesc },
+    { icon: "pen",    name: t.progGraphicsName,        duration: t.progGraphicsDuration,      audience: t.progGraphicsAudience,      format: t.progGraphicsFormat,      desc: t.progGraphicsDesc },
+    { icon: "cpu",    name: t.progRoboticsName,        duration: t.progRoboticsDuration,      audience: t.progRoboticsAudience,      format: t.progRoboticsFormat,      desc: t.progRoboticsDesc },
+    { icon: "brain",  name: t.progAIName,              duration: t.progAIDuration,            audience: t.progAIAudience,            format: t.progAIFormat,            desc: t.progAIDesc },
+    { icon: "wifi",   name: t.progIoTName,             duration: t.progIoTDuration,           audience: t.progIoTAudience,           format: t.progIoTFormat,           desc: t.progIoTDesc },
+    { icon: "chart",  name: t.progDataSciName,         duration: t.progDataSciDuration,       audience: t.progDataSciAudience,       format: t.progDataSciFormat,       desc: t.progDataSciDesc },
+    { icon: "bar",    name: t.progDataAnalyticsName,   duration: t.progDataAnalyticsDuration, audience: t.progDataAnalyticsAudience, format: t.progDataAnalyticsFormat, desc: t.progDataAnalyticsDesc },
+  ];
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -199,7 +136,7 @@ export default function EdTech() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.05 }}
             >
-              Proxynet EdTech Division
+              {t.edtechDivision}
             </motion.p>
             <motion.h1
               className={styles.heroTitle}
@@ -207,7 +144,7 @@ export default function EdTech() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              Empowering the Next Generation of Technology Talent
+              {t.edtechHeroTitle}
             </motion.h1>
             <motion.p
               className={styles.heroSub}
@@ -215,9 +152,7 @@ export default function EdTech() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              We partner with schools, universities, and institutions across
-              West Africa to deliver smart classroom solutions, digital literacy
-              programmes, and ICT infrastructure.
+              {t.edtechHeroSub}
             </motion.p>
             <motion.div
               className={styles.heroCtas}
@@ -246,24 +181,12 @@ export default function EdTech() {
               transition={{ duration: 0.6 }}
             >
               <div className={styles.overviewLeft}>
-                <p className={styles.eyebrowBlue}>What We Do</p>
-                <h2 className={styles.heading}>
-                  Smart School Solutions for Modern Education
-                </h2>
+                <p className={styles.eyebrowBlue}>{t.edtechOverviewEyebrow}</p>
+                <h2 className={styles.heading}>{t.edtechOverviewHeading}</h2>
               </div>
               <div className={styles.overviewRight}>
-                <p className={styles.body}>
-                  Proxynet EdTech is the education technology division of
-                  Proxynet Group. We work with primary schools, secondary
-                  schools, universities, and government education agencies to
-                  transform learning environments through technology.
-                </p>
-                <p className={styles.body}>
-                  From installing interactive displays in classrooms to building
-                  campus-wide Wi-Fi networks and running digital literacy
-                  workshops — we provide end-to-end technology solutions
-                  designed specifically for education.
-                </p>
+                <p className={styles.body}>{t.edtechOverviewBody1}</p>
+                <p className={styles.body}>{t.edtechOverviewBody2}</p>
                 <a
                   href="https://edtech.proxynetgroup.com"
                   target="_blank"
@@ -287,8 +210,8 @@ export default function EdTech() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <p className={styles.eyebrowBlue}>Training Programmes</p>
-              <h2 className={styles.heading}>What We Offer</h2>
+              <p className={styles.eyebrowBlue}>{t.edtechProgrammesEyebrow}</p>
+              <h2 className={styles.heading}>{t.edtechProgrammesHeading}</h2>
             </motion.div>
             <div className={styles.progGrid}>
               {programmes.map((p, i) => (
@@ -335,10 +258,8 @@ export default function EdTech() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <p className={styles.eyebrowLight}>Partner Institutions</p>
-              <h2 className={styles.headingLight}>
-                Schools & Institutions We Have Worked With
-              </h2>
+              <p className={styles.eyebrowLight}>{t.edtechInstitutionsEyebrow}</p>
+              <h2 className={styles.headingLight}>{t.edtechInstitutionsHeading}</h2>
             </motion.div>
             <div className={styles.instGrid}>
               {institutions.map((inst, i) => (
@@ -376,8 +297,8 @@ export default function EdTech() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <p className={styles.eyebrowBlue}>Events Gallery</p>
-              <h2 className={styles.heading}>EdTech in Action</h2>
+              <p className={styles.eyebrowBlue}>{t.edtechGalleryEyebrow}</p>
+              <h2 className={styles.heading}>{t.edtechGalleryHeading}</h2>
             </motion.div>
             <div className={styles.galleryGrid}>
               {/* Row 1 — three equal images */}
@@ -455,20 +376,15 @@ export default function EdTech() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <p className={styles.eyebrowBlue}>Partner With Us</p>
-              <h2 className={styles.heading}>
-                Bring EdTech to Your Institution
-              </h2>
-              <p className={styles.subText}>
-                Fill out the form and our EdTech team will get in touch within 2
-                business days.
-              </p>
+              <p className={styles.eyebrowBlue}>{t.edtechPartnerEyebrow}</p>
+              <h2 className={styles.heading}>{t.edtechPartnerHeading}</h2>
+              <p className={styles.subText}>{t.edtechPartnerSub}</p>
             </motion.div>
             {submitted ? (
               <div className={styles.success}>
                 <Send size={32} />
-                <h3>Enquiry Submitted</h3>
-                <p>Our EdTech team will be in touch within 2 business days.</p>
+                <h3>{t.edtechSuccessTitle}</h3>
+                <p>{t.edtechSuccessMsg}</p>
               </div>
             ) : (
               <motion.form
@@ -481,7 +397,7 @@ export default function EdTech() {
               >
                 <div className={styles.formRow}>
                   <div className={styles.field}>
-                    <label className={styles.label}>Full Name</label>
+                    <label className={styles.label}>{t.edtechFieldName}</label>
                     <input
                       required
                       className={styles.input}
@@ -492,7 +408,7 @@ export default function EdTech() {
                     />
                   </div>
                   <div className={styles.field}>
-                    <label className={styles.label}>Institution Name</label>
+                    <label className={styles.label}>{t.edtechFieldInstitution}</label>
                     <input
                       required
                       className={styles.input}
@@ -505,7 +421,7 @@ export default function EdTech() {
                 </div>
                 <div className={styles.formRow}>
                   <div className={styles.field}>
-                    <label className={styles.label}>Your Role</label>
+                    <label className={styles.label}>{t.edtechFieldRole}</label>
                     <input
                       required
                       className={styles.input}
@@ -516,7 +432,7 @@ export default function EdTech() {
                     />
                   </div>
                   <div className={styles.field}>
-                    <label className={styles.label}>Email</label>
+                    <label className={styles.label}>{t.edtechFieldEmail}</label>
                     <input
                       type="email"
                       required
@@ -530,7 +446,7 @@ export default function EdTech() {
                 </div>
                 <div className={styles.formRow}>
                   <div className={styles.field}>
-                    <label className={styles.label}>Phone</label>
+                    <label className={styles.label}>{t.edtechFieldPhone}</label>
                     <input
                       type="tel"
                       required
@@ -542,7 +458,7 @@ export default function EdTech() {
                     />
                   </div>
                   <div className={styles.field}>
-                    <label className={styles.label}>Area of Interest</label>
+                    <label className={styles.label}>{t.edtechFieldInterest}</label>
                     <select
                       required
                       className={styles.input}
@@ -551,19 +467,19 @@ export default function EdTech() {
                         setForm({ ...form, interest: e.target.value })
                       }
                     >
-                      <option value="">Select an area</option>
-                      <option>Smart Classroom Setup</option>
-                      <option>School Network Infrastructure</option>
-                      <option>Computer Lab Setup</option>
-                      <option>Digital Literacy Training</option>
-                      <option>Teacher Technology Training</option>
-                      <option>ICT Certification Programmes</option>
-                      <option>Other</option>
+                      <option value="">{t.edtechFieldInterestDefault}</option>
+                      <option>{t.edtechInterest1}</option>
+                      <option>{t.edtechInterest2}</option>
+                      <option>{t.edtechInterest3}</option>
+                      <option>{t.edtechInterest4}</option>
+                      <option>{t.edtechInterest5}</option>
+                      <option>{t.edtechInterest6}</option>
+                      <option>{t.edtechInterest7}</option>
                     </select>
                   </div>
                 </div>
                 <div className={styles.field}>
-                  <label className={styles.label}>Additional Notes</label>
+                  <label className={styles.label}>{t.edtechFieldNotes}</label>
                   <textarea
                     rows="4"
                     className={styles.textarea}

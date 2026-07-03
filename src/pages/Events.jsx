@@ -114,20 +114,20 @@ export default function Events() {
             <motion.nav className={styles.breadcrumb} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
               <Link to="/" className={styles.crumb}>{t.home}</Link>
               <ChevronRight size={14} className={styles.sep} />
-              <span className={styles.crumbActive}>Events</span>
+              <span className={styles.crumbActive}>{t.eventsNav}</span>
             </motion.nav>
             <motion.p className={styles.eyebrow} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.05 }}>
-              Industry Presence & Community Engagement
+              {t.eventsEyebrow}
             </motion.p>
             <motion.h1 className={styles.heroTitle} initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}>
-              Where Technology Meets Community
+              {t.eventsHeroTitle}
             </motion.h1>
             <motion.p className={styles.heroSub} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
-              From product launches to partner summits — Proxynet is at the centre of West Africa's technology conversation.
+              {t.eventsHeroSub}
             </motion.p>
             <motion.div className={styles.heroCtas} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}>
-              <a href="https://events.proxynetgroup.com" target="_blank" rel="noopener noreferrer" className={styles.primary}>Register for Next Event</a>
-              <a href="#gallery" className={styles.secondary}>View Gallery</a>
+              <a href="https://events.proxynetgroup.com" target="_blank" rel="noopener noreferrer" className={styles.primary}>{t.eventsRegisterNext}</a>
+              <a href="#gallery" className={styles.secondary}>{t.eventsViewGallery}</a>
             </motion.div>
           </div>
         </section>
@@ -136,8 +136,8 @@ export default function Events() {
         <section className={styles.section}>
           <div className={styles.inner}>
             <motion.div className={styles.sectionHeader} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <p className={styles.eyebrowBlue}>Featured Events</p>
-              <h2 className={styles.heading}>Recent Highlights</h2>
+              <p className={styles.eyebrowBlue}>{t.eventsFeaturedEyebrow}</p>
+              <h2 className={styles.heading}>{t.eventsFeaturedHeading}</h2>
             </motion.div>
             <div className={styles.featuredGrid}>
               {events.filter(e => e.featured).map((e, i) => (
@@ -146,7 +146,7 @@ export default function Events() {
                     <div className={styles.featuredImgWrap} onClick={() => openLightbox(e.photos[0])}>
                       <img src={e.photos[0].src} alt={e.name} className={styles.featuredImg} />
                       <div className={styles.featuredImgOverlay}>
-                        <span className={styles.viewPhotos}>{e.photos.length} photos</span>
+                        <span className={styles.viewPhotos}>{e.photos.length} {t.eventsPhotos}</span>
                       </div>
                     </div>
                   ) : (
@@ -176,17 +176,17 @@ export default function Events() {
         <section id="gallery" className={styles.sectionAlt}>
           <div className={styles.inner}>
             <motion.div className={styles.sectionHeader} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <p className={styles.eyebrowBlue}>Photo Gallery</p>
-              <h2 className={styles.heading}>All Events</h2>
+              <p className={styles.eyebrowBlue}>{t.eventsGalleryEyebrow}</p>
+              <h2 className={styles.heading}>{t.eventsGalleryHeading}</h2>
             </motion.div>
 
             {/* Dropdown filters */}
             <div className={styles.filters}>
-              <FilterDropdown label="Category" options={categories} value={activeFilter} onChange={setActiveFilter} />
-              <FilterDropdown label="Year"     options={years}      value={activeYear}   onChange={setActiveYear} />
+              <FilterDropdown label={t.eventsFilterCategory} options={categories} value={activeFilter} onChange={setActiveFilter} />
+              <FilterDropdown label={t.eventsFilterYear}     options={years}      value={activeYear}   onChange={setActiveYear} />
               {(activeFilter || activeYear) && (
                 <button className={styles.clearBtn} onClick={() => { setActiveFilter(null); setActiveYear(null) }}>
-                  <X size={13} /> Clear
+                  <X size={13} /> {t.eventsClear}
                 </button>
               )}
             </div>
@@ -220,8 +220,8 @@ export default function Events() {
         <section id="upcoming" className={styles.sectionDark}>
           <div className={styles.inner}>
             <motion.div className={styles.sectionHeader} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <p className={styles.eyebrowLight}>What's Next</p>
-              <h2 className={styles.headingLight}>Upcoming Events</h2>
+              <p className={styles.eyebrowLight}>{t.eventsUpcomingEyebrow}</p>
+              <h2 className={styles.headingLight}>{t.eventsUpcomingHeading}</h2>
             </motion.div>
             <div className={styles.upcomingGrid}>
               {upcomingEvents.map((e, i) => (
@@ -234,7 +234,7 @@ export default function Events() {
                     {e.audience && <span className={styles.upcomingMetaItem}>👦 {e.audience}</span>}
                   </div>
                   <p className={styles.upcomingDesc}>{e.desc}</p>
-                  <a href={e.registerUrl || 'https://events.proxynetgroup.com'} target="_blank" rel="noopener noreferrer" className={styles.registerBtn}>Register Interest <ArrowRight size={15} /></a>
+                  <a href={e.registerUrl || 'https://events.proxynetgroup.com'} target="_blank" rel="noopener noreferrer" className={styles.registerBtn}>{t.eventsRegisterInterest} <ArrowRight size={15} /></a>
                 </motion.div>
               ))}
             </div>
@@ -246,12 +246,12 @@ export default function Events() {
           <div className={styles.inner}>
             <motion.div className={styles.ctaBlock} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <SectionBlobs variant="dark" />
-              <p className={styles.ctaEyebrow}>Stay in the Loop</p>
-              <h2 className={styles.ctaHeading}>Never Miss a Proxynet Event</h2>
-              <p className={styles.ctaSub}>Subscribe to our newsletter or follow us on social media to be the first to know about upcoming events, product launches, and partner summits.</p>
+              <p className={styles.ctaEyebrow}>{t.eventsCtaEyebrow}</p>
+              <h2 className={styles.ctaHeading}>{t.eventsCtaHeading}</h2>
+              <p className={styles.ctaSub}>{t.eventsCtaSub}</p>
               <div className={styles.ctaBtns}>
-                <a href="https://events.proxynetgroup.com" target="_blank" rel="noopener noreferrer" className={styles.ctaPrimary}>Register for Next Event</a>
-                <a href="https://www.linkedin.com/company/proxynet-communications" target="_blank" rel="noopener noreferrer" className={styles.ctaSecondary}>Follow on LinkedIn</a>
+                <a href="https://events.proxynetgroup.com" target="_blank" rel="noopener noreferrer" className={styles.ctaPrimary}>{t.eventsCtaPrimary}</a>
+                <a href="https://www.linkedin.com/company/proxynet-communications" target="_blank" rel="noopener noreferrer" className={styles.ctaSecondary}>{t.eventsCtaSecondary}</a>
               </div>
             </motion.div>
           </div>
