@@ -54,7 +54,7 @@ export default function Footer() {
       heading: t.company,
       links: [
         { label: t.aboutUs, href: '/about' },
-        { label: t.ourTeam, href: '/about#leadership' },
+        // { label: t.ourTeam, href: '/about#leadership' },
         { label: t.careers, href: '/careers' },
         { label: t.newsPress, href: '/news' },
         { label: t.partners, href: '/partners' },
@@ -89,7 +89,7 @@ export default function Footer() {
   ]
 
   return (
-    <footer className={styles.footer} role="contentinfo">
+    <footer className={styles.footer} role="contentinfo"  >
       <div className={styles.inner}>
         <div className={styles.top}>
           {/* Brand */}

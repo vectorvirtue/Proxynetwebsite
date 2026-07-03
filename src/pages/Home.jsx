@@ -5,7 +5,6 @@ import Industries from '../components/Industries'
 import FeaturedProjects from '../components/FeaturedProjects'
 import PartnerLogos from '../components/PartnerLogos'
 import SupportCTA from '../components/SupportCTA'
-import Testimonials from '../components/Testimonials'
 import BlogPreview from '../components/BlogPreview'
 import FinalCTA from '../components/FinalCTA'
 import SEO from '../components/SEO'
@@ -38,8 +37,7 @@ export default function Home() {
         <FeaturedProjects />
         <PartnerLogos />
         <SupportCTA />
-        <Testimonials />
-        <BlogPreview />
+         <BlogPreview />
         <FinalCTA />
       </main>
     </>
