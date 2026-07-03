@@ -422,8 +422,13 @@ export const translations = {
     eventsCtaSecondary: "Follow on LinkedIn",
     eventsPhotos: "photos",
     eventsComingSoon: "Coming Soon",
+    // Success Stories
+    edtechStoriesEyebrow: "Success Stories",
+    edtechStoriesHeading: "Hear It From Students & Institutions",
+    edtechStoriesSub: "Video testimonials from students and institutions — specifically requested in our staff survey.",
+    edtechStoriesComingSoon: "Video testimonials coming soon",
+    edtechStoriesComingSoonBody: "We're collecting video testimonials from students and partner institutions. Check back soon.",
     // Billboard Solutions page
-    bbEyebrow: "ProBoard by Proxynet",
     bbHeroSub:
       "Indoor and outdoor digital signage, LED walls, and billboard deployments that command attention and deliver results.",
     bbUseCasesEyebrow: "Use Cases",
@@ -1828,6 +1833,12 @@ export const translations = {
     eventsCtaSecondary: "Suivre sur LinkedIn",
     eventsPhotos: "photos",
     eventsComingSoon: "Bientôt Disponible",
+    // Success Stories
+    edtechStoriesEyebrow: "Témoignages de Réussite",
+    edtechStoriesHeading: "L'Avis des Étudiants et des Institutions",
+    edtechStoriesSub: "Témoignages vidéo d'étudiants et d'institutions — spécifiquement demandés dans notre enquête interne.",
+    edtechStoriesComingSoon: "Témoignages vidéo à venir",
+    edtechStoriesComingSoonBody: "Nous collectons des témoignages vidéo auprès des étudiants et des institutions partenaires. Revenez bientôt.",
     // Billboard Solutions page
     bbEyebrow: "ProBoard par Proxynet",
     bbHeroTitle: "Rendez Votre Message Inoubliable",

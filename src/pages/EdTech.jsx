@@ -366,6 +366,50 @@ export default function EdTech() {
           </div>
         </section>
 
+        <section id="success-stories" className={styles.sectionAlt}>
+          <div className={styles.inner}>
+            <SectionBlobs />
+            <motion.div
+              className={styles.sectionHeader}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <p className={styles.eyebrowBlue}>{t.edtechStoriesEyebrow}</p>
+              <h2 className={styles.heading}>{t.edtechStoriesHeading}</h2>
+              <p className={styles.subText}>{t.edtechStoriesSub}</p>
+            </motion.div>
+            <motion.div
+              className={styles.storiesPlaceholder}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+            >
+              {[0, 1, 2].map((i) => (
+                <div key={i} className={styles.videoPlaceholder}>
+                  <div className={styles.videoThumb}>
+                    <div className={styles.playBtn} aria-hidden="true">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M6.5 4.5l9 5.5-9 5.5V4.5z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className={styles.videoMeta}>
+                    <div className={styles.videoMetaLine} />
+                    <div className={styles.videoMetaLineShort} />
+                  </div>
+                </div>
+              ))}
+              <p className={styles.storiesNote}>
+                <span className={styles.storiesBadge}>{t.edtechStoriesComingSoon}</span>
+                {t.edtechStoriesComingSoonBody}
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
         <section id="partner" className={styles.sectionAlt}>
           <div className={styles.inner}>
             <SectionBlobs />

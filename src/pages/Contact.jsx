@@ -29,9 +29,9 @@ const InstagramIcon = () => (
 
 const offices = [
   { flag: '🇳🇬', city: 'Lagos', tag: 'HQ', address: 'The Proxynet House, 5B, Adedeji Close, off Opebi Road, Ikeja, Lagos, Nigeria.', phone: '+234 703 264 7755', email: 'info@proxynetgroup.com', mapUrl: 'https://maps.google.com/?q=5B+Adedeji+Close+Opebi+Ikeja+Lagos' },
-  { flag: '🇳🇬', city: 'Abuja', tag: '', address: 'House 21, Street 693, Off Road 69, Gwarimpa, Abuja, Nigeria.', phone: '+234 903 182 9347', email: 'abuja@proxynetgroup.com', mapUrl: 'https://maps.google.com/?q=Gwarimpa+Abuja+Nigeria' },
+  { flag: '🇳🇬', city: 'Abuja', tag: '', address: 'House 26, Efab Estate, 59 Cres, Tai Solarin Ave, Gwarinpa, Abuja 900108, Federal Capital Territory.', phone: '0911 633 5406', email: 'abuja@proxynetgroup.com', mapUrl: 'https://maps.google.com/?q=Efab+Estate+Gwarinpa+Abuja' },
   { flag: '🇬🇭', city: 'Accra', tag: '', address: 'No 18 Nii Klu Osae Avenue, Off American House, Accra, Ghana.', phone: '+233 302 546 703', email: 'ghana@proxynetgroup.com', mapUrl: 'https://maps.google.com/?q=Nii+Klu+Osae+Avenue+Accra+Ghana' },
-  { flag: '🇨🇮', city: 'Abidjan', tag: '', address: "1st floor, SIAA Building, Cocody 2 Plateaux, 7e Tranche Road, Abidjan.", phone: '+225 2722 468 434', email: 'cotedivoire@proxynetgroup.com', mapUrl: 'https://maps.google.com/?q=Cocody+2+Plateaux+Abidjan' },
+  { flag: '🇨🇮', city: 'Abidjan', tag: '', address: "7em TRANCHE CARREFOUR VASE D'HONNEUR, Angré, Abidjan, Côte d'Ivoire.", phone: '+225 07 02 45 2072', email: 'cotedivoire@proxynetgroup.com', mapUrl: "https://maps.google.com/?q=Angré+Abidjan+Côte+d'Ivoire" },
   { flag: '🇦🇪', city: 'Dubai', tag: '', address: 'Building A2, Unit 101, Dubai Silicon Oasis, DDP, Dubai, UAE.', phone: '+971 505 044 932', email: 'dubai@proxynetgroup.com', mapUrl: 'https://maps.google.com/?q=Dubai+Silicon+Oasis+Dubai' },
 ]
 

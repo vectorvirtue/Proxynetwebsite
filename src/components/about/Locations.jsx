@@ -15,9 +15,9 @@ const offices = [
   },
   {
     flag: '🇳🇬', city: 'Abuja', country: 'Nigeria', tag: '',
-    address: 'House 21, Street 693, Off Road 69, Gwarimpa, Abuja, Nigeria.',
-    phone: '+234 903 182 9347', email: 'abuja@proxynetgroup.com',
-    mapUrl: 'https://maps.google.com/?q=Gwarimpa+Abuja+Nigeria',
+    address: 'House 26, Efab Estate, 59 Cres, Tai Solarin Ave, Gwarinpa, Abuja 900108, Federal Capital Territory.',
+    phone: '0911 633 5406', email: 'abuja@proxynetgroup.com',
+    mapUrl: 'https://maps.google.com/?q=Efab+Estate+Gwarinpa+Abuja',
     services: ['IT Security', 'Enterprise Networking', 'Systems Integration', 'Support'],
   },
   {
@@ -29,9 +29,9 @@ const offices = [
   },
   {
     flag: '🇨🇮', city: 'Abidjan', country: "Côte d'Ivoire", tag: '',
-    address: "1st floor, SIAA Building, Cocody 2 Plateaux, 7e Tranche Road, Abidjan.",
-    phone: '+225 2722 468 434', email: 'cotedivoire@proxynetgroup.com',
-    mapUrl: "https://maps.google.com/?q=Cocody+2+Plateaux+Abidjan",
+    address: "7em TRANCHE CARREFOUR VASE D'HONNEUR, Angré, Abidjan, Côte d'Ivoire.",
+    phone: '+225 07 02 45 2072', email: 'cotedivoire@proxynetgroup.com',
+    mapUrl: "https://maps.google.com/?q=Angré+Abidjan+Côte+d'Ivoire",
     services: ['IT Security', 'Systems Integration', 'Support'],
   },
   {
