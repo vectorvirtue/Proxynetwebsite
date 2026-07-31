@@ -66,3 +66,8 @@
 .crumb:hover { color: var(--sky); }
 .sep { color: rgba(255,255,255,0.3); }
 .crumbActive { font-size: 13px; color: var(--sky); font-weight: 600; max-width: 260px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}

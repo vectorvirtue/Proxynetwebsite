@@ -517,6 +517,14 @@ export const translations = {
     proj9Category: "Videowall, Audio & CCTV",
     proj9Outcome:
       "Deployed 2 units of 3x2 videowall with full audio solution, Bosch discussion system, and CCTV for the Lagos State House of Assembly.",
+    proj10Solution: "Digital Content Management & Signage Deployment",
+    proj10Category: "Digital Content Management & Signage",
+    proj10Outcome:
+      "Replaced 8 malfunctioning Android boxes with new H96 units and reloaded the Reels CMS across all screens at Sundry Foods GRA Junction, Port Harcourt — restoring seamless branded content display across every screen.",
+    proj11Solution: "10 × 86\" Huawei IdeaHub Deployment",
+    proj11Category: "Video Conferencing & Collaboration",
+    proj11Outcome:
+      "8 of 10 Huawei IdeaHub 86\" units installed and commissioned across PwC Nigeria offices. Rooms covered: 6th floor (8-person) and 8th floor rooms (12-person × 2, 8-person × 1). Remaining 2 units pending wall cladding.",
     // About page
     aboutUs: "About Us",
     aboutHeroTitle: "Who We Are",
@@ -916,15 +924,42 @@ export const translations = {
     cs4Category: "Cybersecurity",
     cs4Excerpt:
       "A comprehensive Unified Threat Management solution protecting Creamer Media's digital publishing infrastructure.",
+    cs5Title: "Sundry Foods Port Harcourt — Digital Content Management & Signage",
+    cs5Category: "Digital Content Management & Signage",
+    cs5Excerpt:
+      "Eight malfunctioning Android boxes replaced and Reels CMS reloaded across all screens at Sundry Foods GRA Junction, Port Harcourt — restoring seamless content display for every brand.",
+    cs6Title: "Stanbic Bank HQ — Huawei IdeaHub B3 Installation",
+    cs6Category: "Video Conferencing & Collaboration",
+    cs6Excerpt:
+      "Huawei IdeaHub B3 units installed and configured for the Chief Executives' suites at Stanbic Bank headquarters in Accra, Ghana.",
+    cs7Title: "PIL — Microsoft Teams Rooms & Yealink Deployment",
+    cs7Category: "Video Conferencing & Collaboration",
+    cs7Excerpt:
+      "End-to-end Microsoft Teams Rooms deployment for PIL, including Yealink MCore, RoomPanel configuration, and commissioning — ahead of their grand opening.",
+    cs8Title: "African Union — Microsoft Teams Rooms Deployment",
+    cs8Category: "Video Conferencing & Collaboration",
+    cs8Excerpt:
+      "Full Microsoft Teams Rooms deployment at the African Union in Ethiopia — one-click meeting joins, wireless content sharing via Wpp30, auto-tracking camera, and clean cable management.",
+    cs9Title: "PwC Nigeria — Huawei IdeaHub 86\" Multi-Room Deployment",
+    cs9Category: "Video Conferencing & Collaboration",
+    cs9Excerpt:
+      "8 of 10 Huawei IdeaHub 86\" units installed across PwC Nigeria offices. Remaining 2 units pending wall cladding by the furniture team across 6th and 8th floor meeting rooms.",
+    cs10Title: "ArcelorMittal — Yealink MeetingBoard Pro Installation",
+    cs10Category: "Video Conferencing & Collaboration",
+    cs10Excerpt:
+      "65-inch Yealink MeetingBoard Pro mounted, commissioned, and staff trained at ArcelorMittal. Installation complete with backup power provision pending.",
     // Case study industries (for filter + display)
     csIndFinancial: "Financial Services",
     csIndMedia: "Media & Publishing",
+    csIndFoodBeverage: "Food & Beverage",
+    csIndBanking: "Banking & Finance",
     // Case study countries (Proxynet office locations)
     csCountryNigeria: "Nigeria",
     csCountryGhana: "Ghana",
     csCountryGambia: "Gambia",
     csCountryCoteDIvoire: "Côte d'Ivoire",
     csCountryUAE: "UAE",
+    csCountryEthiopia: "Ethiopia",
 
     // Industry pages
     industriesNav: "Industries",
@@ -1931,6 +1966,14 @@ export const translations = {
     proj9Category: "Videowall, Audio & CCTV",
     proj9Outcome:
       "Déploiement de 2 unités de videowall 3x2 avec solution audio complète, système de discussion Bosch et CCTV pour l'Assemblée de l'État de Lagos.",
+    proj10Solution: "Déploiement de Gestion de Contenu Numérique & Signalétique",
+    proj10Category: "Gestion de Contenu Numérique & Signalétique",
+    proj10Outcome:
+      "Remplacement de 8 boîtiers Android défectueux par de nouveaux H96 et rechargement du CMS Reels sur tous les écrans à Sundry Foods GRA Junction, Port Harcourt — restauration de l'affichage de contenu de marque sur chaque écran.",
+    proj11Solution: "Déploiement de 10 × Huawei IdeaHub 86\"",
+    proj11Category: "Vidéoconférence & Collaboration",
+    proj11Outcome:
+      "8 des 10 unités Huawei IdeaHub 86\" installées et mises en service dans les bureaux de PwC Nigeria. Salles couvertes : 6e étage (8 personnes) et 8e étage (12 personnes × 2, 8 personnes × 1). 2 unités restantes en attente du revêtement mural.",
     // About page
     aboutUs: "À Propos",
     aboutHeroTitle: "Qui Nous Sommes",
@@ -2337,15 +2380,42 @@ export const translations = {
     cs4Category: "Cybersécurité",
     cs4Excerpt:
       "Une solution UTM complète protégeant l'infrastructure de publication numérique de Creamer Media.",
+    cs5Title: "Sundry Foods Port Harcourt — Gestion de Contenu Numérique & Signalétique",
+    cs5Category: "Gestion de Contenu Numérique & Signalétique",
+    cs5Excerpt:
+      "Huit boîtiers Android défectueux remplacés et le CMS Reels rechargé sur tous les écrans à Sundry Foods GRA Junction, Port Harcourt — restauration de l'affichage de contenu pour chaque marque.",
+    cs6Title: "Stanbic Bank HQ — Installation Huawei IdeaHub B3",
+    cs6Category: "Vidéoconférence & Collaboration",
+    cs6Excerpt:
+      "Unités Huawei IdeaHub B3 installées et configurées dans les suites des directeurs généraux au siège de Stanbic Bank à Accra, Ghana.",
+    cs7Title: "PIL — Déploiement Microsoft Teams Rooms & Yealink",
+    cs7Category: "Vidéoconférence & Collaboration",
+    cs7Excerpt:
+      "Déploiement complet Microsoft Teams Rooms pour PIL, incluant Yealink MCore, configuration du RoomPanel et mise en service — avant leur grande inauguration.",
+    cs8Title: "Union Africaine — Déploiement Microsoft Teams Rooms",
+    cs8Category: "Vidéoconférence & Collaboration",
+    cs8Excerpt:
+      "Déploiement complet Microsoft Teams Rooms à l'Union Africaine en Éthiopie — rejoindre une réunion en un clic, partage de contenu sans fil via Wpp30, suivi automatique de caméra et gestion de câbles.",
+    cs9Title: "PwC Nigeria — Déploiement Huawei IdeaHub 86\" Multi-Salles",
+    cs9Category: "Vidéoconférence & Collaboration",
+    cs9Excerpt:
+      "8 des 10 unités Huawei IdeaHub 86\" installées dans les bureaux de PwC Nigeria. 2 unités restantes en attente du revêtement mural par l'équipe de mobilier.",
+    cs10Title: "ArcelorMittal — Installation Yealink MeetingBoard Pro",
+    cs10Category: "Vidéoconférence & Collaboration",
+    cs10Excerpt:
+      "MeetingBoard Pro Yealink 65 pouces monté, mis en service et formation du personnel effectuée chez ArcelorMittal. Installation complète, alimentation de secours en attente.",
     // Case study industries
     csIndFinancial: "Services Financiers",
     csIndMedia: "Médias & Édition",
+    csIndFoodBeverage: "Alimentation & Boissons",
+    csIndBanking: "Banque & Finance",
     // Case study countries
     csCountryNigeria: "Nigéria",
     csCountryGhana: "Ghana",
     csCountryGambia: "Gambie",
     csCountryCoteDIvoire: "Côte d'Ivoire",
     csCountryUAE: "Émirats Arabes Unis",
+    csCountryEthiopia: "Éthiopie",
 
     // Industry pages
     industriesNav: "Secteurs",

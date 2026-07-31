@@ -18,6 +18,7 @@ import CaseStudy from "./pages/CaseStudy";
 import Partners from "./pages/Partners";
 import Events from "./pages/Events";
 import IndustryPage from "./pages/IndustryPage";
+import AVSolutions from "./pages/AVSolutions";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import WhatsAppButton from "./components/WhatsAppButton";
@@ -53,6 +54,7 @@ export default function App() {
             <Route path="/partners" element={<Partners />} />
             <Route path="/events" element={<Events />} />
             <Route path="/industries/:slug" element={<IndustryPage />} />
+            <Route path="/solutions/av" element={<AVSolutions />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />

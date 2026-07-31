@@ -96,6 +96,51 @@ export default function CaseStudy() {
           </section>
         ) : (
           <>
+            {/* Hero image (if available and no video) */}
+            {cs.image && !cs.video && (
+              <section className={styles.videoSection}>
+                <div className={styles.videoInner}>
+                  <motion.div
+                    className={styles.videoWrapper}
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    <img
+                      className={styles.heroImage}
+                      src={cs.image}
+                      alt={`${cs.client} deployment`}
+                    />
+                  </motion.div>
+                </div>
+              </section>
+            )}
+
+            {/* Video (if available) */}
+            {cs.video && (
+              <section className={styles.videoSection}>
+                <div className={styles.videoInner}>
+                  <motion.div
+                    className={styles.videoWrapper}
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    <video
+                      className={styles.video}
+                      src={cs.video}
+                      controls
+                      playsInline
+                      preload="metadata"
+                      aria-label={`${cs.client} deployment video`}
+                    />
+                  </motion.div>
+                </div>
+              </section>
+            )}
+
             {/* Main content */}
             <section className={styles.contentSection}>
               <div className={styles.contentInner}>

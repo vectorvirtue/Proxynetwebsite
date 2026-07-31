@@ -1,0 +1,86 @@
+/* ── Hero ── */
+.hero { position: relative; background: var(--navy); padding: 100px 0 60px; overflow: hidden; }
+.heroOverlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,18,30,0.6) 0%, rgba(0,40,70,0.2) 100%); z-index: 0; }
+.heroInner { position: relative; z-index: 1; max-width: 1440px; margin: 0 auto; padding: 0 92px; text-align: center; display: flex; flex-direction: column; align-items: center; }
+@media (max-width: 768px) { .heroInner { padding: 0 16px; } .hero { padding: 80px 0 48px; } }
+.breadcrumb { display: flex; align-items: center; gap: 6px; margin-bottom: 24px; flex-wrap: wrap; justify-content: center; }
+.crumb { font-size: 13px; color: rgba(255,255,255,0.5); transition: color 0.15s; }
+.crumb:hover { color: var(--sky); }
+.sep { color: rgba(255,255,255,0.3); }
+.crumbActive { font-size: 13px; color: var(--sky); font-weight: 600; }
+.eyebrow { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--sky); margin-bottom: 12px; }
+.heroTitle { font-size: clamp(36px, 5vw, 68px); font-weight: 800; color: var(--white); letter-spacing: -2px; line-height: 1.05; margin-bottom: 20px; max-width: 760px; }
+.heroSub { font-size: clamp(15px, 1.5vw, 18px); color: rgba(255,255,255,0.65); max-width: 560px; line-height: 1.7; margin-bottom: 32px; }
+.heroCtas { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.primary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; background: var(--blue); color: var(--white); font-size: 15px; font-weight: 600; border-radius: 8px; min-height: 52px; transition: background 0.2s, transform 0.15s; }
+.primary:hover { background: #005a94; transform: translateY(-2px); }
+.secondary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; background: transparent; color: var(--white); font-size: 15px; font-weight: 600; border-radius: 8px; border: 1.5px solid rgba(255,255,255,0.25); min-height: 52px; transition: border-color 0.2s, background 0.2s, transform 0.15s; }
+.secondary:hover { border-color: var(--sky); background: rgba(70,195,242,0.08); transform: translateY(-2px); }
+
+/* ── Shared section layout ── */
+.section { background: var(--bg); padding: 96px 0; position: relative; overflow: hidden; }
+.sectionDark { background: var(--navy); padding: 96px 0; position: relative; overflow: hidden; }
+.sectionAlt { background: var(--white); padding: 96px 0; position: relative; overflow: hidden; }
+.inner { max-width: 1440px; margin: 0 auto; padding: 0 92px; }
+@media (max-width: 768px) { .inner { padding: 0 16px; } .section, .sectionDark, .sectionAlt { padding: 64px 0; } }
+.sectionHeader { max-width: 640px; margin-bottom: 48px; }
+.eyebrowBlue { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--blue); margin-bottom: 12px; }
+.eyebrowLight { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--sky); margin-bottom: 12px; }
+.heading { font-size: clamp(28px, 3vw, 44px); font-weight: 800; color: var(--navy); letter-spacing: -1px; margin-bottom: 12px; }
+.headingLight { font-size: clamp(28px, 3vw, 44px); font-weight: 800; color: var(--white); letter-spacing: -1px; margin-bottom: 12px; }
+.subText { font-size: 16px; color: var(--text); line-height: 1.7; }
+.subTextLight { font-size: 16px; color: rgba(255,255,255,0.65); line-height: 1.7; }
+
+/* ── Capabilities grid ── */
+.capGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+@media (max-width: 1024px) { .capGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .capGrid { grid-template-columns: 1fr; } }
+.capCard { background: var(--white); border: 1.5px solid rgba(0,31,51,0.08); border-radius: 16px; padding: 28px 24px; display: flex; flex-direction: column; gap: 12px; transition: box-shadow 0.2s, border-color 0.2s; }
+.capCard:hover { box-shadow: 0 8px 32px rgba(0,31,51,0.1); border-color: var(--blue); }
+.capIcon { width: 52px; height: 52px; border-radius: 12px; background: rgba(0,111,180,0.08); display: flex; align-items: center; justify-content: center; color: var(--blue); }
+.capTitle { font-size: 17px; font-weight: 700; color: var(--navy); }
+.capDesc { font-size: 14px; color: var(--text); line-height: 1.65; }
+
+/* ── Featured projects grid ── */
+.projectsGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+@media (max-width: 1024px) { .projectsGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .projectsGrid { grid-template-columns: 1fr; } }
+.projectCard { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 8px; transition: border-color 0.2s, background 0.2s; }
+.projectCard:hover { border-color: var(--sky); background: rgba(255,255,255,0.08); }
+.projectCategory { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--sky); }
+.projectSolution { font-size: 15px; font-weight: 700; color: var(--white); line-height: 1.4; }
+.projectClient { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.5); }
+.projectOutcome { font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.6; margin-top: 4px; }
+.projectsCta { margin-top: 40px; }
+.ctaOutline { display: inline-flex; align-items: center; gap: 8px; padding: 13px 28px; border: 1.5px solid rgba(255,255,255,0.25); color: var(--white); font-size: 14px; font-weight: 600; border-radius: 8px; transition: border-color 0.2s, background 0.2s; }
+.ctaOutline:hover { border-color: var(--sky); background: rgba(70,195,242,0.08); }
+
+/* ── Process grid ── */
+.processGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+@media (max-width: 1200px) { .processGrid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 640px) { .processGrid { grid-template-columns: 1fr; } }
+.processStep { background: var(--white); border: 1.5px solid rgba(0,31,51,0.08); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 10px; }
+.stepNum { font-size: 28px; font-weight: 800; color: var(--blue); opacity: 0.25; line-height: 1; }
+.stepTitle { font-size: 15px; font-weight: 700; color: var(--navy); }
+.stepDesc { font-size: 13px; color: var(--text); line-height: 1.65; }
+
+/* ── Brands grid ── */
+.brandsGrid { display: flex; flex-wrap: wrap; gap: 12px; }
+.brandPill { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; background: var(--bg); border: 1.5px solid rgba(0,31,51,0.1); border-radius: 100px; font-size: 14px; font-weight: 600; color: var(--navy); transition: border-color 0.2s, background 0.2s; }
+.brandPill:hover { border-color: var(--blue); background: rgba(0,111,180,0.05); }
+.brandCheck { color: var(--blue); flex-shrink: 0; }
+
+/* ── Enquiry form ── */
+.form { max-width: 800px; display: flex; flex-direction: column; gap: 20px; }
+.formRow { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 640px) { .formRow { grid-template-columns: 1fr; } }
+.field { display: flex; flex-direction: column; gap: 8px; }
+.label { font-size: 13px; font-weight: 600; color: var(--navy); }
+.input, .textarea { padding: 12px 16px; border: 1.5px solid rgba(0,31,51,0.15); border-radius: 8px; font-family: var(--font); font-size: 14px; color: var(--navy); background: var(--white); outline: none; transition: border-color 0.2s; min-height: 48px; }
+.input:focus, .textarea:focus { border-color: var(--blue); }
+.textarea { resize: vertical; min-height: 110px; }
+.submitBtn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; background: var(--blue); color: var(--white); font-size: 15px; font-weight: 600; border-radius: 8px; min-height: 52px; width: fit-content; border: none; transition: background 0.2s, transform 0.15s; }
+.submitBtn:hover { background: #005a94; transform: translateY(-2px); }
+.success { text-align: center; padding: 60px 24px; display: flex; flex-direction: column; align-items: center; gap: 16px; color: var(--blue); }
+.success h3 { font-size: 24px; font-weight: 800; color: var(--navy); }
+.success p { font-size: 15px; color: var(--text); max-width: 440px; line-height: 1.7; }
