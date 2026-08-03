@@ -28,21 +28,20 @@ export default function Navbar() {
         { icon: <Cpu size={18} />, label: t.solIoT, href: '/solutions/iot' },
       ],
     },
-    {
-      category: t.catSoftwareApps,
-      items: [
-        { icon: <BarChart2 size={18} />, label: t.solEnterpriseSoftware, href: '/solutions/enterprise-software' },
-        { icon: <Server size={18} />, label: t.solERP, href: '/solutions/erp' },
+    // {
+    //   category: t.catSoftwareApps,
+    //   items: [
+    //     { icon: <BarChart2 size={18} />, label: t.solEnterpriseSoftware, href: '/solutions/enterprise-software' },
+    //     { icon: <Server size={18} />, label: t.solERP, href: '/solutions/erp' },
 
-        { icon: <GraduationCap size={18} />, label: t.solProSkool, href: '/solutions/proskool' },
-      ],
-    },
+    //     { icon: <GraduationCap size={18} />, label: t.solProSkool, href: '/solutions/proskool' },
+    //   ],
+    // },
     {
       category: t.catManagedCloud,
       items: [
         { icon: <Headphones size={18} />, label: t.solUnifiedComms, href: '/solutions/unified-communications' },
         { icon: <Globe size={18} />, label: t.solCloud, href: '/solutions/cloud-managed-services' },
-        { icon: <Monitor size={18} />, label: t.solCAD, href: '/solutions/cad-services' },
         { icon: <BarChart2 size={18} />, label: t.solDistribution, href: '/solutions/distribution' },
       ],
     },
@@ -62,7 +61,6 @@ export default function Navbar() {
     { label: t.solutions, href: '/solutions', hasMega: true },
     { label: t.casestudies, href: '/case-studies' },
     { label: t.support, href: '/support' },
-    { label: t.community, href: '/csr' },
     { label: t.events, href: '/events' },
     { label: t.blog, href: '/blog' },
   ]

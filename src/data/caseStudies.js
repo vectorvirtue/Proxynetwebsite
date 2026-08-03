@@ -3,9 +3,12 @@
 
 import sundryFoodsVideo from '../assets/sundry foods.mp4'
 import stanbicImage from '../assets/WhatsApp Image 2026-07-31 at 10.29.08 (2).jpeg'
-import pilImage from '../assets/WhatsApp Image 2026-07-31 at 10.29.34 (2).jpeg'
+import pilImage from '../assets/Pil.jpeg'
 import africanUnionVideo from '../assets/african union.mp4'
 import pwcImage from '../assets/pwc.jpeg'
+import arcelormittalImage from '../assets/arcelormittal.jpeg'
+import arikAirImage from '../assets/arik air.jpeg'
+import arikAirVideo from '../assets/arik air.mp4'
 
 export const getCaseStudies = (t) => [
   {
@@ -245,6 +248,7 @@ export const getCaseStudies = (t) => [
     country: t.csCountryNigeria,
     excerpt: t.cs10Excerpt,
     status: 'live',
+    image: arcelormittalImage,
     clientOverview: 'ArcelorMittal is the world\'s leading steel and mining company, with a significant presence across Africa. Their Nigeria office required a modern collaboration solution to support meetings, presentations, and hybrid working for their team.',
     challenge: '',
     solution: '',
@@ -260,6 +264,67 @@ export const getCaseStudies = (t) => [
       'Staff training completed on-site',
       'Installation signed off as complete',
       'Backup power unit to be provided by client — mail sent and acknowledged',
+    ],
+    testimonial: { quote: '', author: '', role: '' },
+    relatedSolutions: ['/solutions/av', '/solutions/unified-communications'],
+  },
+  {
+    slug: 'arik-air-videowall',
+    client: 'Arik Air',
+    title: t.cs11Title,
+    category: t.cs11Category,
+    industry: t.csIndAviation,
+    country: t.csCountryNigeria,
+    excerpt: t.cs11Excerpt,
+    status: 'live',
+    image: arikAirImage,
+    video: arikAirVideo,
+    clientOverview: 'Arik Air is one of Nigeria\'s leading commercial airlines, operating domestic and international routes across Africa and beyond. Their facility required a modern videowall installation to enhance visual communication and operational display capabilities.',
+    challenge: '',
+    solution: '',
+    technologies: [
+      'Videowall Display System',
+      'Osbase Content Management Licence',
+      'Display Mounting & Cabling',
+      'Content Configuration & Activation',
+    ],
+    results: [
+      'Videowall successfully deployed and installed',
+      'Osbase licence activated and operational',
+      'Content running live across all screens',
+      'Deployment complete and signed off',
+    ],
+    testimonial: { quote: '', author: '', role: '' },
+    relatedSolutions: ['/solutions/av', '/billboard-solutions'],
+  },
+  {
+    slug: 'pil-mvc860',
+    client: 'PIL',
+    title: t.cs12Title,
+    category: t.cs12Category,
+    industry: t.csIndFinancial,
+    country: t.csCountryNigeria,
+    excerpt: t.cs12Excerpt,
+    status: 'live',
+    image: pilImage,
+    clientOverview: 'PIL is a modern organisation preparing for a major operational launch. Their new facility features purpose-built meeting and conference rooms designed for hybrid collaboration, requiring a fully integrated Microsoft Teams Rooms solution ahead of their grand opening.',
+    challenge: '',
+    solution: '',
+    technologies: [
+      'Yealink MVC860 Microsoft Teams Rooms System',
+      'Yealink MCore Pro',
+      'Yealink RCH40',
+      'Yealink MSpeaker',
+      'Yealink MTouch',
+      'Structured Cabling & Hardware Integration',
+    ],
+    results: [
+      'MCore Pro installed and fully connected',
+      'RCH40 camera unit installed and connected',
+      'MSpeaker audio system installed and connected',
+      'MTouch controller installed and connected',
+      'All hardware connections verified and complete',
+      'System configuration pending client MTR licence — expected next day',
     ],
     testimonial: { quote: '', author: '', role: '' },
     relatedSolutions: ['/solutions/av', '/solutions/unified-communications'],

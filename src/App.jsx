@@ -19,7 +19,11 @@ import Partners from "./pages/Partners";
 import Events from "./pages/Events";
 import IndustryPage from "./pages/IndustryPage";
 import AVSolutions from "./pages/AVSolutions";
+import DistributionReseller from "./pages/DistributionReseller";
+import UnifiedComms from "./pages/UnifiedComms";
+import CloudManaged from "./pages/CloudManaged";
 import NotFound from "./pages/NotFound";
+import FAQ from "./pages/FAQ";
 import ScrollToTop from "./components/ScrollToTop";
 import WhatsAppButton from "./components/WhatsAppButton";
 import BackToTop from "./components/BackToTop";
@@ -55,6 +59,10 @@ export default function App() {
             <Route path="/events" element={<Events />} />
             <Route path="/industries/:slug" element={<IndustryPage />} />
             <Route path="/solutions/av" element={<AVSolutions />} />
+            <Route path="/solutions/distribution" element={<DistributionReseller />} />
+            <Route path="/solutions/unified-communications" element={<UnifiedComms />} />
+            <Route path="/solutions/cloud-managed-services" element={<CloudManaged />} />
+            <Route path="/faqs" element={<FAQ />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />

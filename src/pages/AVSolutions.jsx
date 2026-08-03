@@ -87,6 +87,12 @@ const featuredProjects = [
     categoryKey: "proj11Category",
     outcomeKey: "proj11Outcome",
   },
+  {
+    client: "Arik Air",
+    solutionKey: "proj12Solution",
+    categoryKey: "proj12Category",
+    outcomeKey: "proj12Outcome",
+  },
 ]
 
 const brands = [

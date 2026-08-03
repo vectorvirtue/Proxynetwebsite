@@ -111,6 +111,7 @@
 /* Mega menu */
 .megaMenu {
   position: fixed;
+  
   top: 72px;
   left: 0;
   right: 0;
@@ -126,7 +127,7 @@
   margin: 0 auto;
   padding: 32px 92px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 32px;
 }
 

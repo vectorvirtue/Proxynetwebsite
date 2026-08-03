@@ -66,7 +66,7 @@ export default function Footer() {
         { label: t.solAV, href: '/solutions/av' },
         { label: t.solNetworking, href: '/solutions/networking' },
         { label: t.solCybersecurity, href: '/solutions/cybersecurity' },
-        { label: t.solEnterpriseSoftware, href: '/solutions/enterprise-software' },
+        // { label: t.solEnterpriseSoftware, href: '/solutions/enterprise-software' },
        
         { label: t.solUnifiedComms, href: '/solutions/unified-communications' },
         { label: t.solCloud, href: '/solutions/cloud-managed-services' },
