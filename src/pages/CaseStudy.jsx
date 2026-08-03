@@ -32,6 +32,7 @@ export default function CaseStudy() {
   }
 
   const isConsentRequired = cs.status === 'consent-required'
+  const isSummaryOnly = cs.status === 'summary-only'
 
   return (
     <>
@@ -92,6 +93,66 @@ export default function CaseStudy() {
                   <ArrowLeft size={16} /> {t.caseStudiesBack}
                 </Link>
               </motion.div>
+            </div>
+          </section>
+        ) : isSummaryOnly ? (
+          /* Summary-only view — project overview without full detail */
+          <section className={styles.contentSection}>
+            <div className={styles.contentInner}>
+              <div className={styles.contentGrid}>
+                <div className={styles.body}>
+                  {cs.clientOverview && (
+                    <motion.div className={styles.block} initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+                      <h2 className={styles.blockHeading}>{t.csClientOverview}</h2>
+                      <p className={styles.blockText}>{cs.clientOverview}</p>
+                    </motion.div>
+                  )}
+                  {cs.solution && (
+                    <motion.div className={styles.block} initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }}>
+                      <h2 className={styles.blockHeading}>{t.csSolution}</h2>
+                      <p className={styles.blockText}>{cs.solution}</p>
+                    </motion.div>
+                  )}
+                  {cs.technologies.length > 0 && (
+                    <motion.div className={styles.block} initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.15 }}>
+                      <h2 className={styles.blockHeading}>{t.csTechnologies}</h2>
+                      <div className={styles.techGrid}>
+                        {cs.technologies.map((tech, i) => (
+                          <span key={i} className={styles.techTag}>{tech}</span>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                  {cs.results.length > 0 && (
+                    <motion.div className={styles.block} initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
+                      <h2 className={styles.blockHeading}>{t.csResults}</h2>
+                      <ul className={styles.resultsList}>
+                        {cs.results.map((r, i) => (
+                          <li key={i} className={styles.resultItem}>
+                            <CheckCircle size={18} className={styles.resultIcon} />
+                            <span>{r}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </motion.div>
+                  )}
+                </div>
+                <aside className={styles.sidebar}>
+                  <motion.div className={styles.sideCard} initial={{ opacity: 0, x: 24 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }}>
+                    <p className={styles.sideLabel}>{t.caseStudiesClientLabel}</p>
+                    <p className={styles.sideValue}>{cs.client}</p>
+                  </motion.div>
+                  <motion.div className={styles.sideCard} initial={{ opacity: 0, x: 24 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.05 }}>
+                    <p className={styles.sideLabel}>{t.caseStudiesSolutionLabel}</p>
+                    <p className={styles.sideValue}>{cs.category}</p>
+                  </motion.div>
+                  <motion.div className={styles.sideCtaCard} initial={{ opacity: 0, x: 24 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.1 }}>
+                    <p className={styles.sideCtaHeading}>{t.caseStudiesSideCtaHeading}</p>
+                    <p className={styles.sideCtaBody}>{t.caseStudiesSideCtaBody}</p>
+                    <Link to="/contact" className={styles.sideCtaBtn}>{t.contactUs}</Link>
+                  </motion.div>
+                </aside>
+              </div>
             </div>
           </section>
         ) : (

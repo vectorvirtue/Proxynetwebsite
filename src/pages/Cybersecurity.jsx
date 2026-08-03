@@ -85,17 +85,35 @@ const brandPartners = [
 /* ── Deployments ── */
 const deployments = [
   {
+    client: 'Creamer Media',
+    solution: 'Kerio Control — Unified Threat Management',
+    category: 'Cybersecurity · UTM · VPN',
+    outcome: 'Evolved from a standalone firewall to a full UTM solution — managing network bandwidth, optimising internet pipe usage, and providing secure VPN access for clients and partners into local resources.',
+  },
+  {
+    client: 'Altech West Africa',
+    solution: 'FireEye Web Malware Protection System',
+    category: 'Web Security · Zero-Day Protection',
+    outcome: 'Deployed FireEye WebMPS to stop web-based attacks missed by traditional firewalls, IPS, and AV — protecting against zero-day web exploits and multi-protocol callbacks to secure network integrity and sensitive data.',
+  },
+  {
+    client: 'NETCO · UAC',
+    solution: 'McAfee Security Connected',
+    category: 'Endpoint Security · Threat Intelligence',
+    outcome: 'Implemented McAfee Security Connected — delivering real-time threat visibility, Global Threat Intelligence, and endpoint security across web, virtualisation, cloud, and mobile environments.',
+  },
+  {
     client: 'Enterprise Clients',
     solution: 'Firewall & Intrusion Detection Deployments',
     category: 'Network Security',
     outcome: 'Firewall design reviews, IDS deployment and security administration for enterprise clients across Nigeria and West Africa.',
   },
-{
-  client: 'Financial Sector',
-  solution: 'Privileged Access Management',
-  category: 'PAM · BeyondTrust',
-  outcome: 'BeyondTrust PAM deployed to enforce least-privilege access and produce audit-ready session recordings for compliance teams.',
-},
+  {
+    client: 'Financial Sector',
+    solution: 'Privileged Access Management',
+    category: 'PAM · BeyondTrust',
+    outcome: 'BeyondTrust PAM deployed to enforce least-privilege access and produce audit-ready session recordings for compliance teams.',
+  },
 ]
 
 /* ── Process ── */

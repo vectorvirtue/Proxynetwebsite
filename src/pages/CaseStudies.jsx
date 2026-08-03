@@ -131,9 +131,11 @@ export default function CaseStudies() {
                       )}
                       <div className={styles.cardFooter}>
                         <span className={styles.cardIndustry}>{cs.industry}</span>
-                        <Link to={`/case-studies/${cs.slug}`} className={styles.cardCta}>
-                          {t.caseStudiesReadStudy} <ArrowRight size={15} />
-                        </Link>
+                        {cs.status !== 'summary-only' && (
+                          <Link to={`/case-studies/${cs.slug}`} className={styles.cardCta}>
+                            {t.caseStudiesReadStudy} <ArrowRight size={15} />
+                          </Link>
+                        )}
                       </div>
                     </motion.div>
                   ))

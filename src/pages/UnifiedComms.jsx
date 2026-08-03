@@ -245,7 +245,7 @@ export default function UnifiedComms() {
         {/* ── Brand strip ── */}
         <div className={styles.brandStrip}>
           <div className={styles.brandStripInner}>
-            <span className={styles.brandStripLabel}>Authorised Distributor &amp; Integrator</span>
+            <span className={styles.brandStripLabel}>Authorised Distributor &amp; Integrator For</span>
             <div className={styles.brandLogos}>
               <div className={styles.brandLogoWrap}>
                 <img src={yealinkLogo} alt="Yealink" className={styles.brandLogoImg} />

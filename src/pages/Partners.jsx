@@ -42,238 +42,47 @@ import zktecLogo from "../assets/zkteco.png";
 import styles from "./Partners.module.css";
 import SectionBlobs from "../components/SectionBlobs";
 
-const partners = [
-  {
-    logo: samsungLogo,
-    name: "Samsung",
-    type: "Authorised B2B Partner",
-    desc: "Large format displays, videowalls, smart signage, and commercial AV solutions.",
-  },
-  {
-    logo: logitechLogo,
-    name: "Logitech",
-    type: "Authorised Distributor",
-    desc: "Video collaboration, peripherals, and enterprise workspace solutions.",
-  },
-  {
-    logo: microsoftLogo,
-    name: "Microsoft",
-    type: "Authorised Partner",
-    desc: "Enterprise software, cloud services, and Microsoft 365 licensing.",
-  },
-  {
-    logo: canonLogo,
-    name: "Canon",
-    type: "Authorised Distributor",
-    desc: "Printers, scanners, cameras, and document management solutions.",
-  },
-  {
-    logo: yealinkLogo,
-    name: "Yealink",
-    type: "Authorised Distributor & Integrator",
-    desc: "IP phones, video conferencing, and unified communications.",
-  },
-  {
-    logo: dahuaLogo,
-    name: "Dahua",
-    type: "Authorised Distributor",
-    desc: "CCTV, IP cameras, NVR systems, and security surveillance.",
-  },
-  {
-    logo: vtLogo,
-    name: "VT",
-    type: "Authorised Distributor",
-    desc: "Professional headsets and communication devices across West Africa.",
-  },
-  {
-    logo: sennheiserLogo,
-    name: "Sennheiser",
-    logoSize: "large",
-    type: "Authorised Partner",
-    desc: "Premium audio solutions, professional headsets, and communication devices.",
-  },
-  {
-    logo: maxhubLogo,
-    name: "Maxhub",
-    type: "Authorised Partner",
-    desc: "Interactive display solutions and collaborative workspace technology.",
-  },
-  {
-    logo: makeblockLogo,
-    name: "MakeBlock",
-    type: "Authorised Partner",
-    desc: "Robotics, IoT platforms, and educational automation solutions.",
-  },
-  {
-    logo: beyondLogo,
-    name: "BeyondTrust",
-    type: "Authorised Partner",
-    desc: "Privileged access management and advanced cybersecurity solutions.",
-  },
-  {
-    logo: inetcoLogo,
-    name: "Inetco",
-    type: "Authorised Partner",
-    desc: "Financial IT infrastructure and payment systems expertise.",
-  },
-  {
-    logo: krammerLogo,
-    name: "Kramer",
-    type: "Authorised Partner",
-    desc: "Professional AV integration, switching, and signal management solutions.",
-  },
-  {
-    logo: huaweiLogo,
-    name: "Huawei",
-    type: "Authorised Partner",
-    desc: "Telecommunications infrastructure and enterprise networking solutions.",
-  },
-  {
-    logo: acebottLogo,
-    name: "Acebott",
-    type: "Authorised Partner",
-    desc: "Industrial automation, robotics, and AI-powered solutions.",
-  },
-  {
-    logo: ibmLogo,
-    name: "IBM",
-    logoSize: "large",
-    logoAlign: "left",
-    type: "Authorised Partner",
-    desc: "Enterprise IT infrastructure, cloud computing, and AI technologies.",
-  },
-  {
-    logo: zoomLogo,
-    name: "Zoom",
-    logoSize: "large",
-    logoAlign: "midLeft",
-    type: "Authorised Partner",
-    desc: "Video conferencing, webinars, and unified communication platforms.",
-  },
-  {
-    logo: peerlessLogo,
-    name: "Peerless-AV",
-    logoSize: "large",
-    type: "Authorised Partner",
-    desc: "Professional AV mounting systems and installation solutions.",
-  },
-  {
-    logo: fireeyeLogo,
-    name: "FireEye",
-    logoSize: "xlarge",
-    logoAlign: "farLeft",
-    type: "Authorised Partner",
-    desc: "Advanced cybersecurity, threat detection, and incident response.",
-  },
-  {
-    logo: nordenLogo,
-    name: "Norden",
-    logoSize: "xlarge",
-    type: "Authorised Partner",
-    desc: "IT solutions and managed services for enterprise environments.",
-  },
-  {
-    logo: hikvisionLogo,
-    name: "Hikvision",
-    type: "Authorised Partner",
-    desc: "Video surveillance, IP cameras, and advanced security systems.",
-  },
-  {
-    logo: boschLogo,
-    name: "Bosch",
-    type: "Authorised Partner",
-    desc: "Building security, communication systems, and integrated solutions.",
-  },
-  {
-    logo: panasonicLogo,
-    name: "Panasonic",
-    logoAlign: "left",
-    type: "Authorised Partner",
-    desc: "Professional imaging, display solutions, and AV equipment.",
-  },
-  {
-    logo: crestronLogo,
-    name: "Crestron",
-    type: "Authorised Partner",
-    desc: "Integrated AV control systems and building automation technology.",
-  },
-  {
-    logo: belkinLogo,
-    name: "Belkin",
-    type: "Authorised Partner",
-    desc: "Networking, charging solutions, and IT connectivity products.",
-  },
-  {
-    logo: extronLogo,
-    name: "Extron",
-    type: "Authorised Partner",
-    desc: "Professional AV systems integration and control solutions.",
-  },
-  {
-    logo: biampLogo,
-    name: "Biamp",
-    type: "Authorised Partner",
-    desc: "Professional audio systems, conferencing, and sound reinforcement.",
-  },
-  {
-    logo: polycomLogo,
-    name: "Polycom",
-    type: "Authorised Partner",
-    desc: "Video conferencing, voice, and unified communication systems.",
-  },
-  {
-    logo: sharpLogo,
-    name: "Sharp",
-    type: "Authorised Partner",
-    desc: "Multifunctional imaging, printing, and display solutions.",
-  },
-  {
-    logo: absenLogo,
-    name: "Absen",
-    type: "Authorised Partner",
-    desc: "LED display systems and visualization technology.",
-  },
-  {
-    logo: uniluminLogo,
-    name: "Unilumin",
-    type: "Authorised Partner",
-    desc: "LED screens, digital signage, and visualization solutions.",
-  },
-  {
-    logo: sonosLogo,
-    name: "Sonos",
-    type: "Authorised Partner",
-    desc: "Premium audio systems and smart speaker technology.",
-  },
-  {
-    logo: dLinkLogo,
-    name: "D-Link",
-    type: "Authorised Partner",
-    desc: "Networking infrastructure and IT connectivity solutions.",
-  },
-  {
-    logo: hanwhaLogo,
-    name: "Hanwha",
-    type: "Authorised Partner",
-    desc: "Surveillance systems, cameras, and security infrastructure.",
-  },
-  {
-    logo: lumensLogo,
-    name: "Lumens",
-    logoSize: "large",
-    type: "Authorised Partner",
-    desc: "Professional projectors, imaging, and display solutions.",
-  },
-  {
-    logo: zktecLogo,
-    name: "ZKTeco",
-    type: "Authorised Partner",
-    desc: "Access control systems, biometric solutions, and security devices.",
-  },
-];
-
 export default function Partners() {
   const { t } = useLang();
+
+  const partners = [
+    { logo: samsungLogo,   name: "Samsung",     typeKey: "partnerTypeAuthorisedB2BPartner",             descKey: "partnerDescSamsung" },
+    { logo: logitechLogo,  name: "Logitech",    typeKey: "partnerTypeAuthorisedDistributor",             descKey: "partnerDescLogitech" },
+    { logo: microsoftLogo, name: "Microsoft",   typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescMicrosoft" },
+    { logo: canonLogo,     name: "Canon",       typeKey: "partnerTypeAuthorisedDistributor",             descKey: "partnerDescCanon" },
+    { logo: yealinkLogo,   name: "Yealink",     typeKey: "partnerTypeAuthorisedDistributorIntegrator",   descKey: "partnerDescYealink" },
+    { logo: dahuaLogo,     name: "Dahua",       typeKey: "partnerTypeAuthorisedDistributor",             descKey: "partnerDescDahua" },
+    { logo: vtLogo,        name: "VT",          typeKey: "partnerTypeAuthorisedDistributor",             descKey: "partnerDescVT" },
+    { logo: sennheiserLogo,name: "Sennheiser",  typeKey: "partnerTypeAuthorisedPartner",  logoSize: "large",  descKey: "partnerDescSennheiser" },
+    { logo: maxhubLogo,    name: "Maxhub",      typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescMaxhub" },
+    { logo: makeblockLogo, name: "MakeBlock",   typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescMakeblock" },
+    { logo: beyondLogo,    name: "BeyondTrust", typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescBeyondTrust" },
+    { logo: inetcoLogo,    name: "Inetco",      typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescInetco" },
+    { logo: krammerLogo,   name: "Kramer",      typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescKramer" },
+    { logo: huaweiLogo,    name: "Huawei",      typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescHuawei" },
+    { logo: acebottLogo,   name: "Acebott",     typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescAcebott" },
+    { logo: ibmLogo,       name: "IBM",         typeKey: "partnerTypeAuthorisedPartner",  logoSize: "large",  logoAlign: "left",    descKey: "partnerDescIBM" },
+    { logo: zoomLogo,      name: "Zoom",        typeKey: "partnerTypeAuthorisedPartner",  logoSize: "large",  logoAlign: "midLeft", descKey: "partnerDescZoom" },
+    { logo: peerlessLogo,  name: "Peerless-AV", typeKey: "partnerTypeAuthorisedPartner",  logoSize: "large",                        descKey: "partnerDescPeerless" },
+    { logo: fireeyeLogo,   name: "FireEye",     typeKey: "partnerTypeAuthorisedPartner",  logoSize: "xlarge", logoAlign: "farLeft", descKey: "partnerDescFireEye" },
+    { logo: nordenLogo,    name: "Norden",      typeKey: "partnerTypeAuthorisedPartner",  logoSize: "xlarge",                       descKey: "partnerDescNorden" },
+    { logo: hikvisionLogo, name: "Hikvision",   typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescHikvision" },
+    { logo: boschLogo,     name: "Bosch",       typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescBosch" },
+    { logo: panasonicLogo, name: "Panasonic",   typeKey: "partnerTypeAuthorisedPartner",  logoAlign: "left",                        descKey: "partnerDescPanasonic" },
+    { logo: crestronLogo,  name: "Crestron",    typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescCrestron" },
+    { logo: belkinLogo,    name: "Belkin",      typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescBelkin" },
+    { logo: extronLogo,    name: "Extron",      typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescExtron" },
+    { logo: biampLogo,     name: "Biamp",       typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescBiamp" },
+    { logo: polycomLogo,   name: "Polycom",     typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescPolycom" },
+    { logo: sharpLogo,     name: "Sharp",       typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescSharp" },
+    { logo: absenLogo,     name: "Absen",       typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescAbsen" },
+    { logo: uniluminLogo,  name: "Unilumin",    typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescUnilumin" },
+    { logo: sonosLogo,     name: "Sonos",       typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescSonos" },
+    { logo: dLinkLogo,     name: "D-Link",      typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescDLink" },
+    { logo: hanwhaLogo,    name: "Hanwha",      typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescHanwha" },
+    { logo: lumensLogo,    name: "Lumens",      typeKey: "partnerTypeAuthorisedPartner",  logoSize: "large",                        descKey: "partnerDescLumens" },
+    { logo: zktecLogo,     name: "ZKTeco",      typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescZKTeco" },
+  ];
   return (
     <>
       <SEO
@@ -362,8 +171,8 @@ export default function Partners() {
                     />
                   </div>
                   <h3 className={styles.name}>{p.name}</h3>
-                  <p className={styles.type}>{p.type}</p>
-                  <p className={styles.desc}>{p.desc}</p>
+                  <p className={styles.type}>{t[p.typeKey]}</p>
+                  <p className={styles.desc}>{t[p.descKey]}</p>
                 </motion.div>
               ))}
             </div>

@@ -45,7 +45,7 @@ const capabilities = [
 ]
 
 const brands = [
-  'Ubiquiti', 'Cisco', 'Cisco Meraki', 'Ruckus', 'Aruba',
+  'Ubiquiti', 'Cisco',
   'D-Link', 'TP-Link Enterprise', 'Fortinet',
 ]
 
@@ -69,12 +69,12 @@ const process = [
 ]
 
 // Gallery: swap src values with real images when available
-const galleryItems = [
-  { id: 1, caption: 'Access point installation — WHO Nursing Colleges Project', src: null },
-  { id: 2, caption: 'Network cabinet and patch panel build-out', src: null },
-  { id: 3, caption: 'Structured cabling and termination', src: null },
-  { id: 4, caption: 'Site survey and remediation — multi-state deployment', src: null },
-]
+// const galleryItems = [
+//   { id: 1, caption: 'Access point installation — WHO Nursing Colleges Project', src: null },
+//   { id: 2, caption: 'Network cabinet and patch panel build-out', src: null },
+//   { id: 3, caption: 'Structured cabling and termination', src: null },
+//   { id: 4, caption: 'Site survey and remediation — multi-state deployment', src: null },
+// ]
 
 export default function Networking() {
   const { t } = useLang()
@@ -178,31 +178,7 @@ export default function Networking() {
           </div>
         </section>
 
-        {/* ── Project Gallery ── */}
-        <section className={styles.sectionAlt}>
-          <div className={styles.inner}>
-            <motion.div className={styles.sectionHeader} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <p className={styles.eyebrowBlue}>Project Gallery</p>
-              <h2 className={styles.heading}>WHO Colleges of Nursing — Site Photos</h2>
-              <p className={styles.subText}>Images from the wireless network deployment across nursing colleges in six Nigerian states.</p>
-            </motion.div>
-            <div className={styles.galleryGrid}>
-              {galleryItems.map((item, i) => (
-                <motion.div key={item.id} className={styles.galleryItem} initial={{ opacity: 0, scale: 0.97 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.08 }}>
-                  {item.src ? (
-                    <img src={item.src} alt={item.caption} className={styles.galleryImg} />
-                  ) : (
-                    <div className={styles.galleryPlaceholder}>
-                      <ImageOff size={32} className={styles.galleryPlaceholderIcon} />
-                      <span className={styles.galleryPlaceholderText}>Photo coming soon</span>
-                    </div>
-                  )}
-                  <p className={styles.galleryCaption}>{item.caption}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
+     
 
         {/* ── Our Process ── */}
         <section className={styles.section}>

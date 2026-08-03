@@ -40,10 +40,14 @@ import acebottLogo from  '../assets/logo-1000x500-1 1.png'
 import makeblockLogo from '../assets/makeblock.png'
 import lumensLogo from '../assets/lumens-logo-2.png'
 import zktecLogo from '../assets/zkteco.png'
+import ciscoLogo from '../assets/cisco.png'
+import netLogo from '../assets/netskope.png'
 const partners = [  
   { logo: samsungLogo,   name: 'Samsung' },
    { logo: leyardLogo,   name: 'Leyard', boxed: true, tall:true },
   { logo: logitechLogo,  name: 'Logitech',  tall: true  },
+   { logo: ciscoLogo,  name: 'Cisco',  tall: true, boxed:true  },
+    { logo: netLogo,  name: 'NetSkope', boxed:true, tall: true  },
   { logo: microsoftLogo, name: 'Microsoft' },
   { logo: yealinkLogo,   name: 'Yealink',  square: true  },
   { logo: sennheiserLogo, name: 'Sennheiser', size: 'xl' },

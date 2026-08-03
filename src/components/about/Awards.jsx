@@ -27,6 +27,7 @@ export default function Awards() {
     { code: 'CISA',     name: 'Certified Information Systems Auditor',      area: 'Audit & Governance' },
     { code: 'Systimax', name: 'Systimax Certified Installer',               area: 'Structured Cabling' },
     { code: 'AutoCAD',  name: 'Autodesk AutoCAD Certified Professional',    area: 'CAD & Design' },
+    { code: 'Dante L2', name: 'Dante Level 2 Certification — Advanced network configuration, multicast routing, clock synchronisation & system troubleshooting', area: 'Audio Networking' },
   ]
   const awards = [
     { type: 'award', logo: <ImgLogo src={samsungLogo} alt="Samsung" />, title: 'Samsung B2B Award 2014', body: t.award1Body },

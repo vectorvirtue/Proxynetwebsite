@@ -15,73 +15,71 @@ import huawei2 from '../assets/huawei2.jpg'
 import huaweiPH from '../assets/huaweiportharcourtexperience.jpg'
 import styles from './Events.module.css'
 
-const ALL = 'All'
-
-const events = [
-  {
-    id: 'comforte-breakfast',
-    name: 'Breakfast Session with Proxynet & Comforte',
-    venue: 'Radisson Blue, Lagos',
-    year: '2024',
-    category: 'Partner Event',
-    photos: [
-      { src: breakfast1, caption: 'Breakfast Session with Proxynet & Comforte at Radisson Blue' },
-      { src: breakfast2, caption: 'Breakfast Session with Proxynet & Comforte at Radisson Blue' },
-      { src: breakfast3, caption: 'Breakfast Session with Proxynet & Comforte at Radisson Blue' },
-      { src: breakfast4, caption: 'Breakfast Session with Proxynet & Comforte at Radisson Blue' },
-    ],
-    featured: false,
-    desc: 'An exclusive breakfast session bringing together enterprise technology leaders to discuss data security and compliance solutions with Comforte AG.',
-  },
-  {
-    id: 'huawei-portharcourt',
-    name: 'Huawei Port Harcourt Experience',
-    venue: 'Port Harcourt, Rivers State',
-    year: '2025',
-    category: 'Partner Event',
-    photos: [
-      { src: huawei1,  caption: 'Huawei Port Harcourt Experience' },
-      { src: huawei2,  caption: 'Huawei Port Harcourt Experience' },
-      { src: huaweiPH, caption: 'Huawei Port Harcourt Experience' },
-    ],
-    featured: false,
-    desc: 'Proxynet brought the Huawei technology experience to Port Harcourt, showcasing enterprise solutions for the oil & gas and manufacturing sectors.',
-  },
-  {
-    id: 'unilumin-lagos-2026',
-    name: 'Unilumin Lagos Experience 2026',
-    venue: 'Marriot Hotel, 122 Joel Ogunnaike Street, Ikeja GRA, Lagos',
-    year: '2026',
-    category: 'Product Launch',
-    photos: [],
-    featured: true,
-    theme: 'Clarity Meets Performance',
-    date: 'Mar 19, 2026 · 10:00 AM WAT',
-    desc: 'An exclusive showcase of Unilumin\'s high-performance LED display technologies — from corporate boardrooms and control rooms to retail malls, houses of worship, broadcast venues, and outdoor architectural displays. Proxynet is the Official Unilumin Distributor in Nigeria.',
-  },
-]
-
-const upcomingEvents = [
-  {
-    name: 'GITEX Kenya 2026',
-    date: 'Coming Soon',
-    venue: 'Nairobi, Kenya',
-    desc: 'Proxynet Group will be exhibiting at GITEX Kenya — East Africa\u2019s premier technology event. Meet our team, explore our solutions, and connect with technology leaders from across the continent.',
-    category: 'Industry Exhibition',
-  },
-  {
-    name: 'Robo-Xplore 2.0',
-    date: '30th May 2026 · 10:00 AM – 2:00 PM',
-    venue: 'Nesama House, 5B Adedeji Close, Opebi Rd, Ikeja, Lagos',
-    desc: 'The biggest kids tech event in Lagos returns — bigger, bolder, and more exciting. Children aged 5–17 drive real robots, try AI face recognition, build mini-robots, compete in Battle Bots, explore VR, and learn to code. Gate fee from ₦5,000.',
-    category: 'Kids Tech Event',
-    audience: 'Children aged 5–17',
-    registerUrl: 'https://events.proxynetgroup.com',
-  },
-]
-
 export default function Events() {
   const { t } = useLang()
+
+  const events = [
+    {
+      id: 'comforte-breakfast',
+      name: t.event1Name,
+      venue: t.event1Venue,
+      year: '2024',
+      category: t.event1Category,
+      photos: [
+        { src: breakfast1, caption: t.event1PhotoCaption },
+        { src: breakfast2, caption: t.event1PhotoCaption },
+        { src: breakfast3, caption: t.event1PhotoCaption },
+        { src: breakfast4, caption: t.event1PhotoCaption },
+      ],
+      featured: false,
+      desc: t.event1Desc,
+    },
+    {
+      id: 'huawei-portharcourt',
+      name: t.event2Name,
+      venue: t.event2Venue,
+      year: '2025',
+      category: t.event2Category,
+      photos: [
+        { src: huawei1,  caption: t.event2PhotoCaption },
+        { src: huawei2,  caption: t.event2PhotoCaption },
+        { src: huaweiPH, caption: t.event2PhotoCaption },
+      ],
+      featured: false,
+      desc: t.event2Desc,
+    },
+    {
+      id: 'unilumin-lagos-2026',
+      name: t.event3Name,
+      venue: t.event3Venue,
+      year: '2026',
+      category: t.event3Category,
+      photos: [],
+      featured: true,
+      theme: t.event3Theme,
+      date: t.event3Date,
+      desc: t.event3Desc,
+    },
+  ]
+
+  const upcomingEvents = [
+    {
+      name: t.upcoming1Name,
+      date: t.upcoming1Date,
+      venue: t.upcoming1Venue,
+      desc: t.upcoming1Desc,
+      category: t.upcoming1Category,
+    },
+    {
+      name: t.upcoming2Name,
+      date: t.upcoming2Date,
+      venue: t.upcoming2Venue,
+      desc: t.upcoming2Desc,
+      category: t.upcoming2Category,
+      audience: t.upcoming2Audience,
+      registerUrl: 'https://events.proxynetgroup.com',
+    },
+  ]
   const [activeFilter, setActiveFilter] = useState(null)
   const [activeYear, setActiveYear] = useState(null)
   const [lightbox, setLightbox] = useState(null) // { src, caption }
