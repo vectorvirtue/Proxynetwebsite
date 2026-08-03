@@ -9,6 +9,7 @@ import canonLogo from '../assets/canon.png'
 import yealinkLogo from '../assets/yealink.png'
 import microsoftLogo from '../assets/microsoft.png'
 import dahuaLogo from '../assets/dahua.png'
+import leyardLogo from '../assets/leyard.png'
 import vtLogo from '../assets/vt.webp'
 import sennheiserLogo from '../assets/Sennheiser-logo.png'
 import maxhubLogo from '../assets/maxhub.jpg'
@@ -41,6 +42,7 @@ import lumensLogo from '../assets/lumens-logo-2.png'
 import zktecLogo from '../assets/zkteco.png'
 const partners = [  
   { logo: samsungLogo,   name: 'Samsung' },
+   { logo: leyardLogo,   name: 'Leyard', boxed: true, tall:true },
   { logo: logitechLogo,  name: 'Logitech',  tall: true  },
   { logo: microsoftLogo, name: 'Microsoft' },
   { logo: yealinkLogo,   name: 'Yealink',  square: true  },
@@ -118,7 +120,8 @@ export default function PartnerLogos() {
                       p.size === 'xl' ? styles.carouselLogoXL :
                       p.tall ? styles.carouselLogoTall :
                       p.wide ? styles.carouselLogoWide :
-                      p.square ? styles.carouselLogoSquare:
+                      p.square ? styles.carouselLogoSquare :
+                      p.boxed ? styles.carouselLogoBoxed :
                       styles.carouselLogo
                     }
                   />

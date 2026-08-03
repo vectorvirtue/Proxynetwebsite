@@ -149,22 +149,28 @@ export default function CaseStudy() {
                   <div className={styles.body}>
 
                     {/* Client Overview */}
-                    <motion.div className={styles.block} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
-                      <h2 className={styles.blockHeading}>{t.csClientOverview}</h2>
-                      <p className={styles.blockText}>{cs.clientOverview}</p>
-                    </motion.div>
+                    {cs.clientOverview && (
+                      <motion.div className={styles.block} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
+                        <h2 className={styles.blockHeading}>{t.csClientOverview}</h2>
+                        <p className={styles.blockText}>{cs.clientOverview}</p>
+                      </motion.div>
+                    )}
 
                     {/* The Challenge */}
-                    <motion.div className={styles.block} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
-                      <h2 className={styles.blockHeading}>{t.csChallenge}</h2>
-                      <p className={styles.blockText}>{cs.challenge}</p>
-                    </motion.div>
+                    {cs.challenge && (
+                      <motion.div className={styles.block} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
+                        <h2 className={styles.blockHeading}>{t.csChallenge}</h2>
+                        <p className={styles.blockText}>{cs.challenge}</p>
+                      </motion.div>
+                    )}
 
                     {/* Our Solution */}
-                    <motion.div className={styles.block} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
-                      <h2 className={styles.blockHeading}>{t.csSolution}</h2>
-                      <p className={styles.blockText}>{cs.solution}</p>
-                    </motion.div>
+                    {cs.solution && (
+                      <motion.div className={styles.block} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
+                        <h2 className={styles.blockHeading}>{t.csSolution}</h2>
+                        <p className={styles.blockText}>{cs.solution}</p>
+                      </motion.div>
+                    )}
 
                     {/* Technologies Used */}
                     {cs.technologies.length > 0 && (

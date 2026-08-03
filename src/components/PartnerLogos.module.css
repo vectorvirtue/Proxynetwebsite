@@ -106,6 +106,17 @@
   object-fit: contain;
   transform: scale(1.3); /* Zooms the logo in by 160% to crop out the invisible padding */
 }
+
+/* Logos with white backgrounds — wrap in a grey pill so they're visible on white */
+.carouselLogoBoxed {
+  max-height: 36px;
+  max-width: 120px;
+  width: auto;
+  object-fit: contain;
+  background: #f0f2f5;
+  border-radius: 8px;
+  padding: 6px 14px;
+}
 /* Wide variant for landscape SVG logos like Unilumin */
 .carouselLogoWide {
   max-height: 32px;

@@ -42,6 +42,11 @@ const capabilities = [
     title: "Maintenance & Support",
     desc: "SLA-backed maintenance contracts, remote monitoring, preventive servicing, and rapid on-site response for all deployed AV infrastructure.",
   },
+  {
+    icon: "led",
+    title: "LED Display Solutions",
+    desc: "With innovation in video walls, large format displays and touch interactivity, Leyard and CVTE offer the best visualisation solutions for a variety of demanding vertical markets around the globe.",
+  },
 ]
 
 const featuredProjects = [
@@ -188,6 +193,7 @@ export default function AVSolutions() {
                     {cap.icon === "mic"      && <Mic2 size={26} />}
                     {cap.icon === "wifi"     && <Wifi size={26} />}
                     {cap.icon === "settings" && <Settings size={26} />}
+                    {cap.icon === "led"      && <TvMinimal size={26} />}
                   </div>
                   <h3 className={styles.capTitle}>{cap.title}</h3>
                   <p className={styles.capDesc}>{cap.desc}</p>

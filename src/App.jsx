@@ -19,6 +19,8 @@ import Partners from "./pages/Partners";
 import Events from "./pages/Events";
 import IndustryPage from "./pages/IndustryPage";
 import AVSolutions from "./pages/AVSolutions";
+import Networking from "./pages/Networking";
+import Cybersecurity from "./pages/Cybersecurity";
 import DistributionReseller from "./pages/DistributionReseller";
 import UnifiedComms from "./pages/UnifiedComms";
 import CloudManaged from "./pages/CloudManaged";
@@ -59,6 +61,8 @@ export default function App() {
             <Route path="/events" element={<Events />} />
             <Route path="/industries/:slug" element={<IndustryPage />} />
             <Route path="/solutions/av" element={<AVSolutions />} />
+            <Route path="/solutions/networking" element={<Networking />} />
+            <Route path="/solutions/cybersecurity" element={<Cybersecurity />} />
             <Route path="/solutions/distribution" element={<DistributionReseller />} />
             <Route path="/solutions/unified-communications" element={<UnifiedComms />} />
             <Route path="/solutions/cloud-managed-services" element={<CloudManaged />} />
