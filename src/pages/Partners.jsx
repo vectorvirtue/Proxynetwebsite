@@ -39,6 +39,13 @@ import acebottLogo from "../assets/logo-1000x500-1 1.png";
 import makeblockLogo from "../assets/makeblock.png";
 import lumensLogo from "../assets/lumens-logo-2.png";
 import zktecLogo from "../assets/zkteco.png";
+import ciscoLogo from "../assets/cisco.png";
+import cleverLogo from "../assets/clevertouch.png";
+import lgLogo from "../assets/lg.png";
+import leyardLogo from '../assets/leyard.png'
+import cyxteraLogo from "../assets/cystera.jpg";
+import yubicoLogo from "../assets/yubico.jpg";
+import netscopeLogo from "../assets/netskope.png";
 import styles from "./Partners.module.css";
 import SectionBlobs from "../components/SectionBlobs";
 
@@ -47,7 +54,14 @@ export default function Partners() {
 
   const partners = [
     { logo: samsungLogo,   name: "Samsung",     typeKey: "partnerTypeAuthorisedB2BPartner",             descKey: "partnerDescSamsung" },
-    { logo: logitechLogo,  name: "Logitech",    typeKey: "partnerTypeAuthorisedDistributor",             descKey: "partnerDescLogitech" },
+    { logo: leyardLogo,    name: "Leyard",      logoAlign: "left", logoSize: "xlarge", typeKey: "partnerTypeAuthorisedPartner", descKey: "partnerDescLeyard" },
+    { logo: ciscoLogo,     name: "Cisco",       typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescCisco" },
+    { logo: cleverLogo,    name: "CleverTouch", typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescCleverTouch" },
+    { logo: lgLogo,        name: "LG",          typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescLG" },
+    { logo: cyxteraLogo,   name: "Cyxtera",  logoSize: "xlarge",   typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescCyxtera" },
+    { logo: yubicoLogo,    name: "Yubico",      typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescYubico" },
+    { logo: netscopeLogo,  name: "Netskope",    typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescNetskope" },
+    { logo: logitechLogo,  name: "Logitech", logoAlign: "left",    typeKey: "partnerTypeAuthorisedDistributor",             descKey: "partnerDescLogitech" },
     { logo: microsoftLogo, name: "Microsoft",   typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescMicrosoft" },
     { logo: canonLogo,     name: "Canon",       typeKey: "partnerTypeAuthorisedDistributor",             descKey: "partnerDescCanon" },
     { logo: yealinkLogo,   name: "Yealink",     typeKey: "partnerTypeAuthorisedDistributorIntegrator",   descKey: "partnerDescYealink" },

@@ -45,7 +45,7 @@ const capabilities = [
   {
     icon: "led",
     title: "LED Display Solutions",
-    desc: "With innovation in video walls, large format displays and touch interactivity, Leyard and CVTE offer the best visualisation solutions for a variety of demanding vertical markets around the globe.",
+    desc: "Proxynet is the Official Unilumin Distributor in Nigeria. With innovation in video walls, large format displays and touch interactivity, Unilumin offers best-in-class visualisation solutions for corporate boardrooms, control rooms, retail, broadcast, and outdoor architectural displays.",
   },
 ]
 

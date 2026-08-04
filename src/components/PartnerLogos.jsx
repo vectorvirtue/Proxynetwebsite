@@ -42,11 +42,22 @@ import lumensLogo from '../assets/lumens-logo-2.png'
 import zktecLogo from '../assets/zkteco.png'
 import ciscoLogo from '../assets/cisco.png'
 import netLogo from '../assets/netskope.png'
+import cleverLogo from '../assets/clevertouch.png'
+import lgLogo from '../assets/lg.png'
+import yubico from '../assets/yubico.jpg'
+import cyxtera from '../assets/cystera.jpg'
+
 const partners = [  
   { logo: samsungLogo,   name: 'Samsung' },
-   { logo: leyardLogo,   name: 'Leyard', boxed: true, tall:true },
+   { logo: leyardLogo,   name: 'Leyard', boxed: true, square:true },
   { logo: logitechLogo,  name: 'Logitech',  tall: true  },
    { logo: ciscoLogo,  name: 'Cisco',  tall: true, boxed:true  },
+  { logo: cleverLogo,  name: 'CleverTouch',  tall: true, square:true  },
+  { logo: lgLogo,  name: 'LG',  tall: true, square:true  },
+
+  { logo: cyxtera,  name: 'Cyxtera',  square: true,  },
+  { logo: yubico,  name: 'Yubico',  tall: true,  },
+
     { logo: netLogo,  name: 'NetSkope', boxed:true, tall: true  },
   { logo: microsoftLogo, name: 'Microsoft' },
   { logo: yealinkLogo,   name: 'Yealink',  square: true  },
