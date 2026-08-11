@@ -26,6 +26,9 @@ import UnifiedComms from "./pages/UnifiedComms";
 import CloudManaged from "./pages/CloudManaged";
 import NotFound from "./pages/NotFound";
 import FAQ from "./pages/FAQ";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import CookiePolicy from "./pages/CookiePolicy";
+import Terms from "./pages/Terms";
 import ScrollToTop from "./components/ScrollToTop";
 import WhatsAppButton from "./components/WhatsAppButton";
 import BackToTop from "./components/BackToTop";
@@ -67,6 +70,9 @@ export default function App() {
             <Route path="/solutions/unified-communications" element={<UnifiedComms />} />
             <Route path="/solutions/cloud-managed-services" element={<CloudManaged />} />
             <Route path="/faqs" element={<FAQ />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/cookie-policy" element={<CookiePolicy />} />
+            <Route path="/terms" element={<Terms />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />

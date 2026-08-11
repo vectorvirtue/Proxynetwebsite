@@ -46,7 +46,7 @@ import cleverLogo from '../assets/clevertouch.png'
 import lgLogo from '../assets/lg.png'
 import yubico from '../assets/yubico.jpg'
 import cyxtera from '../assets/cystera.jpg'
-
+import mcafeeLogo from '../assets/mcafee.png'
 const partners = [  
   { logo: samsungLogo,   name: 'Samsung' },
    { logo: leyardLogo,   name: 'Leyard', boxed: true, square:true },
@@ -54,6 +54,7 @@ const partners = [
    { logo: ciscoLogo,  name: 'Cisco',  tall: true, boxed:true  },
   { logo: cleverLogo,  name: 'CleverTouch',  tall: true, square:true  },
   { logo: lgLogo,  name: 'LG',  tall: true, square:true  },
+  { logo: mcafeeLogo,  name: 'Mcafee',  square: true  },
 
   { logo: cyxtera,  name: 'Cyxtera',  square: true,  },
   { logo: yubico,  name: 'Yubico',  tall: true,  },
