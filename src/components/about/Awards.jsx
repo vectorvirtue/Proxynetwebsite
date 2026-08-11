@@ -28,6 +28,7 @@ export default function Awards() {
     { code: 'Systimax', name: 'Systimax Certified Installer',               area: 'Structured Cabling' },
     { code: 'AutoCAD',  name: 'Autodesk AutoCAD Certified Professional',    area: 'CAD & Design' },
     { code: 'Dante L2', name: 'Dante Level 2 Certification — Advanced network configuration, multicast routing, clock synchronisation & system troubleshooting', area: 'Audio Networking' },
+    { code: 'NDPC',     name: 'NDPC Certificate of Registration — Registered as a Data Controller/Processor of Major Importance pursuant to Section 44 of the Nigeria Data Protection Act, 2023. Reg ID: NDPC/DCP/13529', area: 'Data Protection & Compliance' },
   ]
   const awards = [
     { type: 'award', logo: <ImgLogo src={samsungLogo} alt="Samsung" />, title: 'Samsung B2B Award 2014', body: t.award1Body },
