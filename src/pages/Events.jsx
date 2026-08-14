@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronRight, X, Calendar, MapPin, ArrowRight, Images } from 'lucide-react'
 import FilterDropdown from '../components/FilterDropdown'
 import SEO from '../components/SEO'
-import SectionBlobs from '../components/SectionBlobs'
 import { useLang } from '../context/LanguageContext'
 import { getEvents, PLACEHOLDER } from '../data/events'
 import styles from './Events.module.css'
@@ -58,8 +57,7 @@ export default function Events() {
       />
       <main>
         {/* Hero */}
-        <section className={`${styles.hero} heroScene`}>
-          <SectionBlobs variant="dark" />
+        <section className={styles.hero}>
           <div className={styles.overlay} />
           <div className={styles.heroInner}>
             <motion.nav className={styles.breadcrumb} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
