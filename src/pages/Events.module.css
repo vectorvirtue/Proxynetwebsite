@@ -53,8 +53,10 @@
 .featuredGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
 @media (max-width: 1024px) { .featuredGrid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 768px) { .featuredGrid { grid-template-columns: 1fr; } }
-.featuredCard { background: var(--white); border: 1.5px solid rgba(0,31,51,0.08); border-radius: 16px; overflow: hidden; transition: box-shadow 0.2s, transform 0.2s; }
+.featuredCard { background: var(--white); border: 1.5px solid rgba(0,31,51,0.08); border-radius: 16px; overflow: hidden; transition: box-shadow 0.2s, transform 0.2s; display: flex; flex-direction: column; }
 .featuredCard:hover { box-shadow: 0 12px 40px rgba(0,31,51,0.1); transform: translateY(-4px); }
+.featuredBody { display: flex; flex-direction: column; flex: 1; padding: 20px; gap: 10px; }
+.eventDesc { font-size: 14px; color: var(--text); line-height: 1.7; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; flex: 1; }
 .featuredImgWrap { position: relative; aspect-ratio: 3/2; overflow: hidden; cursor: pointer; background: #e8edf2; }
 .featuredImg { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; transition: transform 0.3s; }
 .featuredImgWrap:hover .featuredImg { transform: scale(1.04); }
@@ -77,7 +79,6 @@
 .placeholderText { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.5); }
 .placeholderTheme { font-size: 18px; font-weight: 800; color: var(--sky); letter-spacing: -0.3px; text-align: center; }
 .placeholderDate { display: flex; align-items: center; gap: 6px; font-size: 13px; color: rgba(255,255,255,0.6); margin-top: 4px; }
-.featuredBody { padding: 24px 28px; display: flex; flex-direction: column; gap: 10px; }
 .eventCategory { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--blue); background: rgba(0,111,180,0.08); padding: 3px 10px; border-radius: 100px; display: inline-block; width: fit-content; }
 .eventName { font-size: clamp(17px, 1.5vw, 21px); font-weight: 800; color: var(--navy); letter-spacing: -0.4px; line-height: 1.3; }
 .eventMeta { display: flex; flex-wrap: wrap; gap: 16px; }

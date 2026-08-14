@@ -15,7 +15,7 @@ const jsonLd = {
   name: 'Proxynet Group',
   url: 'https://www.proxynetgroup.com',
   logo: 'https://www.proxynetgroup.com/PROXYNET LOGO ASSET.png',
-  contactPoint: { '@type': 'ContactPoint', telephone: '+234-703-264-7755', contactType: 'customer service' },
+  contactPoint: { '@type': 'ContactPoint', telephone: '+234-903-182-9347', contactType: 'customer service' },
   address: { '@type': 'PostalAddress', streetAddress: '5B Adedeji Close, off Opebi Road', addressLocality: 'Ikeja, Lagos', addressCountry: 'NG' },
   sameAs: ['https://www.linkedin.com/company/proxynet-communications', 'https://www.facebook.com/proxynetcommunications/', 'https://www.instagram.com/proxynetgroup/'],
 }

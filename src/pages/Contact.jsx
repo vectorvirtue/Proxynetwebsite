@@ -28,7 +28,7 @@ const InstagramIcon = () => (
 )
 
 const offices = [
-  { flag: '🇳🇬', city: 'Lagos', tag: 'HQ', address: 'The Proxynet House, 5B, Adedeji Close, off Opebi Road, Ikeja, Lagos, Nigeria.', phone: '+234 703 264 7755', email: 'info@proxynetgroup.com', mapUrl: 'https://maps.google.com/?q=5B+Adedeji+Close+Opebi+Ikeja+Lagos' },
+  { flag: '🇳🇬', city: 'Lagos', tag: 'HQ', address: 'The Proxynet House, 5B, Adedeji Close, off Opebi Road, Ikeja, Lagos, Nigeria.', phone: '+234 903 182 9347', email: 'info@proxynetgroup.com', mapUrl: 'https://maps.google.com/?q=5B+Adedeji+Close+Opebi+Ikeja+Lagos' },
   { flag: '🇳🇬', city: 'Abuja', tag: '', address: 'House 26, Efab Estate, 59 Cres, Tai Solarin Ave, Gwarinpa, Abuja 900108, Federal Capital Territory.', phone: '0911 633 5406', email: 'abuja@proxynetgroup.com', mapUrl: 'https://maps.google.com/?q=Efab+Estate+Gwarinpa+Abuja' },
   { flag: '🇬🇭', city: 'Accra', tag: '', address: 'No 18 Nii Klu Osae Avenue, Off American House, Accra, Ghana.', phone: '+233 302 546 703', email: 'ghana@proxynetgroup.com', mapUrl: 'https://maps.google.com/?q=Nii+Klu+Osae+Avenue+Accra+Ghana' },
   { flag: '🇨🇮', city: 'Abidjan', tag: '', address: "7em TRANCHE CARREFOUR VASE D'HONNEUR, Angré, Abidjan, Côte d'Ivoire.", phone: '+225 07 02 45 2072', email: 'cotedivoire@proxynetgroup.com', mapUrl: "https://maps.google.com/?q=Angré+Abidjan+Côte+d'Ivoire" },
@@ -39,7 +39,7 @@ const socials = [
   { icon: <LinkedinIcon />, label: 'LinkedIn', href: 'https://www.linkedin.com/company/proxynet-communications' },
   { icon: <FacebookIcon />, label: 'Facebook', href: 'https://www.facebook.com/proxynetcommunications/' },
   { icon: <InstagramIcon />, label: 'Instagram', href: 'https://www.instagram.com/proxynetgroup/' },
-  { icon: <MessageCircle size={20} />, label: 'WhatsApp', href: 'https://wa.me/2347032647755' },
+  { icon: <MessageCircle size={20} />, label: 'WhatsApp', href: 'https://wa.me/2349031829347' },
 ]
 
 export default function Contact() {
@@ -65,7 +65,7 @@ export default function Contact() {
     name: 'Proxynet Group Ltd',
     url: 'https://www.proxynetgroup.com',
     logo: 'https://www.proxynetgroup.com/PROXYNET LOGO ASSET.png',
-    telephone: '+2347032647755',
+    telephone: '+2349031829347',
     email: 'info@proxynetgroup.com',
     address: {
       '@type': 'PostalAddress',
@@ -75,7 +75,7 @@ export default function Contact() {
       addressCountry: 'NG',
     },
     contactPoint: [
-      { '@type': 'ContactPoint', telephone: '+2347032647755', contactType: 'customer service', areaServed: 'NG' },
+      { '@type': 'ContactPoint', telephone: '+2349031829347', contactType: 'customer service', areaServed: 'NG' },
       { '@type': 'ContactPoint', telephone: '+2349031829347', contactType: 'sales', areaServed: 'NG' },
     ],
     sameAs: [
@@ -196,11 +196,11 @@ export default function Contact() {
                     <p className={styles.directValue}>+234 903 182 9347</p>
                   </div>
                 </a>
-                <a href="tel:+2347032647755" className={styles.directItem}>
+                <a href="tel:+2349031829347" className={styles.directItem}>
                   <div className={styles.directIcon}><Phone size={20} /></div>
                   <div>
                     <p className={styles.directLabel}>{t.contactPhoneAlt}</p>
-                    <p className={styles.directValue}>+234 703 264 7755</p>
+                    <p className={styles.directValue}>+234 903 182 9347</p>
                   </div>
                 </a>
                 <a href="mailto:info@proxynetgroup.com" className={styles.directItem}>
@@ -210,11 +210,11 @@ export default function Contact() {
                     <p className={styles.directValue}>info@proxynetgroup.com</p>
                   </div>
                 </a>
-                <a href="https://wa.me/2347032647755" target="_blank" rel="noopener noreferrer" className={styles.directItem}>
+                <a href="https://wa.me/2349031829347" target="_blank" rel="noopener noreferrer" className={styles.directItem}>
                   <div className={styles.directIcon}><MessageCircle size={20} /></div>
                   <div>
                     <p className={styles.directLabel}>WhatsApp</p>
-                    <p className={styles.directValue}>+234 703 264 7755</p>
+                    <p className={styles.directValue}>+234 903 182 9347</p>
                   </div>
                 </a>
               </div>

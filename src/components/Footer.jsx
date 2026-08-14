@@ -131,7 +131,7 @@ export default function Footer() {
                 <p className={styles.contactText}>The Proxynet House, 5B, Adedeji Close, off Opebi Road, Ikeja, Lagos, Nigeria.</p>
               </li>
               <li>
-                <a href="tel:+2347032647755" className={styles.footerLink}>+234 703 264 7755</a>
+                <a href="tel:+2349031829347" className={styles.footerLink}>+234 903 182 9347</a>
               </li>
               <li>
                 <a href="mailto:info@proxynetgroup.com" className={styles.footerLink}>info@proxynetgroup.com</a>

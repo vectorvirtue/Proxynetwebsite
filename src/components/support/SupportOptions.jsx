@@ -8,8 +8,8 @@ export default function SupportOptions() {
 
   const options = [
     { icon: <Ticket size={28} />, label: t.supportOptRaiseTicket, desc: t.supportOptRaiseDesc, action: t.raiseATicket, href: '#ticket', color: '#006fb4' },
-    { icon: <Phone size={28} />, label: t.supportOptCall, desc: t.supportOptCallDesc, action: '+234 703 264 7755', href: 'tel:+2347032647755', color: '#059669' },
-    { icon: <MessageCircle size={28} />, label: t.supportOptWhatsApp, desc: t.supportOptWhatsAppDesc, action: t.supportOptChatAction, href: 'https://wa.me/2347032647755', color: '#25D366' },
+    { icon: <Phone size={28} />, label: t.supportOptCall, desc: t.supportOptCallDesc, action: '+234 903 182 9347', href: 'tel:+2349031829347', color: '#059669' },
+    { icon: <MessageCircle size={28} />, label: t.supportOptWhatsApp, desc: t.supportOptWhatsAppDesc, action: t.supportOptChatAction, href: 'https://wa.me/2349031829347', color: '#25D366' },
     { icon: <Mail size={28} />, label: t.supportOptEmail, desc: t.supportOptEmailDesc, action: 'info@proxynetgroup.com', href: 'mailto:info@proxynetgroup.com', color: '#7c3aed' },
   ]
 

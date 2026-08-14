@@ -90,7 +90,7 @@ export default function Events() {
               <h2 className={styles.heading}>{t.eventsFeaturedHeading}</h2>
             </motion.div>
             <div className={styles.featuredGrid}>
-              {events.filter(e => e.featured).map((e, i) => (
+              {events.filter(e => e.featured).sort((a, b) => b.year - a.year).map((e, i) => (
                 <motion.div
                   key={e.id}
                   className={styles.featuredCard}

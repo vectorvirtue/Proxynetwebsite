@@ -163,7 +163,7 @@ export default function PrivacyPolicy() {
                   <span className={styles.contactLabel}>Proxynet Communications Limited</span>
                   <span className={styles.contactLine}>The Proxynet House, 5B Adedeji Close, off Opebi Road, Ikeja, Lagos, Nigeria.</span>
                   <a href="mailto:info@proxynetgroup.com" className={styles.contactLink}>info@proxynetgroup.com</a>
-                  <a href="tel:+2347032647755" className={styles.contactLink}>+234 703 264 7755</a>
+                  <a href="tel:+2349031829347" className={styles.contactLink}>+234 903 182 9347</a>
                 </div>
               </div>
 

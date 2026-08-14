@@ -1,4 +1,4 @@
-﻿import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ChevronRight, Ticket, Phone } from 'lucide-react'
 import { useLang } from '../../context/LanguageContext'
@@ -28,7 +28,7 @@ export default function SupportHero() {
 
         <motion.div className={styles.ctas} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}>
           <a href="#ticket" className={styles.primary}><Ticket size={18} /> {t.raiseATicket}</a>
-          <a href="tel:+2347032647755" className={styles.secondary}><Phone size={18} /> {t.callSupportNow}</a>
+          <a href="tel:+2349031829347" className={styles.secondary}><Phone size={18} /> {t.callSupportNow}</a>
         </motion.div>
       </div>
     </section>

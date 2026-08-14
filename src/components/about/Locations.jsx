@@ -9,7 +9,7 @@ const offices = [
   {
     flag: '🇳🇬', city: 'Lagos', country: 'Nigeria', tag: 'HQ',
     address: 'The Proxynet House, 5B, Adedeji Close, off Opebi Road, Ikeja, Lagos, Nigeria.',
-    phone: '+234 703 264 7755', email: 'info@proxynetgroup.com',
+    phone: '+234 903 182 9347', email: 'info@proxynetgroup.com',
     mapUrl: 'https://maps.google.com/?q=5B+Adedeji+Close+Opebi+Ikeja+Lagos',
     services: ['IT Security', 'Systems Integration', 'Enterprise Networking', 'AV Rentals', 'Billboard Solutions', 'Software Development', 'Support'],
   },
