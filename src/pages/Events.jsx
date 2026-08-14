@@ -121,8 +121,8 @@ export default function Events() {
                     <span className={styles.eventCategory}>{e.category}</span>
                     <h3 className={styles.eventName}>{e.name}</h3>
                     <div className={styles.eventMeta}>
-                      <MapPin size={13} /><span className={styles.metaItem}>{e.venue}</span>
-                      <Calendar size={13} /><span className={styles.metaItem}>{e.date || e.year}</span>
+                      <span className={styles.metaItem}><MapPin size={13} />{e.venue}</span>
+                      <span className={styles.metaItem}><Calendar size={13} />{e.date || e.year}</span>
                     </div>
                     <p className={styles.eventDesc}>{e.desc}</p>
                     {/* Link to the dedicated gallery page */}

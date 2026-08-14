@@ -1937,6 +1937,11 @@ export const translations = {
     huaweiS3AbujaDate: "July 30, 2026",
     huaweiS3AbujaDesc: "Proxynet hosted the official Huawei IdeaHub S3 launch in Abuja, bringing next-generation smart collaboration technology to enterprise clients in Nigeria's capital.",
 
+    vtEventName: "VT Partner Event",
+    vtEventVenue: "Lagos",
+    vtEventCategory: "Partner Event",
+    vtEventDesc: "Proxynet hosted the VT partner event in Lagos, showcasing VT's professional headsets, communication devices, and unified communications solutions for enterprise clients across West Africa.",
+
     yealinkEventName: "Yealink Partner Event",
     yealinkEventVenue: "Lagos",
     yealinkEventCategory: "Partner Event",
@@ -3673,6 +3678,11 @@ export const translations = {
     huaweiS3AbujaCategory: "Lancement de Produit",
     huaweiS3AbujaDate: "30 Juillet 2026",
     huaweiS3AbujaDesc: "Proxynet a organisé le lancement officiel du Huawei IdeaHub S3 à Abuja, apportant la technologie de collaboration intelligente de nouvelle génération aux clients d'entreprise dans la capitale du Nigeria.",
+
+    vtEventName: "Événement Partenaire VT",
+    vtEventVenue: "Lagos",
+    vtEventCategory: "Événement Partenaire",
+    vtEventDesc: "Proxynet a organisé l'événement partenaire VT à Lagos, présentant les casques professionnels, appareils de communication et solutions de communications unifiées de VT pour les clients d'entreprise en Afrique de l'Ouest.",
 
     yealinkEventName: "Événement Partenaire Yealink",
     yealinkEventVenue: "À déterminer",
