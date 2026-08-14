@@ -30,7 +30,8 @@
 .headingLight { font-size: clamp(28px, 3vw, 44px); font-weight: 800; color: var(--white); letter-spacing: -1px; margin-bottom: 12px; }
 
 /* ── Featured events ──────────────────────────────────────────── */
-.featuredGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+.featuredGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+@media (max-width: 1024px) { .featuredGrid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 768px) { .featuredGrid { grid-template-columns: 1fr; } }
 .featuredCard { background: var(--white); border: 1.5px solid rgba(0,31,51,0.08); border-radius: 16px; overflow: hidden; transition: box-shadow 0.2s, transform 0.2s; }
 .featuredCard:hover { box-shadow: 0 12px 40px rgba(0,31,51,0.1); transform: translateY(-4px); }
@@ -62,6 +63,8 @@
 .eventMeta { display: flex; flex-wrap: wrap; gap: 16px; }
 .metaItem { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text); opacity: 0.7; }
 .eventDesc { font-size: 14px; color: var(--text); line-height: 1.7; }
+.viewGalleryBtn { display: inline-flex; align-items: center; gap: 8px; margin-top: 4px; padding: 10px 20px; background: var(--blue); color: var(--white); font-size: 13px; font-weight: 700; border-radius: 8px; width: fit-content; transition: background 0.2s, transform 0.15s; }
+.viewGalleryBtn:hover { background: #005a94; transform: translateY(-2px); }
 
 /* ── Dropdown filters ─────────────────────────────────────────── */
 .filters { display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; margin-bottom: 32px; }

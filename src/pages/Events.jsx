@@ -6,14 +6,10 @@ import FilterDropdown from '../components/FilterDropdown'
 import SEO from '../components/SEO'
 import SectionBlobs from '../components/SectionBlobs'
 import { useLang } from '../context/LanguageContext'
-import breakfast1 from '../assets/BREAKFAST SESSION WITH PROXYNET AND COMFORTE AT RADISSON BLUE.jpg'
-import breakfast2 from '../assets/BREAKFAST SESSION WITH PROXYNET AND COMFORTE AT RADISSON BLUE2.jpg'
-import breakfast3 from '../assets/BREAKFAST SESSION WITH PROXYNET AND COMFORTE AT RADISSON BLUE3.jpg'
-import breakfast4 from '../assets/BREAKFAST SESSION WITH PROXYNET AND COMFORTE AT RADISSON BLUE4.jpg'
-import huawei1 from '../assets/huawei.jpg'
-import huawei2 from '../assets/huawei2.jpg'
-import huaweiPH from '../assets/huaweiportharcourtexperience.jpg'
 import styles from './Events.module.css'
+
+// All event images served from /public/events/ — not bundled into JS
+const E = (file) => `/events/${file}`
 
 export default function Events() {
   const { t } = useLang()
@@ -26,12 +22,12 @@ export default function Events() {
       year: '2024',
       category: t.event1Category,
       photos: [
-        { src: breakfast1, caption: t.event1PhotoCaption },
-        { src: breakfast2, caption: t.event1PhotoCaption },
-        { src: breakfast3, caption: t.event1PhotoCaption },
-        { src: breakfast4, caption: t.event1PhotoCaption },
+        { src: E('breakfast-session-with-proxynet-and-comforte-at-radisson-blue.jpg'),  caption: t.event1PhotoCaption },
+        { src: E('breakfast-session-with-proxynet-and-comforte-at-radisson-blue2.jpg'), caption: t.event1PhotoCaption },
+        { src: E('breakfast-session-with-proxynet-and-comforte-at-radisson-blue3.jpg'), caption: t.event1PhotoCaption },
+        { src: E('breakfast-session-with-proxynet-and-comforte-at-radisson-blue4.jpg'), caption: t.event1PhotoCaption },
       ],
-      featured: false,
+      featured: true,
       desc: t.event1Desc,
     },
     {
@@ -41,11 +37,11 @@ export default function Events() {
       year: '2025',
       category: t.event2Category,
       photos: [
-        { src: huawei1,  caption: t.event2PhotoCaption },
-        { src: huawei2,  caption: t.event2PhotoCaption },
-        { src: huaweiPH, caption: t.event2PhotoCaption },
+        { src: E('huawei.jpg'),                      caption: t.event2PhotoCaption },
+        { src: E('huawei2.jpg'),                     caption: t.event2PhotoCaption },
+        { src: E('huaweiportharcourtexperience.jpg'), caption: t.event2PhotoCaption },
       ],
-      featured: false,
+      featured: true,
       desc: t.event2Desc,
     },
     {
@@ -60,7 +56,175 @@ export default function Events() {
       date: t.event3Date,
       desc: t.event3Desc,
     },
+    {
+      id: 'gitex-kenya',
+      name: t.gitexKenyaName,
+      venue: t.gitexKenyaVenue,
+      year: '2025',
+      category: t.gitexKenyaCategory,
+      photos: [
+        { src: E('grouppicturegitexkenya.jpg'), caption: t.gitexKenyaPhotoCaption }
+      ],
+      featured: true,
+      desc: t.gitexKenyaDesc,
+    },
+    {
+      id: 'robo-xplore-original',
+      name: t.roboXplore1Name,
+      venue: t.roboXplore1Venue,
+      year: '2026',
+      category: t.roboXplore1Category,
+      date: t.roboXplore1Date,
+      photos: [
+        { src: E('roboexplore1.jpg'), caption: t.roboXplore1Name }
+      ],
+      featured: true,
+      desc: t.roboXplore1Desc,
+    },
+    {
+      id: 'robo-xplore-2026',
+      name: t.roboXplore2Name,
+      venue: t.roboXplore2Venue,
+      year: '2026',
+      category: t.roboXplore2Category,
+      date: t.roboXplore2Date,
+      photos: [
+        { src: E('roboexplore-2-group.jpg'), caption: t.roboXplore2Name }
+      ],
+      featured: true,
+      desc: t.roboXplore2Desc,
+    },
+    {
+      id: 'unilumin-led-training',
+      name: t.uniluminLedTrainingName,
+      venue: t.uniluminLedTrainingVenue,
+      year: '2026',
+      category: t.uniluminLedTrainingCategory,
+      date: t.uniluminLedTrainingDate,
+      photos: [
+        { src: E('uniluminledtraininggroup.jpg'), caption: t.uniluminLedTrainingName }
+      ],
+      featured: true,
+      desc: t.uniluminLedTrainingDesc,
+    },
+    {
+      id: 'zenith-tech-fair',
+      name: t.zenithTechFairName,
+      venue: t.zenithTechFairVenue,
+      year: '2025',
+      category: t.zenithTechFairCategory,
+      photos: [
+        { src: E('zenith-tech-fair-group-photo.jpg'), caption: t.zenithTechFairName }
+      ],
+      featured: true,
+      desc: t.zenithTechFairDesc,
+    },
+    {
+      id: 'beyondtrust-event',
+      name: t.beyondTrustEventName,
+      venue: t.beyondTrustEventVenue,
+      year: '2025',
+      category: t.beyondTrustEventCategory,
+      date: t.beyondTrustEventDate,
+      photos: [
+        { src: E('beyond-trust-group.jpg'), caption: t.beyondTrustEventName }
+      ],
+      featured: true,
+      desc: t.beyondTrustEventDesc,
+    },
+    {
+      id: 'huawei-clearance-sales',
+      name: t.huaweiClearanceName,
+      venue: t.huaweiClearanceVenue,
+      year: '2025',
+      category: t.huaweiClearanceCategory,
+      photos: [],
+      featured: true,
+      desc: t.huaweiClearanceDesc,
+    },
+    {
+      id: 'gitex-nigeria-day1',
+      name: t.gitexNigeriaDay1Name,
+      venue: t.gitexNigeriaDay1Venue,
+      year: '2025',
+      category: t.gitexNigeriaDay1Category,
+      date: t.gitexNigeriaDay1Date,
+      photos: [
+        { src: E('gitex-nigeria-2025-team-photo.jpg'), caption: t.gitexNigeriaDay1Name }
+      ],
+      featured: true,
+      desc: t.gitexNigeriaDay1Desc,
+    },
+    {
+      id: 'proxynet-unilumin-experience',
+      name: t.proxynetUniluminExpName,
+      venue: t.proxynetUniluminExpVenue,
+      year: '2026',
+      category: t.proxynetUniluminExpCategory,
+      date: t.proxynetUniluminExpDate,
+      photos: [
+        { src: E('unilumin-experience-team-photo.jpg'),         caption: t.proxynetUniluminExpName },
+        { src: E('whatsapp-image-2026-07-31-at-10.29.08-1-.jpeg'), caption: t.proxynetUniluminExpName },
+        { src: E('whatsapp-image-2026-07-31-at-10.29.08-2-.jpeg'), caption: t.proxynetUniluminExpName },
+        { src: E('whatsapp-image-2026-07-31-at-10.29.08.jpeg'),    caption: t.proxynetUniluminExpName },
+      ],
+      featured: true,
+      desc: t.proxynetUniluminExpDesc,
+    },
+    {
+      id: 'huawei-s3-launch',
+      name: t.huaweiS3LaunchName,
+      venue: t.huaweiS3LaunchVenue,
+      year: '2026',
+      category: t.huaweiS3LaunchCategory,
+      date: t.huaweiS3LaunchDate,
+      photos: [
+        { src: E('huawei-s3-launch-group.jpg'), caption: t.huaweiS3LaunchName }
+      ],
+      featured: true,
+      desc: t.huaweiS3LaunchDesc,
+    },
+    {
+      id: 'huawei-ideahub-s3-abuja',
+      name: t.huaweiS3AbujaName,
+      venue: t.huaweiS3AbujaVenue,
+      year: '2026',
+      category: t.huaweiS3AbujaCategory,
+      date: t.huaweiS3AbujaDate,
+      photos: [
+        { src: E('huawei-ideahub-s3-launch-abuja.jpg'), caption: t.huaweiS3AbujaName }
+      ],
+      featured: true,
+      desc: t.huaweiS3AbujaDesc,
+    },
+    {
+      id: 'huawei-2025-experience',
+      name: t.huawei2025ExpName,
+      venue: t.huawei2025ExpVenue,
+      year: '2025',
+      category: t.huawei2025ExpCategory,
+      date: t.huawei2025ExpDate,
+      photos: [
+        { src: E('huawei-2025.jpg'), caption: t.huawei2025ExpName }
+      ],
+      featured: true,
+      desc: t.huawei2025ExpDesc,
+    },
+    {
+      id: 'yealink-event',
+      name: t.yealinkEventName,
+      venue: t.yealinkEventVenue,
+      year: '2025',
+      category: t.yealinkEventCategory,
+      photos: [
+        { src: E('yealink-event-group.jpg'), caption: t.yealinkEventName }
+      ],
+      featured: true,
+      desc: t.yealinkEventDesc,
+    },
   ]
+
+  const placeholder = E('thankyouimage2.jpg.jpg')
 
   const upcomingEvents = [
     {
@@ -80,9 +244,10 @@ export default function Events() {
       registerUrl: 'https://events.proxynetgroup.com',
     },
   ]
+
   const [activeFilter, setActiveFilter] = useState(null)
   const [activeYear, setActiveYear] = useState(null)
-  const [lightbox, setLightbox] = useState(null) // { src, caption }
+  const [lightbox, setLightbox] = useState(null)
 
   const categories = [...new Set(events.map(e => e.category))]
   const years = [...new Set(events.map(e => e.year))].sort((a, b) => b - a)
@@ -107,7 +272,8 @@ export default function Events() {
       <main>
         {/* Hero */}
         <section className={`${styles.hero} heroScene`}>
-          <SectionBlobs variant="dark" />     <div className={styles.overlay} />
+          <SectionBlobs variant="dark" />
+          <div className={styles.overlay} />
           <div className={styles.heroInner}>
             <motion.nav className={styles.breadcrumb} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
               <Link to="/" className={styles.crumb}>{t.home}</Link>
@@ -130,7 +296,7 @@ export default function Events() {
           </div>
         </section>
 
-        {/* Featured events */}
+        {/* Featured / Recent Highlights */}
         <section className={styles.section}>
           <div className={styles.inner}>
             <motion.div className={styles.sectionHeader} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
@@ -139,22 +305,21 @@ export default function Events() {
             </motion.div>
             <div className={styles.featuredGrid}>
               {events.filter(e => e.featured).map((e, i) => (
-                <motion.div key={e.id} className={styles.featuredCard} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}>
-                  {e.photos.length > 0 ? (
-                    <div className={styles.featuredImgWrap} onClick={() => openLightbox(e.photos[0])}>
-                      <img src={e.photos[0].src} alt={e.name} className={styles.featuredImg} />
+                <motion.div key={e.id} className={styles.featuredCard} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: (i % 3) * 0.1 }}>
+                  <div className={styles.featuredImgWrap} onClick={e.photos.length > 0 ? () => openLightbox(e.photos[0]) : undefined}>
+                    <img
+                      src={e.photos.length > 0 ? e.photos[0].src : placeholder}
+                      alt={e.name}
+                      className={styles.featuredImg}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    {e.photos.length > 0 && (
                       <div className={styles.featuredImgOverlay}>
                         <span className={styles.viewPhotos}>{e.photos.length} {t.eventsPhotos}</span>
                       </div>
-                    </div>
-                  ) : (
-                    <div className={styles.featuredImgPlaceholder}>
-                      <Images size={40} className={styles.placeholderIcon} />
-                      <p className={styles.placeholderText}>{t.csGalleryComingSoon}</p>
-                      {e.theme && <p className={styles.placeholderTheme}>Theme: {e.theme}</p>}
-                      {e.date && <p className={styles.placeholderDate}><Calendar size={14} /> {e.date}</p>}
-                    </div>
-                  )}
+                    )}
+                  </div>
                   <div className={styles.featuredBody}>
                     <span className={styles.eventCategory}>{e.category}</span>
                     <h3 className={styles.eventName}>{e.name}</h3>
@@ -163,6 +328,9 @@ export default function Events() {
                       <Calendar size={13} /><span className={styles.metaItem}>{e.date || e.year}</span>
                     </div>
                     <p className={styles.eventDesc}>{e.desc}</p>
+                    <a href="#gallery" className={styles.viewGalleryBtn}>
+                      <Images size={15} /> {t.eventsViewGallery}
+                    </a>
                   </div>
                 </motion.div>
               ))}
@@ -178,7 +346,6 @@ export default function Events() {
               <h2 className={styles.heading}>{t.eventsGalleryHeading}</h2>
             </motion.div>
 
-            {/* Dropdown filters */}
             <div className={styles.filters}>
               <FilterDropdown label={t.eventsFilterCategory} options={categories} value={activeFilter} onChange={setActiveFilter} />
               <FilterDropdown label={t.eventsFilterYear}     options={years}      value={activeYear}   onChange={setActiveYear} />
@@ -189,7 +356,6 @@ export default function Events() {
               )}
             </div>
 
-            {/* Grid */}
             <div className={styles.galleryGrid}>
               <AnimatePresence mode="popLayout">
                 {allPhotos.map((photo, i) => (
@@ -200,10 +366,10 @@ export default function Events() {
                     initial={{ opacity: 0, scale: 0.96 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.96 }}
-                    transition={{ duration: 0.3, delay: i * 0.04 }}
+                    transition={{ duration: 0.3, delay: (i % 9) * 0.04 }}
                     onClick={() => openLightbox(photo)}
                   >
-                    <img src={photo.src} alt={photo.caption} className={styles.galleryImg} loading="lazy" />
+                    <img src={photo.src} alt={photo.caption} className={styles.galleryImg} loading="lazy" decoding="async" />
                     <div className={styles.galleryOverlay}>
                       <p className={styles.galleryCaption}>{photo.caption}</p>
                     </div>
@@ -262,7 +428,7 @@ export default function Events() {
           <motion.div className={styles.lightboxBackdrop} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={closeLightbox}>
             <motion.div className={styles.lightboxContent} initial={{ scale: 0.92, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.92, opacity: 0 }} onClick={e => e.stopPropagation()}>
               <button className={styles.lightboxClose} onClick={closeLightbox} aria-label="Close"><X size={22} /></button>
-              <img src={lightbox.src} alt={lightbox.caption} className={styles.lightboxImg} />
+              <img src={lightbox.src} alt={lightbox.caption} className={styles.lightboxImg} loading="lazy" decoding="async" />
               {lightbox.caption && <p className={styles.lightboxCaption}>{lightbox.caption}</p>}
             </motion.div>
           </motion.div>
@@ -271,4 +437,3 @@ export default function Events() {
     </>
   )
 }
-
