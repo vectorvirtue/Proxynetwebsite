@@ -70,11 +70,11 @@ export default function CareersHero() {
         </motion.nav>
 
         <motion.h1 className={styles.title} initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}>
-          Build the Future of Technology in West Africa
+          {t.careersHeroTitle}
         </motion.h1>
 
         <motion.p className={styles.sub} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
-          Join a team of engineers, innovators, and problem-solvers delivering world-class technology infrastructure across Africa.
+          {t.careersHeroSub}
         </motion.p>
 
         <motion.div className={styles.ctas} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}>

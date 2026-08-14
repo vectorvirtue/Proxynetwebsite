@@ -3,23 +3,19 @@ import { GraduationCap, CheckCircle, ArrowRight } from 'lucide-react'
 import { useLang } from '../../context/LanguageContext'
 import styles from './Programme.module.css'
 
-const eligibility = [
-  'Recent graduate (within 2 years) in Computer Science, Engineering, IT, or related field',
-  'Minimum Second Class Upper (2:1) degree or equivalent',
-  'Strong analytical and problem-solving skills',
-  'Passion for technology and eagerness to learn',
-]
-
-const gains = [
-  '12-month structured rotation across key departments',
-  'Mentorship from senior engineers and managers',
-  'Professional certifications sponsored by Proxynet',
-  'Competitive graduate salary and benefits',
-  'Full-time offer upon successful completion',
-]
-
 export default function GraduateProgramme() {
   const { t } = useLang()
+
+  const eligibility = [
+    t.gradEligibility1, t.gradEligibility2,
+    t.gradEligibility3, t.gradEligibility4,
+  ]
+
+  const gains = [
+    t.gradGain1, t.gradGain2, t.gradGain3,
+    t.gradGain4, t.gradGain5,
+  ]
+
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
@@ -28,16 +24,16 @@ export default function GraduateProgramme() {
         </motion.div>
 
         <motion.div className={styles.content} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }}>
-          <p className={styles.eyebrow}>Graduate Programme</p>
-          <h2 className={styles.heading}>Start Your Career at the Top</h2>
-          <p className={styles.sub}>Our Graduate Programme is designed to fast-track exceptional young talent into technology careers. You will rotate across departments, work on live projects, and be mentored by industry experts.</p>
+          <p className={styles.eyebrow}>{t.gradEyebrow}</p>
+          <h2 className={styles.heading}>{t.gradHeading}</h2>
+          <p className={styles.sub}>{t.gradSub}</p>
 
           <div className={styles.cols}>
             <div>
-              <h3 className={styles.colTitle}>Eligibility</h3>
+              <h3 className={styles.colTitle}>{t.gradEligibilityHeading}</h3>
               <ul className={styles.list}>
-                {eligibility.map(e => (
-                  <li key={e} className={styles.listItem}>
+                {eligibility.map((e, i) => (
+                  <li key={i} className={styles.listItem}>
                     <CheckCircle size={16} className={styles.check} />
                     <span>{e}</span>
                   </li>
@@ -45,10 +41,10 @@ export default function GraduateProgramme() {
               </ul>
             </div>
             <div>
-              <h3 className={styles.colTitle}>What You Gain</h3>
+              <h3 className={styles.colTitle}>{t.gradGainsHeading}</h3>
               <ul className={styles.list}>
-                {gains.map(g => (
-                  <li key={g} className={styles.listItem}>
+                {gains.map((g, i) => (
+                  <li key={i} className={styles.listItem}>
                     <CheckCircle size={16} className={styles.check} />
                     <span>{g}</span>
                   </li>
