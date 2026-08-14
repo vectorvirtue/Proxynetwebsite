@@ -201,14 +201,15 @@
   border-radius: 8px;
   cursor: pointer;
   background: #e8edf2;
-  aspect-ratio: 1;
+  aspect-ratio: 3 / 2;
 }
-.galleryItemFeatured { aspect-ratio: unset; min-height: 380px; }
+.galleryItemFeatured { aspect-ratio: unset; min-height: 420px; }
 
 .galleryImg {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 20%;
   display: block;
   transition: transform 0.4s ease;
 }

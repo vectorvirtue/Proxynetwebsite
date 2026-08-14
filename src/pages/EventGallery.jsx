@@ -97,14 +97,7 @@ export default function EventGallery() {
             </motion.button>
           </div>
 
-          {/* Event name + venue label at bottom-left like the screenshot */}
-          <motion.div
-            className={styles.heroFooter}
-            initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.4 }}
-          >
-            <span className={styles.heroFooterName}>{event.name.toUpperCase()}</span>
-            {event.venue && <span className={styles.heroFooterVenue}>{event.venue.toUpperCase()}</span>}
-          </motion.div>
+      
         </section>
 
         {/* Event info bar */}
