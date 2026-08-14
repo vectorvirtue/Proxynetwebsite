@@ -17,6 +17,7 @@ import CaseStudies from "./pages/CaseStudies";
 import CaseStudy from "./pages/CaseStudy";
 import Partners from "./pages/Partners";
 import Events from "./pages/Events";
+import EventGallery from "./pages/EventGallery";
 import IndustryPage from "./pages/IndustryPage";
 import AVSolutions from "./pages/AVSolutions";
 import Networking from "./pages/Networking";
@@ -62,6 +63,7 @@ export default function App() {
             <Route path="/case-studies/:slug" element={<CaseStudy />} />
             <Route path="/partners" element={<Partners />} />
             <Route path="/events" element={<Events />} />
+            <Route path="/events/:eventId" element={<EventGallery />} />
             <Route path="/industries/:slug" element={<IndustryPage />} />
             <Route path="/solutions/av" element={<AVSolutions />} />
             <Route path="/solutions/networking" element={<Networking />} />
