@@ -20,14 +20,6 @@ export default function Events() {
       venue: t.upcoming1Venue,
       desc: t.upcoming1Desc,
       category: t.upcoming1Category,
-    },
-    {
-      name: t.upcoming2Name,
-      date: t.upcoming2Date,
-      venue: t.upcoming2Venue,
-      desc: t.upcoming2Desc,
-      category: t.upcoming2Category,
-      audience: t.upcoming2Audience,
       registerUrl: 'https://events.proxynetgroup.com',
     },
   ]
@@ -188,6 +180,11 @@ export default function Events() {
             <div className={styles.upcomingGrid}>
               {upcomingEvents.map((e, i) => (
                 <motion.div key={e.name} className={styles.upcomingCard} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.1 }}>
+                  {e.poster && (
+                    <div className={styles.upcomingPoster}>
+                      <img src={e.poster} alt={e.name} className={styles.upcomingPosterImg} loading="lazy" decoding="async" />
+                    </div>
+                  )}
                   <span className={styles.upcomingCategory}>{e.category}</span>
                   <h3 className={styles.upcomingName}>{e.name}</h3>
                   <div className={styles.upcomingMeta}>

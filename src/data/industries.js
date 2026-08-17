@@ -11,11 +11,11 @@ export const getIndustries = (t) => [
     overview: t.indFinancialOverview,
     proxynetRole: t.indFinancialRole,
     solutions: [
+      { icon: 'Monitor', label: t.solAV, href: '/solutions/av' },
       { icon: 'Shield', label: t.solCybersecurity, href: '/solutions/cybersecurity' },
       { icon: 'Network', label: t.solNetworking, href: '/solutions/networking' },
-      { icon: 'Server', label: t.solCloud, href: '/solutions/cloud-managed-services' },
-      { icon: 'Monitor', label: t.solAV, href: '/solutions/av' },
       { icon: 'MessageSquare', label: t.solUnifiedComms, href: '/solutions/unified-communications' },
+      { icon: 'Server', label: t.solCloud, href: '/solutions/cloud-managed-services' },
       { icon: 'Code2', label: t.solEnterpriseSoftware, href: '/solutions/enterprise-software' },
     ],
     caseStudy: {
@@ -24,7 +24,7 @@ export const getIndustries = (t) => [
       outcome: t.indFinancialCaseOutcome,
       href: '/case-studies/access-bank-videowall',
     },
-    clients: ['UBA', 'Access Bank', 'GTBank', 'FCMB', 'Zenith Bank'],
+    clients: ['UBA', 'Access Bank', 'FCMB', 'Stanbic Bank Ghana', 'Zenith Bank', 'GTBank', 'PIL'],
   },
   {
     slug: 'oil-gas',
@@ -45,11 +45,11 @@ export const getIndustries = (t) => [
     ],
     caseStudy: {
       title: t.indOilGasCaseTitle,
-      client: 'Oil & Gas Operator',
+      client: 'ArcelorMittal',
       outcome: t.indOilGasCaseOutcome,
-      href: '/case-studies',
+      href: '/case-studies/arcelormittal-yealink-meetingboard',
     },
-    clients: ['NNPC', 'Shell', 'Chevron', 'TotalEnergies', 'Seplat'],
+    clients: ['ArcelorMittal', 'NETCO', 'Blueseas Maritime', 'Seplat', 'Total Energies'],
   },
   {
     slug: 'manufacturing',
@@ -62,7 +62,7 @@ export const getIndustries = (t) => [
     proxynetRole: t.indManufacturingRole,
     solutions: [
       { icon: 'Network', label: t.solNetworking, href: '/solutions/networking' },
-      { icon: 'Layers', label: t.solERP, href: '/solutions/erp' },
+      { icon: 'Layers', label: t.solERP, href: '/solutions/enterprise-software' },
       { icon: 'Shield', label: t.solCybersecurity, href: '/solutions/cybersecurity' },
       { icon: 'Cpu', label: t.solIoT, href: '/solutions/iot' },
       { icon: 'MessageSquare', label: t.solUnifiedComms, href: '/solutions/unified-communications' },
@@ -70,11 +70,11 @@ export const getIndustries = (t) => [
     ],
     caseStudy: {
       title: t.indManufacturingCaseTitle,
-      client: 'FMCG Manufacturer',
+      client: 'Altech West Africa',
       outcome: t.indManufacturingCaseOutcome,
-      href: '/case-studies',
+      href: '/case-studies/altech-fireeye-webmps',
     },
-    clients: ['Dangote Group', 'BUA Group', 'Flour Mills', 'Nestlé Nigeria'],
+    clients: ['Altech West Africa', 'Dangote Group', 'BUA Group', 'Flour Mills', 'UAC'],
   },
   {
     slug: 'telecommunications',
@@ -93,13 +93,8 @@ export const getIndustries = (t) => [
       { icon: 'Server', label: t.solCloud, href: '/solutions/cloud-managed-services' },
       { icon: 'Code2', label: t.solEnterpriseSoftware, href: '/solutions/enterprise-software' },
     ],
-    caseStudy: {
-      title: t.indTelecomsCaseTitle,
-      client: 'Telecoms Operator',
-      outcome: t.indTelecomsCaseOutcome,
-      href: '/case-studies',
-    },
-    clients: ['MTN Nigeria', 'Airtel', 'Glo', '9mobile'],
+    caseStudy: null,
+    clients: ['MTN Nigeria', 'Airtel', 'Glo', '9mobile', 'IHS Towers'],
   },
   {
     slug: 'government',
@@ -115,16 +110,16 @@ export const getIndustries = (t) => [
       { icon: 'Shield', label: t.solCybersecurity, href: '/solutions/cybersecurity' },
       { icon: 'Monitor', label: t.solAV, href: '/solutions/av' },
       { icon: 'Code2', label: t.solEnterpriseSoftware, href: '/solutions/enterprise-software' },
-      { icon: 'Layers', label: t.solERP, href: '/solutions/erp' },
+      { icon: 'Layers', label: t.solERP, href: '/solutions/enterprise-software' },
       { icon: 'MessageSquare', label: t.solUnifiedComms, href: '/solutions/unified-communications' },
     ],
     caseStudy: {
       title: t.indGovernmentCaseTitle,
-      client: 'Federal Government Agency',
+      client: 'Lagos State House of Assembly',
       outcome: t.indGovernmentCaseOutcome,
       href: '/case-studies',
     },
-    clients: ['Federal Ministry of Finance', 'FIRS', 'CBN', 'INEC', 'NCC'],
+    clients: ['Lagos State House of Assembly', 'African Union', 'WHO Nigeria', 'FIRS', 'CBN'],
   },
   {
     slug: 'education',
@@ -145,11 +140,11 @@ export const getIndustries = (t) => [
     ],
     caseStudy: {
       title: t.indEducationCaseTitle,
-      client: 'Lagos State Schools',
+      client: 'WHO Nigeria — Nursing Colleges',
       outcome: t.indEducationCaseOutcome,
       href: '/case-studies',
     },
-    clients: ['University of Lagos', 'Covenant University', 'Lagos State University', 'NERDC'],
+    clients: ['WHO Nigeria', 'Avicenna College', 'Pampers Private School', 'Divine Confidence Academy', 'Bright Spark Academy'],
   },
   {
     slug: 'healthcare',
@@ -170,11 +165,11 @@ export const getIndustries = (t) => [
     ],
     caseStudy: {
       title: t.indHealthcareCaseTitle,
-      client: 'Lagos Teaching Hospital',
+      client: 'WHO Nigeria',
       outcome: t.indHealthcareCaseOutcome,
       href: '/case-studies',
     },
-    clients: ['Lagos University Teaching Hospital', 'Eko Hospital', 'Reddington Hospital'],
+    clients: ['WHO Nigeria', 'Reddington Hospital', 'Eko Hospital', 'Tunwase Paediatric Centre'],
   },
   {
     slug: 'retail',
@@ -190,16 +185,16 @@ export const getIndustries = (t) => [
       { icon: 'Network', label: t.solNetworking, href: '/solutions/networking' },
       { icon: 'Shield', label: t.solCybersecurity, href: '/solutions/cybersecurity' },
       { icon: 'Code2', label: t.solEnterpriseSoftware, href: '/solutions/enterprise-software' },
-      { icon: 'Layers', label: t.solERP, href: '/solutions/erp' },
+      { icon: 'Layers', label: t.solERP, href: '/solutions/enterprise-software' },
       { icon: 'MessageSquare', label: t.solUnifiedComms, href: '/solutions/unified-communications' },
     ],
     caseStudy: {
       title: t.indRetailCaseTitle,
-      client: 'Retail Chain',
+      client: 'Sundry Foods',
       outcome: t.indRetailCaseOutcome,
-      href: '/case-studies',
+      href: '/case-studies/sundry-foods-ph-signage',
     },
-    clients: ['Shoprite', 'Spar', 'Jumia', 'Konga'],
+    clients: ['Sundry Foods', 'Bloominggreen', 'Doyen', 'Proper Child', 'Logo Lagoon'],
   },
 ]
 

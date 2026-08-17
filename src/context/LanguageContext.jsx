@@ -1239,9 +1239,9 @@ export const translations = {
       "Oil and gas operations demand technology that works in harsh environments, remote locations, and under extreme operational pressure. Connectivity failures and security breaches in this sector carry enormous consequences. Proxynet has delivered technology solutions to upstream and downstream operators across Nigeria and West Africa, understanding the sector's unique requirements — ATEX-rated environments, remote site connectivity, and real-time operational visibility.",
     indOilGasRole:
       "We provide end-to-end technology infrastructure for oil and gas operations — from remote site connectivity and SCADA integration to command centre solutions and cybersecurity for operational technology (OT) environments. Our engineers are experienced in deploying ruggedised solutions in challenging field conditions.",
-    indOilGasCaseTitle: "Multi-Site Logitech VC Solution — Oil & Gas Operator",
+    indOilGasCaseTitle: "Yealink MeetingBoard — ArcelorMittal",
     indOilGasCaseOutcome:
-      "Implemented a multi-site Logitech video conferencing solution connecting Lagos, Bonny, Port Harcourt, and Abuja offices for a major oil and gas operator, enabling seamless collaboration across field and head office teams.",
+      "Deployed Yealink MeetingBoard collaboration solutions at ArcelorMittal's operations in Nigeria, enabling seamless video conferencing and team collaboration across production and management teams.",
     // Manufacturing
     indManufacturingEyebrow: "Manufacturing",
     indManufacturingHeroTitle: "Systems Integration for Modern Manufacturing",
@@ -1251,10 +1251,9 @@ export const translations = {
       "Manufacturing operations depend on seamless connectivity between production systems, supply chain management, and enterprise applications. Technology failures on the factory floor translate directly to lost production and revenue. Proxynet works with manufacturers across Nigeria and West Africa to design and deploy the network infrastructure, systems integration, and operational technology solutions that keep production running.",
     indManufacturingRole:
       "From factory floor networking to ERP integration and command centre solutions — Proxynet provides the technology backbone for modern manufacturing operations. We connect machines, sensors, and management systems into a unified operational view that drives efficiency and reduces downtime.",
-    indManufacturingCaseTitle:
-      "Factory Network & Systems Integration — FMCG Manufacturer",
+    indManufacturingCaseTitle: "FireEye WebMPS Deployment — Altech West Africa",
     indManufacturingCaseOutcome:
-      "Designed and deployed a factory-wide network infrastructure connecting production lines, warehouse management, and ERP systems for a leading Nigerian FMCG manufacturer, reducing operational downtime by over 40%.",
+      "Deployed the FireEye Web Malware Protection System for Altech West Africa, protecting their network against zero-day web exploits and multi-protocol callbacks — safeguarding the integrity of their operations and sensitive data.",
     // Telecommunications
     indTelecomsEyebrow: "Telecommunications",
     indTelecomsHeroTitle: "Enterprise Technology for Telecoms Operators",
@@ -1277,9 +1276,9 @@ export const translations = {
       "Government agencies require technology infrastructure that meets strict security and compliance requirements, supports large-scale operations, and delivers reliable service to citizens and staff. Proxynet has delivered technology solutions to federal ministries, state government agencies, and public institutions across Nigeria, meeting government procurement requirements and security standards.",
     indGovernmentRole:
       "From secure network infrastructure and command centres to enterprise software and digital transformation — Proxynet is a trusted technology partner for Nigeria's public sector. We understand government procurement processes, security clearance requirements, and the need for long-term support commitments.",
-    indGovernmentCaseTitle: "Command Centre — Federal Government Agency",
+    indGovernmentCaseTitle: "Videowall & Audio — Lagos State House of Assembly",
     indGovernmentCaseOutcome:
-      "Designed and deployed a multi-display command and control centre for a federal government agency, integrating security feeds, infrastructure monitoring, and communications into a unified operational view.",
+      "Deployed 2 × 3x2 videowalls with a complete Bosch audio discussion system and CCTV infrastructure for the Lagos State House of Assembly, enabling high-visibility broadcasting and secure plenary session management.",
     // Education
     indEducationEyebrow: "Education",
     indEducationHeroTitle:
@@ -1290,9 +1289,9 @@ export const translations = {
       "Educational institutions are undergoing a digital transformation. Smart classrooms, campus-wide connectivity, and digital learning tools are becoming essential infrastructure — not optional extras. Through our dedicated EdTech division, Proxynet has deployed smart classroom solutions, campus networks, and digital literacy programmes in schools and universities across Lagos State and beyond.",
     indEducationRole:
       "We provide end-to-end education technology solutions — from interactive classroom displays and campus Wi-Fi to computer lab setup, digital literacy training, and ICT certification programmes. Our EdTech team works directly with school administrators, teachers, and government education agencies.",
-    indEducationCaseTitle: "Smart Classroom Rollout — Lagos State Schools",
+    indEducationCaseTitle: "Nursing College Network Project — WHO Nigeria",
     indEducationCaseOutcome:
-      "Deployed smart classroom solutions across multiple Lagos State schools, equipping over 200 classrooms with interactive displays, structured cabling, and internet connectivity — improving learning outcomes and teacher effectiveness.",
+      "Deployed wireless network infrastructure across nursing colleges in six Nigerian states — Ubiquiti access points, structured cabling, activation and remediation across approximately 13 schools — delivered in 2026 for WHO Nigeria.",
     // Healthcare
     indHealthcareEyebrow: "Healthcare",
     indHealthcareHeroTitle: "Reliable Technology for Healthcare Providers",
@@ -1302,10 +1301,9 @@ export const translations = {
       "Healthcare technology failures can have life-or-death consequences. Reliable connectivity, data security, and system availability are critical requirements for any healthcare technology partner. Proxynet works with hospitals, clinics, and healthcare networks to deliver the network infrastructure, cybersecurity, and communication solutions that support patient care and administrative operations.",
     indHealthcareRole:
       "From hospital network infrastructure and patient data security to unified communications and digital signage — Proxynet provides technology solutions built for healthcare environments. We understand the sensitivity of patient data and the need for zero-downtime infrastructure in clinical settings.",
-    indHealthcareCaseTitle:
-      "Hospital Network Infrastructure — Teaching Hospital",
+    indHealthcareCaseTitle: "Nursing College Network — WHO Nigeria",
     indHealthcareCaseOutcome:
-      "Designed and deployed a campus-wide network infrastructure for a major Lagos teaching hospital, connecting clinical systems, administrative offices, and patient wards with high-availability connectivity and robust data security controls.",
+      "Designed and deployed a wireless network across nursing colleges in six Nigerian states for WHO Nigeria — providing reliable connectivity to healthcare training institutions serving thousands of nursing students.",
     // Retail
     indRetailEyebrow: "Retail",
     indRetailHeroTitle: "Smart Retail Technology for Nigeria's Leading Brands",
@@ -1315,9 +1313,9 @@ export const translations = {
       "Modern retail demands seamless technology — from in-store digital experiences and POS connectivity to back-office systems and security infrastructure. Proxynet works with retail chains, FMCG companies, and blue chip organisations to deliver the technology infrastructure that drives customer experience and operational efficiency.",
     indRetailRole:
       "From digital signage and POS networking to enterprise software and security systems — Proxynet provides the technology backbone for modern retail operations. We design multi-site solutions that scale with your store network and deliver consistent customer experiences across every location.",
-    indRetailCaseTitle: "Digital Signage Network — Retail Chain",
+    indRetailCaseTitle: "Digital Signage & Content Management — Sundry Foods",
     indRetailCaseOutcome:
-      "Deployed a centralised digital signage network across 12 retail locations for a leading Nigerian retail chain, enabling real-time promotional content management and improving in-store customer engagement.",
+      "Replaced 8 faulty Android boxes with new H96 units and reloaded the Reels CMS across all screens at Sundry Foods GRA Junction, Port Harcourt — restoring branded content display on every screen and improving in-store customer engagement.",
     // Billboard Solutions (bb)
     bbEyebrow: "ProBoard by Proxynet",
     bbHeroTitle: "Make Your Message Unmissable",
@@ -1431,11 +1429,11 @@ export const translations = {
     event3Date: "Mar 19, 2026 · 10:00 AM WAT",
     event3Desc: "An exclusive showcase of Unilumin's high-performance LED display technologies — from corporate boardrooms and control rooms to retail malls, houses of worship, broadcast venues, and outdoor architectural displays.",
     // Event data — upcoming
-    upcoming1Name: "GITEX Kenya 2026",
-    upcoming1Date: "Coming Soon",
-    upcoming1Venue: "Nairobi, Kenya",
+    upcoming1Name: "GITEX Nigeria x AI Everything Nigeria 2026",
+    upcoming1Date: "Aug 31 – Sep 3, 2026",
+    upcoming1Venue: "Abuja | Lagos",
     upcoming1Category: "Industry Exhibition",
-    upcoming1Desc: "Proxynet Group will be exhibiting at GITEX Kenya — East Africa's premier technology event. Meet our team, explore our solutions, and connect with technology leaders from across the continent.",
+    upcoming1Desc: "Proxynet will be live at GITEX Nigeria × AI Everything Nigeria 2026 — powering the digital enterprises. Find us at Booth H2-C40. The biggest technology event in Nigeria returns to Abuja and Lagos.",
     upcoming2Name: "Robo-Xplore 2.0",
     upcoming2Date: "30th May 2026 · 10:00 AM – 2:00 PM",
     upcoming2Venue: "Nesama House, 5B Adedeji Close, Opebi Rd, Ikeja, Lagos",
@@ -2536,11 +2534,11 @@ export const translations = {
     event3Date: "19 Mar 2026 · 10h00 WAT",
     event3Desc: "Une vitrine exclusive des technologies d'affichage LED haute performance d'Unilumin — des salles de réunion d'entreprise et salles de contrôle aux centres commerciaux, lieux de culte, studios de diffusion et affichages architecturaux extérieurs. Proxynet est le Distributeur Officiel Unilumin au Nigeria.",
     // Event data — upcoming
-    upcoming1Name: "GITEX Kenya 2026",
-    upcoming1Date: "Bientôt",
-    upcoming1Venue: "Nairobi, Kenya",
-    upcoming1Category: "Exposition Sectorielle",
-    upcoming1Desc: "Proxynet Group exposera au GITEX Kenya — l'événement technologique phare d'Afrique de l'Est. Rencontrez notre équipe, explorez nos solutions et connectez-vous avec des leaders technologiques du continent.",
+    upcoming1Name: "GITEX Nigeria x AI Everything Nigeria 2026",
+    upcoming1Date: "31 Août – 3 Sep 2026",
+    upcoming1Venue: "Abuja | Lagos",
+    upcoming1Category: "Exposition Industrielle",
+    upcoming1Desc: "Proxynet sera présent au GITEX Nigeria × AI Everything Nigeria 2026 — propulser les entreprises numériques. Retrouvez-nous au Stand H2-C40. Le plus grand événement technologique du Nigeria revient à Abuja et Lagos.",
     upcoming2Name: "Robo-Xplore 2.0",
     upcoming2Date: "30 mai 2026 · 10h00 – 14h00",
     upcoming2Venue: "Nesama House, 5B Adedeji Close, Opebi Rd, Ikeja, Lagos",
@@ -3294,10 +3292,9 @@ export const translations = {
       "Les opérations pétrolières et gazières exigent une technologie qui fonctionne dans des environnements difficiles, des sites éloignés et sous une pression opérationnelle extrême. Proxynet a livré des solutions technologiques aux opérateurs en amont et en aval à travers le Nigeria et l'Afrique de l'Ouest.",
     indOilGasRole:
       "Nous fournissons une infrastructure technologique de bout en bout pour les opérations pétrolières et gazières — de la connectivité des sites distants et l'intégration SCADA aux solutions de centres de commandement et à la cybersécurité pour les environnements de technologie opérationnelle (OT).",
-    indOilGasCaseTitle:
-      "Solution VC Logitech Multi-Sites — Opérateur Pétrolier",
+    indOilGasCaseTitle: "Yealink MeetingBoard — ArcelorMittal",
     indOilGasCaseOutcome:
-      "Mise en œuvre d'une solution de vidéoconférence Logitech multi-sites reliant les bureaux de Lagos, Bonny, Port Harcourt et Abuja pour un grand opérateur pétrolier et gazier.",
+      "Déploiement de solutions de collaboration Yealink MeetingBoard chez ArcelorMittal au Nigeria, permettant une vidéoconférence et une collaboration d'équipe fluides entre les équipes de production et de gestion.",
     // Manufacturing
     indManufacturingEyebrow: "Industrie Manufacturière",
     indManufacturingHeroTitle:
@@ -3308,10 +3305,9 @@ export const translations = {
       "Les opérations manufacturières dépendent d'une connectivité transparente entre les systèmes de production, la gestion de la chaîne d'approvisionnement et les applications d'entreprise. Proxynet travaille avec des fabricants à travers le Nigeria et l'Afrique de l'Ouest pour concevoir et déployer les solutions d'infrastructure réseau et d'intégration de systèmes.",
     indManufacturingRole:
       "Du réseau d'atelier à l'intégration ERP et aux solutions de centres de commandement — Proxynet fournit l'épine dorsale technologique pour les opérations manufacturières modernes. Nous connectons les machines, capteurs et systèmes de gestion dans une vue opérationnelle unifiée.",
-    indManufacturingCaseTitle:
-      "Réseau d'Usine & Intégration de Systèmes — Fabricant FMCG",
+    indManufacturingCaseTitle: "Déploiement FireEye WebMPS — Altech West Africa",
     indManufacturingCaseOutcome:
-      "Conception et déploiement d'une infrastructure réseau à l'échelle de l'usine connectant les lignes de production, la gestion des entrepôts et les systèmes ERP pour un fabricant FMCG nigérian de premier plan.",
+      "Déploiement du système de protection contre les logiciels malveillants web FireEye pour Altech West Africa, protégeant leur réseau contre les exploits web zero-day et les rappels multi-protocoles — préservant l'intégrité de leurs opérations.",
     // Telecommunications
     indTelecomsEyebrow: "Télécommunications",
     indTelecomsHeroTitle:
@@ -3334,10 +3330,9 @@ export const translations = {
       "Les agences gouvernementales ont besoin d'une infrastructure technologique qui répond à des exigences strictes de sécurité et de conformité, supporte des opérations à grande échelle et fournit un service fiable aux citoyens et au personnel. Proxynet a livré des solutions technologiques à des ministères fédéraux, des agences gouvernementales étatiques et des institutions publiques à travers le Nigeria.",
     indGovernmentRole:
       "De l'infrastructure réseau sécurisée et des centres de commandement aux logiciels d'entreprise et à la transformation numérique — Proxynet est un partenaire technologique de confiance pour le secteur public nigérian. Nous comprenons les processus d'approvisionnement gouvernementaux et les exigences de sécurité.",
-    indGovernmentCaseTitle:
-      "Centre de Commandement — Agence Gouvernementale Fédérale",
+    indGovernmentCaseTitle: "Videowall & Audio — Assemblée de l'État de Lagos",
     indGovernmentCaseOutcome:
-      "Conception et déploiement d'un centre de commandement et de contrôle multi-écrans pour une agence gouvernementale fédérale, intégrant les flux de sécurité, la surveillance de l'infrastructure et les communications dans une vue opérationnelle unifiée.",
+      "Déploiement de 2 videowalls 3x2 avec un système audio de discussion Bosch complet et une infrastructure CCTV pour l'Assemblée de l'État de Lagos, permettant une diffusion haute visibilité et une gestion sécurisée des sessions plénières.",
     // Education
     indEducationEyebrow: "Éducation",
     indEducationHeroTitle: "Solutions EdTech pour Écoles & Universités",
