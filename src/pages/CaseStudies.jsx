@@ -44,7 +44,7 @@ export default function CaseStudies() {
         {/* Hero */}
         <section className={`${styles.hero} heroScene`}>
           <SectionBlobs variant="dark" />    <div className={styles.overlay} />
-          <div className={styles.heroInner}>
+          <div className={styles.inner}>
             <motion.nav className={styles.breadcrumb} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
               <Link to="/" className={styles.crumb}>{t.home}</Link>
               <ChevronRight size={14} className={styles.sep} />

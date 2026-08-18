@@ -24,7 +24,7 @@ export const getIndustries = (t) => [
       outcome: t.indFinancialCaseOutcome,
       href: '/case-studies/access-bank-videowall',
     },
-    clients: ['UBA', 'Access Bank', 'FCMB', 'Stanbic Bank Ghana', 'Zenith Bank', 'GTBank', 'PIL'],
+    clients: ['UBA', 'Access Bank', 'FCMB', 'Mastercard', 'Stanbic Bank Ghana', 'Ecobank', 'First Atlantic Bank Ghana', 'Express Capital Ghana', 'Oak Pensions', 'GTBank Gambia', 'UMB Ghana', 'PIL'],
   },
   {
     slug: 'oil-gas',
@@ -49,7 +49,7 @@ export const getIndustries = (t) => [
       outcome: t.indOilGasCaseOutcome,
       href: '/case-studies/arcelormittal-yealink-meetingboard',
     },
-    clients: ['ArcelorMittal', 'NETCO', 'Blueseas Maritime', 'Seplat', 'Total Energies'],
+    clients: ['ArcelorMittal', 'Goldfields Ghana', 'Waltersmith Nigeria', 'BRASS LNG Nigeria', 'Oando', 'MRS', 'NNPC', 'Vivo Energy Ghana', 'NETCO'],
   },
   {
     slug: 'manufacturing',
@@ -74,7 +74,7 @@ export const getIndustries = (t) => [
       outcome: t.indManufacturingCaseOutcome,
       href: '/case-studies/altech-fireeye-webmps',
     },
-    clients: ['Altech West Africa', 'Dangote Group', 'BUA Group', 'Flour Mills', 'UAC'],
+    clients: ['Unilever', 'Honeywell', 'PZ Industries', 'Neimeth', 'UAC Nigeria', 'Pernod Ricard Ghana', 'GM Motors Nigeria', 'Jagal Group Nigeria', 'Altech West Africa'],
   },
   {
     slug: 'telecommunications',
@@ -94,7 +94,7 @@ export const getIndustries = (t) => [
       { icon: 'Code2', label: t.solEnterpriseSoftware, href: '/solutions/enterprise-software' },
     ],
     caseStudy: null,
-    clients: ['MTN Nigeria', 'Airtel', 'Glo', '9mobile', 'IHS Towers'],
+    clients: ['Glo', 'Surfline Ghana', 'Metro TV Ghana', 'MTN', 'Airtel', 'Channels TV', 'Galaxy TV', 'Emerge Ghana'],
   },
   {
     slug: 'government',
@@ -119,7 +119,7 @@ export const getIndustries = (t) => [
       outcome: t.indGovernmentCaseOutcome,
       href: '/case-studies',
     },
-    clients: ['Lagos State House of Assembly', 'African Union', 'WHO Nigeria', 'FIRS', 'CBN'],
+    clients: ['Olusegun Obasanjo Presidential Library', 'Federal High Court Abuja', 'International Conference Centre', 'NNPC', 'Anambra State Ministry of Education', 'CBN', 'Lagos State House of Assembly', 'African Union', 'WHO Nigeria'],
   },
   {
     slug: 'education',
@@ -144,7 +144,7 @@ export const getIndustries = (t) => [
       outcome: t.indEducationCaseOutcome,
       href: '/case-studies',
     },
-    clients: ['WHO Nigeria', 'Avicenna College', 'Pampers Private School', 'Divine Confidence Academy', 'Bright Spark Academy'],
+    clients: ['Sunnydale Schools ', 'Unique Heights School ', 'National Open University Nigeria', 'Babcock University', 'Obasanjo Presidential Library', 'Bircham International University'],
   },
   {
     slug: 'healthcare',
@@ -169,7 +169,7 @@ export const getIndustries = (t) => [
       outcome: t.indHealthcareCaseOutcome,
       href: '/case-studies',
     },
-    clients: ['WHO Nigeria', 'Reddington Hospital', 'Eko Hospital', 'Tunwase Paediatric Centre'],
+    clients: ['WHO Nigeria'],
   },
   {
     slug: 'retail',
@@ -194,7 +194,7 @@ export const getIndustries = (t) => [
       outcome: t.indRetailCaseOutcome,
       href: '/case-studies/sundry-foods-ph-signage',
     },
-    clients: ['Sundry Foods', 'Bloominggreen', 'Doyen', 'Proper Child', 'Logo Lagoon'],
+    clients: ['Sundry Foods', 'Nigerian Breweries', 'British American Tobacco', 'KFC'],
   },
 ]
 

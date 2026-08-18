@@ -1179,12 +1179,26 @@ export const translations = {
     cs12Category: "Video Conferencing & Collaboration",
     cs12Excerpt:
       "Full Yealink MVC860 system installed at PIL — MCore Pro, RCH40, MSpeaker, and MTouch all connected and commissioned.",
+    cs14Title: "GGGI — Professional Conference System Deployment",
+    cs14Category: "Conference System Deployment",
+    cs14Excerpt:
+      "Professional conferencing system deployed for Global Green Growth Institute operations in Côte d'Ivoire.",
+    cs15Title: "Ruyat Oil / Olam Agri — CCTV & Network Upgrade",
+    cs15Category: "CCTV & Network Infrastructure",
+    cs15Excerpt:
+      "Comprehensive CCTV and network infrastructure upgrade with fibre connectivity and integrated cabling.",
+    cs16Title: "UNDP — UN House Meeting-Room Voice-Lift Deployment",
+    cs16Category: "Audio Enhancement & Integration",
+    cs16Excerpt:
+      "Speech-intelligibility enhancement across UN House meeting rooms with professional audio integration.",
     // Case study industries (for filter + display)
     csIndFinancial: "Financial Services",
     csIndMedia: "Media & Publishing",
     csIndFoodBeverage: "Food & Beverage",
     csIndBanking: "Banking & Finance",
     csIndAviation: "Aviation",
+    csIndInternationalDev: "International Development",
+    csIndEnergyManufacturing: "Energy & Manufacturing",
     // Case study countries (Proxynet office locations)
     csCountryNigeria: "Nigeria",
     csCountryGhana: "Ghana",
@@ -3169,6 +3183,18 @@ export const translations = {
     cs12Category: "Vidéoconférence & Collaboration",
     cs12Excerpt:
       "Système Yealink MVC860 entièrement installé chez PIL — MCore Pro, RCH40, MSpeaker et MTouch tous connectés et mis en service.",
+    cs14Title: "GGGI — Déploiement du Système de Conférence Professionnel",
+    cs14Category: "Déploiement du Système de Conférence",
+    cs14Excerpt:
+      "Système de conférence professionnel déployé pour les opérations de l'Institut Mondial de la Croissance Verte en Côte d'Ivoire.",
+    cs15Title: "Ruyat Oil / Olam Agri — Mise à Niveau CCTV & Réseau",
+    cs15Category: "Infrastructure CCTV & Réseau",
+    cs15Excerpt:
+      "Mise à niveau complète de l'infrastructure CCTV et réseau avec connectivité fibre et câblage intégré.",
+    cs16Title: "UNDP — Déploiement de Renforcement Vocal dans les Salles de Réunion du Siège de l'ONU",
+    cs16Category: "Amélioration Audio & Intégration",
+    cs16Excerpt:
+      "Amélioration de l'intelligibilité de la parole dans les salles de réunion du Siège de l'ONU avec intégration audio professionnelle.",
     // Case study content — clientOverview, solution, technologies, results
     // Access Bank
     cs2ClientOverview: "Access Bank est l'une des plus grandes institutions financières du Nigeria, avec des opérations dans plusieurs pays africains. Leur agence Ikota avait besoin d'une solution videowall à fort impact pour leur hall bancaire.",
@@ -3239,6 +3265,8 @@ export const translations = {
     csIndFoodBeverage: "Alimentation & Boissons",
     csIndBanking: "Banque & Finance",
     csIndAviation: "Aviation",
+    csIndInternationalDev: "Développement International",
+    csIndEnergyManufacturing: "Énergie & Fabrication",
     // Case study countries
     csCountryNigeria: "Nigéria",
     csCountryGhana: "Ghana",
