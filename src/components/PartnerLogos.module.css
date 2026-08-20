@@ -69,10 +69,28 @@
   object-fit: contain;
 }
 
+.carouselLogoAlgoSec {
+  display: block;
+  width: 190px;
+  height: 62px;
+  object-fit: contain;
+  transform: scale(1.35);
+}
+
+.carouselLogoCrowdStrike {
+  display: block;
+  width: 190px;
+  height: 52px;
+  object-fit: contain;
+  background: #f0f2f5;
+  border-radius: 8px;
+  padding: 8px 16px;
+}
+
 /* Extra large — FireEye */
 .carouselLogoXL {
   max-height: 70px;
-  max-width: 160px;
+  max-width: 190px;
   width: auto;
   object-fit: contain;
 }
@@ -109,13 +127,20 @@
 
 /* Logos with white backgrounds — wrap in a grey pill so they're visible on white */
 .carouselLogoBoxed {
-  max-height: 36px;
-  max-width: 120px;
+  max-height: 44px;
+  max-width: 160px;
   width: auto;
   object-fit: contain;
   background: #f0f2f5;
   border-radius: 8px;
   padding: 6px 14px;
+}
+
+.carouselLogoWide {
+  max-height: 44px;
+  max-width: 180px;
+  width: auto;
+  object-fit: contain;
 }
 /* Wide variant for landscape SVG logos like Unilumin */
 .carouselLogoWide {

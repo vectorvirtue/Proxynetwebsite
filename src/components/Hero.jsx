@@ -4,15 +4,18 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useLang } from '../context/LanguageContext'
 import img1 from '../assets/idehub.jpg'
-import img2 from '../assets/Picture1.jpg'
-import img3 from '../assets/Picture2.png'
+import comforteImage from '../assets/comforte1.jpg'
+import img2 from '../assets/inetco.avif'
+import img3 from '../assets/fortinet.webp'
 import img4 from '../assets/Picture3.png'
 import img5 from '../assets/Picture4.png'
 import img6 from '../assets/Picture5.png'
 import styles from './Hero.module.css'
 
 const VIDEO_ID = 'JBkgS1Es770'
-const images = [img1, img2, img3, img4, img5, img6]
+const PAM_VIDEO_ID = 'nwqVvNvv3Yk'
+const IN_VIDEO_ID = 'vTaAntbu49c'
+const images = [img1, comforteImage, img3, img2, img5, img6]
 const TOTAL = 1 + images.length
 
 export default function Hero() {
@@ -34,12 +37,6 @@ export default function Hero() {
       title: t.slide1Title,
       accent: t.slide1Accent,
       sub: t.slide1Sub,
-      isEvent: true,
-      eventDate: t.slide1EventDate,
-      eventTime: t.slide1EventTime,
-      eventVenue: t.slide1EventVenue,
-      eventCta: t.slide1EventCta,
-      eventCtaHref: 'http://events.proxynetgroup.com/',
     },
     {
       eyebrow: t.slide2Eyebrow,
@@ -104,12 +101,12 @@ export default function Hero() {
       onTouchEnd={handleTouchEnd}>
       {/* Background */}
       <div className={styles.videoBg} aria-hidden="true">
-        {current === 0 ? (
+        {current === 0 || current === 1 || current === 5 ? (
           <iframe
-            key="video"
+            key={current}
             className={styles.youtubeFrame}
-            src={`https://www.youtube.com/embed/${VIDEO_ID}?autoplay=1&mute=1&loop=1&playlist=${VIDEO_ID}&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1`}
-            title="Hero background video"
+            src={`https://www.youtube.com/embed/${current === 0 ? VIDEO_ID : current === 1 ? PAM_VIDEO_ID : IN_VIDEO_ID}?autoplay=1&mute=1&loop=1&playlist=${current === 0 ? VIDEO_ID : current === 1 ? PAM_VIDEO_ID : IN_VIDEO_ID}&controls=0&cc_load_policy=0&disablekb=1&showinfo=0&rel=0&modestbranding=1&playsinline=1`}
+            title={current === 0 ? 'Hero background video' : current === 1 ? 'BeyondTrust PAM video' : 'INETCO fraud detection video'}
             allow="autoplay; encrypted-media"
           />
         ) : (

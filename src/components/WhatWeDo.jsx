@@ -11,6 +11,7 @@ const getCategories = (t) => [
   { icon: <Code2 size={32} />, label: t.enterpriseSoftware, desc: t.enterpriseSoftwareDesc, detail: t.enterpriseSoftwareDetail },
   { icon: <Network size={32} />, label: t.enterpriseNetworking, desc: t.enterpriseNetworkingDesc, detail: t.enterpriseNetworkingDetail },
   { icon: <ShieldCheck size={32} />, label: t.networkSecurity, desc: t.networkSecurityDesc, detail: t.networkSecurityDetail },
+  { icon: <ShieldCheck size={32} />, label: t.cybersecuritySolutions, desc: t.cybersecuritySolutionsDesc, detail: t.cybersecuritySolutionsDetail },
   { icon: <ServerCog size={32} />, label: t.disasterRecovery, desc: t.disasterRecoveryDesc, detail: t.disasterRecoveryDetail },
   { icon: <Globe size={32} />, label: t.enterpriseNetworkingWan, desc: t.enterpriseNetworkingWanDesc, detail: t.enterpriseNetworkingWanDetail },
   { icon: <Smartphone size={32} />, label: t.mobileApps, desc: t.mobileAppsDesc, detail: t.mobileAppsDetail },

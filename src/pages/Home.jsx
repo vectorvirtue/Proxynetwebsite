@@ -1,6 +1,7 @@
 import Hero from '../components/Hero'
 import StatsBar from '../components/StatsBar'
 import WhatWeDo from '../components/WhatWeDo'
+import CybersecuritySolutions from '../components/CybersecuritySolutions'
 import Industries from '../components/Industries'
 import FeaturedProjects from '../components/FeaturedProjects'
 import PartnerLogos from '../components/PartnerLogos'
@@ -33,6 +34,7 @@ export default function Home() {
         <Hero />
         <StatsBar />
         <WhatWeDo />
+        <CybersecuritySolutions />
         <Industries />
         <FeaturedProjects />
         <PartnerLogos />

@@ -167,6 +167,31 @@ export const translations = {
       "Protecting your infrastructure from threats, inside and out.",
     networkSecurityDetail:
       "Our security team implements firewalls, intrusion detection systems, anti-virus solutions, and VPNs to protect your organisation from both external attacks and internal vulnerabilities.",
+    cybersecuritySolutions: "Cybersecurity Solutions",
+    cybersecuritySolutionsDesc:
+      "End-to-end protection across identities, data, networks, endpoints, and transactions.",
+    cybersecuritySolutionsDetail:
+      "We combine trusted cybersecurity technologies with professional services to assess risk, protect critical assets, detect threats, and support resilient operations.",
+    cybersecuritySolutionsEyebrow: "Proxynet Cybersecurity Solutions",
+    cybersecuritySolutionsHeading: "Security Expertise Across Your Attack Surface",
+    cybersecuritySolutionsIntro:
+      "A coordinated portfolio of professional services and trusted technology partners for protecting identities, data, networks, endpoints, and transactions.",
+    cybersecurityTableService: "Service / Capability",
+    cybersecurityTableVendor: "Vendor(s)",
+    cybersecurityTableOffering: "Primary Offering",
+    cybersecurityRows: [
+      ["Penetration Testing", "Proxynet Professional Services", "Network, application, and infrastructure penetration testing"],
+      ["Vulnerability Assessment & Management", "Fortinet", "Security posture, vulnerability, and attack-surface capabilities"],
+      ["Privileged Access Management", "BeyondTrust", "PAM, privileged identity, credential management, and remote access"],
+      ["Identity & Authentication", "V-Key", "Digital identity, authentication, authorization, and cryptographic security"],
+      ["Agentic AI Security", "Forcepoint", "AI-agent security, AI governance, monitoring, and data protection"],
+      ["Cybersecurity / Network Security", "Comforte", "Data-centric security, tokenization, and sensitive data protection"],
+      ["Endpoint Security / EDR / XDR", "Fortinet", "Firewalls, secure networking, SASE, endpoint, and SOC security"],
+      ["Cyber Threat Intelligence & Forensics", "CrowdStrike; Fortinet", "Endpoint protection, threat detection, and response"],
+      ["Fraud Prevention Services", "INETCO; V-Key", "Threat intelligence, threat hunting, incident investigation, transaction monitoring, and digital authentication"],
+      ["Network Performance & Optimization", "INETCO; AlgoSec; Fortinet", "Performance monitoring, transaction visibility, and network optimization"],
+      ["Network Security Policy Management", "AlgoSec", "Firewall policy management, application connectivity, and policy automation"],
+    ],
     disasterRecovery: "Disaster Recovery",
     disasterRecoveryDesc:
       "Keeping your data safe and your business running when things go wrong.",
@@ -1001,45 +1026,41 @@ export const translations = {
     slide0Sub:
       "World-class connectivity, infrastructure, and managed services for businesses across Africa — built for reliability, designed for growth.",
 
-    slide1Eyebrow: "Upcoming Event — May 6, 2026",
-    slide1Title: "Huawei IdeaHub S3",
-    slide1Accent: "Launch",
+    slide1Eyebrow: "Privileged Access Management",
+    slide1Title: "Secure Every",
+    slide1Accent: "Privileged Access",
     slide1Sub:
-      "Experience the Future of Smart Collaboration. Join us at Four Points by Sheraton, VI, Lagos. 10:00AM WAT.",
-    slide1EventDate: "May 6, 2026",
-    slide1EventTime: "10:00AM WAT",
-    slide1EventVenue: "Four Points by Sheraton, VI, Lagos",
-    slide1EventCta: "Register Now",
+      "Protect critical systems with BeyondTrust Privileged Access Management (PAM): control, monitor, and audit privileged identities across your organization.",
 
-    slide2Eyebrow: "Smart School Solutions",
-    slide2Title: "Empowering the Next",
-    slide2Accent: "Generation of Talent",
+    slide2Eyebrow: "Data-Centric Security",
+    slide2Title: "Discover and Protect",
+    slide2Accent: "Sensitive Data",
     slide2Sub:
-      "Proxynet EdTech delivers smart classrooms, digital literacy programmes, and ICT infrastructure to schools across West Africa.",
+      "With Comforte, discover, classify, and protect sensitive data across databases, cloud stores, and files while strengthening privacy compliance.",
 
-    slide3Eyebrow: "NOC & Command Centres",
-    slide3Title: "Real-Time Monitoring",
-    slide3Accent: "at Scale",
+    slide3Eyebrow: "Fortinet Network Security",
+    slide3Title: "Defend Every",
+    slide3Accent: "Connection",
     slide3Sub:
-      "From 15-display NOC solutions to full command centres — we design and deploy infrastructure that keeps your operations visible.",
+      "Secure your users, applications, and infrastructure with Fortinet firewalls and security solutions built for visibility, control, and resilient connectivity.",
 
-    slide4Eyebrow: "Systems Integration",
-    slide4Title: "Technology That",
-    slide4Accent: "Works Together",
+    slide4Eyebrow: "VKey Data Protection",
+    slide4Title: "Keep Sensitive Data",
+    slide4Accent: "Out of Reach",
     slide4Sub:
-      "We connect your hardware, software, and networks into one seamless system — eliminating silos and driving operational efficiency.",
+      "Protect payment and customer data with VKey tokenization, reducing exposure while supporting secure transactions and compliance.",
 
-    slide5Eyebrow: "AV & Videowall Solutions",
-    slide5Title: "Displays That",
-    slide5Accent: "Command Attention",
+    slide5Eyebrow: "INETCO Fraud Detection",
+    slide5Title: "See Risk",
+    slide5Accent: "Before It Spreads",
     slide5Sub:
-      "From boardroom videowalls to large-scale event AV — we design, deploy, and support world-class display solutions.",
+      "Monitor payment traffic in real time with INETCO, detect suspicious activity faster, and protect every transaction with actionable intelligence.",
 
-    slide6Eyebrow: "Cybersecurity",
-    slide6Title: "Protecting Your",
-    slide6Accent: "Infrastructure",
+    slide6Eyebrow: "Audio Visual Solutions",
+    slide6Title: "Bring Your Spaces",
+    slide6Accent: "To Life",
     slide6Sub:
-      "Firewalls, intrusion detection, VPNs, and disaster recovery — we secure your business from threats inside and out.",
+      "Create smarter, more engaging spaces with professional displays, videowalls, video conferencing, and audio solutions designed for seamless collaboration.",
     projectsDelivered: "Projects Delivered",
     countriesServed: "Countries Served",
     globalPartners: "Global Technology Partners",
@@ -2143,6 +2164,31 @@ export const translations = {
       "Protéger votre infrastructure contre les menaces internes et externes.",
     networkSecurityDetail:
       "Notre équipe de sécurité met en œuvre des pare-feux, des systèmes de détection d'intrusion, des solutions antivirus et des VPN.",
+    cybersecuritySolutions: "Solutions de Cybersécurité",
+    cybersecuritySolutionsDesc:
+      "Une protection de bout en bout des identités, données, réseaux, terminaux et transactions.",
+    cybersecuritySolutionsDetail:
+      "Nous combinons des technologies de cybersécurité fiables et des services professionnels pour évaluer les risques, protéger les actifs critiques et détecter les menaces.",
+    cybersecuritySolutionsEyebrow: "Solutions de Cybersécurité Proxynet",
+    cybersecuritySolutionsHeading: "Une Expertise de Sécurité sur Toute Votre Surface d'Attaque",
+    cybersecuritySolutionsIntro:
+      "Un portefeuille coordonné de services professionnels et de partenaires technologiques fiables pour protéger les identités, données, réseaux, terminaux et transactions.",
+    cybersecurityTableService: "Service / Capacité",
+    cybersecurityTableVendor: "Fournisseur(s)",
+    cybersecurityTableOffering: "Offre Principale",
+    cybersecurityRows: [
+      ["Tests d'Intrusion", "Services Professionnels Proxynet", "Tests d'intrusion réseau, applicatifs et d'infrastructure"],
+      ["Évaluation et Gestion des Vulnérabilités", "Fortinet", "Posture de sécurité, vulnérabilités et surface d'attaque"],
+      ["Gestion des Accès Privilégiés", "BeyondTrust", "PAM, identités privilégiées, gestion des identifiants et accès à distance"],
+      ["Identité et Authentification", "V-Key", "Identité numérique, authentification, autorisation et sécurité cryptographique"],
+      ["Sécurité de l'IA Agentique", "Forcepoint", "Sécurité des agents IA, gouvernance, surveillance et protection des données"],
+      ["Cybersécurité / Sécurité Réseau", "Comforte", "Sécurité centrée sur les données, tokenisation et protection des données sensibles"],
+      ["Sécurité des Terminaux / EDR / XDR", "Fortinet", "Pare-feux, réseaux sécurisés, SASE, sécurité des terminaux et SOC"],
+      ["Renseignement sur les Menaces et Forensique", "CrowdStrike; Fortinet", "Protection des terminaux, détection et réponse aux menaces"],
+      ["Services de Prévention de la Fraude", "INETCO; V-Key", "Renseignement sur les menaces, chasse aux menaces, investigation, surveillance des transactions et authentification numérique"],
+      ["Performance et Optimisation Réseau", "INETCO; AlgoSec; Fortinet", "Surveillance des performances, visibilité des transactions et optimisation réseau"],
+      ["Gestion des Politiques de Sécurité Réseau", "AlgoSec", "Gestion des politiques de pare-feu, connectivité applicative et automatisation"],
+    ],
     disasterRecovery: "Reprise après Sinistre",
     disasterRecoveryDesc:
       "Garder vos données en sécurité et votre entreprise opérationnelle en cas de problème.",
@@ -3058,45 +3104,41 @@ export const translations = {
     slide0Sub:
       "Connectivité, infrastructure et services gérés de classe mondiale pour les entreprises à travers l'Afrique — fiables et conçus pour la croissance.",
 
-    slide1Eyebrow: "Événement à Venir — 6 Mai 2026",
-    slide1Title: "Huawei IdeaHub S3",
-    slide1Accent: "Lancement",
+    slide1Eyebrow: "Gestion des Accès Privilégiés",
+    slide1Title: "Sécurisez Chaque",
+    slide1Accent: "Accès Privilégié",
     slide1Sub:
-      "Découvrez l'Avenir de la Collaboration Intelligente. Rejoignez-nous au Four Points by Sheraton, VI, Lagos. 10h00 WAT.",
-    slide1EventDate: "6 Mai 2026",
-    slide1EventTime: "10h00 WAT",
-    slide1EventVenue: "Four Points by Sheraton, VI, Lagos",
-    slide1EventCta: "S'inscrire",
+      "Protégez les systèmes critiques avec la gestion des accès privilégiés (PAM) de BeyondTrust : contrôlez, surveillez et auditez les identités privilégiées de votre organisation.",
 
-    slide2Eyebrow: "Solutions pour Écoles Intelligentes",
-    slide2Title: "Former la Prochaine",
-    slide2Accent: "Génération de Talents",
+    slide2Eyebrow: "Sécurité des Données",
+    slide2Title: "Découvrez et Protégez",
+    slide2Accent: "Vos Données Sensibles",
     slide2Sub:
-      "Proxynet EdTech déploie des salles de classe intelligentes, des programmes d'alphabétisation numérique et des infrastructures TIC dans les écoles d'Afrique de l'Ouest.",
+      "Avec Comforte, découvrez, classez et protégez les données sensibles dans les bases de données, le cloud et les fichiers, tout en renforçant votre conformité.",
 
-    slide3Eyebrow: "NOC & Centres de Commandement",
-    slide3Title: "Surveillance en Temps Réel",
-    slide3Accent: "à Grande Échelle",
+    slide3Eyebrow: "Sécurité Réseau Fortinet",
+    slide3Title: "Défendez Chaque",
+    slide3Accent: "Connexion",
     slide3Sub:
-      "Des solutions NOC à 15 écrans aux centres de commandement complets — nous concevons et déployons l'infrastructure qui garde vos opérations visibles.",
+      "Sécurisez vos utilisateurs, applications et infrastructures avec les pare-feux et solutions Fortinet, conçus pour une connectivité visible, contrôlée et résiliente.",
 
-    slide4Eyebrow: "Intégration de Systèmes",
-    slide4Title: "Une Technologie Qui",
-    slide4Accent: "Fonctionne Ensemble",
+    slide4Eyebrow: "Protection des Données VKey",
+    slide4Title: "Gardez les Données",
+    slide4Accent: "Sensibles à l'Abri",
     slide4Sub:
-      "Nous connectons votre matériel, vos logiciels et vos réseaux en un système unifié — éliminant les silos et améliorant l'efficacité opérationnelle.",
+      "Protégez les données de paiement et des clients avec la tokenisation VKey, réduisant l'exposition tout en soutenant des transactions sécurisées et la conformité.",
 
-    slide5Eyebrow: "Solutions AV & Videowalls",
-    slide5Title: "Des Écrans Qui",
-    slide5Accent: "Captent l'Attention",
+    slide5Eyebrow: "Détection de Fraude INETCO",
+    slide5Title: "Identifiez les Risques",
+    slide5Accent: "Avant leur Propagation",
     slide5Sub:
-      "Des videowalls de salle de réunion aux événements AV à grande échelle — nous concevons, déployons et supportons des solutions d'affichage de classe mondiale.",
+      "Surveillez les paiements en temps réel avec INETCO, détectez plus rapidement les activités suspectes et protégez chaque transaction grâce à des informations exploitables.",
 
-    slide6Eyebrow: "Cybersécurité",
-    slide6Title: "Protéger Votre",
-    slide6Accent: "Infrastructure",
+    slide6Eyebrow: "Solutions Audiovisuelles",
+    slide6Title: "Donnez Vie à Vos",
+    slide6Accent: "Espaces",
     slide6Sub:
-      "Pare-feux, détection d'intrusion, VPN et reprise après sinistre — nous sécurisons votre entreprise contre les menaces internes et externes.",
+      "Créez des espaces plus intelligents et engageants grâce à des écrans professionnels, des murs vidéo, la visioconférence et des solutions audio conçues pour une collaboration fluide.",
     projectsDelivered: "Projets Réalisés",
     countriesServed: "Pays Desservis",
     globalPartners: "Partenaires Technologiques Mondiaux",

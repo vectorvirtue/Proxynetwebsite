@@ -47,7 +47,21 @@ import lgLogo from '../assets/lg.png'
 import yubico from '../assets/yubico.jpg'
 import cyxtera from '../assets/cystera.jpg'
 import mcafeeLogo from '../assets/mcafee.png'
+import comforteLogo from '../assets/comforte.png'
+import vkeys from '../assets/vkey.jpeg'
+import fortinet from '../assets/logo_fortinet.png'
+import forcepointLogo from '../assets/Forcepoint_Logo_New.webp'
+import crowdstrikeLogo from '../assets/crowdstrike.svg'
+import algosecLogo from '../assets/algosec.avif'
 const partners = [  
+  {logo: fortinet, name: 'Fortinet', tall: true  },
+   { logo: comforteLogo,   name: 'Comforte' },
+{logo: vkeys,   name: 'VKeys' },
+{logo: algosecLogo, name: 'AlgoSec', logoClass: styles.carouselLogoAlgoSec },
+{logo: crowdstrikeLogo, name: 'CrowdStrike', logoClass: styles.carouselLogoCrowdStrike },
+{logo: forcepointLogo,   name: 'Forcepoint', tall: true  },
+   {logo: beyondLogo,    name: 'BeyondTrust', tall: true  },
+{logo: inetcoLogo,    name: 'Inetco', tall: true  },
   { logo: samsungLogo,   name: 'Samsung' },
    { logo: leyardLogo,   name: 'Leyard', boxed: true, square:true },
   { logo: logitechLogo,  name: 'Logitech',  tall: true  },
@@ -65,9 +79,6 @@ const partners = [
   { logo: sennheiserLogo, name: 'Sennheiser', size: 'xl' },
   { logo: maxhubLogo,    name: 'Maxhub' },
    { logo: makeblockLogo,    name: 'MakeBlock', tall:true },
-  
-{logo: beyondLogo,    name: 'BeyondTrust', tall: true  },
-{logo: inetcoLogo,    name: 'Inetco', tall: true  },
 {logo: krammerLogo,    name: 'Kramer', tall: true  },
   { logo: huaweiLogo,    name: 'Huawei' },
    { logo:acebottLogo, name: 'Acebott', tall: true },
@@ -132,14 +143,14 @@ export default function PartnerLogos() {
                   <img
                     src={p.logo}
                     alt={p.name}
-                    className={
+                    className={p.logoClass || (
                       p.size === 'xl' ? styles.carouselLogoXL :
                       p.tall ? styles.carouselLogoTall :
                       p.wide ? styles.carouselLogoWide :
                       p.square ? styles.carouselLogoSquare :
                       p.boxed ? styles.carouselLogoBoxed :
                       styles.carouselLogo
-                    }
+                    )}
                   />
                 ) : (
                   <span className={styles.carouselName}>{p.name}</span>
