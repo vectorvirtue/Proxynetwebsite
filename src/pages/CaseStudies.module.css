@@ -3,7 +3,7 @@
   min-height: 96vh;
 background-image: 
     linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), 
-    url('src/assets/WhatsApp Image 2026-07-31 at 10.29.08 (2).jpeg');  background-size: cover;
+    url('../assets/WhatsApp Image 2026-07-31 at 10.29.08 (2).jpeg');  background-size: cover;
   background-position: center 20%;
   background-repeat: no-repeat;
   overflow: hidden;

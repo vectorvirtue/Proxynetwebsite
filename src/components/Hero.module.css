@@ -91,7 +91,7 @@
 .videoOverlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 10, 20, 0.8);
+  background: rgba(0, 10, 20, 0.65);
   pointer-events: none;
 }
 
