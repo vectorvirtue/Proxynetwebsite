@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight, ShieldCheck } from 'lucide-react'
 import { useLang } from '../context/LanguageContext'
 import SectionBlobs from './SectionBlobs'
-import penetrationTestingImage from '../assets/netowrk and penetration.jpg'
-import securityPostureImage from '../assets/security posture.jpg'
+import penetrationTestingImage from '../assets/penetrationtesting.jpeg'
+import securityPostureImage from '../assets/vulnerabilityassessment.jpeg'
 import pamImage from '../assets/pam beyond trust.png'
 import digitalAuthImage from '../assets/digital authorization.jpg'
 import fortinetImage from '../assets/fortinet.png'
@@ -12,9 +12,9 @@ import dataProtectionImage from '../assets/data protection.jpg'
 import endpointProtectionImage from '../assets/endpointprotection.jpg'
 import socSecurityImage from '../assets/soc security.jpg'
 import incidentInvestigationImage from '../assets/incident investigation.jpg'
+import fraudPreventionImage from '../assets/fraudprevention.jpeg'
 import performanceMonitoringImage from '../assets/performancemonitoring.jpg'
 import firewallPolicyImage from '../assets/firewallpolicy.jpg'
-import inetcoImage from '../assets/inetco.avif'
 import beyondTrustLogo from '../assets/BeyondTrust.jpg'
 import vkeyLogo from '../assets/vkey.jpeg'
 import fortinetLogo from '../assets/logo_fortinet.png'
@@ -39,7 +39,7 @@ export default function CybersecuritySolutions() {
     { row: 5, image: dataProtectionImage, logos: [comforteLogo] },
     { row: 6, image: endpointProtectionImage, logos: [fortinetLogo] },
     { row: 7, image: incidentInvestigationImage, logos: [crowdstrikeLogo, fortinetLogo] },
-    { row: 8, image: socSecurityImage, logos: [inetcoLogo, vkeyLogo] },
+    { row: 8, image: fraudPreventionImage, logos: [inetcoLogo, vkeyLogo] },
     { row: 9, image: performanceMonitoringImage, logos: [inetcoLogo, algosecLogo, fortinetLogo] },
     { row: 10, image: firewallPolicyImage, logos: [algosecLogo] },
   ]
@@ -128,7 +128,7 @@ export default function CybersecuritySolutions() {
               </motion.div>
             </AnimatePresence>
 
-            <div className={styles.logoRow} aria-label={`${vendor} logos`}>
+            <div className={styles.logoRow} aria-label={`${vendor} logos`} data-slide={current}>
               {solution.logos.length > 0 ? solution.logos.map((logo, index) => (
                 <img key={`${vendor}-${index}`} src={logo} alt="" className={styles.partnerLogo} />
               )) : <span className={styles.logoFallback}>{logoFallback}</span>}

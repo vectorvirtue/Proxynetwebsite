@@ -178,6 +178,26 @@
 }
 
 .partnerLogo { max-width: 130px; max-height: 42px; width: auto; object-fit: contain; background: #f4f7f9; border: 1px solid rgba(0, 31, 51, 0.08); border-radius: 6px; padding: 5px 9px; }
+
+/* Much larger logos for slides 7, 9, and 10 (indices 7, 9, 10) */
+.logoRow[data-slide="7"] .partnerLogo,
+.logoRow[data-slide="9"] .partnerLogo,
+.logoRow[data-slide="10"] .partnerLogo {
+  max-width: 220px;
+  max-height: 72px;
+  padding: 12px 18px;
+}
+
+@media (max-width: 768px) {
+  .logoRow[data-slide="7"] .partnerLogo,
+  .logoRow[data-slide="9"] .partnerLogo,
+  .logoRow[data-slide="10"] .partnerLogo {
+    max-width: 160px;
+    max-height: 56px;
+    padding: 10px 14px;
+  }
+}
+
 .logoFallback { color: var(--navy); font-size: 14px; font-weight: 700; text-align: center; }
 
 .controls { display: flex; align-items: center; gap: 16px; }
