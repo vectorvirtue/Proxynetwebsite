@@ -129,9 +129,15 @@ export default function CybersecuritySolutions() {
             </AnimatePresence>
 
             <div className={styles.logoRow} aria-label={`${vendor} logos`} data-slide={current}>
-              {solution.logos.length > 0 ? solution.logos.map((logo, index) => (
-                <img key={`${vendor}-${index}`} src={logo} alt="" className={styles.partnerLogo} />
-              )) : <span className={styles.logoFallback}>{logoFallback}</span>}
+              {solution.logos.length > 0 ? solution.logos.map((logo, index) => {
+                // Determine logo-specific class based on the logo source
+                let logoClass = styles.partnerLogo;
+                if (logo === fortinetLogo) logoClass += ` ${styles.logoFortinet}`;
+                if (logo === algosecLogo) logoClass += ` ${styles.logoAlgosec}`;
+                if (logo === inetcoLogo) logoClass += ` ${styles.logoInetco}`;
+                
+                return <img key={`${vendor}-${index}`} src={logo} alt="" className={logoClass} />;
+              }) : <span className={styles.logoFallback}>{logoFallback}</span>}
             </div>
 
             <div className={styles.controls}>
