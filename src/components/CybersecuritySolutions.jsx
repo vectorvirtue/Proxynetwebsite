@@ -48,6 +48,9 @@ export default function CybersecuritySolutions() {
 
   const solution = solutions[current]
   const [service, vendor, offering] = t.cybersecurityRows[solution.row]
+  const prevSolutionLabel = t.cybersecurityPreviousSolution || 'Previous solution'
+  const nextSolutionLabel = t.cybersecurityNextSolution || 'Next solution'
+  const logoFallback = t.cybersecurityLogoFallback || 'Proxynet Professional Services'
   const variants = {
     enter: (dir) => ({ x: dir > 0 ? 80 : -80, opacity: 0 }),
     center: { x: 0, opacity: 1, transition: { duration: 0.4, ease: 'easeOut' } },
@@ -120,17 +123,22 @@ export default function CybersecuritySolutions() {
             <div className={styles.logoRow} aria-label={`${vendor} logos`}>
               {solution.logos.length > 0 ? solution.logos.map((logo, index) => (
                 <img key={`${vendor}-${index}`} src={logo} alt="" className={styles.partnerLogo} />
-              )) : <span className={styles.logoFallback}>Proxynet Professional Services</span>}
+              )) : <span className={styles.logoFallback}>{logoFallback}</span>}
             </div>
 
             <div className={styles.controls}>
-              <button className={styles.arrow} onClick={() => go(-1)} aria-label="Previous solution"><ChevronLeft size={20} /></button>
+              <button className={styles.arrow} onClick={() => go(-1)} aria-label={prevSolutionLabel}><ChevronLeft size={20} /></button>
               <div className={styles.dots}>
                 {solutions.map((_, index) => (
-                  <button key={index} className={index === current ? `${styles.dot} ${styles.dotActive}` : styles.dot} onClick={() => { setDirection(index > current ? 1 : -1); setCurrent(index) }} aria-label={`Solution ${index + 1}`} />
+                  <button
+                    key={index}
+                    className={index === current ? `${styles.dot} ${styles.dotActive}` : styles.dot}
+                    onClick={() => { setDirection(index > current ? 1 : -1); setCurrent(index) }}
+                    aria-label={`${t.cybersecuritySolutionLabel || 'Solution'} ${index + 1}`}
+                  />
                 ))}
               </div>
-              <button className={styles.arrow} onClick={() => go(1)} aria-label="Next solution"><ChevronRight size={20} /></button>
+              <button className={styles.arrow} onClick={() => go(1)} aria-label={nextSolutionLabel}><ChevronRight size={20} /></button>
             </div>
           </div>
         </motion.div>

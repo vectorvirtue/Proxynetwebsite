@@ -176,6 +176,10 @@ export const translations = {
     cybersecuritySolutionsHeading: "Security Expertise Across Your Attack Surface",
     cybersecuritySolutionsIntro:
       "A coordinated portfolio of professional services and trusted technology partners for protecting identities, data, networks, endpoints, and transactions.",
+    cybersecurityPreviousSolution: "Previous solution",
+    cybersecurityNextSolution: "Next solution",
+    cybersecuritySolutionLabel: "Solution",
+    cybersecurityLogoFallback: "Proxynet Professional Services",
     cybersecurityTableService: "Service / Capability",
     cybersecurityTableVendor: "Vendor(s)",
     cybersecurityTableOffering: "Primary Offering",
@@ -1039,8 +1043,8 @@ export const translations = {
       "With Comforte, discover, classify, and protect sensitive data across databases, cloud stores, and files while strengthening privacy compliance.",
 
     slide3Eyebrow: "Fortinet Network Security",
-    slide3Title: "Defend Every",
-    slide3Accent: "Connection",
+    slide3Title: "Defend Every Network,",
+    slide3Accent: "Every Connection",
     slide3Sub:
       "Secure your users, applications, and infrastructure with Fortinet firewalls and security solutions built for visibility, control, and resilient connectivity.",
 
@@ -1051,14 +1055,14 @@ export const translations = {
       "Protect payment and customer data with VKey tokenization, reducing exposure while supporting secure transactions and compliance.",
 
     slide5Eyebrow: "INETCO Fraud Detection",
-    slide5Title: "See Risk",
+    slide5Title: "See Every Risk,",
     slide5Accent: "Before It Spreads",
     slide5Sub:
       "Monitor payment traffic in real time with INETCO, detect suspicious activity faster, and protect every transaction with actionable intelligence.",
 
     slide6Eyebrow: "Audio Visual Solutions",
-    slide6Title: "Bring Your Spaces",
-    slide6Accent: "To Life",
+    slide6Title: "Bring Your Spaces and",
+    slide6Accent: "Meetings to Life",
     slide6Sub:
       "Create smarter, more engaging spaces with professional displays, videowalls, video conferencing, and audio solutions designed for seamless collaboration.",
     projectsDelivered: "Projects Delivered",
@@ -2173,6 +2177,10 @@ export const translations = {
     cybersecuritySolutionsHeading: "Une Expertise de Sécurité sur Toute Votre Surface d'Attaque",
     cybersecuritySolutionsIntro:
       "Un portefeuille coordonné de services professionnels et de partenaires technologiques fiables pour protéger les identités, données, réseaux, terminaux et transactions.",
+    cybersecurityPreviousSolution: "Solution précédente",
+    cybersecurityNextSolution: "Solution suivante",
+    cybersecuritySolutionLabel: "Solution",
+    cybersecurityLogoFallback: "Services Professionnels Proxynet",
     cybersecurityTableService: "Service / Capacité",
     cybersecurityTableVendor: "Fournisseur(s)",
     cybersecurityTableOffering: "Offre Principale",
@@ -3117,8 +3125,8 @@ export const translations = {
       "Avec Comforte, découvrez, classez et protégez les données sensibles dans les bases de données, le cloud et les fichiers, tout en renforçant votre conformité.",
 
     slide3Eyebrow: "Sécurité Réseau Fortinet",
-    slide3Title: "Défendez Chaque",
-    slide3Accent: "Connexion",
+    slide3Title: "Défendez Chaque Réseau,",
+    slide3Accent: "Chaque Connexion",
     slide3Sub:
       "Sécurisez vos utilisateurs, applications et infrastructures avec les pare-feux et solutions Fortinet, conçus pour une connectivité visible, contrôlée et résiliente.",
 
@@ -3129,14 +3137,14 @@ export const translations = {
       "Protégez les données de paiement et des clients avec la tokenisation VKey, réduisant l'exposition tout en soutenant des transactions sécurisées et la conformité.",
 
     slide5Eyebrow: "Détection de Fraude INETCO",
-    slide5Title: "Identifiez les Risques",
+    slide5Title: "Identifiez Chaque Risque,",
     slide5Accent: "Avant leur Propagation",
     slide5Sub:
       "Surveillez les paiements en temps réel avec INETCO, détectez plus rapidement les activités suspectes et protégez chaque transaction grâce à des informations exploitables.",
 
     slide6Eyebrow: "Solutions Audiovisuelles",
-    slide6Title: "Donnez Vie à Vos",
-    slide6Accent: "Espaces",
+    slide6Title: "Donnez Vie à Vos Espaces",
+    slide6Accent: "et Réunions",
     slide6Sub:
       "Créez des espaces plus intelligents et engageants grâce à des écrans professionnels, des murs vidéo, la visioconférence et des solutions audio conçues pour une collaboration fluide.",
     projectsDelivered: "Projets Réalisés",
