@@ -37,7 +37,7 @@ import vkeyLogo from "../assets/vkey.jpeg";
 import forcepointLogo from "../assets/Forcepoint_Logo_New.webp";
 import comforteLogo from "../assets/comforte.png";
 import crowdstrikeLogo from "../assets/crowdstrike.svg";
-import algosecLogo from "../assets/algosec.avif";
+import algosecLogo from "../assets/Algosec_logo.svg.webp";
 import nordenLogo from "../assets/348886.png";
 import krammerLogo from "../assets/Krammer.png";
 import inetcoLogo from "../assets/INETCO_Systems_Limited_Logo.jpg";
@@ -60,12 +60,12 @@ export default function Partners() {
 
   const partners = [
     // Cybersecurity Partners (from Cybersecurity Solutions section)
-    { logo: fortinetLogo,   name: "Fortinet",     typeKey: "partnerTypeAuthorisedPartner",  logoSize: "large",  descKey: "partnerDescFortinet" },
+    { logo: fortinetLogo,   name: "Fortinet",     typeKey: "partnerTypeAuthorisedPartner",  logoSize: "xlarge", descKey: "partnerDescFortinet" },
     { logo: beyondLogo,     name: "BeyondTrust",  typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescBeyondTrust" },
     { logo: vkeyLogo,       name: "V-Key",        typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescVKey" },
     { logo: forcepointLogo, name: "Forcepoint",   typeKey: "partnerTypeAuthorisedPartner",  logoSize: "large",  descKey: "partnerDescForcepoint" },
     { logo: comforteLogo,   name: "Comforte",     typeKey: "partnerTypeAuthorisedPartner",  logoSize: "large",  descKey: "partnerDescComforte" },
-    { logo: crowdstrikeLogo,name: "CrowdStrike",  typeKey: "partnerTypeAuthorisedPartner",  logoSize: "large",  descKey: "partnerDescCrowdStrike" },
+    { logo: crowdstrikeLogo,name: "CrowdStrike",  typeKey: "partnerTypeAuthorisedPartner",  logoSize: "xlarge", descKey: "partnerDescCrowdStrike" },
     { logo: inetcoLogo,     name: "INETCO",       typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescInetco" },
     { logo: algosecLogo,    name: "AlgoSec",      typeKey: "partnerTypeAuthorisedPartner",  logoSize: "large",  descKey: "partnerDescAlgoSec" },
     
@@ -80,22 +80,22 @@ export default function Partners() {
     { logo: leyardLogo,     name: "Leyard",       typeKey: "partnerTypeAuthorisedPartner",  logoAlign: "left", logoSize: "xlarge", descKey: "partnerDescLeyard" },
     { logo: ciscoLogo,      name: "Cisco",        typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescCisco" },
     { logo: cleverLogo,     name: "CleverTouch",  typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescCleverTouch" },
-    { logo: lgLogo,         name: "LG",           typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescLG" },
+    { logo: lgLogo,         name: "LG",           typeKey: "partnerTypeAuthorisedPartner",  logoSize: "xlarge", descKey: "partnerDescLG" },
     { logo: logitechLogo,   name: "Logitech",     typeKey: "partnerTypeAuthorisedDistributor", logoAlign: "left", descKey: "partnerDescLogitech" },
     { logo: microsoftLogo,  name: "Microsoft",    typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescMicrosoft" },
     { logo: canonLogo,      name: "Canon",        typeKey: "partnerTypeAuthorisedDistributor",                  descKey: "partnerDescCanon" },
     { logo: yealinkLogo,    name: "Yealink",      typeKey: "partnerTypeAuthorisedDistributorIntegrator",        descKey: "partnerDescYealink" },
     { logo: dahuaLogo,      name: "Dahua",        typeKey: "partnerTypeAuthorisedDistributor",                  descKey: "partnerDescDahua" },
     { logo: vtLogo,         name: "VT",           typeKey: "partnerTypeAuthorisedDistributor",                  descKey: "partnerDescVT" },
-    { logo: sennheiserLogo, name: "Sennheiser",   typeKey: "partnerTypeAuthorisedPartner",  logoSize: "large",  descKey: "partnerDescSennheiser" },
+    { logo: sennheiserLogo, name: "Sennheiser",   typeKey: "partnerTypeAuthorisedPartner",  logoSize: "xlarge", descKey: "partnerDescSennheiser" },
     { logo: maxhubLogo,     name: "Maxhub",       typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescMaxhub" },
     { logo: makeblockLogo,  name: "MakeBlock",    typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescMakeblock" },
     { logo: krammerLogo,    name: "Kramer",       typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescKramer" },
     { logo: huaweiLogo,     name: "Huawei",       typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescHuawei" },
     { logo: acebottLogo,    name: "Acebott",      typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescAcebott" },
-    { logo: ibmLogo,        name: "IBM",          typeKey: "partnerTypeAuthorisedPartner",  logoSize: "large",  logoAlign: "left", descKey: "partnerDescIBM" },
-    { logo: zoomLogo,       name: "Zoom",         typeKey: "partnerTypeAuthorisedPartner",  logoSize: "large",  logoAlign: "midLeft", descKey: "partnerDescZoom" },
-    { logo: peerlessLogo,   name: "Peerless-AV",  typeKey: "partnerTypeAuthorisedPartner",  logoSize: "large",  descKey: "partnerDescPeerless" },
+    { logo: ibmLogo,        name: "IBM",          typeKey: "partnerTypeAuthorisedPartner",  logoSize: "xlarge", logoAlign: "left", descKey: "partnerDescIBM" },
+    { logo: zoomLogo,       name: "Zoom",         typeKey: "partnerTypeAuthorisedPartner",  logoSize: "xlarge", logoAlign: "midLeft", descKey: "partnerDescZoom" },
+    { logo: peerlessLogo,   name: "Peerless-AV",  typeKey: "partnerTypeAuthorisedPartner",  logoSize: "xlarge", descKey: "partnerDescPeerless" },
     { logo: nordenLogo,     name: "Norden",       typeKey: "partnerTypeAuthorisedPartner",  logoSize: "xlarge", descKey: "partnerDescNorden" },
     { logo: hikvisionLogo,  name: "Hikvision",    typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescHikvision" },
     { logo: boschLogo,      name: "Bosch",        typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescBosch" },
@@ -190,6 +190,8 @@ export default function Partners() {
                           : p.logoSize === "large"
                             ? styles.logoLarge
                             : ""
+                      } ${
+                        p.name === "CrowdStrike" ? styles.logoCrowdstrike : ""
                       } ${
                         p.logoAlign === "farLeft"
                           ? styles.logoPullFarLeft

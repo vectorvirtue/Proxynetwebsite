@@ -52,7 +52,7 @@ import vkeys from '../assets/vkey.jpeg'
 import fortinet from '../assets/logo_fortinet.png'
 import forcepointLogo from '../assets/Forcepoint_Logo_New.webp'
 import crowdstrikeLogo from '../assets/crowdstrike.svg'
-import algosecLogo from '../assets/algosec.avif'
+import algosecLogo from '../assets/Algosec_logo.svg.webp'
 const partners = [  
   {logo: fortinet, name: 'Fortinet', tall: true  },
    { logo: comforteLogo,   name: 'Comforte' },

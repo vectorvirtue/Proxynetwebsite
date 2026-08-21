@@ -22,7 +22,7 @@ import forcepointLogo from '../assets/Forcepoint_Logo_New.webp'
 import comforteLogo from '../assets/comforte.png'
 import crowdstrikeLogo from '../assets/crowdstrike.svg'
 import inetcoLogo from '../assets/INETCO_Systems_Limited_Logo.jpg'
-import algosecLogo from '../assets/algosec.avif'
+import algosecLogo from '../assets/Algosec_logo.svg.webp'
 import styles from './CybersecuritySolutions.module.css'
 
 export default function CybersecuritySolutions() {
