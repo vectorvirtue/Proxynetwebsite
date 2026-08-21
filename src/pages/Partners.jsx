@@ -32,6 +32,12 @@ import sonosLogo from "../assets/Sonos_2015-Logo.png";
 import uniluminLogo from "../assets/unilumin.png";
 import belkinLogo from "../assets/belkin.jpg";
 import beyondLogo from "../assets/BeyondTrust.jpg";
+import fortinetLogo from "../assets/logo_fortinet.png";
+import vkeyLogo from "../assets/vkey.jpeg";
+import forcepointLogo from "../assets/Forcepoint_Logo_New.webp";
+import comforteLogo from "../assets/comforte.png";
+import crowdstrikeLogo from "../assets/crowdstrike.svg";
+import algosecLogo from "../assets/algosec.avif";
 import nordenLogo from "../assets/348886.png";
 import krammerLogo from "../assets/Krammer.png";
 import inetcoLogo from "../assets/INETCO_Systems_Limited_Logo.jpg";
@@ -53,49 +59,60 @@ export default function Partners() {
   const { t } = useLang();
 
   const partners = [
-    { logo: samsungLogo,   name: "Samsung",     typeKey: "partnerTypeAuthorisedB2BPartner",             descKey: "partnerDescSamsung" },
-    { logo: leyardLogo,    name: "Leyard",      logoAlign: "left", logoSize: "xlarge", typeKey: "partnerTypeAuthorisedPartner", descKey: "partnerDescLeyard" },
-    { logo: ciscoLogo,     name: "Cisco",       typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescCisco" },
-    { logo: cleverLogo,    name: "CleverTouch", typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescCleverTouch" },
-    { logo: lgLogo,        name: "LG",          typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescLG" },
-    { logo: cyxteraLogo,   name: "Cyxtera",  logoSize: "xlarge",   typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescCyxtera" },
-    { logo: yubicoLogo,    name: "Yubico",      typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescYubico" },
-    { logo: netscopeLogo,  name: "Netskope",    typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescNetskope" },
-    { logo: logitechLogo,  name: "Logitech", logoAlign: "left",    typeKey: "partnerTypeAuthorisedDistributor",             descKey: "partnerDescLogitech" },
-    { logo: microsoftLogo, name: "Microsoft",   typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescMicrosoft" },
-    { logo: canonLogo,     name: "Canon",       typeKey: "partnerTypeAuthorisedDistributor",             descKey: "partnerDescCanon" },
-    { logo: yealinkLogo,   name: "Yealink",     typeKey: "partnerTypeAuthorisedDistributorIntegrator",   descKey: "partnerDescYealink" },
-    { logo: dahuaLogo,     name: "Dahua",       typeKey: "partnerTypeAuthorisedDistributor",             descKey: "partnerDescDahua" },
-    { logo: vtLogo,        name: "VT",          typeKey: "partnerTypeAuthorisedDistributor",             descKey: "partnerDescVT" },
-    { logo: sennheiserLogo,name: "Sennheiser",  typeKey: "partnerTypeAuthorisedPartner",  logoSize: "large",  descKey: "partnerDescSennheiser" },
-    { logo: maxhubLogo,    name: "Maxhub",      typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescMaxhub" },
-    { logo: makeblockLogo, name: "MakeBlock",   typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescMakeblock" },
-    { logo: beyondLogo,    name: "BeyondTrust", typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescBeyondTrust" },
-    { logo: inetcoLogo,    name: "Inetco",      typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescInetco" },
-    { logo: krammerLogo,   name: "Kramer",      typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescKramer" },
-    { logo: huaweiLogo,    name: "Huawei",      typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescHuawei" },
-    { logo: acebottLogo,   name: "Acebott",     typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescAcebott" },
-    { logo: ibmLogo,       name: "IBM",         typeKey: "partnerTypeAuthorisedPartner",  logoSize: "large",  logoAlign: "left",    descKey: "partnerDescIBM" },
-    { logo: zoomLogo,      name: "Zoom",        typeKey: "partnerTypeAuthorisedPartner",  logoSize: "large",  logoAlign: "midLeft", descKey: "partnerDescZoom" },
-    { logo: peerlessLogo,  name: "Peerless-AV", typeKey: "partnerTypeAuthorisedPartner",  logoSize: "large",                        descKey: "partnerDescPeerless" },
-    { logo: fireeyeLogo,   name: "FireEye",     typeKey: "partnerTypeAuthorisedPartner",  logoSize: "xlarge", logoAlign: "farLeft", descKey: "partnerDescFireEye" },
-    { logo: nordenLogo,    name: "Norden",      typeKey: "partnerTypeAuthorisedPartner",  logoSize: "xlarge",                       descKey: "partnerDescNorden" },
-    { logo: hikvisionLogo, name: "Hikvision",   typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescHikvision" },
-    { logo: boschLogo,     name: "Bosch",       typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescBosch" },
-    { logo: panasonicLogo, name: "Panasonic",   typeKey: "partnerTypeAuthorisedPartner",  logoAlign: "left",                        descKey: "partnerDescPanasonic" },
-    { logo: crestronLogo,  name: "Crestron",    typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescCrestron" },
-    { logo: belkinLogo,    name: "Belkin",      typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescBelkin" },
-    { logo: extronLogo,    name: "Extron",      typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescExtron" },
-    { logo: biampLogo,     name: "Biamp",       typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescBiamp" },
-    { logo: polycomLogo,   name: "Polycom",     typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescPolycom" },
-    { logo: sharpLogo,     name: "Sharp",       typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescSharp" },
-    { logo: absenLogo,     name: "Absen",       typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescAbsen" },
-    { logo: uniluminLogo,  name: "Unilumin",    typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescUnilumin" },
-    { logo: sonosLogo,     name: "Sonos",       typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescSonos" },
-    { logo: dLinkLogo,     name: "D-Link",      typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescDLink" },
-    { logo: hanwhaLogo,    name: "Hanwha",      typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescHanwha" },
-    { logo: lumensLogo,    name: "Lumens",      typeKey: "partnerTypeAuthorisedPartner",  logoSize: "large",                        descKey: "partnerDescLumens" },
-    { logo: zktecLogo,     name: "ZKTeco",      typeKey: "partnerTypeAuthorisedPartner",                 descKey: "partnerDescZKTeco" },
+    // Cybersecurity Partners (from Cybersecurity Solutions section)
+    { logo: fortinetLogo,   name: "Fortinet",     typeKey: "partnerTypeAuthorisedPartner",  logoSize: "large",  descKey: "partnerDescFortinet" },
+    { logo: beyondLogo,     name: "BeyondTrust",  typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescBeyondTrust" },
+    { logo: vkeyLogo,       name: "V-Key",        typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescVKey" },
+    { logo: forcepointLogo, name: "Forcepoint",   typeKey: "partnerTypeAuthorisedPartner",  logoSize: "large",  descKey: "partnerDescForcepoint" },
+    { logo: comforteLogo,   name: "Comforte",     typeKey: "partnerTypeAuthorisedPartner",  logoSize: "large",  descKey: "partnerDescComforte" },
+    { logo: crowdstrikeLogo,name: "CrowdStrike",  typeKey: "partnerTypeAuthorisedPartner",  logoSize: "large",  descKey: "partnerDescCrowdStrike" },
+    { logo: inetcoLogo,     name: "INETCO",       typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescInetco" },
+    { logo: algosecLogo,    name: "AlgoSec",      typeKey: "partnerTypeAuthorisedPartner",  logoSize: "large",  descKey: "partnerDescAlgoSec" },
+    
+    // Other Security Partners
+    { logo: cyxteraLogo,    name: "Cyxtera",      typeKey: "partnerTypeAuthorisedPartner",  logoSize: "xlarge", descKey: "partnerDescCyxtera" },
+    { logo: yubicoLogo,     name: "Yubico",       typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescYubico" },
+    { logo: netscopeLogo,   name: "Netskope",     typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescNetskope" },
+    { logo: fireeyeLogo,    name: "FireEye",      typeKey: "partnerTypeAuthorisedPartner",  logoSize: "xlarge", logoAlign: "farLeft", descKey: "partnerDescFireEye" },
+    
+    // Audio-Visual & Collaboration Partners
+    { logo: samsungLogo,    name: "Samsung",      typeKey: "partnerTypeAuthorisedB2BPartner",                   descKey: "partnerDescSamsung" },
+    { logo: leyardLogo,     name: "Leyard",       typeKey: "partnerTypeAuthorisedPartner",  logoAlign: "left", logoSize: "xlarge", descKey: "partnerDescLeyard" },
+    { logo: ciscoLogo,      name: "Cisco",        typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescCisco" },
+    { logo: cleverLogo,     name: "CleverTouch",  typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescCleverTouch" },
+    { logo: lgLogo,         name: "LG",           typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescLG" },
+    { logo: logitechLogo,   name: "Logitech",     typeKey: "partnerTypeAuthorisedDistributor", logoAlign: "left", descKey: "partnerDescLogitech" },
+    { logo: microsoftLogo,  name: "Microsoft",    typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescMicrosoft" },
+    { logo: canonLogo,      name: "Canon",        typeKey: "partnerTypeAuthorisedDistributor",                  descKey: "partnerDescCanon" },
+    { logo: yealinkLogo,    name: "Yealink",      typeKey: "partnerTypeAuthorisedDistributorIntegrator",        descKey: "partnerDescYealink" },
+    { logo: dahuaLogo,      name: "Dahua",        typeKey: "partnerTypeAuthorisedDistributor",                  descKey: "partnerDescDahua" },
+    { logo: vtLogo,         name: "VT",           typeKey: "partnerTypeAuthorisedDistributor",                  descKey: "partnerDescVT" },
+    { logo: sennheiserLogo, name: "Sennheiser",   typeKey: "partnerTypeAuthorisedPartner",  logoSize: "large",  descKey: "partnerDescSennheiser" },
+    { logo: maxhubLogo,     name: "Maxhub",       typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescMaxhub" },
+    { logo: makeblockLogo,  name: "MakeBlock",    typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescMakeblock" },
+    { logo: krammerLogo,    name: "Kramer",       typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescKramer" },
+    { logo: huaweiLogo,     name: "Huawei",       typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescHuawei" },
+    { logo: acebottLogo,    name: "Acebott",      typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescAcebott" },
+    { logo: ibmLogo,        name: "IBM",          typeKey: "partnerTypeAuthorisedPartner",  logoSize: "large",  logoAlign: "left", descKey: "partnerDescIBM" },
+    { logo: zoomLogo,       name: "Zoom",         typeKey: "partnerTypeAuthorisedPartner",  logoSize: "large",  logoAlign: "midLeft", descKey: "partnerDescZoom" },
+    { logo: peerlessLogo,   name: "Peerless-AV",  typeKey: "partnerTypeAuthorisedPartner",  logoSize: "large",  descKey: "partnerDescPeerless" },
+    { logo: nordenLogo,     name: "Norden",       typeKey: "partnerTypeAuthorisedPartner",  logoSize: "xlarge", descKey: "partnerDescNorden" },
+    { logo: hikvisionLogo,  name: "Hikvision",    typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescHikvision" },
+    { logo: boschLogo,      name: "Bosch",        typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescBosch" },
+    { logo: panasonicLogo,  name: "Panasonic",    typeKey: "partnerTypeAuthorisedPartner",  logoAlign: "left",  descKey: "partnerDescPanasonic" },
+    { logo: crestronLogo,   name: "Crestron",     typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescCrestron" },
+    { logo: belkinLogo,     name: "Belkin",       typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescBelkin" },
+    { logo: extronLogo,     name: "Extron",       typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescExtron" },
+    { logo: biampLogo,      name: "Biamp",        typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescBiamp" },
+    { logo: polycomLogo,    name: "Polycom",      typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescPolycom" },
+    { logo: sharpLogo,      name: "Sharp",        typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescSharp" },
+    { logo: absenLogo,      name: "Absen",        typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescAbsen" },
+    { logo: uniluminLogo,   name: "Unilumin",     typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescUnilumin" },
+    { logo: sonosLogo,      name: "Sonos",        typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescSonos" },
+    { logo: dLinkLogo,      name: "D-Link",       typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescDLink" },
+    { logo: hanwhaLogo,     name: "Hanwha",       typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescHanwha" },
+    { logo: lumensLogo,     name: "Lumens",       typeKey: "partnerTypeAuthorisedPartner",  logoSize: "large",  descKey: "partnerDescLumens" },
+    { logo: zktecLogo,      name: "ZKTeco",       typeKey: "partnerTypeAuthorisedPartner",                      descKey: "partnerDescZKTeco" },
   ];
   return (
     <>

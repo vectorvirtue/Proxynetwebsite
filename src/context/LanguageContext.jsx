@@ -277,6 +277,12 @@ export const translations = {
     partnerDescCyxtera: "Data centre infrastructure, co-location, and secure connectivity services.",
     partnerDescYubico: "Hardware security keys and phishing-resistant multi-factor authentication.",
     partnerDescNetskope: "Cloud security, SASE, and zero trust network access solutions.",
+    partnerDescFortinet: "Network security, firewalls, SASE, endpoint protection, and comprehensive cybersecurity solutions.",
+    partnerDescVKey: "Digital identity, authentication, and cryptographic security solutions.",
+    partnerDescForcepoint: "AI-agent security, data protection, and advanced cyber threat defense.",
+    partnerDescComforte: "Data-centric security, tokenization, and sensitive data protection solutions.",
+    partnerDescCrowdStrike: "Endpoint protection, threat intelligence, and incident response platform.",
+    partnerDescAlgoSec: "Network security policy management and firewall automation solutions.",
     // Partnerships page
     partnershipsNav: "Partnerships",
     partnershipsPageTitle:
@@ -2281,6 +2287,12 @@ export const translations = {
     partnerDescCyxtera: "Infrastructure de centre de données, co-localisation et services de connectivité sécurisée.",
     partnerDescYubico: "Clés de sécurité matérielles et authentification multi-facteurs résistante au phishing.",
     partnerDescNetskope: "Sécurité cloud, SASE et solutions d'accès réseau à confiance zéro.",
+    partnerDescFortinet: "Sécurité réseau, pare-feu, SASE, protection des terminaux et solutions de cybersécurité complètes.",
+    partnerDescVKey: "Identité numérique, authentification et solutions de sécurité cryptographique.",
+    partnerDescForcepoint: "Sécurité des agents IA, protection des données et défense avancée contre les cybermenaces.",
+    partnerDescComforte: "Sécurité centrée sur les données, tokenisation et solutions de protection des données sensibles.",
+    partnerDescCrowdStrike: "Protection des terminaux, renseignements sur les menaces et plateforme de réponse aux incidents.",
+    partnerDescAlgoSec: "Gestion des politiques de sécurité réseau et solutions d'automatisation des pare-feu.",
     // Partnerships page
     partnershipsNav: "Partenariats",
     partnershipsPageTitle:
