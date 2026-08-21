@@ -3,9 +3,17 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight, ShieldCheck } from 'lucide-react'
 import { useLang } from '../context/LanguageContext'
 import SectionBlobs from './SectionBlobs'
-import cybersecurityImage from '../assets/hero.png'
-import fortinetImage from '../assets/fortinet.webp'
-import comforteImage from '../assets/comforte1.jpg'
+import penetrationTestingImage from '../assets/netowrk and penetration.jpg'
+import securityPostureImage from '../assets/security posture.jpg'
+import pamImage from '../assets/pam beyond trust.png'
+import digitalAuthImage from '../assets/digital authorization.jpg'
+import fortinetImage from '../assets/fortinet.png'
+import dataProtectionImage from '../assets/data protection.jpg'
+import endpointProtectionImage from '../assets/endpointprotection.jpg'
+import socSecurityImage from '../assets/soc security.jpg'
+import incidentInvestigationImage from '../assets/incident investigation.jpg'
+import performanceMonitoringImage from '../assets/performancemonitoring.jpg'
+import firewallPolicyImage from '../assets/firewallpolicy.jpg'
 import inetcoImage from '../assets/inetco.avif'
 import beyondTrustLogo from '../assets/BeyondTrust.jpg'
 import vkeyLogo from '../assets/vkey.jpeg'
@@ -23,17 +31,17 @@ export default function CybersecuritySolutions() {
   const [direction, setDirection] = useState(1)
 
   const solutions = [
-    { row: 0, image: cybersecurityImage, logos: [] },
-    { row: 1, image: fortinetImage, logos: [fortinetLogo] },
-    { row: 2, image: beyondTrustLogo, logos: [beyondTrustLogo] },
-    { row: 3, image: vkeyLogo, logos: [vkeyLogo] },
+    { row: 0, image: penetrationTestingImage, logos: [] },
+    { row: 1, image: securityPostureImage, logos: [fortinetLogo] },
+    { row: 2, image: pamImage, logos: [beyondTrustLogo] },
+    { row: 3, image: digitalAuthImage, logos: [vkeyLogo] },
     { row: 4, image: fortinetImage, logos: [forcepointLogo] },
-    { row: 5, image: comforteImage, logos: [comforteLogo] },
-    { row: 6, image: fortinetImage, logos: [fortinetLogo] },
-    { row: 7, image: inetcoImage, logos: [crowdstrikeLogo, fortinetLogo] },
-    { row: 8, image: inetcoImage, logos: [inetcoLogo, vkeyLogo] },
-    { row: 9, image: inetcoImage, logos: [inetcoLogo, algosecLogo, fortinetLogo] },
-    { row: 10, image: algosecLogo, logos: [algosecLogo] },
+    { row: 5, image: dataProtectionImage, logos: [comforteLogo] },
+    { row: 6, image: endpointProtectionImage, logos: [fortinetLogo] },
+    { row: 7, image: incidentInvestigationImage, logos: [crowdstrikeLogo, fortinetLogo] },
+    { row: 8, image: socSecurityImage, logos: [inetcoLogo, vkeyLogo] },
+    { row: 9, image: performanceMonitoringImage, logos: [inetcoLogo, algosecLogo, fortinetLogo] },
+    { row: 10, image: firewallPolicyImage, logos: [algosecLogo] },
   ]
 
   useEffect(() => {
