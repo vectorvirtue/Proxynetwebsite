@@ -135,6 +135,7 @@ export default function CybersecuritySolutions() {
                 if (logo === fortinetLogo) logoClass += ` ${styles.logoFortinet}`;
                 if (logo === algosecLogo) logoClass += ` ${styles.logoAlgosec}`;
                 if (logo === inetcoLogo) logoClass += ` ${styles.logoInetco}`;
+                if (logo === crowdstrikeLogo) logoClass += ` ${styles.logoCrowdstrike}`;
                 
                 return <img key={`${vendor}-${index}`} src={logo} alt="" className={logoClass} />;
               }) : <span className={styles.logoFallback}>{logoFallback}</span>}
