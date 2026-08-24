@@ -9,6 +9,7 @@ import Captcha from '../components/Captcha'
 import SEO from '../components/SEO'
 import { useLang } from '../context/LanguageContext'
 import SectionBlobs from '../components/SectionBlobs'
+import SolutionPartnerStrip from '../components/SolutionPartnerStrip'
 import styles from './CloudManaged.module.css'
 
 /* ── Data ──────────────────────────────────────────────────────── */
@@ -154,6 +155,8 @@ export default function CloudManaged() {
             </motion.div>
           </div>
         </section>
+
+        <SolutionPartnerStrip partners={['Microsoft', 'Cisco', 'Fortinet']} label="Technology Partners" />
 
         {/* ── Services ── */}
         <section id="services" className={styles.section}>

@@ -40,6 +40,7 @@ import avicennaLogo from "../assets/avicenna.jpg";
 import brightsparkLogo from "../assets/brightspark.png";
 import styles from "./EdTech.module.css";
 import SectionBlobs from "../components/SectionBlobs";
+import SolutionPartnerStrip from "../components/SolutionPartnerStrip";
 const institutions = [
   { name: "Lara Day School", logo: laradayLogo },
   { name: "Banana Island School", logo: bananaislandLogo },
@@ -169,6 +170,8 @@ export default function EdTech() {
             </motion.div>
           </div>
         </section>
+
+        <SolutionPartnerStrip partners={['MakeBlock', 'Acebott']} label="Robotics & IoT Kit Partners" />
 
         <section className={styles.section}>
           <div className={styles.inner}>

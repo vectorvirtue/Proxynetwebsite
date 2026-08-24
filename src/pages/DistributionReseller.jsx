@@ -10,6 +10,7 @@ import Captcha from '../components/Captcha'
 import SEO from '../components/SEO'
 import { useLang } from '../context/LanguageContext'
 import SectionBlobs from '../components/SectionBlobs'
+import SolutionPartnerStrip from '../components/SolutionPartnerStrip'
 import styles from './DistributionReseller.module.css'
 
 /* ── Data ──────────────────────────────────────────────────────── */
@@ -198,6 +199,8 @@ export default function DistributionReseller() {
             </motion.div>
           </div>
         </section>
+
+        <SolutionPartnerStrip partners={['Samsung', 'Yealink', 'D-Link', 'Dahua', 'Canon', 'Crestron', 'MakeBlock', 'Acebott']} label="Distribution Partners" />
 
         {/* ── Stats bar ── */}
         <div className={styles.statsBar}>

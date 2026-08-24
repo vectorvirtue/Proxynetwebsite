@@ -25,6 +25,12 @@ import Cybersecurity from "./pages/Cybersecurity";
 import DistributionReseller from "./pages/DistributionReseller";
 import UnifiedComms from "./pages/UnifiedComms";
 import CloudManaged from "./pages/CloudManaged";
+import IoTSolutions from "./pages/IoTSolutions";
+import TouchscreenSolutions from "./pages/TouchscreenSolutions";
+import PhysicalSecuritySolutions from "./pages/PhysicalSecuritySolutions";
+import NetworkPerformanceSolutions from "./pages/NetworkPerformanceSolutions";
+import LEDSolutions from "./pages/LEDSolutions";
+import HomeAutomationSolutions from "./pages/HomeAutomationSolutions";
 import NotFound from "./pages/NotFound";
 import FAQ from "./pages/FAQ";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -71,6 +77,12 @@ export default function App() {
             <Route path="/solutions/distribution" element={<DistributionReseller />} />
             <Route path="/solutions/unified-communications" element={<UnifiedComms />} />
             <Route path="/solutions/cloud-managed-services" element={<CloudManaged />} />
+            <Route path="/solutions/iot" element={<IoTSolutions />} />
+            <Route path="/solutions/touchscreen" element={<TouchscreenSolutions />} />
+            <Route path="/solutions/physical-security" element={<PhysicalSecuritySolutions />} />
+            <Route path="/solutions/network-performance-monitoring" element={<NetworkPerformanceSolutions />} />
+            <Route path="/solutions/led" element={<LEDSolutions />} />
+            <Route path="/solutions/home-automation" element={<HomeAutomationSolutions />} />
             <Route path="/faqs" element={<FAQ />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/cookie-policy" element={<CookiePolicy />} />

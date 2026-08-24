@@ -9,6 +9,7 @@ import Captcha from '../components/Captcha'
 import SEO from '../components/SEO'
 import { useLang } from '../context/LanguageContext'
 import SectionBlobs from '../components/SectionBlobs'
+import SolutionPartnerStrip from '../components/SolutionPartnerStrip'
 import styles from "./AVSolutions.module.css"
 
 const capabilities = [
@@ -25,7 +26,7 @@ const capabilities = [
   {
     icon: "video",
     title: "Video Conferencing & Collaboration",
-    desc: "Logitech, Poly, and Yealink collaboration systems for boardrooms, huddle spaces, and multi-site organisations. Integrated with Microsoft Teams and Zoom.",
+    desc: "Logitech and Yealink collaboration systems for boardrooms, huddle spaces, and multi-site organisations. Integrated with Microsoft Teams and Zoom.",
   },
   {
     icon: "mic",
@@ -102,7 +103,7 @@ const featuredProjects = [
 
 const brands = [
   "Samsung", "LG", "Logitech", "Biamp", "Crestron",
-  "Extron", "Sennheiser", "Yealink", "Poly", "Absen",
+  "Extron", "Sennheiser", "Yealink", "Absen",
   "Unilumin", "Peerless-AV",
 ]
 
@@ -173,6 +174,8 @@ export default function AVSolutions() {
             </motion.div>
           </div>
         </section>
+
+        <SolutionPartnerStrip partners={brands} label="Technology Partners" />
 
         {/* ── Capabilities ── */}
         <section id="capabilities" className={styles.section}>

@@ -33,6 +33,10 @@ export const translations = {
     solCloud: "Cloud & Managed Services",
     solCAD: "CAD Services",
     solIoT: "IoT & Smart Infrastructure",
+    iotEyebrow: "IoT & Smart Infrastructure",
+    iotHeroTitle: "Connect the Physical World",
+    iotHeroSub: "Intelligent sensors, connected systems and practical automation that help organisations see more, respond faster and operate with confidence.",
+    iotPartnerLabel: "In partnership with",
     solProVMS: "Visitor Management — ProVMS",
     solProSkool: "School Management — ProSkool",
     solERP: "ERP Solutions",
@@ -684,6 +688,12 @@ export const translations = {
     catSoftwareApps: "Software & Apps",
     catManagedCloud: "Managed & Cloud",
     catSpecialist: "Specialist",
+    catAdvanced: "Advanced Solutions",
+    solHomeAutomation: "Home Automation Solutions",
+    solLed: "LED Solutions",
+    solNetworkPerformance: "Network Performance & Monitoring Solutions",
+    solPhysicalSecurity: "Physical Security Solutions",
+    solTouchscreen: "Touchscreen Solutions",
     // Featured Projects content
     proj1Solution: "15-Display NOC Solution",
     proj1Category: "NOC & Command Centre",
@@ -737,7 +747,7 @@ export const translations = {
     projWHOSolution: "Colleges of Nursing Network Project",
     projWHOCategory: "Network Infrastructure · Healthcare",
     projWHOOutcome:
-      "Wireless network deployment across nursing colleges in six Nigerian states — Ubiquiti access points, networking, cabling, activation, and remediation across approximately 13 schools. Delivered 2026 for WHO Nigeria.",
+      "Wireless network deployment across nursing colleges in six Nigerian states — wireless access points, networking, cabling, activation, and remediation across approximately 13 schools. Delivered 2026 for WHO Nigeria.",
     // About page
     aboutUs: "About Us",
     aboutHeroTitle: "Who We Are",
@@ -1336,7 +1346,7 @@ export const translations = {
       "We provide end-to-end education technology solutions — from interactive classroom displays and campus Wi-Fi to computer lab setup, digital literacy training, and ICT certification programmes. Our EdTech team works directly with school administrators, teachers, and government education agencies.",
     indEducationCaseTitle: "Nursing College Network Project — WHO Nigeria",
     indEducationCaseOutcome:
-      "Deployed wireless network infrastructure across nursing colleges in six Nigerian states — Ubiquiti access points, structured cabling, activation and remediation across approximately 13 schools — delivered in 2026 for WHO Nigeria.",
+      "Deployed wireless network infrastructure across nursing colleges in six Nigerian states — wireless access points, structured cabling, activation and remediation across approximately 13 schools — delivered in 2026 for WHO Nigeria.",
     // Healthcare
     indHealthcareEyebrow: "Healthcare",
     indHealthcareHeroTitle: "Reliable Technology for Healthcare Providers",
@@ -2038,10 +2048,20 @@ export const translations = {
     solCloud: "Cloud & Services Gérés",
     solCAD: "Services CAO",
     solIoT: "IoT & Infrastructure Intelligente",
+    iotEyebrow: "IoT & Infrastructure Intelligente",
+    iotHeroTitle: "Connecter le monde physique",
+    iotHeroSub: "Des capteurs intelligents, des systèmes connectés et une automatisation concrète pour aider les organisations à mieux observer, réagir plus vite et opérer en toute confiance.",
+    iotPartnerLabel: "En partenariat avec",
     solProVMS: "Gestion des Visiteurs — ProVMS",
     solProSkool: "Gestion Scolaire — ProSkool",
     solERP: "Solutions ERP",
     solDistribution: "Distribution & Revendeurs",
+    catAdvanced: "Solutions Avancées",
+    solHomeAutomation: "Solutions Domotiques",
+    solLed: "Solutions LED",
+    solNetworkPerformance: "Solutions de Performance et de Supervision Réseau",
+    solPhysicalSecurity: "Solutions de Sécurité Physique",
+    solTouchscreen: "Solutions à Écran Tactile",
     // Software
     softwareSolutions: "Solutions Logicielles",
     customDev: "Développement Logiciel Sur Mesure",
@@ -2780,7 +2800,7 @@ export const translations = {
     projWHOSolution: "Projet Réseau des Écoles de Nursing",
     projWHOCategory: "Infrastructure Réseau · Santé",
     projWHOOutcome:
-      "Déploiement de réseau sans fil dans des écoles de nursing dans six États nigérians — points d'accès Ubiquiti, câblage, activation et remédiation dans environ 13 établissements. Livré en 2026 pour l'OMS Nigeria.",
+      "Déploiement de réseau sans fil dans des écoles de nursing dans six États nigérians — points d'accès sans fil, câblage, activation et remédiation dans environ 13 établissements. Livré en 2026 pour l'OMS Nigeria.",
     // About page
     aboutUs: "À Propos",
     aboutHeroTitle: "Qui Nous Sommes",

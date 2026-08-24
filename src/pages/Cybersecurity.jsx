@@ -9,6 +9,7 @@ import Captcha from '../components/Captcha'
 import SEO from '../components/SEO'
 import { useLang } from '../context/LanguageContext'
 import SectionBlobs from '../components/SectionBlobs'
+import SolutionPartnerStrip from '../components/SolutionPartnerStrip'
 import beyondTrustLogo from '../assets/BeyondTrust.jpg'
 import inetcoLogo from '../assets/INETCO_Systems_Limited_Logo.jpg'
 import comforteLogo from '../assets/COMFORTE 04 FS_SecurDPS Discover and Classify-1.png'
@@ -179,6 +180,11 @@ return (
           </motion.div>
         </div>
       </section>
+
+      <SolutionPartnerStrip
+        partners={['Fortinet', 'Comforte', 'VKeys', 'AlgoSec', 'CrowdStrike', 'Forcepoint', 'BeyondTrust', 'INETCO', 'Cyxtera', 'Yubico', 'Netskope', 'FireEye']}
+        label="Security Partners"
+      />
 
       {/* ── Capabilities ── */}
       <section className={styles.section}>

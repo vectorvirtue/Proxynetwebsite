@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, ChevronDown, Search, Shield, Wifi, Server, Globe, Headphones, BarChart2, TvMinimal, Monitor, GraduationCap, Network, Cpu, Building2 } from 'lucide-react'
+import { Menu, X, ChevronDown, Search, Shield, Wifi, Server, Globe, Headphones, BarChart2, TvMinimal, Monitor, GraduationCap, Network, Cpu, Building2, House, Activity, LockKeyhole } from 'lucide-react'
 import { useLang } from '../context/LanguageContext'
 import logo from '../assets/PROXYNET LOGO.png'
 import styles from './Navbar.module.css'
@@ -51,6 +51,16 @@ export default function Navbar() {
         { icon: <GraduationCap size={18} />, label: t.edtech, href: '/solutions/edtech' },
         { icon: <TvMinimal size={18} />, label: t.rentals, href: '/rentals' },
         { icon: <Monitor size={18} />, label: t.billboardSolutions, href: '/billboard-solutions' },
+      ],
+    },
+    {
+      category: t.catAdvanced,
+      items: [
+        { icon: <House size={18} />, label: t.solHomeAutomation, href: '/solutions/home-automation' },
+        { icon: <TvMinimal size={18} />, label: t.solLed, href: '/solutions/led' },
+        { icon: <Activity size={18} />, label: t.solNetworkPerformance, href: '/solutions/network-performance-monitoring' },
+        { icon: <LockKeyhole size={18} />, label: t.solPhysicalSecurity, href: '/solutions/physical-security' },
+        { icon: <Monitor size={18} />, label: t.solTouchscreen, href: '/solutions/touchscreen' },
       ],
     },
   ]

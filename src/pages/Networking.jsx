@@ -9,6 +9,7 @@ import Captcha from '../components/Captcha'
 import SEO from '../components/SEO'
 import { useLang } from '../context/LanguageContext'
 import SectionBlobs from '../components/SectionBlobs'
+import SolutionPartnerStrip from '../components/SolutionPartnerStrip'
 import styles from './Networking.module.css'
 
 const capabilities = [
@@ -20,7 +21,7 @@ const capabilities = [
   {
     icon: Wifi,
     title: 'Wireless Networks',
-    desc: 'Enterprise Wi-Fi design and deployment using Ubiquiti, Cisco Meraki and Ruckus — covering campuses, multi-floor offices and distributed sites.',
+    desc: 'Enterprise Wi-Fi design and deployment using leading wireless platforms — covering campuses, multi-floor offices and distributed sites.',
   },
   {
     icon: Server,
@@ -45,8 +46,8 @@ const capabilities = [
 ]
 
 const brands = [
-  'Ubiquiti', 'Cisco',
-  'D-Link', 'TP-Link Enterprise', 'Fortinet',
+  'Cisco',
+  'D-Link', 'Fortinet',
 ]
 
 const deployments = [
@@ -55,7 +56,7 @@ const deployments = [
     solution: 'Colleges of Nursing Network Project',
     category: 'Network Infrastructure · Healthcare',
     year: '2026',
-    outcome: 'Wireless network deployment across nursing colleges in six Nigerian states — Ubiquiti access points, structured cabling, activation and remediation across approximately 13 schools.',
+    outcome: 'Wireless network deployment across nursing colleges in six Nigerian states — wireless access points, structured cabling, activation and remediation across approximately 13 schools.',
   },
 ]
 
@@ -87,7 +88,7 @@ export default function Networking() {
     <>
       <SEO
         title="Network Infrastructure & Systems Integration — Proxynet Group"
-        description="Proxynet designs and deploys enterprise LAN, WAN, wireless networks and structured cabling across Nigeria and West Africa. Ubiquiti, Cisco, Ruckus and more."
+        description="Proxynet designs and deploys enterprise LAN, WAN, wireless networks and structured cabling across Nigeria and West Africa."
         canonical="/solutions/networking"
         jsonLd={{
           '@context': 'https://schema.org',
@@ -129,6 +130,8 @@ export default function Networking() {
             </motion.div>
           </div>
         </section>
+
+        <SolutionPartnerStrip partners={brands} label="Technology Partners" />
 
         {/* ── Capabilities ── */}
         <section id="capabilities" className={styles.section}>

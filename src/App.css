@@ -1,3 +1,13 @@
+.solutionPartnerStrip { background: var(--blue); padding: 20px 0; }
+.solutionPartnerStripInner { max-width: 1440px; margin: 0 auto; padding: 0 92px; display: flex; align-items: center; gap: 32px; flex-wrap: wrap; }
+.solutionPartnerStripLabel { font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.8); text-transform: uppercase; letter-spacing: 1px; white-space: nowrap; }
+.solutionPartnerLogos { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.solutionPartnerLogoWrap { min-width: 128px; height: 64px; padding: 10px 20px; background: var(--white); border-radius: 10px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.solutionPartnerLogo { max-width: 140px; max-height: 38px; width: auto; height: auto; object-fit: contain; }
+.solutionPartnerLogoWrapLarge { min-width: 148px; }
+.solutionPartnerLogoLarge { max-width: 170px; max-height: 48px; }
+.solutionPartnerName { color: var(--navy); font-size: 13px; font-weight: 700; white-space: nowrap; }
+@media (max-width: 768px) { .solutionPartnerStripInner { padding: 0 16px; justify-content: center; } .solutionPartnerStripLabel { width: 100%; text-align: center; } .solutionPartnerLogos { justify-content: center; } }
 .sr-only {
   position: absolute;
   width: 1px;
