@@ -26,7 +26,7 @@ const capabilities = [
   {
     icon: "video",
     title: "Video Conferencing & Collaboration",
-    desc: "Logitech and Yealink collaboration systems for boardrooms, huddle spaces, and multi-site organisations. Integrated with Microsoft Teams and Zoom.",
+    desc: "Logitech, Poly, and Yealink collaboration systems for boardrooms, huddle spaces, and multi-site organisations. Integrated with Microsoft Teams and Zoom.",
   },
   {
     icon: "mic",
@@ -103,7 +103,7 @@ const featuredProjects = [
 
 const brands = [
   "Samsung", "LG", "Logitech", "Biamp", "Crestron",
-  "Extron", "Sennheiser", "Yealink", "Absen",
+  "Extron", "Sennheiser", "Yealink", "Poly", "Absen",
   "Unilumin", "Peerless-AV",
 ]
 

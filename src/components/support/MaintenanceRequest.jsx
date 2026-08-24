@@ -9,9 +9,48 @@ export default function MaintenanceRequest() {
   const { t } = useLang()
   const [submitted, setSubmitted] = useState(false)
   const [captchaToken, setCaptchaToken] = useState(null)
-  const [form, setForm] = useState({ name: '', email: '', phone: '', site: '', date: '', description: '' })
+  const [submitting, setSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState('')
+  const [form, setForm] = useState({ name: '', email: '', phone: '', site: '', date: '', description: '', priority: 'high' })
 
-  const handleSubmit = (e) => { e.preventDefault(); if (!captchaToken) return; setSubmitted(true) }
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    if (!captchaToken) return
+
+    const apiKey = import.meta.env.VITE_SUPPORT_WEBHOOK_API_KEY
+    if (!apiKey) {
+      setSubmitError(t.ticketSubmitError)
+      return
+    }
+
+    setSubmitting(true)
+    setSubmitError('')
+    try {
+      const response = await fetch('https://crm.com/webhooks/website-ticket', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Website-Api-Key': apiKey,
+        },
+        body: JSON.stringify({
+          full_name: form.name,
+          email: form.email,
+          phone: form.phone,
+          site_location: form.site,
+          preferred_date: form.date,
+          issue_description: form.description,
+          priority: form.priority,
+        }),
+      })
+
+      if (!response.ok) throw new Error(`Webhook request failed with ${response.status}`)
+      setSubmitted(true)
+    } catch {
+      setSubmitError(t.ticketSubmitError)
+    } finally {
+      setSubmitting(false)
+    }
+  }
 
   return (
     <section id="ticket" className={styles.section}>
@@ -42,9 +81,11 @@ export default function MaintenanceRequest() {
               <div className={styles.field}><label className={styles.label}>{t.supportFieldSite}</label><input required className={styles.input} value={form.site} onChange={e => setForm({...form, site: e.target.value})} /></div>
             </div>
             <div className={styles.field}><label className={styles.label}>{t.supportFieldDate}</label><input type="date" className={styles.input} value={form.date} onChange={e => setForm({...form, date: e.target.value})} /></div>
+            <div className={styles.field}><label className={styles.label}>{t.supportFieldPriority}</label><select className={styles.input} value={form.priority} onChange={e => setForm({...form, priority: e.target.value})}><option value="low">{t.supportPriorityLow}</option><option value="medium">{t.supportPriorityMedium}</option><option value="high">{t.supportPriorityHigh}</option></select></div>
             <div className={styles.field}><label className={styles.label}>{t.supportFieldIssue}</label><textarea required rows="5" className={styles.textarea} value={form.description} onChange={e => setForm({...form, description: e.target.value})} placeholder={t.supportFieldIssuePlaceholder} /></div>
             <Captcha onChange={setCaptchaToken} />
-            <button type="submit" className={styles.submit}>{t.submitRequest} <Send size={16} /></button>
+            {submitError && <p role="alert" className={styles.error}>{submitError}</p>}
+            <button type="submit" className={styles.submit} disabled={submitting}>{submitting ? t.submitting : t.submitRequest} {!submitting && <Send size={16} />}</button>
           </motion.form>
         )}
       </div>

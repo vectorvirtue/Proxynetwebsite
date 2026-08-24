@@ -78,6 +78,7 @@ export default function EdTech() {
     { icon: "cpu",    name: t.progRoboticsName,        duration: t.progRoboticsDuration,      audience: t.progRoboticsAudience,      format: t.progRoboticsFormat,      desc: t.progRoboticsDesc },
     { icon: "brain",  name: t.progAIName,              duration: t.progAIDuration,            audience: t.progAIAudience,            format: t.progAIFormat,            desc: t.progAIDesc },
     { icon: "wifi",   name: t.progIoTName,             duration: t.progIoTDuration,           audience: t.progIoTAudience,           format: t.progIoTFormat,           desc: t.progIoTDesc },
+    { icon: "monitor", name: t.progSmartBoardsName,   duration: t.progSmartBoardsDuration,   audience: t.progSmartBoardsAudience,   format: t.progSmartBoardsFormat,   desc: t.progSmartBoardsDesc },
     { icon: "chart",  name: t.progDataSciName,         duration: t.progDataSciDuration,       audience: t.progDataSciAudience,       format: t.progDataSciFormat,       desc: t.progDataSciDesc },
     { icon: "bar",    name: t.progDataAnalyticsName,   duration: t.progDataAnalyticsDuration, audience: t.progDataAnalyticsAudience, format: t.progDataAnalyticsFormat, desc: t.progDataAnalyticsDesc },
   ];
@@ -235,6 +236,7 @@ export default function EdTech() {
                     {p.icon === "cpu" && <Cpu size={24} />}
                     {p.icon === "brain" && <Brain size={24} />}
                     {p.icon === "wifi" && <Wifi size={24} />}
+                    {p.icon === "monitor" && <Monitor size={24} />}
                     {p.icon === "chart" && <BarChart2 size={24} />}
                     {p.icon === "bar" && <BarChart size={24} />}
                   </div>

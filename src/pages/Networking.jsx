@@ -21,7 +21,7 @@ const capabilities = [
   {
     icon: Wifi,
     title: 'Wireless Networks',
-    desc: 'Enterprise Wi-Fi design and deployment using leading wireless platforms — covering campuses, multi-floor offices and distributed sites.',
+    desc: 'Enterprise Wi-Fi design and deployment using Ubiquiti, Cisco Meraki and Ruckus — covering campuses, multi-floor offices and distributed sites.',
   },
   {
     icon: Server,
@@ -56,7 +56,7 @@ const deployments = [
     solution: 'Colleges of Nursing Network Project',
     category: 'Network Infrastructure · Healthcare',
     year: '2026',
-    outcome: 'Wireless network deployment across nursing colleges in six Nigerian states — wireless access points, structured cabling, activation and remediation across approximately 13 schools.',
+    outcome: 'Wireless network deployment across nursing colleges in six Nigerian states — Ubiquiti access points, structured cabling, activation and remediation across approximately 13 schools.',
   },
 ]
 
@@ -88,7 +88,7 @@ export default function Networking() {
     <>
       <SEO
         title="Network Infrastructure & Systems Integration — Proxynet Group"
-        description="Proxynet designs and deploys enterprise LAN, WAN, wireless networks and structured cabling across Nigeria and West Africa."
+        description="Proxynet designs and deploys enterprise LAN, WAN, wireless networks and structured cabling across Nigeria and West Africa. Ubiquiti, Cisco, Ruckus and more."
         canonical="/solutions/networking"
         jsonLd={{
           '@context': 'https://schema.org',

@@ -6,6 +6,21 @@ import { ChevronRight, Send, TvMinimal, Volume2, Monitor, Layers } from "lucide-
 import Captcha from '../components/Captcha'
 import { useLang } from '../context/LanguageContext'
 import SectionBlobs from '../components/SectionBlobs'
+import lightingImage from '../assets/lighting.png'
+import lightingImage2 from '../assets/lighting2.png'
+import videoConferencingImage from '../assets/videoconferencing.jpg'
+import mountsImage from '../assets/mounts.jpg'
+import interactivePanelImage from '../assets/ifp.jpeg'
+import videowallImage from '../assets/videowall.jpeg'
+import ledScreensImage from '../assets/led screens.jpg'
+import soundImage from '../assets/sound.jpg'
+import digitalSignageImage from '../assets/digital signage.png'
+import av1 from '../assets/av1.jpg'
+import av2 from '../assets/av2.jpeg'
+import av3 from '../assets/av3.jpg'
+import av4 from '../assets/av4.jpeg'
+import av5 from '../assets/av5.jpg'
+import av6 from '../assets/av6.jpg'
 import styles from "./Rentals.module.css"
 
 export default function Rentals() {
@@ -15,10 +30,15 @@ export default function Rentals() {
   const [form, setForm] = useState({ name: "", company: "", date: "", location: "", equipment: "", notes: "" })
 
   const equipment = [
-    { icon: "tv",     nameKey: "rentalsEquip1Name", specsKey: "rentalsEquip1Specs", usesKey: "rentalsEquip1Uses" },
-    { icon: "monitor",nameKey: "rentalsEquip2Name", specsKey: "rentalsEquip2Specs", usesKey: "rentalsEquip2Uses" },
-    { icon: "layers", nameKey: "rentalsEquip3Name", specsKey: "rentalsEquip3Specs", usesKey: "rentalsEquip3Uses" },
-    { icon: "volume", nameKey: "rentalsEquip4Name", specsKey: "rentalsEquip4Specs", usesKey: "rentalsEquip4Uses" },
+    { image: lightingImage, nameKey: "rentalsEquip5Name" },
+    { image: lightingImage2, nameKey: "rentalsEquip6Name" },
+    { image: videoConferencingImage, nameKey: "rentalsEquip7Name" },
+    { image: mountsImage, nameKey: "rentalsEquip8Name" },
+    { image: interactivePanelImage, nameKey: "rentalsEquip9Name" },
+    { image: videowallImage, nameKey: "rentalsEquip1Name" },
+    { image: ledScreensImage, nameKey: "rentalsEquip10Name" },
+    { image: soundImage, nameKey: "rentalsEquip4Name" },
+    { image: digitalSignageImage, nameKey: "rentalsEquip11Name" },
   ]
 
   const steps = [
@@ -80,16 +100,17 @@ export default function Rentals() {
             </motion.div>
             <div className={styles.equipGrid}>
               {equipment.map((e, i) => (
-                <motion.div key={e.name} className={styles.equipCard} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.08 }} whileHover={{ y: -4 }}>
-                  <div className={styles.equipIcon}>
-                    {e.icon === "tv" && <TvMinimal size={28} />}
-                    {e.icon === "monitor" && <Monitor size={28} />}
-                    {e.icon === "layers" && <Layers size={28} />}
-                    {e.icon === "volume" && <Volume2 size={28} />}
+                <motion.div key={e.nameKey} className={styles.equipCard} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.08 }} whileHover={{ y: -4 }}>
+                  <div className={styles.equipVisual}>
+                    {e.image ? <img src={e.image} alt={t[e.nameKey]} className={styles.equipImage} /> : (
+                      <div className={styles.equipIcon}>
+                        {e.icon === "monitor" && <Monitor size={42} />}
+                        {e.icon === "layers" && <Layers size={42} />}
+                        {e.icon === "volume" && <Volume2 size={42} />}
+                      </div>
+                    )}
                   </div>
                   <h3 className={styles.equipName}>{t[e.nameKey]}</h3>
-                  <p className={styles.equipSpecs}><strong>{t.rentalsSpecsLabel}</strong> {t[e.specsKey]}</p>
-                  <p className={styles.equipUse}><strong>{t.rentalsUseCasesLabel}</strong> {t[e.usesKey]}</p>
                 </motion.div>
               ))}
             </div>
@@ -102,12 +123,12 @@ export default function Rentals() {
             <motion.div className={styles.sectionHeader} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <p className={styles.eyebrowLight}>{t.rentalsGalleryEyebrow}</p>
               <h2 className={styles.headingLight}>{t.rentalsGalleryHeading}</h2>
-              <p className={styles.galleryNote}>{t.rentalsGalleryNote}</p>
+            
             </motion.div>
             <div className={styles.galleryGrid}>
-              {[1,2,3,4,5,6].map(i => (
-                <div key={i} className={styles.galleryPlaceholder}>
-                  <TvMinimal size={32} className={styles.galleryIcon} />
+              {[av1, av2, av3, av4, av5, av6].map((image) => (
+                <div className={styles.galleryItem}>
+                  <img src={image} alt="AV rental equipment" className={styles.galleryImage} />
                 </div>
               ))}
             </div>
