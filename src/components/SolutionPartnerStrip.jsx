@@ -12,6 +12,9 @@ import yealink from '../assets/yealink.png'
 import absen from '../assets/absen.jpg'
 import unilumin from '../assets/unilumin.png'
 import leyard from '../assets/leyard.png'
+import qstech from '../assets/qstech logo.jpg'
+import paessler from '../assets/paessler-logo-png_seeklogo-336700.png'
+import solarWinds from '../assets/SolarWinds-Logo.wine.png'
 import peerless from '../assets/peerlessav.jpg'
 import cisco from '../assets/cisco.png'
 import dLink from '../assets/D-Link_wordmark.svg.png'
@@ -51,6 +54,9 @@ const partnerAssets = {
   Absen: absen,
   Unilumin: unilumin,
   Leyard: leyard,
+  QSTECH: qstech,
+  Paessler: paessler,
+  SolarWinds: solarWinds,
   'Peerless-AV': peerless,
   Cisco: cisco,
   'D-Link': dLink,
@@ -88,14 +94,14 @@ export default function SolutionPartnerStrip({ partners, label = 'Technology Par
           {partners.map((partner, index) => (
             <motion.div
               key={partner}
-              className={`solutionPartnerLogoWrap ${['Cyxtera', 'FireEye', 'Peerless-AV', 'LG'].includes(partner) ? 'solutionPartnerLogoWrapLarge' : ''}`}
+              className={`solutionPartnerLogoWrap ${['Cyxtera', 'FireEye', 'Peerless-AV', 'LG', 'Leyard', 'QSTECH'].includes(partner) ? 'solutionPartnerLogoWrapLarge' : ''} ${['Paessler', 'SolarWinds'].includes(partner) ? 'solutionPartnerLogoWrapNetwork' : ''}`}
               initial={{ opacity: 0, y: 8 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: index * 0.04 }}
             >
               {partnerAssets[partner]
-                ? <img src={partnerAssets[partner]} alt={partner} className={`solutionPartnerLogo ${['Cyxtera', 'FireEye', 'Peerless-AV', 'LG'].includes(partner) ? 'solutionPartnerLogoLarge' : ''}`} />
+                ? <img src={partnerAssets[partner]} alt={partner} className={`solutionPartnerLogo ${['Cyxtera', 'FireEye', 'Peerless-AV', 'LG', 'Leyard', 'QSTECH'].includes(partner) ? 'solutionPartnerLogoLarge' : ''} ${['Paessler', 'SolarWinds'].includes(partner) ? 'solutionPartnerLogoNetwork' : ''}`} />
                 : <span className="solutionPartnerName">{partner}</span>}
             </motion.div>
           ))}

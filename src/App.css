@@ -6,8 +6,10 @@
 .solutionPartnerLogo { max-width: 140px; max-height: 38px; width: auto; height: auto; object-fit: contain; }
 .solutionPartnerLogoWrapLarge { min-width: 148px; }
 .solutionPartnerLogoLarge { max-width: 170px; max-height: 48px; }
+.solutionPartnerLogoWrapNetwork { width: min(260px, 100%); min-width: 0; height: 84px; padding: 8px 16px; }
+.solutionPartnerLogoNetwork { width: auto; max-width: 100%; height: 63px; max-height: 63px; }
 .solutionPartnerName { color: var(--navy); font-size: 13px; font-weight: 700; white-space: nowrap; }
-@media (max-width: 768px) { .solutionPartnerStripInner { padding: 0 16px; justify-content: center; } .solutionPartnerStripLabel { width: 100%; text-align: center; } .solutionPartnerLogos { justify-content: center; } }
+@media (max-width: 768px) { .solutionPartnerStripInner { padding: 0 16px; justify-content: center; } .solutionPartnerStripLabel { width: 100%; text-align: center; } .solutionPartnerLogos { width: 100%; justify-content: center; } .solutionPartnerLogoWrapNetwork { width: min(260px, 100%); } }
 .sr-only {
   position: absolute;
   width: 1px;

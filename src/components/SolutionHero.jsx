@@ -4,7 +4,7 @@ import { ChevronRight } from 'lucide-react'
 import SectionBlobs from './SectionBlobs'
 import styles from './SolutionHero.module.css'
 
-export default function SolutionHero({ eyebrow, title, description, primaryCta, primaryHref = '#enquire', secondaryCta, secondaryHref = '#capabilities' }) {
+export default function SolutionHero({ eyebrow, title, description, primaryCta, primaryHref = '/contact', secondaryCta, secondaryHref = '#capabilities' }) {
   return (
     <section className={`${styles.hero} heroScene`}>
       <SectionBlobs variant="dark" />

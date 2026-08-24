@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ChevronRight } from 'lucide-react'
+import { ChevronRight, Truck, Fuel, Warehouse, Factory, Boxes, Network } from 'lucide-react'
 import SEO from '../components/SEO'
 import SectionBlobs from '../components/SectionBlobs'
 import SolutionPartnerStrip from '../components/SolutionPartnerStrip'
@@ -73,13 +73,42 @@ export default function IoTSolutions() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <a href="#enquire" className={styles.primary}>Explore a Solution</a>
-              <a href="#capabilities" className={styles.secondary}>What We Connect</a>
+              <a href="#partner-solutions" className={styles.primary}>Explore a Solution</a>
+              <a href="#partner-solutions" className={styles.secondary}>What We Connect</a>
             </motion.div>
           </div>
         </section>
 
-        <SolutionPartnerStrip partners={['TechScouts', 'MakeBlock', 'Acebott']} label="IoT Partners" />
+        <SolutionPartnerStrip partners={['TechScouts']} label="IoT Partners" />
+
+        <section id="partner-solutions" className={styles.partnerSolutions}>
+          <SectionBlobs />
+          <div className={styles.partnerSolutionsInner}>
+            <div className={styles.sectionHeader}>
+              <p className={styles.eyebrowBlue}>Tech Scout Labs Solutions</p>
+              <h2 className={styles.sectionTitle}>Connected operations for every stage of your business</h2>
+              <p className={styles.sectionSub}>Bring fleet, facilities, production, and logistics data together with practical IoT solutions from our technology partner.</p>
+            </div>
+            <div className={styles.solutionGrid}>
+              {[
+                { icon: Truck, title: 'Fleet Management', description: 'Track vehicles, routes, utilisation, and field operations in one connected view.' },
+                { icon: Fuel, title: 'Fuel Management', description: 'Monitor fuel levels, usage, dispensing, and loss across your operations.' },
+                { icon: Warehouse, title: 'Garage & Store Management', description: 'Improve visibility across workshops, inventory, maintenance, and stores.' },
+                { icon: Factory, title: 'Production Management', description: 'Connect production activity, equipment, and operational performance.' },
+                { icon: Boxes, title: 'Logistics Management', description: 'Coordinate goods movement, assets, and delivery workflows with better data.' },
+                { icon: Network, title: 'Other Solutions', description: 'Explore TSL solutions for land levelling, tractor auto steering, unmanned weighbridges, and soil monitoring. We also support diesel generator monitoring and predictive maintenance for rotating machines.' },
+              ].map(({ icon: Icon, title, description }) => (
+                <article key={title} className={styles.solutionCard}>
+                  <div className={styles.solutionIcon}><Icon size={25} /></div>
+                  <h3>{title}</h3>
+                  <p>{description}</p>
+                </article>
+              ))}
+            </div>
+            <Link to="/contact" className={styles.solutionCta}>Discuss your IoT needs <ChevronRight size={17} /></Link>
+
+          </div>
+        </section>
       </main>
     </>
   )

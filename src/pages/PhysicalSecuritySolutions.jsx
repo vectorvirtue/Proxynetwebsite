@@ -1,21 +1,17 @@
 import SEO from '../components/SEO'
-import SolutionHero from '../components/SolutionHero'
-import SolutionPartnerStrip from '../components/SolutionPartnerStrip'
+import AdvancedSolutionPage from '../components/AdvancedSolutionPage'
 
 export default function PhysicalSecuritySolutions() {
   return (
     <>
       <SEO title="Physical Security Solutions" description="Physical security solutions that help organisations prevent unwanted access to facilities, equipment, and resources." canonical="/solutions/physical-security" />
       <main>
-        <SolutionHero
-          eyebrow="Physical Security Solutions"
-          title="Physical Security Solutions"
-          description="Security measures are essential in every organisation to prevent unwanted access to facilities, equipment, and resources. We design and deploy practical systems that help protect what matters."
-          primaryCta="Request a Security Assessment"
-          secondaryCta="Our Security Partners"
-          secondaryHref="#partners"
+        <AdvancedSolutionPage
+          seo={{ description: 'Physical security solutions that help organisations prevent unwanted access to facilities, equipment, and resources.' }}
+          hero={{ eyebrow: 'Physical Security Solutions', title: 'Physical Security Solutions', description: 'Protect your facilities, equipment, and people with practical physical security systems designed around your sites and operating needs.', primaryCta: 'Request a Security Assessment', secondaryCta: 'Our Security Partners' }}
+          capabilities={[{ title: 'Access control', description: 'Manage who can enter, where they can go, and when access is permitted.' }, { title: 'Video surveillance', description: 'Improve visibility across critical areas with dependable monitoring and recording.' }, { title: 'Integrated protection', description: 'Connect security systems into a coordinated solution that is easier to manage.' }]}
+          partners={['Hikvision', 'ZKTeco', 'Hanwha', 'Bosch']}
         />
-        <div id="partners"><SolutionPartnerStrip partners={['Hikvision', 'ZKTeco', 'Hanwha', 'Bosch']} label="Security Partners" /></div>
       </main>
     </>
   )

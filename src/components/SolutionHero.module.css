@@ -15,4 +15,4 @@
 .primary:hover { background: #005a94; transform: translateY(-2px); }
 .secondary { background: transparent; border: 1.5px solid rgba(255,255,255,0.25); }
 .secondary:hover { border-color: var(--sky); background: rgba(70,195,242,0.08); transform: translateY(-2px); }
-@media (max-width: 768px) { .heroInner { padding: 0 16px; } .hero { padding: 80px 0 48px; } }
+@media (max-width: 768px) { .heroInner { padding: 0 16px; } .hero { padding: 80px 0 48px; } .heroCtas { width: 100%; } .primary, .secondary { justify-content: center; width: 100%; max-width: 360px; } }
