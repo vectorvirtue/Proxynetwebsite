@@ -27,7 +27,9 @@ export default function Rentals() {
   const { t } = useLang()
   const [submitted, setSubmitted] = useState(false)
   const [captchaToken, setCaptchaToken] = useState(null)
-  const [form, setForm] = useState({ name: "", company: "", date: "", location: "", equipment: "", notes: "" })
+  const [submitting, setSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState("")
+  const [form, setForm] = useState({ name: "", company: "", email: "", phone: "", date: "", location: "", equipment: "", notes: "" })
 
   const equipment = [
     { image: lightingImage, nameKey: "rentalsEquip5Name" },
@@ -47,7 +49,44 @@ export default function Rentals() {
     { num: "03", titleKey: "rentalsStep3Title", descKey: "rentalsStep3Desc" },
   ]
 
-  const handleSubmit = (e) => { e.preventDefault(); if (!captchaToken) return; setSubmitted(true) }
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    if (!captchaToken) return
+
+    const apiKey = import.meta.env.VITE_SUPPORT_WEBHOOK_API_KEY
+    if (!apiKey) {
+      setSubmitError("Unable to submit your enquiry right now. Please try again later.")
+      return
+    }
+
+    setSubmitting(true)
+    setSubmitError("")
+    try {
+      const response = await fetch("https://crm.com/webhooks/website-ticket", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-Website-Api-Key": apiKey,
+        },
+        body: JSON.stringify({
+          full_name: form.name,
+          email: form.email,
+          phone: form.phone,
+          site_location: form.location,
+          preferred_date: form.date,
+          issue_description: `Company: ${form.company}\nEquipment needed: ${form.equipment}${form.notes ? `\nAdditional notes: ${form.notes}` : ""}`,
+          priority: "medium",
+        }),
+      })
+
+      if (!response.ok) throw new Error(`Webhook request failed with ${response.status}`)
+      setSubmitted(true)
+    } catch {
+      setSubmitError("We couldn't submit your enquiry. Please try again or contact us directly.")
+    } finally {
+      setSubmitting(false)
+    }
+  }
 
   return (
     <>
@@ -171,13 +210,18 @@ export default function Rentals() {
                   <div className={styles.field}><label className={styles.label}>{t.rentalsFieldCompany}</label><input required className={styles.input} value={form.company} onChange={e => setForm({...form, company: e.target.value})} /></div>
                 </div>
                 <div className={styles.formRow}>
+                  <div className={styles.field}><label className={styles.label}>Email</label><input type="email" required className={styles.input} value={form.email} onChange={e => setForm({...form, email: e.target.value})} /></div>
+                  <div className={styles.field}><label className={styles.label}>Phone</label><input type="tel" required className={styles.input} value={form.phone} onChange={e => setForm({...form, phone: e.target.value})} /></div>
+                </div>
+                <div className={styles.formRow}>
                   <div className={styles.field}><label className={styles.label}>{t.rentalsFieldDate}</label><input type="date" required className={styles.input} value={form.date} onChange={e => setForm({...form, date: e.target.value})} /></div>
                   <div className={styles.field}><label className={styles.label}>{t.rentalsFieldLocation}</label><input required className={styles.input} value={form.location} onChange={e => setForm({...form, location: e.target.value})} /></div>
                 </div>
                 <div className={styles.field}><label className={styles.label}>{t.rentalsFieldEquipment}</label><input required className={styles.input} placeholder={t.rentalsFieldEquipmentPlaceholder} value={form.equipment} onChange={e => setForm({...form, equipment: e.target.value})} /></div>
                 <div className={styles.field}><label className={styles.label}>{t.rentalsFieldNotes}</label><textarea rows="4" className={styles.textarea} value={form.notes} onChange={e => setForm({...form, notes: e.target.value})} /></div>
                 <Captcha onChange={setCaptchaToken} />
-                <button type="submit" className={styles.submitBtn} disabled={!captchaToken} style={{ opacity: captchaToken ? 1 : 0.5, cursor: captchaToken ? 'pointer' : 'not-allowed' }}>{t.submitEnquiry} <Send size={16} /></button>
+                {submitError && <p role="alert" className={styles.error}>{submitError}</p>}
+                <button type="submit" className={styles.submitBtn} disabled={!captchaToken || submitting} style={{ opacity: captchaToken && !submitting ? 1 : 0.5, cursor: captchaToken && !submitting ? 'pointer' : 'not-allowed' }}>{submitting ? "Submitting..." : t.submitEnquiry} {!submitting && <Send size={16} />}</button>
               </motion.form>
             )}
           </div>
